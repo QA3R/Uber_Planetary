@@ -20,9 +20,9 @@ public class InputHandler : MonoBehaviour
     
     private void Update()
     {
-        rotationDelegate?.Invoke(new Vector3(Input.GetAxisRaw(xRotAxisName), Input.GetAxisRaw(yRotAxisName), Input.GetAxisRaw(zRotAxisName)).normalized);
+        rotationDelegate?.Invoke(new Vector3(Input.GetAxis(xRotAxisName), Input.GetAxis(yRotAxisName), Input.GetAxis(zRotAxisName)).normalized);
 
-        movementDelegate?.Invoke(Input.GetAxisRaw("Vertical"));
+        movementDelegate?.Invoke(Input.GetAxis("Vertical"));
 
         if (Input.GetButton("Jump"))
         {
