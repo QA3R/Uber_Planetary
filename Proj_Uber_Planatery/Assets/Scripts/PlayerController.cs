@@ -11,22 +11,25 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed;
     public float movementSpeed;
     public float boostSpeed;
-
+    
     private Rigidbody _rigidbody;
+
+    private CursorController _cursorController;
     private void Awake()
     {
+        _cursorController = GetComponentInChildren<CursorController>();
         _rigidbody = GetComponent<Rigidbody>();
         _inputHandler = GetComponent<InputHandler>();
         _inputHandler.rotationDelegate += Rotate;
         _inputHandler.movementDelegate += Move;
         _inputHandler.boostDelegate += Boost;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     private void Rotate(Vector3 dir)
     {
-        transform.Rotate(dir * (rotationSpeed * Time.deltaTime));
+        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,dir.z) * (rotationSpeed * Time.deltaTime));
     }
 
     private void Move(float val)
