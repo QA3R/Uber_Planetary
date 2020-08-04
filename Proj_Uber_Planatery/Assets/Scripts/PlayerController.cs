@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Rotate(Vector3 dir)
     {
-        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,dir.z) * (rotationSpeed * Time.deltaTime));
+        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,-dir.z) * (rotationSpeed * Time.deltaTime));
     }
 
     private void Move(float val)
