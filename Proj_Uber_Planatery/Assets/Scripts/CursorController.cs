@@ -12,8 +12,11 @@ public class CursorController : MonoBehaviour
 
     public Vector2 CursorAxis => _cursorAxis;
 
+    private Image _cursorIcon;
+
     private void Awake()
     {
+        _cursorIcon = GetComponent<Image>();
         _inputHandler = GetComponentInParent<InputHandler>();
         _inputHandler.mousePositionDelegate += MapCursorIcon;
         //Cursor.lockState = CursorLockMode.Locked;
@@ -37,6 +40,9 @@ public class CursorController : MonoBehaviour
 
         _cursorAxis.x = x;
         _cursorAxis.y = y;
+        Color tmp = _cursorIcon.material.color;
+        tmp.a = _cursorAxis.magnitude;
+        _cursorIcon.material.color = tmp;
     }
     
     public static Rect RectTransformToScreenSpace(RectTransform transform)

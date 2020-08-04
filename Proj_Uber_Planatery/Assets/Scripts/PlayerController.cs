@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         _inputHandler.movementDelegate += Move;
         _inputHandler.boostDelegate += Boost;
         //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.visible = false;
     }
 
     private void Rotate(Vector3 dir)
