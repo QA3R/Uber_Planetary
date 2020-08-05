@@ -40,11 +40,17 @@ public class CursorController : MonoBehaviour
 
         _cursorAxis.x = x;
         _cursorAxis.y = y;
+        
+        SetCursorAlpha();
+    }
+
+    private void SetCursorAlpha()
+    {
         Color tmp = _cursorIcon.material.color;
         tmp.a = _cursorAxis.magnitude;
         _cursorIcon.material.color = tmp;
     }
-    
+
     public static Rect RectTransformToScreenSpace(RectTransform transform)
     {
         Vector2 size = Vector2.Scale(transform.rect.size, transform.lossyScale);

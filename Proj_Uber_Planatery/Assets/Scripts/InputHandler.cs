@@ -9,7 +9,7 @@ public class InputHandler : MonoBehaviour
     public delegate void MousePositionDelegate(Vector3 dir);
 
     public delegate void MovementDelegate(float val);
-    public delegate void BoostDelegate();
+    public delegate void BoostDelegate(bool isHeld);
 
     public RotationDelegate rotationDelegate;
     public MovementDelegate movementDelegate;
@@ -19,6 +19,7 @@ public class InputHandler : MonoBehaviour
     [SerializeField]private string xRotAxisName;
     [SerializeField]private string yRotAxisName;
     [SerializeField]private string zRotAxisName;
+    [SerializeField]private string boostAxisName;
     
     
     private void Update()
@@ -31,9 +32,13 @@ public class InputHandler : MonoBehaviour
 
         movementDelegate?.Invoke(Input.GetAxis("Vertical"));
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton(boostAxisName))
         {
-            boostDelegate?.Invoke();
+            boostDelegate?.Invoke(true);
+        }
+        if (Input.GetButtonUp(boostAxisName))
+        {
+            boostDelegate?.Invoke(false);
         }
         mousePositionDelegate?.Invoke(Input.mousePosition);
     }    
