@@ -1,16 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private InputHandler _inputHandler;
     private CursorController _cursorController;
-    private Rigidbody _rigidbody;
     
     [SerializeField] private float rotationSpeed;
     [SerializeField] [Range(0,1)] private float rotationLossMultiplier;
     private float _originalRotLossMultiplier;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float boostSpeed;
+    
+    public float ShipSpeed { get; private set; }
+
+    private Vector3 _previousPosition;
+    private Vector3 _currentPosition;
     
     private void Awake()
     {
@@ -45,7 +50,8 @@ public class PlayerController : MonoBehaviour
     /// Translate object forward and reduce rotation speed
     /// </summary>
     /// <param name="isHeld"></param>
-    private void Boost(bool isHeld)
+    /// <param name="val"></param>
+    private void Boost(bool isHeld, float val)
     {
         if (isHeld)
         {
@@ -55,17 +61,29 @@ public class PlayerController : MonoBehaviour
         { 
             rotationLossMultiplier = 1f;
         }
-        transform.Translate(transform.forward * (boostSpeed * Time.deltaTime), Space.World);
+        transform.Translate(transform.forward * (val * (boostSpeed * Time.deltaTime)), Space.World);
         // rotationSpeed = _originalRotSpeed;
     }
-    
+
+    private void Update()
+    {
+        CalculateShipSpeed();
+    }
+
+    private void CalculateShipSpeed()
+    {
+        _previousPosition = _currentPosition;
+        _currentPosition = transform.position;
+        ShipSpeed = (_currentPosition - _previousPosition).magnitude / Time.deltaTime;
+        ShipSpeed = ShipSpeed.Remap(0, boostSpeed, 0, 1);
+    }
+
     /// <summary>
     /// Get Component Reference from gameobject
     /// </summary>
     private void AssignComponents()
     {
         _cursorController = GetComponentInChildren<CursorController>();
-        _rigidbody = GetComponent<Rigidbody>();
         _inputHandler = GetComponent<InputHandler>();
     }
     

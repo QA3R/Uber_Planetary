@@ -9,7 +9,7 @@ public class InputHandler : MonoBehaviour
     public delegate void MousePositionDelegate(Vector3 dir);
 
     public delegate void MovementDelegate(float val);
-    public delegate void BoostDelegate(bool isHeld);
+    public delegate void BoostDelegate(bool isHeld, float val);
 
     public RotationDelegate rotationDelegate;
     public MovementDelegate movementDelegate;
@@ -34,12 +34,16 @@ public class InputHandler : MonoBehaviour
 
         if (Input.GetButton(boostAxisName))
         {
-            boostDelegate?.Invoke(true);
+            boostDelegate?.Invoke(true, Input.GetAxis(boostAxisName));
         }
-        if (Input.GetButtonUp(boostAxisName))
+        else
         {
-            boostDelegate?.Invoke(false);
+            boostDelegate?.Invoke(false,Input.GetAxis(boostAxisName));
         }
+        // if (Input.GetButtonUp(boostAxisName))
+        // {
+        //     boostDelegate?.Invoke(false,Input.GetAxis(boostAxisName));
+        // }
         mousePositionDelegate?.Invoke(Input.mousePosition);
     }    
     
