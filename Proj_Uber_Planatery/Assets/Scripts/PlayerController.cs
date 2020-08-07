@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
     private InputHandler _inputHandler;
     private CursorController _cursorController;
     
-    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float xRotationSpeed;
+    [SerializeField] private float yRotationSpeed;
+    [SerializeField] private float zRotationSpeed;
     [SerializeField] [Range(0,1)] private float rotationLossMultiplier;
     private float _originalRotLossMultiplier;
     [SerializeField] private float movementSpeed;
@@ -34,7 +36,7 @@ public class PlayerController : MonoBehaviour
     /// <param name="dir"></param>
     private void Rotate(Vector3 dir)
     {
-        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,-dir.z) * (rotationLossMultiplier * (rotationSpeed * Time.deltaTime)));
+        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y * xRotationSpeed,_cursorController.CursorAxis.x * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
     }
 
     /// <summary>

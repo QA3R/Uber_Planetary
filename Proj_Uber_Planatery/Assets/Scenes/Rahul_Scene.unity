@@ -1978,10 +1978,10 @@ MonoBehaviour:
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
-  m_AngularDampingMode: 1
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
+  m_AngularDampingMode: 0
+  m_PitchDamping: 1
+  m_YawDamping: 1
+  m_RollDamping: 3
   m_AngularDamping: 1
 --- !u!114 &62345067
 MonoBehaviour:
@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.03
+  m_LookaheadTime: 0.05
   m_LookaheadSmoothing: 30
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0.05
@@ -38410,10 +38410,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe0d54c57d3f5c4d9d4c457baa34802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  xRotationSpeed: 120
+  yRotationSpeed: 60
+  zRotationSpeed: 100
   rotationLossMultiplier: 0.5
-  movementSpeed: 80
-  boostSpeed: 200
+  movementSpeed: 50
+  boostSpeed: 180
 --- !u!65 &1082170287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57020,7 +57022,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh289036
+  m_Name: pb_Mesh19206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75751,7 +75753,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -80394,8 +80396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c3f69967116334abdd9e2d0c58c233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxParticles: 80
-  minStartSpeed: 20
+  maxParticles: 100
+  minStartSpeed: 10
   maxStartSpeed: 100
 --- !u!1 &2095146769
 GameObject:
