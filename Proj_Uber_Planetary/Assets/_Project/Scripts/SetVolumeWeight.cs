@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering;
 
 public class SetVolumeWeight : MonoBehaviour
@@ -13,6 +10,10 @@ public class SetVolumeWeight : MonoBehaviour
         _volume = GetComponent<Volume>();
     }
 
+    /// <summary>
+    /// Expects a value between 0 to 1 and sets volume's weight
+    /// </summary>
+    /// <param name="amount"></param>
     public void SetVolume(float amount)
     {
         _volume.weight = amount;

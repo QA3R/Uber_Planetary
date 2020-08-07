@@ -1,23 +1,24 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Private Members
     private InputHandler _inputHandler;
     private CursorController _cursorController;
+    private float _originalRotLossMultiplier;
+    private Vector3 _previousPosition;
+    private Vector3 _currentPosition;
     
+    //Exposed fields in inspector
     [SerializeField] private float xRotationSpeed;
     [SerializeField] private float yRotationSpeed;
     [SerializeField] private float zRotationSpeed;
     [SerializeField] [Range(0,1)] private float rotationLossMultiplier;
-    private float _originalRotLossMultiplier;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float boostSpeed;
     
+    //Exposed value for current speed remapped to be -1 to 1.
     public float ShipSpeed { get; private set; }
-
-    private Vector3 _previousPosition;
-    private Vector3 _currentPosition;
     
     private void Awake()
     {
@@ -36,7 +37,9 @@ public class PlayerController : MonoBehaviour
     /// <param name="dir"></param>
     private void Rotate(Vector3 dir)
     {
-        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y * xRotationSpeed,_cursorController.CursorAxis.x * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
+        transform.Rotate(new Vector3(-_cursorController.CursorAxis.y * xRotationSpeed,
+            _cursorController.CursorAxis.x * yRotationSpeed,
+            -dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
     }
 
     /// <summary>
@@ -51,11 +54,10 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Translate object forward and reduce rotation speed
     /// </summary>
-    /// <param name="isHeld"></param>
     /// <param name="val"></param>
-    private void Boost(bool isHeld, float val)
+    private void Boost(float val)
     {
-        if (isHeld)
+        if (val >= .1)
         {
             rotationLossMultiplier = _originalRotLossMultiplier;
         }
@@ -64,7 +66,6 @@ public class PlayerController : MonoBehaviour
             rotationLossMultiplier = 1f;
         }
         transform.Translate(transform.forward * (val * (boostSpeed * Time.deltaTime)), Space.World);
-        // rotationSpeed = _originalRotSpeed;
     }
 
     private void Update()
@@ -72,6 +73,9 @@ public class PlayerController : MonoBehaviour
         CalculateShipSpeed();
     }
 
+    /// <summary>
+    /// Speed calculated based on position delta over time
+    /// </summary>
     private void CalculateShipSpeed()
     {
         _previousPosition = _currentPosition;
@@ -81,7 +85,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Get Component Reference from gameobject
+    /// Get Component Reference from GameObject
     /// </summary>
     private void AssignComponents()
     {

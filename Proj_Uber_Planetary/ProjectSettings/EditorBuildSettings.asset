@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Rahul_Scene.unity
+    path: Assets/_Project/Scenes/Rahul_Scene.unity
     guid: 159fc2a9bd7507f40afc735bdfe1f306
   m_configObjects: {}

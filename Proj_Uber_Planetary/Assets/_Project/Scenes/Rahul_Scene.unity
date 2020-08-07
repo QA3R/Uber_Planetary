@@ -38398,6 +38398,7 @@ MonoBehaviour:
   yRotAxisName: Mouse X
   zRotAxisName: Horizontal
   boostAxisName: Boost
+  forwardAxisName: Forward
 --- !u!114 &1082170286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38410,7 +38411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe0d54c57d3f5c4d9d4c457baa34802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRotationSpeed: 120
+  xRotationSpeed: 100
   yRotationSpeed: 60
   zRotationSpeed: 100
   rotationLossMultiplier: 0.5
@@ -75685,11 +75686,11 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -80398,7 +80399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxParticles: 100
   minStartSpeed: 10
-  maxStartSpeed: 100
+  maxStartSpeed: 80
 --- !u!1 &2095146769
 GameObject:
   m_ObjectHideFlags: 0
