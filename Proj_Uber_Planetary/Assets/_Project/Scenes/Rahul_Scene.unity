@@ -28513,7 +28513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1f195dfecc6ff42b08f735ad708a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 40
+  min: 35
   max: 60
 --- !u!1 &827141077
 GameObject:
@@ -55185,7 +55185,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1224
+  m_Name: pb_Mesh348154
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74763,9 +74763,25 @@ PrefabInstance:
       propertyPath: m_XDamping
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 740858013920213177, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_PitchDamping
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 740858013920213180, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_TrackedObjectOffset.y
-      value: 3
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014039564574, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: maxStartSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014039564574, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: maxParticles
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014254787310, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 740858014254787311, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Enabled
@@ -74773,11 +74789,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -2.0787592e-11
+      value: -3.9968025e-15
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 2.0787536e-12
+      value: 5.273559e-16
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -74793,19 +74809,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000021679116
+      value: -0.0000000042896873
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.0812592e-10
+      value: 3.1993685e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0498137
+      value: 0.07437623
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99875855
+      value: 0.9972303
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728161, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: onValueChange.m_PersistentCalls.m_Calls.Array.size
@@ -74885,11 +74901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118506386515126315, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4118506386515126315, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8291810872056899703, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Enabled
