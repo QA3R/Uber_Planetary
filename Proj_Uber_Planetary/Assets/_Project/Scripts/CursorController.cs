@@ -18,6 +18,7 @@ namespace UberPlanetary
     
         //Assigned Rect in inspector
         [SerializeField] private RectTransform allowedAreaRect;
+        [SerializeField] private RectTransform deadZoneRect;
     
         //Exposed Cursor position remapped to -1 to 1 range so it acts like an Axis
         public Vector2 CursorAxis => _cursorAxis;
@@ -35,42 +36,58 @@ namespace UberPlanetary
         private void MapCursorIcon(Vector3 pos)
         {
             _cursorPos = pos;
-            Rect boop = RectTransformToScreenSpace(allowedAreaRect);
-        
-            _cursorPos.x = Mathf.Clamp(_cursorPos.x,  boop.xMin ,boop.xMax );
-            _cursorPos.y = Mathf.Clamp(_cursorPos.y, boop.yMin ,boop.yMax );
+            Rect newAllowedRect = RectTransformToScreenSpace(allowedAreaRect);
+            Rect newDeadRect = RectTransformToScreenSpace(deadZoneRect);
+            
+            _cursorPos.x = Mathf.Clamp(_cursorPos.x,  newAllowedRect.xMin ,newAllowedRect.xMax );
+            _cursorPos.y = Mathf.Clamp(_cursorPos.y, newAllowedRect.yMin ,newAllowedRect.yMax );
+            
             _cursorPos.z = 0;
             
             transform.position = _cursorPos;
         
-            TranslateCursorAxis(boop);
+            TranslateCursorAxis(newAllowedRect, newDeadRect);
             SetCursorAlpha();
         }
 
         /// <summary>
         /// Remaps Cursor's position to be between -1 and 1
         /// </summary>
-        /// <param name="boop"></param>
-        private void TranslateCursorAxis(Rect boop)
+        /// <param name="allowedRect"></param>
+        private void TranslateCursorAxis(Rect allowedRect, Rect deadRect)
         {
             _remappedX = _cursorPos.x;
             _remappedY = _cursorPos.y;
 
-            _remappedX = _remappedX.Remap(boop.xMin, boop.xMax, -1f, 1f);
-            _remappedY = _remappedY.Remap(boop.yMin, boop.yMax, -1f, 1f);
+            _remappedX = _remappedX.Remap(allowedRect.xMin, allowedRect.xMax, -1f, 1f);
+            _remappedY = _remappedY.Remap(allowedRect.yMin, allowedRect.yMax, -1f, 1f);
 
+            if (IsBetween(_cursorPos.x, deadRect.xMin, deadRect.xMax))
+            {
+                _remappedX = 0;
+            }
+            if (IsBetween(_cursorPos.y, deadRect.yMin, deadRect.yMax))
+            {
+                _remappedY = 0;
+            }
             _cursorAxis.x = _remappedX;
             _cursorAxis.y = _remappedY;
+            
+            
         }
 
+        public bool IsBetween(float val, float min, float max)
+        {
+            return (val >= Mathf.Min(min,max) && val <= Mathf.Max(min,max));
+        }
         /// <summary>
         /// Set Cursor's Alpha based on the current Cursor's Axis (position 0-1)
         /// </summary>
         private void SetCursorAlpha()
         {
-            var material = _cursorIcon.material;
+            var material = _cursorIcon;
             Color tmp = material.color;
-            tmp.a = _cursorAxis.magnitude;
+            tmp.a = Mathf.Clamp(_cursorAxis.magnitude, .05f, 1f);
             material.color = tmp;
         }
 
