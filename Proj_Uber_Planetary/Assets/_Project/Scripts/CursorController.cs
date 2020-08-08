@@ -80,6 +80,7 @@ namespace UberPlanetary
         {
             return (val >= Mathf.Min(min,max) && val <= Mathf.Max(min,max));
         }
+        
         /// <summary>
         /// Set Cursor's Alpha based on the current Cursor's Axis (position 0-1)
         /// </summary>
