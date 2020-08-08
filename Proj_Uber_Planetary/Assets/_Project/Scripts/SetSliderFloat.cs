@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class SetSliderFloat : MonoBehaviour
+namespace UberPlanetary
 {
-    public UnityEvent<float> onValueChange;
-
-    private PlayerController _player;
-
-    private void Awake()
+    public class SetSliderFloat : MonoBehaviour
     {
-        _player = FindObjectOfType<PlayerController>();
-    }
+        public UnityEvent<float> onValueChange;
 
-    private void Update()
-    {
-        onValueChange?.Invoke(_player.ShipSpeed);
+        private PlayerController _player;
+
+        private void Awake()
+        {
+            _player = FindObjectOfType<PlayerController>();
+        }
+
+        private void Update()
+        {
+            onValueChange?.Invoke(_player.ShipSpeed);
+        }
     }
 }

@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
 
-public class SetVolumeWeight : MonoBehaviour
+namespace UberPlanetary
 {
-    private Volume _volume;
-
-    private void Awake()
+    public class SetVolumeWeight : MonoBehaviour
     {
-        _volume = GetComponent<Volume>();
-    }
+        private Volume _volume;
 
-    /// <summary>
-    /// Expects a value between 0 to 1 and sets volume's weight
-    /// </summary>
-    /// <param name="amount"></param>
-    public void SetVolume(float amount)
-    {
-        _volume.weight = amount;
+        private void Awake()
+        {
+            _volume = GetComponent<Volume>();
+        }
+
+        /// <summary>
+        /// Expects a value between 0 to 1 and sets volume's weight
+        /// </summary>
+        /// <param name="amount"></param>
+        public void SetVolume(float amount)
+        {
+            _volume.weight = amount;
+        }
     }
 }
