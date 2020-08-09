@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c100e134f63d93d4d9206f094667aa02
+guid: 64c49a58ba9872342a521f633ffb09aa
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -164,7 +164,7 @@ TextureImporter:
       name: Crosshair_1
       rect:
         serializedVersion: 2
-        x: 603
+        x: 600
         y: 0
         width: 600
         height: 600
@@ -247,7 +247,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 50aaba4f2ed1ced40a3680581004ff20
     internalID: 0
     vertices: []
     indices: 
