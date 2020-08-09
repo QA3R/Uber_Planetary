@@ -10,6 +10,7 @@ namespace UberPlanetary
         [SerializeField] private float fovMin, fovMax, shakeMax;
         private float _currentFov;
         private float _currentShakeFrequency;
+        [SerializeField] private AnimationCurve shakeCurve;
 
         private void Awake()
         {
@@ -26,7 +27,8 @@ namespace UberPlanetary
 
         public void SetShakeFrequency(float val)
         {
-            _currentShakeFrequency = val.Remap(0, 1, 0, shakeMax);
+            float curveVal = shakeCurve.Evaluate(val);
+            _currentShakeFrequency = val.Remap(0, 1, 0 * curveVal, shakeMax * curveVal);
             _cvNoise.m_FrequencyGain = _currentShakeFrequency;
         }
     }
