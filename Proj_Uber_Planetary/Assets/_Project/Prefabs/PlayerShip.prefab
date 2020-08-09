@@ -2020,7 +2020,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: -0, y: 0.000000004280253, z: -4.2802528e-10, w: 1}
+  m_LocalRotation: {x: 0.0000000037252899, y: -3.3668376e-10, z: 3.3668384e-11, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2138,7 +2138,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.049813703, y: -0.000000002148128, z: 1.07139214e-10, w: 0.99875855}
+  m_LocalRotation: {x: 0.049813703, y: -0.0000000024860696, z: 1.2399426e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2273,9 +2273,9 @@ GameObject:
   - component: {fileID: 740858015040728188}
   - component: {fileID: 740858015040728190}
   - component: {fileID: 740858015040728189}
+  - component: {fileID: 740858015040728161}
   - component: {fileID: 740858015040728191}
   - component: {fileID: 740858015040728160}
-  - component: {fileID: 740858015040728161}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -2338,35 +2338,6 @@ MonoBehaviour:
   zRotAxisName: Horizontal
   boostAxisName: Boost
   forwardAxisName: Forward
---- !u!65 &740858015040728191
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740858015040728187}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5, y: 2, z: 7}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &740858015040728160
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740858015040728187}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &740858015040728161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,6 +2401,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &740858015040728191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740858015040728187}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2, z: 7}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &740858015040728160
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740858015040728187}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2059684472286028986
 GameObject:
   m_ObjectHideFlags: 0

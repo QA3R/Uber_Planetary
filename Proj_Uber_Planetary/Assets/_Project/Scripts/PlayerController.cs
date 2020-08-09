@@ -31,7 +31,6 @@ namespace UberPlanetary
             _originalRotLossMultiplier = rotationLossMultiplier;
             rotationLossMultiplier = 1f;
         
-            Cursor.visible = false;
         }
     
         /// <summary>
