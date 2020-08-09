@@ -54,11 +54,12 @@ namespace UberPlanetary
         /// Remaps Cursor's position to be between -1 and 1
         /// </summary>
         /// <param name="allowedRect"></param>
+        /// <param name="deadRect"></param>
         private void TranslateCursorAxis(Rect allowedRect, Rect deadRect)
         {
             _remappedX = _cursorPos.x;
             _remappedY = _cursorPos.y;
-
+            
             _remappedX = _remappedX.Remap(allowedRect.xMin, allowedRect.xMax, -1f, 1f);
             _remappedY = _remappedY.Remap(allowedRect.yMin, allowedRect.yMax, -1f, 1f);
 
@@ -70,10 +71,9 @@ namespace UberPlanetary
             {
                 _remappedY = 0;
             }
+            
             _cursorAxis.x = _remappedX;
             _cursorAxis.y = _remappedY;
-            
-            
         }
 
         public bool IsBetween(float val, float min, float max)

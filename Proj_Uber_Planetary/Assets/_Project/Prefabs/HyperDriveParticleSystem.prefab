@@ -107,7 +107,7 @@ ParticleSystem:
       m_PostInfinity: 2
       m_RotationOrder: 4
   moveWithTransform: 0
-  moveWithCustomTransform: {fileID: 0}
+  moveWithCustomTransform: {fileID: 4793620080870466897}
   scalingMode: 1
   randomSeed: 0
   InitialModule:
@@ -4825,6 +4825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c3f69967116334abdd9e2d0c58c233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxParticles: 100
+  maxParticles: 150
   minStartSpeed: 10
-  maxStartSpeed: 80
+  maxStartSpeed: 120
