@@ -5389,15 +5389,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 173257647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d550f914df7f2b4439435f09f7ecca65, type: 3}
+  m_Script: {fileID: 11500000, guid: f452c02a860f4a2bb8c85ef2b2689364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onValueChange:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1995407877}
-        m_TargetAssemblyTypeName: SetVolumeWeight, Assembly-CSharp
-        m_MethodName: SetVolume
+        m_TargetAssemblyTypeName: UberPlanetary.SetVolumeWeight, Assembly-CSharp
+        m_MethodName: SetWeight
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54937,7 +54937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1576
+  m_Name: pb_Mesh-13350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74692,17 +74692,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 740858013920213177, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_PitchDamping
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.0000000037252899
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -4.4408916e-16
+      value: -0.0000000042819903
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.857225e-17
+      value: 4.2819903e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -74718,15 +74722,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.049813703
+      value: 0.0498137
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000002148127
+      value: -0.0000000021478415
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.0713916e-10
+      value: 1.07124906e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.w

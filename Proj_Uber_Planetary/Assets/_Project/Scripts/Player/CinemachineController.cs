@@ -1,7 +1,8 @@
 ﻿using Cinemachine;
+using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary
+namespace UberPlanetary.Player
 {
     public class CinemachineController : MonoBehaviour
     {
@@ -38,8 +39,8 @@ namespace UberPlanetary
         /// <param name="val"></param>
         public void SetShakeFrequency(float val)
         {
-            _currentShakeFrequency = val.Remap(0, 1, 0, shakeMax * shakeCurve.Evaluate(val));
-            _cvNoise.m_FrequencyGain = _currentShakeFrequency;
+            _currentShakeFrequency = val.Remap(0, 1, 0, shakeMax );
+            _cvNoise.m_FrequencyGain = _currentShakeFrequency * shakeCurve.Evaluate(val);
         }
     }
 }

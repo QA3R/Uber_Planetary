@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UberPlanetary
+namespace UberPlanetary.Player
 {
     public class InputHandler : MonoBehaviour
     {

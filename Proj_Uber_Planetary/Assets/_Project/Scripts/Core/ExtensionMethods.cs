@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UberPlanetary
+namespace UberPlanetary.Core
 {
     public static class ExtensionMethods
     {

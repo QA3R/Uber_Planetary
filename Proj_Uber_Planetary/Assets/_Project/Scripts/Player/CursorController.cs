@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using UberPlanetary.Core;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace UberPlanetary
+namespace UberPlanetary.Player
 {
     /// <summary>
     /// Controls Cursor Icon's state based on provided input

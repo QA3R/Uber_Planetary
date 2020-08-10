@@ -1,9 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary
+namespace UberPlanetary.Player
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour , IEventValueProvider<float>
     {
         //Private Members
         private InputHandler _inputHandler;
@@ -30,7 +31,6 @@ namespace UberPlanetary
         
             _originalRotLossMultiplier = rotationLossMultiplier;
             rotationLossMultiplier = 1f;
-        
         }
     
         /// <summary>
@@ -114,6 +114,11 @@ namespace UberPlanetary
             if (_inputHandler.rotationDelegate != null) _inputHandler.rotationDelegate -= Rotate;
             if (_inputHandler.movementDelegate != null) _inputHandler.movementDelegate -= Move;
             if (_inputHandler.boostDelegate != null) _inputHandler.boostDelegate -= Boost;
+        }
+
+        public float GetValue()
+        {
+            return ShipSpeed;
         }
     }
 }
