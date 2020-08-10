@@ -54937,7 +54937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh610522
+  m_Name: pb_Mesh-1576
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74680,6 +74680,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 826596513, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: shakeMax
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 740858013398270857, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -74694,11 +74698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 4.4408916e-16
+      value: -4.4408916e-16
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -4.857225e-17
+      value: 4.857225e-17
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -74718,11 +74722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000002148128
+      value: 0.000000002148127
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.07139214e-10
+      value: -1.0713916e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.w

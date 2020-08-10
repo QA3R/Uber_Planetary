@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,25 +17,34 @@ namespace UberPlanetary
         private Vector2 _cursorAxis = Vector2.zero;
         private Image _cursorIcon;
         private float _remappedX, _remappedY;
-    
+        private List<Image> _childCursorImages = new List<Image>();
+        
         //Assigned Rect in inspector
         [SerializeField] private RectTransform allowedAreaRect;
         [SerializeField] private RectTransform deadZoneRect;
-
-        [SerializeField] private UnityEvent updateCursorState;
-    
+        
         //Exposed Cursor position remapped to -1 to 1 range so it acts like an Axis
         public Vector2 CursorAxis => _cursorAxis;
-    
+
         private void Awake()
         {
             AssignComponents();
             AssignDelegates();
+            SetCursorProperties();
+        }
+
+        private void SetCursorProperties()
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                _childCursorImages.Add(transform.GetChild(i).GetComponent<Image>());
+            }
+
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.lockState = CursorLockMode.Confined;
         }
-    
+
         /// <summary>
         /// Clamp Cursor's Position inside Provided Rect
         /// </summary>
@@ -53,8 +63,7 @@ namespace UberPlanetary
             transform.position = _cursorPos;
         
             TranslateCursorAxis(newAllowedRect, newDeadRect);
-            //SetCursorAlpha();
-            updateCursorState?.Invoke();
+            SetCursorAlpha();
         }
 
         /// <summary>
@@ -91,12 +100,15 @@ namespace UberPlanetary
         /// <summary>
         /// Set Cursor's Alpha based on the current Cursor's Axis (position 0-1)
         /// </summary>
-        private void SetCursorAlpha(Image icon)
+        public void SetCursorAlpha()
         {
-            var material = icon;
-            Color tmp = material.color;
-            tmp.a = Mathf.Clamp(_cursorAxis.magnitude, .05f, 1f);
-            material.color = tmp;
+            for (int i = 0; i < _childCursorImages.Count; i++)
+            {
+                var material = _childCursorImages[i];
+                Color tmp = material.color;
+                tmp.a = Mathf.Clamp(_cursorAxis.magnitude, .05f, 1f);
+                material.color = tmp;
+            }
         }
 
         /// <summary>
