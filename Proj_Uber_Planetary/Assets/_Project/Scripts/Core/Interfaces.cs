@@ -1,4 +1,6 @@
-﻿namespace UberPlanetary.Core
+﻿using UnityEngine.Events;
+
+namespace UberPlanetary.Core
 {
     /// <summary>
     /// Finds the appropriate IEventValueProvider and exposes an event based on provided value
@@ -18,5 +20,10 @@
     public interface IEventValueProvider<T> where T : struct
     {
         T GetValue();
+    }
+
+    public interface ITakeDamage
+    {
+        void TakeDamage();
     }
 }

@@ -14,6 +14,8 @@ namespace UberPlanetary
         [SerializeField] private float maxParticles;
         [SerializeField] private float minStartSpeed;
         [SerializeField] private float maxStartSpeed;
+        [SerializeField] private AnimationCurve speedAnimationCurve;
+        [SerializeField] private AnimationCurve particleAnimationCurve;
 
         private void Awake()
         {
@@ -21,18 +23,25 @@ namespace UberPlanetary
         }
 
         /// <summary>
-        /// Expects a value between 0-1 and remaps it to valid range for Particle system properties
+        /// Expects a value between 0-1 and remaps it to valid range for Particle system speed
         /// </summary>
         /// <param name="val"></param>
-        public void SetCount(float val)
+        public void SetSpeedAmount(float val)
+        {
+            _currentStartSpeed = val.Remap(0, 1, minStartSpeed, maxStartSpeed);
+            var particleSystemMain = _particleSystem.main;
+            particleSystemMain.startSpeed = _currentStartSpeed * speedAnimationCurve.Evaluate(val);
+        }
+        
+        /// <summary>
+        /// Expects a value between 0-1 and remaps it to valid range for Particle system emission
+        /// </summary>
+        /// <param name="val"></param>
+        public void SetParticleAmount(float val)
         {
             _currentParticles = val.Remap(0, 1, 0, maxParticles);
-            _currentStartSpeed = val.Remap(0, 1, minStartSpeed, maxStartSpeed);
-        
             var particleSystemEmission = _particleSystem.emission;
-            particleSystemEmission.rateOverTime = _currentParticles;
-            var particleSystemMain = _particleSystem.main;
-            particleSystemMain.startSpeed = _currentStartSpeed;
+            particleSystemEmission.rateOverTime = _currentParticles * particleAnimationCurve.Evaluate(val);
         }
     }
 }
