@@ -21,7 +21,7 @@ namespace UberPlanetary.Player
         [SerializeField] private float movementSpeed;
         [SerializeField] private float boostSpeed;
     
-        //Exposed value for current speed remapped to be -1 to 1.
+        //Exposed value for current speed remapped to be 0 to 1.
         public float ShipSpeed { get; private set; }
     
         private void Awake()
@@ -74,7 +74,7 @@ namespace UberPlanetary.Player
         {
             CalculateShipSpeed();
         }
-
+        
         /// <summary>
         /// Speed calculated based on position delta over time
         /// </summary>

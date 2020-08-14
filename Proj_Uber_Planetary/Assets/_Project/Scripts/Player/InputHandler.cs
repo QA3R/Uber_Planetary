@@ -35,7 +35,6 @@ namespace UberPlanetary.Player
             ));
 
             movementDelegate?.Invoke(Input.GetAxis(forwardAxisName));
-
             boostDelegate?.Invoke(Input.GetAxis(boostAxisName));
 
             mousePositionDelegate?.Invoke(Input.mousePosition);
