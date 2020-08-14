@@ -41,9 +41,9 @@ MonoBehaviour:
   m_Name: ForwardRenderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: -3111249788796422032}
-  - {fileID: -7270711139025049571}
-  m_RendererFeatureMap: 70b8471bcd9ed2d41da8efadbd3e199b
+  - {fileID: 3049883412341363760}
+  - {fileID: 7689344794781423745}
+  m_RendererFeatureMap: 3094f6f6cd5c532a811872d8590ab66a
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -79,6 +79,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   depthNormalsMaterial: {fileID: 0}
+--- !u!114 &3049883412341363760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c112c19a3a69c4697b058198829075, type: 3}
+  m_Name: DepthNormals
+  m_EditorClassIdentifier: 
+  m_Active: 1
 --- !u!114 &3391363001775703241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,3 +106,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings: {outlineMaterial: {fileID: 2100000, guid: f7c20777fa6d01f45b3eed19a242545e, type: 2}}
+--- !u!114 &7689344794781423745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c67f6268f93723438ad241803cf70cb, type: 3}
+  m_Name: Outline
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    outlineMaterial: {fileID: 2100000, guid: 114d8678773052f4b96f2d223970211a, type: 2}
