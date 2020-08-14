@@ -28,9 +28,9 @@ namespace UberPlanetary
         /// <param name="val"></param>
         public void SetSpeedAmount(float val)
         {
-            _currentStartSpeed = val.Remap(0, 1, minStartSpeed, maxStartSpeed);
+            _currentStartSpeed = speedAnimationCurve.Evaluate(val).Remap(0, 1, minStartSpeed, maxStartSpeed);
             var particleSystemMain = _particleSystem.main;
-            particleSystemMain.startSpeed = _currentStartSpeed * speedAnimationCurve.Evaluate(val);
+            particleSystemMain.startSpeed = _currentStartSpeed;
         }
         
         /// <summary>
@@ -39,9 +39,9 @@ namespace UberPlanetary
         /// <param name="val"></param>
         public void SetParticleAmount(float val)
         {
-            _currentParticles = val.Remap(0, 1, 0, maxParticles);
+            _currentParticles = particleAnimationCurve.Evaluate(val).Remap(0, 1, 0, maxParticles);
             var particleSystemEmission = _particleSystem.emission;
-            particleSystemEmission.rateOverTime = _currentParticles * particleAnimationCurve.Evaluate(val);
+            particleSystemEmission.rateOverTime = _currentParticles;
         }
     }
 }

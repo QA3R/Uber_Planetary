@@ -23,7 +23,13 @@ namespace UberPlanetary.Player
     
         //Exposed value for current speed remapped to be 0 to 1.
         public float ShipSpeed { get; private set; }
-    
+
+        public float GetValue
+        {
+            get => ShipSpeed;
+            set => value = GetValue;
+        }
+
         private void Awake()
         {
             AssignComponents();
@@ -116,9 +122,5 @@ namespace UberPlanetary.Player
             if (_inputHandler.boostDelegate != null) _inputHandler.boostDelegate -= Boost;
         }
 
-        public float GetValue()
-        {
-            return ShipSpeed;
-        }
     }
 }

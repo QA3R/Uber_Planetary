@@ -9,7 +9,7 @@ namespace UberPlanetary.Player
     /// <summary>
     /// Controls Cursor Icon's state based on provided input
     /// </summary>
-    public class CursorController : MonoBehaviour
+    public class CursorController : MonoBehaviour, IEventValueProvider<Vector2>
     {
         //Private Members
         private InputHandler _inputHandler;
@@ -25,6 +25,7 @@ namespace UberPlanetary.Player
         
         //Exposed Cursor position remapped to -1 to 1 range so it acts like an Axis
         public Vector2 CursorAxis => _cursorAxis;
+        public Vector2 GetValue => _cursorAxis;
 
         private void Awake()
         {
@@ -147,5 +148,6 @@ namespace UberPlanetary.Player
         {
             if (_inputHandler.mousePositionDelegate != null) _inputHandler.mousePositionDelegate -= MapCursorIcon;
         }
+
     }
 }

@@ -27,7 +27,7 @@ namespace UberPlanetary.Player
 
         public void InvokeEvent()
         {
-            onValueChange?.Invoke(EventValueProvider.GetValue());
+            onValueChange?.Invoke(EventValueProvider.GetValue);
         }
 
     }

@@ -19,7 +19,8 @@ namespace UberPlanetary.Core
     /// <typeparam name="T"></typeparam>
     public interface IEventValueProvider<T> where T : struct
     {
-        T GetValue();
+        T GetValue { get;}
+        // T GetValue();
     }
 
     public interface ITakeDamage
