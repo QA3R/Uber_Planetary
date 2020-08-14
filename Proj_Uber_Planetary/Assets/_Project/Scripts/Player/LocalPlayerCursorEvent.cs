@@ -1,4 +1,5 @@
-﻿using UberPlanetary.Core;
+﻿using System;
+using UberPlanetary.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,18 +10,15 @@ namespace UberPlanetary.Player
         public IEventValueProvider<Vector2> EventValueProvider { get; set; }
         
         [SerializeField] private UnityEvent<Vector2> onValueChange;
-
-
-        // Start is called before the first frame update
-        void Start()
-        {
         
+        private void Awake()
+        {
+            SetReference();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-        
+            InvokeEvent();
         }
 
         public void SetReference()
@@ -32,6 +30,5 @@ namespace UberPlanetary.Player
         {
             onValueChange?.Invoke(EventValueProvider.GetValue);
         }
-
     }
 }
