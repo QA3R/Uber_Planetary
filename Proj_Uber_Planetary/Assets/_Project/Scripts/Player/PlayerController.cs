@@ -12,6 +12,8 @@ namespace UberPlanetary.Player
         private float _originalRotLossMultiplier;
         private Vector3 _previousPosition;
         private Vector3 _currentPosition;
+        private float _movementLossMultiplier;
+
     
         //Exposed fields in inspector
         [SerializeField] private float xRotationSpeed;
@@ -24,10 +26,16 @@ namespace UberPlanetary.Player
         //Exposed value for current speed remapped to be 0 to 1.
         public float ShipSpeed { get; private set; }
 
+        public float MovementLossMultiplier
+        {
+            get => _movementLossMultiplier;
+            set => _movementLossMultiplier = Mathf.Clamp01(value);
+        }
+
         public float GetValue
         {
             get => ShipSpeed;
-            set => value = GetValue;
+            set => GetValue = value;
         }
 
         private void Awake()
@@ -56,7 +64,7 @@ namespace UberPlanetary.Player
         /// <param name="val"></param>
         private void Move(float val)
         {
-            transform.Translate(transform.forward * (val * (movementSpeed * Time.deltaTime)), Space.World);
+            transform.Translate(transform.forward * (val * (movementSpeed * Time.deltaTime) * _movementLossMultiplier), Space.World);
         }
 
         /// <summary>
@@ -73,14 +81,23 @@ namespace UberPlanetary.Player
             { 
                 rotationLossMultiplier = 1f;
             }
-            transform.Translate(transform.forward * (val * (boostSpeed * Time.deltaTime)), Space.World);
+            transform.Translate(transform.forward * (val * (boostSpeed * Time.deltaTime) * _movementLossMultiplier), Space.World);
         }
 
         private void Update()
         {
             CalculateShipSpeed();
+            ResetMovementLossMultiplier();
         }
-        
+
+        private void ResetMovementLossMultiplier()
+        {
+            if (_movementLossMultiplier >= 1) return;
+            
+            _movementLossMultiplier += .1f * Time.deltaTime;
+           // Debug.Log(_movementLossMultiplier);
+        }
+
         /// <summary>
         /// Speed calculated based on position delta over time
         /// </summary>

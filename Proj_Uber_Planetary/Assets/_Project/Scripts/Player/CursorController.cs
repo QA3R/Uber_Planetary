@@ -15,6 +15,7 @@ namespace UberPlanetary.Player
         private InputHandler _inputHandler;
         private Vector3 _cursorPos;
         private Vector2 _cursorAxis = Vector2.zero;
+        private Vector2 _rawCursorAxis = Vector2.zero;
         private Image _cursorIcon;
         private float _remappedX, _remappedY;
         private List<Image> _childCursorImages = new List<Image>();
@@ -25,7 +26,7 @@ namespace UberPlanetary.Player
         
         //Exposed Cursor position remapped to -1 to 1 range so it acts like an Axis
         public Vector2 CursorAxis => _cursorAxis;
-        public Vector2 GetValue => _cursorAxis;
+        public Vector2 GetValue => _rawCursorAxis;
 
         private void Awake()
         {
@@ -80,6 +81,9 @@ namespace UberPlanetary.Player
             _remappedX = _remappedX.Remap(allowedRect.xMin, allowedRect.xMax, -1f, 1f);
             _remappedY = _remappedY.Remap(allowedRect.yMin, allowedRect.yMax, -1f, 1f);
 
+            _rawCursorAxis.x = _remappedX;
+            _rawCursorAxis.y = _remappedY;
+            
             if (IsBetween(_cursorPos.x, deadRect.xMin, deadRect.xMax))
             {
                 _remappedX = 0;

@@ -507,7 +507,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: -0, y: 0.0000000042818322, z: -4.2818318e-10, w: 1}
+  m_LocalRotation: {x: -0.0000000037252899, y: 0.0000000042810426, z: -4.2810422e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -640,7 +640,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.049813703, y: -0.0000000021481288, z: 1.07139256e-10, w: 0.99875855}
+  m_LocalRotation: {x: 0.0498137, y: 0.0000000021480613, z: -1.0713587e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 3530900}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,7 +968,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDamageTaken:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2296210312025619625}
+        m_TargetAssemblyTypeName: UberPlanetary.Player.PlayerDamageResponse, Assembly-CSharp
+        m_MethodName: ReduceSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &740858015040728191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1761,15 +1773,6 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.15
-      value: 0.5
-      inSlope: 2.4170947
-      outSlope: 2.4170947
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.18854418
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
@@ -2420,6 +2423,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: adde8ea7d6f77de4dac6e29810f3127e, type: 3}
       propertyPath: m_Name
       value: Playership1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129603032752897145, guid: adde8ea7d6f77de4dac6e29810f3127e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1859260055904188700, guid: adde8ea7d6f77de4dac6e29810f3127e, type: 3}
       propertyPath: m_Materials.Array.data[0]
