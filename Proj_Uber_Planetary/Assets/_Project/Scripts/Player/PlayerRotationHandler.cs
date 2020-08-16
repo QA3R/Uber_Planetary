@@ -18,7 +18,7 @@ namespace UberPlanetary.Player
             rotationLossMultiplier = _originalRotLossMultiplier;
         }
 
-        public void ResetRotation()
+        public void ResetRotationMultiplier()
         {
             rotationLossMultiplier = 1f;
         }

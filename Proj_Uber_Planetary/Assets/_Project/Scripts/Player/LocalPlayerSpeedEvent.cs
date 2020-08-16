@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 namespace UberPlanetary.Player
 {
+    /// <summary>
+    /// Finds the player locally and invokes an event based on its speed value.
+    /// </summary>
     public class LocalPlayerSpeedEvent : MonoBehaviour, IEventExposer<float>
     {
         public UnityEvent<float> onValueChange;

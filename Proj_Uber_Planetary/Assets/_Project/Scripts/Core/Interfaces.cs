@@ -36,28 +36,46 @@ namespace UberPlanetary.Core
         T GetValue { get;}
     }
 
+    /// <summary>
+    /// Damageable Interface
+    /// </summary>
     public interface ITakeDamage
     {
         void TakeDamage();
     }
 
+    /// <summary>
+    /// Rotates object based on provided vector 3
+    /// </summary>
     public interface IRotationHandler
     {
+        //Rotate function
         void Rotate(Vector3 dir);
+        //Reduce Rotation multiplier
         void DampenRotation();
-        void ResetRotation();
+        //ResetRotation multiplier
+        void ResetRotationMultiplier();
     }
 
+    /// <summary>
+    /// Moves the object based on provided value
+    /// </summary>
     public interface IMovementHandler
     {
         void Move(float val);
     }
 
+    /// <summary>
+    /// Moves the player forward based on value
+    /// </summary>
     public interface IBoostHandler
     {
         void Boost(float val);
     }
 
+    /// <summary>
+    /// Input interface encapsulating events required by other classes
+    /// </summary>
     public interface IInputProvider
     {
         event Action<Vector3> OnRotate;

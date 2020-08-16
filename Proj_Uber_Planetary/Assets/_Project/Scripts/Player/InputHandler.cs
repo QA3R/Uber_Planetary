@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace UberPlanetary.Player
 {
+    /// <summary>
+    /// Implements the input interface and invokes events based on proper axis's names
+    /// </summary>
     public class InputHandler : MonoBehaviour, IInputProvider
     {
         //Delegate Deceleration

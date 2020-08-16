@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace UberPlanetary.Player
 {
+    /// <summary>
+    /// Controls the Cinemachine camera's properties and provides functions to modify them
+    /// </summary>
     public class CinemachineController : MonoBehaviour
     {
         //Private members

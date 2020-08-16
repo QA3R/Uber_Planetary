@@ -2,7 +2,7 @@
 
 namespace UberPlanetary.Core
 {
-    public static class ExtensionMethods
+    public static class FloatExtensionMethods
     {
         /// <summary>
         /// Returns a value mapped from the current min max to the provided min max
@@ -30,7 +30,10 @@ namespace UberPlanetary.Core
         {
             return (value >= Mathf.Min(min,max) && value <= Mathf.Max(min,max));
         }
-        
+    }
+
+    public static class RectTransformExtensionMethods
+    {
         /// <summary>
         /// Translate a given points from UI Rect space to Screen Space
         /// </summary>
@@ -42,4 +45,5 @@ namespace UberPlanetary.Core
             return new Rect((Vector2)inTransform.position - (size * 0.5f), size);
         }
     }
+
 }

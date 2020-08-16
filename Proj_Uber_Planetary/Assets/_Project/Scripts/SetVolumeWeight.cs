@@ -1,7 +1,4 @@
-﻿using System;
-using UberPlanetary.Player;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 using UnityEngine.Rendering;
 
 namespace UberPlanetary
