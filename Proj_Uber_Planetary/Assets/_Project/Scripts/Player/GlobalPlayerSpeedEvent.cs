@@ -10,6 +10,8 @@ namespace UberPlanetary.Player
         [SerializeField] private UnityEvent<float> onValueChange;
         public IEventValueProvider<float> EventValueProvider { get; set; }
 
+        private float _previousValue;
+
         private void Start()
         {
             SetReference();
@@ -27,7 +29,9 @@ namespace UberPlanetary.Player
 
         public void InvokeEvent()
         {
+            if (Math.Abs(_previousValue - EventValueProvider.GetValue) < .0001f) return;
             onValueChange?.Invoke(EventValueProvider.GetValue);
+            _previousValue = EventValueProvider.GetValue;
         }
 
     }

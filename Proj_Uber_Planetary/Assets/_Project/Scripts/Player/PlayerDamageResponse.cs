@@ -13,7 +13,7 @@ namespace UberPlanetary.Player
 
         public void ReduceSpeed(float val)
         {
-            _playerController.MovementLossMultiplier -= val;
+            //_playerController.MovementLossMultiplier -= val;
         }
     }
 }
