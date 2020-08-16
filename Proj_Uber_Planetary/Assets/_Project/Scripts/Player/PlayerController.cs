@@ -29,7 +29,7 @@ namespace UberPlanetary.Player
             _movementHandler.Move(val);
         }
         
-        private void Boost(float val)
+        private void OnBoost(float val)
         {
             if (val >= .1)
             {
@@ -59,9 +59,9 @@ namespace UberPlanetary.Player
         /// </summary>
         private void AssignDelegates()
         {
-            _inputHandler.RotationDelegate += Rotate;
-            _inputHandler.MovementDelegate += Move;
-            _inputHandler.BoostDelegate += Boost;
+            _inputHandler.OnRotate += Rotate;
+            _inputHandler.OnMove += Move;
+            _inputHandler.OnBoost += OnBoost;
         }
 
         /// <summary>
@@ -69,9 +69,9 @@ namespace UberPlanetary.Player
         /// </summary>
         private void OnDisable()
         {
-            _inputHandler.RotationDelegate -= Rotate;
-            _inputHandler.MovementDelegate -= Move;
-            _inputHandler.BoostDelegate -= Boost;
+            _inputHandler.OnRotate -= Rotate;
+            _inputHandler.OnMove -= Move;
+            _inputHandler.OnBoost -= OnBoost;
         }
     }
 }

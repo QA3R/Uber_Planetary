@@ -102,7 +102,7 @@ namespace UberPlanetary.Player
         /// </summary>
         private void AssignDelegates()
         {
-            _inputHandler.MousePositionDelegate += MapCursorIcon;
+            _inputHandler.OnMousePosition += MapCursorIcon;
         }
 
         /// <summary>
@@ -110,8 +110,7 @@ namespace UberPlanetary.Player
         /// </summary>
         private void OnDisable()
         {
-            _inputHandler.MousePositionDelegate -= MapCursorIcon;
+            _inputHandler.OnMousePosition -= MapCursorIcon;
         }
-
     }
 }

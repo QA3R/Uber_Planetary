@@ -7,14 +7,10 @@ namespace UberPlanetary.Player
     public class InputHandler : MonoBehaviour, IInputProvider
     {
         //Delegate Deceleration
-        // public RotationDelegate rotationDelegate;
-        // public MovementDelegate movementDelegate;
-        // public BoostDelegate boostDelegate;
-        // public MousePositionDelegate mousePositionDelegate;
-        public event Action<Vector3> RotationDelegate;
-        public event Action<float> MovementDelegate;
-        public event Action<Vector3> MousePositionDelegate;
-        public event Action<float> BoostDelegate;
+        public event Action<Vector3> OnRotate;
+        public event Action<float> OnMove;
+        public event Action<Vector3> OnMousePosition;
+        public event Action<float> OnBoost;
         
         //Exposed input names
         [SerializeField] private string xRotAxisName;
@@ -28,19 +24,16 @@ namespace UberPlanetary.Player
         /// </summary>
         private void Update()
         {
-            RotationDelegate?.Invoke(new Vector3(
+            OnRotate?.Invoke(new Vector3(
                 Input.GetAxisRaw(xRotAxisName), 
                 Input.GetAxisRaw(yRotAxisName), 
                 Input.GetAxisRaw(zRotAxisName)
             ));
 
-            MovementDelegate?.Invoke(Input.GetAxis(forwardAxisName));
-            BoostDelegate?.Invoke(Input.GetAxis(boostAxisName));
+            OnMove?.Invoke(Input.GetAxis(forwardAxisName));
+            OnBoost?.Invoke(Input.GetAxis(boostAxisName));
 
-            MousePositionDelegate?.Invoke(Input.mousePosition);
+            OnMousePosition?.Invoke(Input.mousePosition);
         }
-
-
-
     }
 }

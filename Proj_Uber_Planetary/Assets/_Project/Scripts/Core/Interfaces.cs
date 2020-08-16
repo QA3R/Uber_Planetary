@@ -60,9 +60,9 @@ namespace UberPlanetary.Core
 
     public interface IInputProvider
     {
-        event Action<Vector3> RotationDelegate;
-        event Action<float> MovementDelegate;
-        event Action<Vector3> MousePositionDelegate;
-        event Action<float> BoostDelegate;
+        event Action<Vector3> OnRotate;
+        event Action<float> OnMove;
+        event Action<Vector3> OnMousePosition;
+        event Action<float> OnBoost;
     }
 }
