@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 4345205358444814408}
   - component: {fileID: 1993320063962895490}
   - component: {fileID: 5444563332208544514}
-  - component: {fileID: -4868939620973213605}
   m_Layer: 0
-  m_Name: Checkpoint Ring 1.0
+  m_Name: Checkpoint Ring
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,45 +116,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &-4868939620973213605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47655555724309847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b010266cbc44ec6958966988cd7c2cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDamageTaken:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3716551969001825769, guid: 4ec78d1b59614864f9df87d91a6223ba, type: 3}
-        m_TargetAssemblyTypeName: UberPlanetary.CheckPoints.CheckPoint, Assembly-CSharp
-        m_MethodName: UpdateCourse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 660750739941855006, guid: 4ec78d1b59614864f9df87d91a6223ba, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &5700839428364120064
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,9 +128,10 @@ GameObject:
   - component: {fileID: 29533627808781757}
   - component: {fileID: 435452214564534784}
   - component: {fileID: 894008130351665609}
+  - component: {fileID: 5800041899319836341}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,8 +208,47 @@ MeshCollider:
   m_GameObject: {fileID: 5700839428364120064}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3298800115395149385, guid: d72fdbaaf26ad9746bbaceb8eb15b8ea, type: 3}
+--- !u!114 &5800041899319836341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700839428364120064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b010266cbc44ec6958966988cd7c2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5444563332208544514}
+        m_TargetAssemblyTypeName: UberPlanetary.CheckPoints.CheckPoint, Assembly-CSharp
+        m_MethodName: UpdateCourse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 47655555724309847}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

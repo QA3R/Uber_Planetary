@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/Rahul_Scene.unity
     guid: 159fc2a9bd7507f40afc735bdfe1f306
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/Daren_Scene.unity
     guid: 2a6cbbd0d95726344b016a484c625ceb
   m_configObjects: {}

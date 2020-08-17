@@ -28,7 +28,6 @@ namespace UberPlanetary.CheckPoints
             onCurrentCheckPoint?.Invoke();
             HighlightCheckPoint(litColorPropertyName, currentRingLitColor);
             HighlightCheckPoint(shadedColorPropertyName, currentRingShadedColor);
-            _collider.enabled = true;
         }
 
         public void SetAsNext()
@@ -36,7 +35,12 @@ namespace UberPlanetary.CheckPoints
             HighlightCheckPoint(litColorPropertyName, nextRingLitColor);
             HighlightCheckPoint(shadedColorPropertyName, nextRingShadedColor);
         }
-        
+
+        public Vector3 Position()
+        {
+            return transform.position;
+        }
+
         private void HighlightCheckPoint(string id, Color color)
         {
             _material.SetColor(id, color);

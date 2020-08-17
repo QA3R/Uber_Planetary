@@ -90,5 +90,7 @@ namespace UberPlanetary.Core
     {
         void SetAsCurrent();
         void SetAsNext();
+
+        Vector3 Position();
     }
 }
