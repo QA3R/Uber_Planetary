@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CabEngineTrailMat
+  m_Name: Mat_Crystal_Light
   m_Shader: {fileID: -6465566751694194690, guid: 1ec091a93391e164cb3892ce89f6a81a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -30,11 +30,11 @@ Material:
     m_Floats:
     - Vector1_1783887: 1
     - Vector1_38BD3441: 0.4
-    - Vector1_CF8B0D8D: 2
-    - Vector1_ED5ABFD9: 0
-    - Vector1_F3F6B787: -1
+    - Vector1_CF8B0D8D: 6
+    - Vector1_ED5ABFD9: 0.001
+    - Vector1_F3F6B787: 0.3
     m_Colors:
-    - Color_28180829: {r: 0.21568628, g: 0.2882353, b: 0.37254903, a: 1}
-    - Color_57D43A16: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 0}
-    - Color_F689E8B9: {r: 0, g: 1.4980392, b: 1.2470589, a: 1}
+    - Color_28180829: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - Color_57D43A16: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0}
+    - Color_F689E8B9: {r: 0.018679176, g: 1.3168818, b: 1.7838612, a: 0.6666667}
   m_BuildTextureStacks: []

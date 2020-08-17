@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CabBumperMat
-  m_Shader: {fileID: -6465566751694194690, guid: 4aa46d33b0afb5e49bb0703218e42e0e, type: 3}
+  m_Name: Mat_Head_Lights
+  m_Shader: {fileID: -6465566751694194690, guid: 1ec091a93391e164cb3892ce89f6a81a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -29,12 +29,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1783887: 1
-    - Vector1_38BD3441: 1
-    - Vector1_CF8B0D8D: 4
-    - Vector1_ED5ABFD9: 0.1
+    - Vector1_38BD3441: 0.4
+    - Vector1_CF8B0D8D: 6
+    - Vector1_ED5ABFD9: 0.06
     - Vector1_F3F6B787: 0.3
     m_Colors:
-    - Color_28180829: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
-    - Color_57D43A16: {r: 0.95283014, g: 0.95283014, b: 0.95283014, a: 0}
-    - Color_F689E8B9: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+    - Color_28180829: {r: 0.9073191, g: 0.9424085, b: 0.44897762, a: 1}
+    - Color_57D43A16: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 0}
+    - Color_F689E8B9: {r: 2.9019608, g: 2.9960785, b: 0.47058824, a: 1}
   m_BuildTextureStacks: []
