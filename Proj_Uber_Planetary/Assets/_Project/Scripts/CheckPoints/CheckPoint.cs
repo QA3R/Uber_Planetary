@@ -1,6 +1,7 @@
 ﻿using System;
 using UberPlanetary.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UberPlanetary.CheckPoints
 {
@@ -11,8 +12,9 @@ namespace UberPlanetary.CheckPoints
         private Course _course;
         private BoxCollider _collider;
         
-        [SerializeField][ColorUsage(false, true)] private Color highlightColor, softHighlightColor;
-        [SerializeField] private string colorPropertyName;
+        [SerializeField][ColorUsage(false, true)] private Color currentRingLitColor, currentRingShadedColor, nextRingLitColor, nextRingShadedColor ;
+        [SerializeField] private string litColorPropertyName, shadedColorPropertyName;
+        [SerializeField] private UnityEvent onCurrentCheckPoint;
 
         private void Awake()
         {
@@ -23,13 +25,16 @@ namespace UberPlanetary.CheckPoints
 
         public void SetAsCurrent()
         {
-            HighlightCheckPoint(colorPropertyName, highlightColor);
+            onCurrentCheckPoint?.Invoke();
+            HighlightCheckPoint(litColorPropertyName, currentRingLitColor);
+            HighlightCheckPoint(shadedColorPropertyName, currentRingShadedColor);
             _collider.enabled = true;
         }
 
         public void SetAsNext()
         {
-            HighlightCheckPoint(colorPropertyName, softHighlightColor);
+            HighlightCheckPoint(litColorPropertyName, nextRingLitColor);
+            HighlightCheckPoint(shadedColorPropertyName, nextRingShadedColor);
         }
         
         private void HighlightCheckPoint(string id, Color color)
