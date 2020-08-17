@@ -85,4 +85,10 @@ namespace UberPlanetary.Core
         event Action<Vector3> OnMousePosition;
         event Action<float> OnBoost;
     }
+    
+    public interface ICheckPoint
+    {
+        void SetAsCurrent();
+        void SetAsNext();
+    }
 }
