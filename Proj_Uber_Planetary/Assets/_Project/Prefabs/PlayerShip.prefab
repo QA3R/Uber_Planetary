@@ -160,7 +160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1e28efd7377887d46b433bef1582bc76, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -532,7 +532,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: 0.000000026077029, y: -0.000000012596257, z: 8.709717e-10, w: 1}
+  m_LocalRotation: {x: -0, y: -9.91423e-10, z: 9.914233e-11, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -665,7 +665,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.0498137, y: 4.156932e-11, z: -2.0724056e-12, w: 0.99875855}
+  m_LocalRotation: {x: 0.049813703, y: 0.0000000027255345, z: -1.3593772e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1046,19 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDamageTaken:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2296210312025619625}
-        m_TargetAssemblyTypeName: UberPlanetary.Player.PlayerDamageResponse, Assembly-CSharp
-        m_MethodName: ReduceSpeed
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3530900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,11 +1994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].time
-      value: 0.1967349
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].value
-      value: 0.80823684
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].inSlope
@@ -2128,6 +2116,10 @@ PrefabInstance:
       propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4793620080870466903, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
+      propertyPath: ShapeModule.alignToDirection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
 --- !u!114 &5222391751918813621 stripped
@@ -2215,11 +2207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].time
-      value: 0.1967349
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].value
-      value: 0.80823684
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].inSlope
@@ -2301,6 +2293,10 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 4793620080870466903, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
+      propertyPath: ShapeModule.alignToDirection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
 --- !u!114 &740858014039564574 stripped
@@ -2377,7 +2373,7 @@ PrefabInstance:
     - target: {fileID: -7926114001041950057, guid: adde8ea7d6f77de4dac6e29810f3127e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e26a5f3fc4efb4241ba072d6f2bf5957, type: 2}
+      objectReference: {fileID: 2100000, guid: a99c05d181837f0438e0a2a9187e04f6, type: 2}
     - target: {fileID: -7885254199614114535, guid: adde8ea7d6f77de4dac6e29810f3127e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
