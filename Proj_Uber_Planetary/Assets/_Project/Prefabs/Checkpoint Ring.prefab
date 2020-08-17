@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660750739941855006}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 20.98}
+  m_LocalPosition: {x: 0, y: 0, z: 20.98}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,9 +96,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d545bea3279bf4197383a4a89e9939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 1.2176831, g: 5.7366395, b: 4.9643373, a: 0}
-  softHighlightColor: {r: 0.26610893, g: 0.49056602, b: 0.46598583, a: 0}
-  colorPropertyName: Color_F689E8B9
+  currentRingLitColor: {r: 0, g: 1.9764706, b: 0.1254902, a: 0}
+  currentRingShadedColor: {r: 0.10348015, g: 3.952942, b: 0.3311365, a: 0}
+  nextRingLitColor: {r: 2.0754716, g: 2.053739, b: 0.347723, a: 0}
+  nextRingShadedColor: {r: 4.3921566, g: 3.6792936, b: 0.5748896, a: 0}
+  litColorPropertyName: Color_F689E8B9
+  shadedColorPropertyName: Color_28180829
+  onCurrentCheckPoint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 370831497741693477}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1642360245558003919
 MonoBehaviour:
   m_ObjectHideFlags: 0
