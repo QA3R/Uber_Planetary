@@ -77392,15 +77392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000015659964
+      value: -1.1452393e-11
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.5659966e-10
+      value: 1.1452574e-12
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000000037252899
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -77420,11 +77420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000037206658
+      value: 0.000000002146559
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.8557052e-10
+      value: -1.0706095e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -77478,6 +77478,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: backwardAxisName
+      value: Backward
+      objectReference: {fileID: 0}
     - target: {fileID: 740858015040728190, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: movementSpeed
       value: 80
@@ -77492,7 +77496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2839219001471342374, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: passiveMovementSpeed
-      value: 0
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839219001471342374, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: backwardMovementSpeed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5222391751918813621, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: speedAnimationCurve.m_Curve.Array.data[1].value

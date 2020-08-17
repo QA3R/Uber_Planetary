@@ -27,9 +27,14 @@ namespace UberPlanetary.Player
             _rotationHandler.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,dir.z));
         }
         
-        private void Move(float val)
+        private void MoveForward(float val)
         {
-            _movementHandler.Move(val);
+            _movementHandler.MoveForward(val);
+        }
+
+        private void MoveBackward(float val)
+        {
+            _movementHandler.MoveBackward(val);
         }
         
         private void OnBoost(float val)
@@ -63,8 +68,9 @@ namespace UberPlanetary.Player
         private void AssignDelegates()
         {
             _inputHandler.OnRotate += Rotate;
-            _inputHandler.OnMove += Move;
+            _inputHandler.OnMoveForward += MoveForward;
             _inputHandler.OnBoost += OnBoost;
+            _inputHandler.OnMoveBackward += MoveBackward;
         }
 
         /// <summary>
@@ -73,8 +79,9 @@ namespace UberPlanetary.Player
         private void OnDisable()
         {
             _inputHandler.OnRotate -= Rotate;
-            _inputHandler.OnMove -= Move;
+            _inputHandler.OnMoveForward -= MoveForward;
             _inputHandler.OnBoost -= OnBoost;
+            _inputHandler.OnMoveBackward -= MoveBackward;
         }
     }
 }

@@ -11,7 +11,8 @@ namespace UberPlanetary.Player
     {
         //Delegate Deceleration
         public event Action<Vector3> OnRotate;
-        public event Action<float> OnMove;
+        public event Action<float> OnMoveForward;
+        public event Action<float> OnMoveBackward;
         public event Action<Vector3> OnMousePosition;
         public event Action<float> OnBoost;
         
@@ -21,6 +22,7 @@ namespace UberPlanetary.Player
         [SerializeField] private string zRotAxisName;
         [SerializeField] private string boostAxisName;
         [SerializeField] private string forwardAxisName;
+        [SerializeField] private string backwardAxisName;
         
         /// <summary>
         /// Capture Input and invoke respective Delegates
@@ -33,7 +35,9 @@ namespace UberPlanetary.Player
                 Input.GetAxisRaw(zRotAxisName)
             ));
 
-            OnMove?.Invoke(Input.GetAxis(forwardAxisName));
+            OnMoveForward?.Invoke(Input.GetAxis(forwardAxisName));
+            OnMoveBackward?.Invoke(Input.GetAxis(backwardAxisName));
+            
             OnBoost?.Invoke(Input.GetAxis(boostAxisName));
 
             OnMousePosition?.Invoke(Input.mousePosition);

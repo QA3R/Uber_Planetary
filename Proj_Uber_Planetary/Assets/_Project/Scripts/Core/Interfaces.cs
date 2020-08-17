@@ -62,7 +62,8 @@ namespace UberPlanetary.Core
     /// </summary>
     public interface IMovementHandler
     {
-        void Move(float val);
+        void MoveForward(float val);
+        void MoveBackward(float val);
     }
 
     /// <summary>
@@ -79,7 +80,8 @@ namespace UberPlanetary.Core
     public interface IInputProvider
     {
         event Action<Vector3> OnRotate;
-        event Action<float> OnMove;
+        event Action<float> OnMoveForward;
+        event Action<float> OnMoveBackward;
         event Action<Vector3> OnMousePosition;
         event Action<float> OnBoost;
     }
