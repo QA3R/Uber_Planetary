@@ -18,7 +18,8 @@ namespace UberPlanetary.Core
         //public properties
         public float InMax => iMax;
         //Exposed value for current speed remapped to be 0 to 1.
-        public float GetValue => _speed;
+        public float Speed => _speed;
+        public float GetValue => Speed;
         
         private void Update()
         {
