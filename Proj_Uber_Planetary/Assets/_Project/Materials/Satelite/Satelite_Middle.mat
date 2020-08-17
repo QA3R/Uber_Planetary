@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base
+  m_Name: Satelite_Middle
   m_Shader: {fileID: -6465566751694194690, guid: 4aa46d33b0afb5e49bb0703218e42e0e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5f4b2fd60d5e3c24baa781961382b075, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -48,10 +48,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_38BD3441: 0.46
-    - Vector1_CF8B0D8D: 3.4
-    - Vector1_ED5ABFD9: 0
-    - Vector1_F3F6B787: 0.15
+    - Vector1_38BD3441: 0.4
+    - Vector1_CF8B0D8D: 6
+    - Vector1_ED5ABFD9: 0.05
+    - Vector1_F3F6B787: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -74,15 +74,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_28180829: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
-    - Color_57D43A16: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
-    - Color_F689E8B9: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+    - Color_28180829: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
+    - Color_57D43A16: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 0}
+    - Color_F689E8B9: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3415860320363624912
+--- !u!114 &7830410953763483056
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
