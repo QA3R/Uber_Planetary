@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace UberPlanetary.Player
 {
+    /// <summary>
+    /// Delegates tasks to other classes according to input
+    /// </summary>
     public class PlayerController : MonoBehaviour 
     {
         //Private Members
@@ -37,7 +40,7 @@ namespace UberPlanetary.Player
             }
             else
             { 
-                _rotationHandler.ResetRotation();
+                _rotationHandler.ResetRotationMultiplier();
             }
             _boostHandler.Boost(val);
         }

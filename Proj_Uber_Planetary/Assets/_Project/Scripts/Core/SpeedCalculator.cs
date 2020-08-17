@@ -7,18 +7,19 @@ namespace UberPlanetary.Core
     /// </summary>
     public class SpeedCalculator : MonoBehaviour , IEventValueProvider<float>
     {
+        //private members
         private Vector3 _previousPosition;
         private Vector3 _currentPosition;
         private float _speed;
 
+        //Exposed fields
         [SerializeField] private float iMax;
 
+        //public properties
         public float InMax => iMax;
-        
         //Exposed value for current speed remapped to be 0 to 1.
         public float GetValue => _speed;
-
-
+        
         private void Update()
         {
             CalculateShipSpeed();
@@ -34,6 +35,5 @@ namespace UberPlanetary.Core
             _speed = (_currentPosition - _previousPosition).magnitude / Time.deltaTime;
             _speed = _speed.Remap(0, iMax, 0, 1);
         }
-
     }
 }

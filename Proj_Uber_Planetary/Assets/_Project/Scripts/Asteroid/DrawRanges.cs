@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UberPlanetary.Asteroid
 {
+    /// <summary>
+    /// Draws Gizmos to help visualize ranges for Asteroid's components
+    /// </summary>
     public class DrawRanges : MonoBehaviour
     {
         [SerializeField] private float mainRadius;
@@ -12,10 +15,12 @@ namespace UberPlanetary.Asteroid
 
         private void OnDrawGizmosSelected()
         {
+            var position = transform.position;
+            
             Gizmos.color = innerColor;
-            Gizmos.DrawWireSphere(transform.position, mainRadius);
+            Gizmos.DrawWireSphere(position, mainRadius);
             Gizmos.color = outerColor;
-            Gizmos.DrawWireSphere(transform.position, mainRadius + disperseRadius);
+            Gizmos.DrawWireSphere(position, mainRadius + disperseRadius);
         }
     }
 }

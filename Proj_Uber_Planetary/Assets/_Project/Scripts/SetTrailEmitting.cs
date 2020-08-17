@@ -1,13 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace UberPlanetary
 {
-    public class SetTrailEmmition : MonoBehaviour
+    public class SetTrailEmitting : MonoBehaviour
     {
-
         private TrailRenderer _trail;
-
+        
         private void Awake()
         {
             _trail = GetComponent<TrailRenderer>();

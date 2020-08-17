@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace UberPlanetary.CollisionHandling
 {
+    /// <summary>
+    /// Calls the TakeDamage function on colliding with a ITakeDamage of matching Tag.
+    /// </summary>
     public class OnCollisionDealDamage : MonoBehaviour
     {
         [SerializeField] private string damageableTag;

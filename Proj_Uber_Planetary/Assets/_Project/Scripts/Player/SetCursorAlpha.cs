@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 namespace UberPlanetary.Player
 {
+    /// <summary>
+    /// Populates the list of cursor images and exposes a function to set their alpha.
+    /// </summary>
     public class SetCursorAlpha : MonoBehaviour
     {
         private readonly List<Image> _childCursorImages = new List<Image>();

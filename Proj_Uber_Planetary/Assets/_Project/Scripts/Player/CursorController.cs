@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using UberPlanetary.Core;
+﻿using UberPlanetary.Core;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UberPlanetary.Player
 {
