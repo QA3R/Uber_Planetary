@@ -18,7 +18,6 @@ namespace UberPlanetary
 
         public Vector3 Target
         {
-            get => _target;
             set => _target = value;
         }
 
