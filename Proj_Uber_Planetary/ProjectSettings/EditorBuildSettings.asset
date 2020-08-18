@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/Rahul_Scene.unity
     guid: 159fc2a9bd7507f40afc735bdfe1f306
   - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
     path: Assets/_Project/Scenes/Daren_Scene.unity
-    guid: 2a6cbbd0d95726344b016a484c625ceb
+    guid: 13682060605d24f479ba3bdc74a934c7
   m_configObjects: {}
