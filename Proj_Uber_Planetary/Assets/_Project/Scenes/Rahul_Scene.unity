@@ -3031,6 +3031,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &108014865
@@ -3384,6 +3412,34 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalScale.z
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -8630,9 +8686,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: StartNewTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: set_CourseName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: Course 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -8657,6 +8793,58 @@ PrefabInstance:
     - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: set_CourseName
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: Course 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -10519,6 +10707,34 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -13046,6 +13262,62 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: StopTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -23634,6 +23906,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &659554191
@@ -25924,6 +26224,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &726457399
@@ -26550,6 +26878,34 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -30677,6 +31033,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &858119200
@@ -31117,6 +31501,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &866139464
@@ -31376,6 +31788,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &876303150
@@ -31539,6 +31979,34 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalScale.z
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -34826,6 +35294,62 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -44409,6 +44933,58 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StopTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5800041899319836341, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -51222,6 +51798,34 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalScale.z
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -65370,6 +65974,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
 --- !u!1 &1776558993
@@ -70645,6 +71277,34 @@ PrefabInstance:
     - target: {fileID: 856421517560721389, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: m_LocalScale.z
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1983184330}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UberPlanetary.CourseTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddNewTimeStamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
@@ -79003,11 +79663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -4.4408916e-16
+      value: 4.4408916e-16
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.857225e-17
+      value: -4.857225e-17
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -79047,15 +79707,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000002148127
+      value: 0.000000002148128
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.0713916e-10
+      value: -1.07139214e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.049813703
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728160, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728187, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Name

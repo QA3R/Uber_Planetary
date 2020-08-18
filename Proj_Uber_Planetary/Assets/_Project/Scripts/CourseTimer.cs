@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UberPlanetary.CheckPoints;
 using UberPlanetary.Core;
 using UberPlanetary.Player;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 namespace UberPlanetary
@@ -15,7 +17,7 @@ namespace UberPlanetary
         private List<TimeStamp> _checkPointTimes = new List<TimeStamp>();
         private List<TimeStamp> _maxSpeedCheckPointTimes = new List<TimeStamp>();
         private List<TimeStamp> _timeBetweenCheckPoints = new List<TimeStamp>();
-        
+        private TimeStamp _previousTimeStamp;
         
         private string _finalTimeString;
         private float _milliseconds,_seconds, _minutes;
@@ -30,6 +32,7 @@ namespace UberPlanetary
         private void Awake()
         {
             _playerSpeed = FindObjectOfType<PlayerController>().GetComponent<IEventValueProvider<float>>();
+            Analytics.enabled = true;
         }
 
         public void ClearTimer()
@@ -49,25 +52,67 @@ namespace UberPlanetary
         [ContextMenu("Start Timer")]
         public void StartNewTimer()
         {
+            ClearTimer();
             StartCoroutine(Timer());
         }
 
         public void AddNewTimeStamp()
         {
-            _checkPointTimes.Add(new TimeStamp(_minutes,_seconds,_milliseconds));
+            if (_previousTimeStamp != null)
+            {
+                _timeBetweenCheckPoints.Add(new TimeStamp(_minutes - _previousTimeStamp.Minutes, _seconds - _previousTimeStamp.Seconds, _milliseconds - _previousTimeStamp.Milliseconds));
+            }
+            _previousTimeStamp = new TimeStamp(_minutes, _seconds, _milliseconds);
+            _checkPointTimes.Add(_previousTimeStamp);
             _maxSpeedCheckPointTimes.Add(new TimeStamp(_maxSpeedMinutes, _maxSpeedSeconds, _maxSpeedMilliseconds));
-            //_timeBetweenCheckPoints.Add();
         }
 
         public void ExportData()
         {
-            var timeData = new TimeData(CourseName, _checkPointTimes, _maxSpeedCheckPointTimes, _timeBetweenCheckPoints);
+            int i = 1;
+            Analytics.CustomEvent(CourseName + "Completed!");
+            foreach (var timeStamps in _checkPointTimes)
+            {
+                Analytics.CustomEvent(CourseName + " CheckPoint Times", new Dictionary<string, object>
+                {
+                    { "String Time : " + i, $"{timeStamps.Minutes:00}:{timeStamps.Seconds:00}:{timeStamps.Milliseconds:00}"},
+                    { "Minutes : " + i, timeStamps.Minutes},
+                    {"Seconds : " + i, timeStamps.Seconds},
+                    {"Milliseconds : " + i, timeStamps.Milliseconds}
+                });
+                i++;
+            }
+            i = 1;
+            foreach (var timeStamps in _maxSpeedCheckPointTimes)
+            {
+                Analytics.CustomEvent(CourseName + " Max Speed CheckPoint Times", new Dictionary<string, object>
+                {
+                    { "String Time : " + i, $"{timeStamps.Minutes:00}:{timeStamps.Seconds:00}:{timeStamps.Milliseconds:00}"},
+                    { "Minutes : " + i, timeStamps.Minutes},
+                    {"Seconds : " + i, timeStamps.Seconds},
+                    {"Milliseconds : " + i, timeStamps.Milliseconds}
+                });
+                i++;
+            }
+            i = 1;
+            foreach (var timeStamps in _timeBetweenCheckPoints)
+            {
+                Analytics.CustomEvent(CourseName + " Time Between CheckPoint", new Dictionary<string, object>
+                {
+                    { "String Time : " + i, $"{timeStamps.Minutes:00}:{timeStamps.Seconds:00}:{timeStamps.Milliseconds:00}"},
+                    { "Minutes : " + i, timeStamps.Minutes},
+                    {"Seconds : " + i, timeStamps.Seconds},
+                    {"Milliseconds : " + i, timeStamps.Milliseconds}
+                });
+                i++;
+            }
         }
         
         [ContextMenu("Stop Timer")]
         public void StopTimer()
         {
             StopAllCoroutines();
+            ExportData();
         }
 
         private IEnumerator Timer()
@@ -97,6 +142,7 @@ namespace UberPlanetary
         }
     }
 
+    [System.Serializable]
     public class TimeData
     {
         private string _courseName;
@@ -113,9 +159,17 @@ namespace UberPlanetary
         }
         
     }
+    
+    [System.Serializable]
     public class TimeStamp
     {
         private float _milliseconds,_seconds, _minutes;
+
+        public float Milliseconds => _milliseconds;
+
+        public float Seconds => _seconds;
+
+        public float Minutes => _minutes;
 
         public TimeStamp(float minutes, float seconds, float milliseconds)
         {

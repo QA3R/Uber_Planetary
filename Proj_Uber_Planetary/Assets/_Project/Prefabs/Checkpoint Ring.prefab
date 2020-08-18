@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5444563332208544514}
   m_Layer: 0
   m_Name: Checkpoint Ring
-  m_TagString: Asteroid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,10 +128,10 @@ GameObject:
   - component: {fileID: 29533627808781757}
   - component: {fileID: 435452214564534784}
   - component: {fileID: 894008130351665609}
-  - component: {fileID: 5800041899319836341}
+  - component: {fileID: 4086067717917222958}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Asteroid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,13 +207,13 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700839428364120064}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3298800115395149385, guid: d72fdbaaf26ad9746bbaceb8eb15b8ea, type: 3}
---- !u!114 &5800041899319836341
+--- !u!114 &4086067717917222958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5700839428364120064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b010266cbc44ec6958966988cd7c2cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3dc161f406890844693be3a3b852972e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onDamageTaken:
@@ -252,3 +252,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageableTag: Player
