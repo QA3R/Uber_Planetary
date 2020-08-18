@@ -95,10 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d545bea3279bf4197383a4a89e9939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRingLitColor: {r: 0, g: 1.9764706, b: 0.1254902, a: 0}
-  currentRingShadedColor: {r: 0.10348015, g: 3.952942, b: 0.3311365, a: 0}
-  nextRingLitColor: {r: 2.0754716, g: 2.053739, b: 0.347723, a: 0}
-  nextRingShadedColor: {r: 4.3921566, g: 3.6792936, b: 0.5748896, a: 0}
+  currentRingLitColor: {r: 0, g: 0.90060884, b: 2.1185474, a: 0}
+  currentRingShadedColor: {r: 0.34241205, g: 0.6933428, b: 1.1473808, a: 0}
+  nextRingLitColor: {r: 1, g: 1, b: 1, a: 0}
+  nextRingShadedColor: {r: 1.0940143, g: 1.0940143, b: 1.0940143, a: 0}
   litColorPropertyName: Color_F689E8B9
   shadedColorPropertyName: Color_28180829
   onCurrentCheckPoint:
@@ -208,7 +208,7 @@ MeshCollider:
   m_GameObject: {fileID: 5700839428364120064}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
