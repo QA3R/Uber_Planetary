@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4d0bb258d320cfe4daec402e1e65a8ee, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -647,11 +647,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1.3668398e-11
+      value: -1.7874588e-13
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.3668647e-12
+      value: 1.7860711e-14
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294912, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Cameras.Array.size
@@ -667,11 +667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000021742554
+      value: 0.0000000021481033
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.0844234e-10
+      value: -1.0713797e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728187, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Name
