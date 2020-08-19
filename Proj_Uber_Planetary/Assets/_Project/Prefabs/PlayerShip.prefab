@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90794736, g: 0.6745283, b: 1, a: 1}
+  m_Color: {r: 0.27221143, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -527,8 +527,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: -0.0000000037252899, y: -0.0000000042802477, z: 4.280247e-10, w: 1}
-  m_LocalPosition: {x: -0.000008453712, y: 195.5497, z: 1955.4968}
+  m_LocalRotation: {x: -0.00000001117587, y: 0.00000000806332, z: 4.0000556e-10, w: 1}
+  m_LocalPosition: {x: 0.000008377228, y: 195.54968, z: 1955.4968}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 740858013920213176}
@@ -661,7 +661,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.049813703, y: 0.000000002148127, z: -1.0713916e-10, w: 0.99875855}
+  m_LocalRotation: {x: 0.049813703, y: -0.0000000037206653, z: 1.8557049e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 4, z: -1975.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1045,6 +1045,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6826936980101663042}
+        m_TargetAssemblyTypeName: UberPlanetary.ChangeTrailWidth, Assembly-CSharp
+        m_MethodName: SetWidth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2296210312025619625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,7 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7900151, g: 0.5030705, b: 0.8018868, a: 1}
+  m_Color: {r: 0, g: 0.7490196, b: 0.050980393, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1667,7 +1679,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fcaef9ab49ce6f14397c77b76275dbbb, type: 2}
+  - {fileID: 2100000, guid: 7ec650d3afbb0cf40a70151b20c5f762, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1754,6 +1766,64 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &6826936980101663042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833968205261489984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc390da7a0ec6574486d9837d1126f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minStarWidth: 0
+  maxStartWidth: 0.3
+  minEndWidth: 0
+  maxEndWidth: 0.4
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.6675066
+      outSlope: 1.6675066
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.30021384
+      value: 0.50060856
+      inSlope: -0.0742686
+      outSlope: -0.0742686
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.27254546
+    - serializedVersion: 3
+      time: 0.7461687
+      value: 0.5033986
+      inSlope: 0.0044356
+      outSlope: 0.0044356
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.536651
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.9564228
+      outSlope: 1.9564228
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &6928036599145105371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2195,6 +2265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
+--- !u!4 &5222391751918813616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4793620080870466897, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
+  m_PrefabInstance: {fileID: 792622203747935457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5222391751918813621 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4793620080870466900, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
@@ -2206,11 +2281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c3f69967116334abdd9e2d0c58c233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &5222391751918813616 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4793620080870466897, guid: 450c017223b88b74c9c8e26489e5ac25, type: 3}
-  m_PrefabInstance: {fileID: 792622203747935457}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5246221190881789002
 PrefabInstance:
   m_ObjectHideFlags: 0
