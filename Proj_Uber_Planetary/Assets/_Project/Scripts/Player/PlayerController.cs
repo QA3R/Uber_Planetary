@@ -55,7 +55,7 @@ namespace UberPlanetary.Player
         /// </summary>
         private void AssignComponents()
         {
-            _cursorController = GetComponentInChildren<CursorController>();
+            _cursorController = FindObjectOfType<CursorController>();
             _inputHandler = GetComponent<InputHandler>();
             _boostHandler = GetComponent<IBoostHandler>();
             _rotationHandler = GetComponent<IRotationHandler>();

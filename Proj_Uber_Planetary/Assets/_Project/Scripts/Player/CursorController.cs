@@ -91,7 +91,7 @@ namespace UberPlanetary.Player
         /// </summary>
         private void AssignComponents()
         {
-            _inputHandler = GetComponentInParent<InputHandler>();
+            _inputHandler = FindObjectOfType<InputHandler>().GetComponent<IInputProvider>();
         }
 
         /// <summary>
