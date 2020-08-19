@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UberPlanetary.CheckPoints;
 using UberPlanetary.Core;
 using UberPlanetary.Player;
 using UnityEngine;
@@ -12,7 +11,7 @@ namespace UberPlanetary
 {
     public class CourseTimer : MonoBehaviour
     {
-        [SerializeField] private Text TimerText;
+        [SerializeField] private Text timerText;
         
         private List<TimeStamp> _checkPointTimes = new List<TimeStamp>();
         private List<TimeStamp> _maxSpeedCheckPointTimes = new List<TimeStamp>();
@@ -24,7 +23,7 @@ namespace UberPlanetary
         private float _timer, _maxSpeedTimer;
         private float _maxSpeedMilliseconds,_maxSpeedSeconds, _maxSpeedMinutes;
         
-        private bool _isAboveSpeedThreshold => _playerSpeed.GetValue > .9f;
+        private bool IsAboveSpeedThreshold => _playerSpeed.GetValue > .8f;
         private IEventValueProvider<float> _playerSpeed;
         
         public string CourseName { get; set; }
@@ -37,7 +36,6 @@ namespace UberPlanetary
 
         public void ClearTimer()
         {
-            // _finalTimeString = "00:00:00";
             _milliseconds = 0;
             _seconds = 0;
             _minutes = 0;
@@ -46,7 +44,7 @@ namespace UberPlanetary
             _checkPointTimes.Clear();
             _maxSpeedCheckPointTimes.Clear();
             _timeBetweenCheckPoints.Clear();
-            FormatStringTimer();
+            timerText.text = FormatStringTimer(0,0,0);
         }
 
         [ContextMenu("Start Timer")]
@@ -75,10 +73,10 @@ namespace UberPlanetary
             {
                 Analytics.CustomEvent(CourseName + " CheckPoint Times", new Dictionary<string, object>
                 {
-                    { "String Time : " + i, $"{timeStamps.Minutes:00}:{timeStamps.Seconds:00}:{timeStamps.Milliseconds:00}"},
-                    { "Minutes : " + i, timeStamps.Minutes},
-                    {"Seconds : " + i, timeStamps.Seconds},
-                    {"Milliseconds : " + i, timeStamps.Milliseconds}
+                    { "String Time : " + i, FormatStringTimer(timeStamps.Minutes,timeStamps.Seconds, timeStamps.Milliseconds)},
+                    // { "Minutes : " + i, timeStamps.Minutes},
+                    // {"Seconds : " + i, timeStamps.Seconds},
+                    // {"Milliseconds : " + i, timeStamps.Milliseconds}
                 });
                 i++;
             }
@@ -87,10 +85,10 @@ namespace UberPlanetary
             {
                 Analytics.CustomEvent(CourseName + " Max Speed CheckPoint Times", new Dictionary<string, object>
                 {
-                    { "String Time : " + i, $"{timeStamps.Minutes:00}:{timeStamps.Seconds:00}:{timeStamps.Milliseconds:00}"},
-                    { "Minutes : " + i, timeStamps.Minutes},
-                    {"Seconds : " + i, timeStamps.Seconds},
-                    {"Milliseconds : " + i, timeStamps.Milliseconds}
+                    { "String Time : " + i, FormatStringTimer(timeStamps.Minutes,timeStamps.Seconds, timeStamps.Milliseconds)},
+                    // { "Minutes : " + i, timeStamps.Minutes},
+                    // {"Seconds : " + i, timeStamps.Seconds},
+                    // {"Milliseconds : " + i, timeStamps.Milliseconds}
                 });
                 i++;
             }
@@ -99,10 +97,10 @@ namespace UberPlanetary
             {
                 Analytics.CustomEvent(CourseName + " Time Between CheckPoint", new Dictionary<string, object>
                 {
-                    { "String Time : " + i, $"{timeStamps.Minutes:00}:{timeStamps.Seconds:00}:{timeStamps.Milliseconds:00}"},
-                    { "Minutes : " + i, timeStamps.Minutes},
-                    {"Seconds : " + i, timeStamps.Seconds},
-                    {"Milliseconds : " + i, timeStamps.Milliseconds}
+                    { "String Time : " + i, FormatStringTimer(timeStamps.Minutes,timeStamps.Seconds, timeStamps.Milliseconds)},
+                    // { "Minutes : " + i, timeStamps.Minutes},
+                    // {"Seconds : " + i, timeStamps.Seconds},
+                    // {"Milliseconds : " + i, timeStamps.Milliseconds}
                 });
                 i++;
             }
@@ -123,59 +121,38 @@ namespace UberPlanetary
                 _milliseconds = (int)((_timer - (int) _timer) * 100);
                 _seconds = (int) (_timer % 60);
                 _minutes = (int) (_timer / 60 % 60);
-                if (_isAboveSpeedThreshold)
+                if (IsAboveSpeedThreshold)
                 {
                     _maxSpeedTimer += Time.deltaTime;
                     _maxSpeedMilliseconds = (int)((_maxSpeedTimer - (int) _maxSpeedTimer) * 100);
                     _maxSpeedSeconds = (int) (_maxSpeedTimer % 60);
                     _maxSpeedMinutes = (int) (_maxSpeedTimer / 60 % 60);
                 }
-                FormatStringTimer();
+                timerText.text = FormatStringTimer(_minutes,_seconds,_milliseconds);
                 yield return new WaitForEndOfFrame();
             }
         }
 
-        private void FormatStringTimer()
+        private string FormatStringTimer(float m, float s, float ms)
         {
-            //TimerText.text = string.Format("{0:00}:{1:00}:{2:00}", _minutes, _seconds, _milliseconds);
-            TimerText.text = $"{_minutes:00}:{_seconds:00}:{_milliseconds:00}";
-        }
-    }
-
-    [System.Serializable]
-    public class TimeData
-    {
-        private string _courseName;
-        private List<TimeStamp> _checkPointTimes;
-        private List<TimeStamp> _maxSpeedCheckPointTimes;
-        private List<TimeStamp> _timeBetweenCheckPoints;
-
-        public TimeData(string courseName, List<TimeStamp> checkPointTimes, List<TimeStamp> maxSpeedCheckPointTimes, List<TimeStamp> timeBetweenCheckPoints)
-        {
-            _courseName = courseName;
-            _checkPointTimes = checkPointTimes;
-            _maxSpeedCheckPointTimes = maxSpeedCheckPointTimes;
-            _timeBetweenCheckPoints = timeBetweenCheckPoints;
-        }
-        
-    }
-    
-    [System.Serializable]
-    public class TimeStamp
-    {
-        private float _milliseconds,_seconds, _minutes;
-
-        public float Milliseconds => _milliseconds;
-
-        public float Seconds => _seconds;
-
-        public float Minutes => _minutes;
-
-        public TimeStamp(float minutes, float seconds, float milliseconds)
-        {
-            this._minutes = minutes;
-            this._milliseconds = milliseconds;
-            this._seconds = seconds;
+           return $"{m:00}:{s:00}:{ms:00}";
         }
     }
 }
+    
+    [Serializable]
+    public class TimeStamp
+    {
+        public float Milliseconds { get; }
+
+        public float Seconds { get; }
+
+        public float Minutes { get; }
+
+        public TimeStamp(float minutes, float seconds, float milliseconds)
+        {
+            this.Minutes = minutes;
+            this.Milliseconds = milliseconds;
+            this.Seconds = seconds;
+        }
+    }
