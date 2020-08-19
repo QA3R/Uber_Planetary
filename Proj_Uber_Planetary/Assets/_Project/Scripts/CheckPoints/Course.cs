@@ -15,7 +15,7 @@ namespace UberPlanetary.CheckPoints
         
         private void Start()
         {
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < transform.childCount - 1; i++)
             {
                 _checkPoints.Add(transform.GetChild(i).GetComponent<ICheckPoint>());
             }
@@ -24,11 +24,11 @@ namespace UberPlanetary.CheckPoints
 
         public void UpdateCourse()
         {
-            if (_courseIndex < _checkPoints.Count)
+            if (_courseIndex < _checkPoints.Count - 1)
             {
                 _checkPoints[_courseIndex].SetAsCurrent();
                 onTargetChanged?.Invoke(_checkPoints[_courseIndex].Position());
-                if (_courseIndex <_checkPoints.Count -1)
+                if (_courseIndex <_checkPoints.Count - 2)
                 {
                     _checkPoints[++_courseIndex].SetAsNext();
                 }
