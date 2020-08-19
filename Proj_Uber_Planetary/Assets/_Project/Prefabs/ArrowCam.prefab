@@ -59,7 +59,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2137201903129326103, guid: 6aa11e065395ebe4da0c3f31f86a9a24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2137201903129326103, guid: 6aa11e065395ebe4da0c3f31f86a9a24, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2137201903129326103, guid: 6aa11e065395ebe4da0c3f31f86a9a24, type: 3}
       propertyPath: m_LocalRotation.x
