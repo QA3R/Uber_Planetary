@@ -1392,7 +1392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -1472,7 +1472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: ClearTimer
+      value: StartNewTimer
       objectReference: {fileID: 0}
     - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1480,7 +1480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: StartNewTimer
+      value: AddNewTimeStamp
       objectReference: {fileID: 0}
     - target: {fileID: 4086067717917222958, guid: 70963231e431d9741945a78a7dc84d9f, type: 3}
       propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
