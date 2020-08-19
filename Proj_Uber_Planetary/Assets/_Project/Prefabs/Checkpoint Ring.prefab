@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRingLitColor: {r: 0, g: 0.90060884, b: 2.1185474, a: 0}
-  currentRingShadedColor: {r: 0.34241205, g: 0.6933428, b: 1.1473808, a: 0}
+  currentRingShadedColor: {r: 0.068643905, g: 0.3756543, b: 0.7659217, a: 0}
   nextRingLitColor: {r: 1, g: 1, b: 1, a: 0}
-  nextRingShadedColor: {r: 1.0940143, g: 1.0940143, b: 1.0940143, a: 0}
+  nextRingShadedColor: {r: 0.54700714, g: 0.54700714, b: 0.54700714, a: 0}
   litColorPropertyName: Color_F689E8B9
   shadedColorPropertyName: Color_28180829
   onCurrentCheckPoint:
