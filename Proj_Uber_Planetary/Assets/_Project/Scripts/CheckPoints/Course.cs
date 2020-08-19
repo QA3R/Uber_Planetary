@@ -12,23 +12,24 @@ namespace UberPlanetary.CheckPoints
         private int _courseIndex = 0;
 
         [SerializeField] UnityEvent<Vector3> onTargetChanged;
+        [SerializeField] GameObject ringHolder;
         
         private void Start()
         {
-            for (int i = 0; i < transform.childCount - 1; i++)
+            for (int i = 0; i < ringHolder.transform.childCount; i++)
             {
-                _checkPoints.Add(transform.GetChild(i).GetComponent<ICheckPoint>());
+                _checkPoints.Add(ringHolder.transform.GetChild(i).GetComponent<ICheckPoint>());
             }
             UpdateCourse();
         }
 
         public void UpdateCourse()
         {
-            if (_courseIndex < _checkPoints.Count - 1)
+            if (_courseIndex < _checkPoints.Count)
             {
                 _checkPoints[_courseIndex].SetAsCurrent();
                 onTargetChanged?.Invoke(_checkPoints[_courseIndex].Position());
-                if (_courseIndex <_checkPoints.Count - 2)
+                if (_courseIndex <_checkPoints.Count -1)
                 {
                     _checkPoints[++_courseIndex].SetAsNext();
                 }
