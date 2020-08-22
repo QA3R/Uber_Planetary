@@ -22,6 +22,7 @@ namespace UberPlanetary.Player
 
         private void Update()
         {
+            //if (_previousValue == EventValueProvider.GetValue) return;
             InvokeEvent();
         }
 
@@ -32,7 +33,6 @@ namespace UberPlanetary.Player
 
         public void InvokeEvent()
         {
-            if (_previousValue == EventValueProvider.GetValue) return;
             onValueChange?.Invoke(EventValueProvider.GetValue);
             _previousValue = EventValueProvider.GetValue;
         }
