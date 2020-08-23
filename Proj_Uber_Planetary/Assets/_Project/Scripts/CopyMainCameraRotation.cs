@@ -1,10 +1,9 @@
-﻿using System;
-using UberPlanetary.Core;
+﻿using UberPlanetary.Core;
 using UnityEngine;
 
 namespace UberPlanetary
 {
-    public class CopyRotation : MonoBehaviour
+    public class CopyMainCameraRotation : MonoBehaviour
     {
         private IEventValueProvider<Quaternion> _camRotation;
 

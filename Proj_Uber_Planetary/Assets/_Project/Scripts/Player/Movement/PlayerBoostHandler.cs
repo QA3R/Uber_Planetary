@@ -1,7 +1,7 @@
 ﻿using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary.Player
+namespace UberPlanetary.Player.Movement
 {
     public class PlayerBoostHandler : MonoBehaviour, IBoostHandler
     {

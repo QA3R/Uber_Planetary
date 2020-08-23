@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UberPlanetary.Core;
 using UberPlanetary.Player;
+using UberPlanetary.Player.Movement;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.UI;
 
-namespace UberPlanetary
+namespace UberPlanetary.Course
 {
     public class CourseTimer : MonoBehaviour
     {
@@ -135,11 +136,10 @@ namespace UberPlanetary
 
         private string FormatStringTimer(float m, float s, float ms)
         {
-           return $"{m:00}:{s:00}:{ms:00}";
+            return $"{m:00}:{s:00}:{ms:00}";
         }
     }
-}
-    
+
     [Serializable]
     public class TimeStamp
     {
@@ -156,3 +156,4 @@ namespace UberPlanetary
             this.Seconds = seconds;
         }
     }
+}

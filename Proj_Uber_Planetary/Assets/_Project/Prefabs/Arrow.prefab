@@ -95,3 +95,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 25
+  testObject: {fileID: 11500000, guid: 478f131081cd6c94aa05318535bf8726, type: 3}

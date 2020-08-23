@@ -1,8 +1,7 @@
-﻿using System;
-using UberPlanetary.Core;
+﻿using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary.Player
+namespace UberPlanetary.Player.Movement
 {
     public class PlayerMovementHandler : MonoBehaviour, IMovementHandler
     {

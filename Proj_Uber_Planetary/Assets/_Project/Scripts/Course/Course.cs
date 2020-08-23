@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UberPlanetary.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UberPlanetary.CheckPoints
+namespace UberPlanetary.Course
 {
+    /// <summary>
+    /// Generates a list of checkpoints from the provided objet's children and calls functions on the interface appropriately 
+    /// </summary>
     public class Course : MonoBehaviour
     {
         private List<ICheckPoint> _checkPoints = new List<ICheckPoint>();
@@ -23,6 +25,7 @@ namespace UberPlanetary.CheckPoints
             UpdateCourse();
         }
 
+        //Error checking for end of list
         public void UpdateCourse()
         {
             if (_courseIndex < _checkPoints.Count)

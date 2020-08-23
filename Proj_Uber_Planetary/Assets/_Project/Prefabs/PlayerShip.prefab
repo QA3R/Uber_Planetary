@@ -527,7 +527,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: 0.0000000037252899, y: 0.0000000015670467, z: -1.5670469e-10, w: 1}
+  m_LocalRotation: {x: -0, y: 1.02590145e-10, z: -1.025898e-11, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -661,7 +661,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.0498137, y: 0.0000000021477586, z: -1.0712077e-10, w: 0.99875855}
+  m_LocalRotation: {x: 0.049813703, y: 0.0000000020817634, z: -1.0382924e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -889,10 +889,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb045bb990f9458b900ef2788f79c04b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRotationSpeed: 80
+  xRotationSpeed: 60
   yRotationSpeed: 60
-  zRotationSpeed: 100
-  rotationLossMultiplier: 0.5
+  zRotationSpeed: 80
+  rotationLossMultiplier: 0.4
 --- !u!114 &2839219001471342374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,7 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dff3fafda6841f9ba3cf3f9e5cf209d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageableTag: Asteroid
+  damageableTags:
+  - Asteroid
 --- !u!65 &740858015040728191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1531,7 +1532,7 @@ GameObject:
   - component: {fileID: 4838597574984632477}
   - component: {fileID: 8034750086553155527}
   m_Layer: 0
-  m_Name: JimmyAd
+  m_Name: JimmyTrophy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

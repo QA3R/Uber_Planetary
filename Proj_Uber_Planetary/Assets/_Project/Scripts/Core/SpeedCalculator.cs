@@ -34,20 +34,20 @@ namespace UberPlanetary.Core
         private void Update()
         {
             //CalculateSpeed();
-            Debug.Log("Current Speed : " + _speed);
+            // Debug.Log("Current Speed : " + _speed);
             speedText.text = _speed.ToString();
         }
 
-        /// <summary>
-        /// Speed calculated based on position delta over time
-        /// </summary>
-        private void CalculateSpeed()
-        {
-            _previousPosition = _currentPosition;
-            _currentPosition = transform.position;
-            _speed = (_currentPosition - _previousPosition).magnitude / Time.deltaTime;
-            _remappedSpeed = _speed.Remap(0, iMax, 0, 1);
-        }
+        // /// <summary>
+        // /// Speed calculated based on position delta over time
+        // /// </summary>
+        // private void CalculateSpeed()
+        // {
+        //     _previousPosition = _currentPosition;
+        //     _currentPosition = transform.position;
+        //     _speed = (_currentPosition - _previousPosition).magnitude / Time.deltaTime;
+        //     _remappedSpeed = _speed.Remap(0, iMax, 0, 1);
+        // }
 
         /// <summary>
         /// Velocity calculated based on position delta over time

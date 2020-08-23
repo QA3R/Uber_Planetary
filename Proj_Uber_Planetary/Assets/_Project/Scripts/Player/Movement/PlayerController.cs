@@ -1,8 +1,7 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using UberPlanetary.Core;
+﻿using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary.Player
+namespace UberPlanetary.Player.Movement
 {
     /// <summary>
     /// Delegates tasks to other classes according to input

@@ -1,5 +1,6 @@
 ﻿using System;
 using UberPlanetary.Core;
+using UberPlanetary.Player.Movement;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -36,6 +37,5 @@ namespace UberPlanetary.Player
             onValueChange?.Invoke(EventValueProvider.GetValue);
             _previousValue = EventValueProvider.GetValue;
         }
-
     }
 }

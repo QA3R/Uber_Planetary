@@ -1,11 +1,9 @@
-﻿using System;
-using UberPlanetary.Core;
+﻿using UberPlanetary.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UberPlanetary.CheckPoints
+namespace UberPlanetary.Course
 {
-    
     public class CheckPoint : MonoBehaviour, ICheckPoint
     {
         private Material _material;
@@ -23,6 +21,7 @@ namespace UberPlanetary.CheckPoints
             _collider = GetComponent<BoxCollider>();
         }
 
+        //Sets the color and invokes corresponding event
         public void SetAsCurrent()
         {
             onCurrentCheckPoint?.Invoke();
@@ -30,6 +29,7 @@ namespace UberPlanetary.CheckPoints
             HighlightCheckPoint(shadedColorPropertyName, currentRingShadedColor);
         }
 
+        //Changes the color to the next ring colors
         public void SetAsNext()
         {
             HighlightCheckPoint(litColorPropertyName, nextRingLitColor);
@@ -41,11 +41,17 @@ namespace UberPlanetary.CheckPoints
             return transform.position;
         }
 
+        /// <summary>
+        /// Takes a string id and color and assigns that to shader's property
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="color"></param>
         private void HighlightCheckPoint(string id, Color color)
         {
             _material.SetColor(id, color);
         }
 
+        //called from unity event to update the course
         public void UpdateCourse()
         {
             _course.UpdateCourse();

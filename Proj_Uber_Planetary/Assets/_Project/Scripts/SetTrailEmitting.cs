@@ -15,5 +15,10 @@ namespace UberPlanetary
         {
             _trail.emitting = val > 0;
         }
+
+        public void ToggleEmitting()
+        {
+            _trail.emitting = !_trail.emitting;
+        }
     }
 }

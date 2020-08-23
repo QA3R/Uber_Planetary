@@ -8,13 +8,17 @@ namespace UberPlanetary.CollisionHandling
     /// </summary>
     public class OnCollisionDealDamage : MonoBehaviour
     {
-        [SerializeField] private string damageableTag;
+        [SerializeField] private string[] damageableTags;
         
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.CompareTag(damageableTag))
+            for (int i = 0; i < damageableTags.Length; i++)
             {
-                other.gameObject.GetComponent<ITakeDamage>().TakeDamage();
+                if (other.gameObject.CompareTag(damageableTags[i]))
+                {
+                    other.gameObject.GetComponent<ITakeDamage>().TakeDamage();
+                    break;
+                }
             }
         }
     }

@@ -86,6 +86,9 @@ namespace UberPlanetary.Core
         event Action<float> OnBoost;
     }
     
+    /// <summary>
+    /// Interface for courses to communicate with checkpoints
+    /// </summary>
     public interface ICheckPoint
     {
         void SetAsCurrent();

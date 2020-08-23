@@ -45,5 +45,4 @@ namespace UberPlanetary.Core
             return new Rect((Vector2)inTransform.position - (size * 0.5f), size);
         }
     }
-
 }

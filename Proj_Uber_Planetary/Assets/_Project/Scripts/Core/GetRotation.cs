@@ -1,7 +1,6 @@
-﻿using UberPlanetary.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace UberPlanetary
+namespace UberPlanetary.Core
 {
     public class GetRotation : MonoBehaviour , IEventValueProvider<Quaternion>
     {

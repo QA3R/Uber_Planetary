@@ -1,7 +1,7 @@
 ﻿using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary
+namespace UberPlanetary.Player
 {
     public class TiltWings : MonoBehaviour
     {

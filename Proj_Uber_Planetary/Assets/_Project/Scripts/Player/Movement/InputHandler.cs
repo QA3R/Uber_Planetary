@@ -2,7 +2,7 @@
 using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary.Player
+namespace UberPlanetary.Player.Movement
 {
     /// <summary>
     /// Implements the input interface and invokes events based on proper axis's names

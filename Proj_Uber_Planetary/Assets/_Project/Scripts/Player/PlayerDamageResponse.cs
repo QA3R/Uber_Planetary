@@ -1,5 +1,6 @@
 ﻿using System;
 using UberPlanetary.CollisionHandling;
+using UberPlanetary.Player.Movement;
 
 namespace UberPlanetary.Player
 {

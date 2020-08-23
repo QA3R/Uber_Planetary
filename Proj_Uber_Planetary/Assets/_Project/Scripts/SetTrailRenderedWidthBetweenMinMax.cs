@@ -1,10 +1,12 @@
-﻿using System;
-using UberPlanetary.Core;
+﻿using UberPlanetary.Core;
 using UnityEngine;
 
 namespace UberPlanetary
 {
-    public class ChangeTrailWidth : MonoBehaviour
+    /// <summary>
+    /// Expects values between 0-1 and remaps them to provided range
+    /// </summary>
+    public class SetTrailRenderedWidthBetweenMinMax : MonoBehaviour
     {
         private TrailRenderer _trail;
         [SerializeField] private float minStarWidth, maxStartWidth, minEndWidth, maxEndWidth;
