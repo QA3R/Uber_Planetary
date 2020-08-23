@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UberPlanetary.Core;
 using UnityEngine;
 using UnityEngine.Events;

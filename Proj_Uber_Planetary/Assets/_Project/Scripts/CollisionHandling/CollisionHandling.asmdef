@@ -1,0 +1,15 @@
+{
+    "name": "CollisionHandling",
+    "references": [
+        "GUID:b130331a1cb00a7409c8316d99e8f35c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

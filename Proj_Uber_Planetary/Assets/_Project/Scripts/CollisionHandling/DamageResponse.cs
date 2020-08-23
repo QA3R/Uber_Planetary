@@ -1,4 +1,4 @@
-﻿using UberPlanetary.Core;
+using UberPlanetary.Core;
 using UnityEngine;
 using UnityEngine.Events;
 

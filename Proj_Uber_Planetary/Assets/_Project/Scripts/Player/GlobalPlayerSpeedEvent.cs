@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UberPlanetary.Core;
 using UberPlanetary.Player.Movement;
 using UnityEngine;

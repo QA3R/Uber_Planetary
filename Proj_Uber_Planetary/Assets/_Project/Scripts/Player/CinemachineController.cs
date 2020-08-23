@@ -1,4 +1,4 @@
-﻿using Cinemachine;
+using Cinemachine;
 using UberPlanetary.Core;
 using UnityEngine;
 

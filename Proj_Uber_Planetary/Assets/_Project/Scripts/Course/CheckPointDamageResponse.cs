@@ -1,4 +1,4 @@
-﻿using UberPlanetary.CollisionHandling;
+using UberPlanetary.CollisionHandling;
 using UnityEngine;
 
 namespace UberPlanetary.Course
