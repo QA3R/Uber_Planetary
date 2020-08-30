@@ -3939,11 +3939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000021481266
+      value: -0.000000002148127
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.0713914e-10
+      value: 1.0713916e-10
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4014,6 +4014,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: keyCodes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: buttonStrings.Array.data[0]
       value: 323
       objectReference: {fileID: 0}
@@ -4040,6 +4044,18 @@ PrefabInstance:
     - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: scrollAxisName
       value: Scroll
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: keyCodes.Array.data[0]
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: keyCodes.Array.data[1]
+      value: 324
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: keyCodes.Array.data[2]
+      value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 750039389709115537, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.x
