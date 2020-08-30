@@ -4,9 +4,7 @@ using UberPlanetary.Player.Movement;
 
 namespace UberPlanetary.Player
 {
-    /// <summary>
     /// Functions for what happens when player is hit
-    /// </summary>
     public class PlayerDamageResponse : DamageResponse
     {
         private PlayerController _playerController;

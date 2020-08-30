@@ -21,7 +21,7 @@ namespace UberPlanetary.Course
             _collider = GetComponent<BoxCollider>();
         }
 
-        //Sets the color and invokes corresponding event
+        ///Sets the color and invokes corresponding event
         public void SetAsCurrent()
         {
             onCurrentCheckPoint?.Invoke();
@@ -29,7 +29,7 @@ namespace UberPlanetary.Course
             HighlightCheckPoint(shadedColorPropertyName, currentRingShadedColor);
         }
 
-        //Changes the color to the next ring colors
+        ///Changes the color to the next ring colors
         public void SetAsNext()
         {
             HighlightCheckPoint(litColorPropertyName, nextRingLitColor);
@@ -41,17 +41,13 @@ namespace UberPlanetary.Course
             return transform.position;
         }
 
-        /// <summary>
         /// Takes a string id and color and assigns that to shader's property
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="color"></param>
         private void HighlightCheckPoint(string id, Color color)
         {
             _material.SetColor(id, color);
         }
 
-        //called from unity event to update the course
+        ///called from unity event to update the course
         public void UpdateCourse()
         {
             _course.UpdateCourse();

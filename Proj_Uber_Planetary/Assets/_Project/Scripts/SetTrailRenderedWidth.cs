@@ -3,9 +3,7 @@ using UnityEngine;
 
 namespace UberPlanetary
 {
-    /// <summary>
     /// Expects values between 0-1 and remaps them to provided range
-    /// </summary>
     public class SetTrailRenderedWidth : MonoBehaviour
     {
         private TrailRenderer _trail;

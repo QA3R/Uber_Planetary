@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 namespace UberPlanetary.Player
 {
-    /// <summary>
     /// Populates the list of cursor images and exposes a function to set their alpha.
-    /// </summary>
     public class SetCursorAlpha : MonoBehaviour
     {
         private readonly List<Image> _childCursorImages = new List<Image>();
@@ -24,9 +22,7 @@ namespace UberPlanetary.Player
             }
         }
 
-        /// <summary>
         /// Set Cursor's Alpha based on the current Cursor's Axis (position 0-1)
-        /// </summary>
         public void SetAlpha(Vector2 val)
         {
             for (int i = 0; i < _childCursorImages.Count; i++)

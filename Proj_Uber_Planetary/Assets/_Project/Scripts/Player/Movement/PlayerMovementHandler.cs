@@ -11,29 +11,36 @@ namespace UberPlanetary.Player.Movement
         [SerializeField] private float backwardMovementSpeed = 80;
         [SerializeField] private float passiveMovementSpeed = 20;
 
+        public float ForwardSpeed
+        {
+            get => forwardMovementSpeed;
+            set => forwardMovementSpeed = value;
+        }
 
         private void Awake()
         {
             _playerSpeed = GetComponent<SpeedCalculator>();
         }
         
-        /// <summary>
-        /// Translate object forward
-        /// </summary>
-        /// <param name="val"></param>
         public void MoveForward(float val)
         {
-            transform.Translate(transform.forward * (val * (forwardMovementSpeed * Time.deltaTime)), Space.World);
+            Move(val, forwardMovementSpeed);
         }
 
         public void MoveBackward(float val)
         {
-            transform.Translate(transform.forward * (val * (backwardMovementSpeed * Time.deltaTime)), Space.World);
+            Move(val, backwardMovementSpeed);
         }
-
+        
         private void Update()
         {
-            transform.Translate(transform.forward * (passiveMovementSpeed * Time.deltaTime), Space.World);
+            Move(1, passiveMovementSpeed);
+        }
+
+        /// Translate Object in direction with speed
+        private void Move(float val, float speedMultiplier)
+        {
+            transform.Translate(transform.forward * (val * (speedMultiplier * Time.deltaTime)), Space.World);
         }
     }
 }

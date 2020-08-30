@@ -4,9 +4,7 @@ using UnityEngine.Events;
 
 namespace UberPlanetary.CollisionHandling
 {
-    /// <summary>
-    /// Inherit from this and write additional functions to be a part of damage response 
-    /// </summary>
+    /// Inherit from this and write additional functions to be a part of damage response along with calling the TakeDamage method if applicable
     public class DamageResponse : MonoBehaviour, ITakeDamage
     {
         public UnityEvent onDamageTaken;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UberPlanetary.Core
+namespace UberPlanetary
 {
     public class FollowTargetWithOffset : MonoBehaviour
     {

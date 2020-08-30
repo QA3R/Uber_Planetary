@@ -3,9 +3,7 @@ using UnityEngine;
 
 namespace UberPlanetary.Player.Movement
 {
-    /// <summary>
     /// Delegates tasks to other classes according to input
-    /// </summary>
     public class PlayerController : MonoBehaviour 
     {
         //Private Members
@@ -49,9 +47,7 @@ namespace UberPlanetary.Player.Movement
             _boostHandler.Boost(val);
         }
         
-        /// <summary>
         /// Get Component Reference from GameObject
-        /// </summary>
         private void AssignComponents()
         {
             _cursorController = FindObjectOfType<CursorController>();
@@ -61,9 +57,7 @@ namespace UberPlanetary.Player.Movement
             _movementHandler = GetComponent<IMovementHandler>();
         }
     
-        /// <summary>
         /// Assign methods to respective delegates
-        /// </summary>
         private void AssignDelegates()
         {
             _inputHandler.OnRotate += Rotate;
@@ -72,9 +66,7 @@ namespace UberPlanetary.Player.Movement
             _inputHandler.OnMoveBackward += MoveBackward;
         }
 
-        /// <summary>
         /// UnAssign methods on Disable
-        /// </summary>
         private void OnDisable()
         {
             _inputHandler.OnRotate -= Rotate;

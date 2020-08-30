@@ -5,9 +5,7 @@ using UnityEngine.Events;
 
 namespace UberPlanetary.Player
 {
-    /// <summary>
     /// Finds the Cursor Axis value provider and invokes event
-    /// </summary>
     public class LocalPlayerRawCursorEvent : MonoBehaviour, IEventExposer<Vector2>
     {
         public IEventValueProvider<Vector2> EventValueProvider { get; set; }

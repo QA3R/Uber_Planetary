@@ -14,9 +14,9 @@ namespace UberPlanetary.Course
     {
         [SerializeField] private Text timerText;
         
-        private List<TimeStamp> _checkPointTimes = new List<TimeStamp>();
-        private List<TimeStamp> _maxSpeedCheckPointTimes = new List<TimeStamp>();
-        private List<TimeStamp> _timeBetweenCheckPoints = new List<TimeStamp>();
+        private readonly List<TimeStamp> _checkPointTimes = new List<TimeStamp>();
+        private readonly List<TimeStamp> _maxSpeedCheckPointTimes = new List<TimeStamp>();
+        private readonly List<TimeStamp> _timeBetweenCheckPoints = new List<TimeStamp>();
         private TimeStamp _previousTimeStamp;
         
         private string _finalTimeString;
@@ -35,7 +35,7 @@ namespace UberPlanetary.Course
             Analytics.enabled = true;
         }
 
-        public void ClearTimer()
+        private void ClearTimer()
         {
             _milliseconds = 0;
             _seconds = 0;
@@ -134,7 +134,7 @@ namespace UberPlanetary.Course
             }
         }
 
-        private string FormatStringTimer(float m, float s, float ms)
+        private static string FormatStringTimer(float m, float s, float ms)
         {
             return $"{m:00}:{s:00}:{ms:00}";
         }

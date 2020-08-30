@@ -1,10 +1,8 @@
 using UnityEngine;
 
-namespace UberPlanetary.Core
+namespace UberPlanetary
 {
-    /// <summary>
     /// Rotates the object in the axis with a speed
-    /// </summary>
     public class RotateOverTimeOnAxis : MonoBehaviour
     {
         //[SerializeField] private bool x, y, z;

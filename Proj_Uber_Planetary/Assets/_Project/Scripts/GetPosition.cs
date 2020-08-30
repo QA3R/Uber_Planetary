@@ -1,6 +1,7 @@
+using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary.Core
+namespace UberPlanetary
 {
     public class GetPosition : MonoBehaviour, IEventValueProvider<Vector3>
     {

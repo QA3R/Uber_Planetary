@@ -28,10 +28,7 @@ namespace UberPlanetary.Player.Movement
             rotationLossMultiplier = 1f;
         }
 
-        /// <summary>
         /// Rotate object based on mouse cursor position and other inputs
-        /// </summary>
-        /// <param name="dir"></param>
         public void Rotate(Vector3 dir)
         {
             transform.Rotate(new Vector3(dir.x * xRotationSpeed,dir.y * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));

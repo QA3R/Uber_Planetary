@@ -1,11 +1,8 @@
-using System;
 using UnityEngine;
 
 namespace UberPlanetary.Asteroid
 {
-    /// <summary>
     /// Draws Gizmos to help visualize ranges for Asteroid's components
-    /// </summary>
     public class DrawRanges : MonoBehaviour
     {
         [SerializeField] private float mainRadius;

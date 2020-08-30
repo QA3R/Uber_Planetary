@@ -4,9 +4,7 @@ using UnityEngine;
 
 namespace UberPlanetary.Player
 {
-    /// <summary>
     /// Controls the Cinemachine camera's properties and provides functions to modify them
-    /// </summary>
     public class CinemachineController : MonoBehaviour
     {
         //Private members
@@ -26,20 +24,14 @@ namespace UberPlanetary.Player
             _cvNoise = _cvCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         }
 
-        /// <summary>
         /// Expects a value between 0 to 1, and remaps it to camera's FOV min max.
-        /// </summary>
-        /// <param name="val"></param>
         public void SetFov(float val)
         {
             _currentFov = val.Remap(0, 1, fovMax, fovMin);
             _cvCam.m_Lens.FieldOfView = _currentFov;
         }
 
-        /// <summary>
         /// Expects a value between 0 to 1 and remaps it to the camera shake frequency based on the animation curve
-        /// </summary>
-        /// <param name="val"></param>
         public void SetShakeFrequency(float val)
         {
             _currentShakeFrequency = val.Remap(0, 1, 0, shakeMax );

@@ -22,10 +22,7 @@ namespace UberPlanetary
             _particleSystem = GetComponent<ParticleSystem>();
         }
 
-        /// <summary>
         /// Expects a value between 0-1 and remaps it to valid range for Particle system speed
-        /// </summary>
-        /// <param name="val"></param>
         public void SetSpeedAmount(float val)
         {
             _currentStartSpeed = speedAnimationCurve.Evaluate(val).Remap(0, 1, minStartSpeed, maxStartSpeed);
@@ -33,10 +30,7 @@ namespace UberPlanetary
             particleSystemMain.startSpeed = _currentStartSpeed;
         }
         
-        /// <summary>
         /// Expects a value between 0-1 and remaps it to valid range for Particle system emission
-        /// </summary>
-        /// <param name="val"></param>
         public void SetParticleAmount(float val)
         {
             _currentParticles = particleAnimationCurve.Evaluate(val).Remap(0, 1, 0, maxParticles);

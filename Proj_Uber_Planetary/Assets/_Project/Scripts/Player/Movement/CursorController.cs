@@ -3,9 +3,7 @@ using UnityEngine;
 
 namespace UberPlanetary.Player.Movement
 {
-    /// <summary>
     /// Controls Cursor Icon's state based on provided input
-    /// </summary>
     public class CursorController : MonoBehaviour, IEventValueProvider<Vector2>
     {
         //Private Members
@@ -37,10 +35,7 @@ namespace UberPlanetary.Player.Movement
             Cursor.lockState = CursorLockMode.Confined;
         }
 
-        /// <summary>
         /// Clamp Cursor's Position inside Provided Rect
-        /// </summary>
-        /// <param name="pos"></param>
         private void MapCursorIcon(Vector3 pos)
         {
             _cursorPos = pos;
@@ -57,11 +52,7 @@ namespace UberPlanetary.Player.Movement
             TranslateCursorAxis(newAllowedRect, newDeadRect);
         }
 
-        /// <summary>
         /// Remaps Cursor's position to be between -1 and 1
-        /// </summary>
-        /// <param name="allowedRect"></param>
-        /// <param name="deadRect"></param>
         private void TranslateCursorAxis(Rect allowedRect, Rect deadRect)
         {
             _remappedX = _cursorPos.x;
@@ -86,25 +77,19 @@ namespace UberPlanetary.Player.Movement
             _cursorAxis.y = _remappedY;
         }
         
-        /// <summary>
         /// Get Component Reference from GameObject
-        /// </summary>
         private void AssignComponents()
         {
             _inputHandler = FindObjectOfType<InputHandler>().GetComponent<IInputProvider>();
         }
 
-        /// <summary>
         /// Assign methods to respective delegates
-        /// </summary>
         private void AssignDelegates()
         {
             _inputHandler.OnMousePosition += MapCursorIcon;
         }
 
-        /// <summary>
         /// UnAssign methods on Disable
-        /// </summary>
         private void OnDisable()
         {
             _inputHandler.OnMousePosition -= MapCursorIcon;
