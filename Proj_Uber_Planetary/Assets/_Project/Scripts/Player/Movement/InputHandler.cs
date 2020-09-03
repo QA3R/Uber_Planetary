@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UberPlanetary.Core;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace UberPlanetary.Player.Movement
         public event Action<float> OnMoveBackward;
         public event Action<Vector3> OnMousePosition;
         public event Action<float> OnBoost;
-        public event Action<Vector2> OnScroll;
+        public event Action<float> OnScroll;
         public Dictionary<KeyCode, ButtonEvent> ClickInfo => _clickInfo;
 
         //Exposed input names
@@ -68,7 +67,7 @@ namespace UberPlanetary.Player.Movement
 
         private void UpdateMouse()
         {
-            OnScroll?.Invoke(Input.mouseScrollDelta);
+            OnScroll?.Invoke(Input.GetAxis(scrollAxisName));
             OnMousePosition?.Invoke(Input.mousePosition);
         }
         

@@ -64,7 +64,7 @@ namespace UberPlanetary.Core
         event Action<float> OnMoveBackward;
         event Action<Vector3> OnMousePosition;
         event Action<float> OnBoost;
-        event Action<Vector2> OnScroll;
+        event Action<float> OnScroll;
         Dictionary<KeyCode, ButtonEvent> ClickInfo {get;}
     }
     /// Interface for courses to communicate with checkpoints
@@ -74,5 +74,44 @@ namespace UberPlanetary.Core
         void SetAsNext();
 
         Vector3 Position();
+    }
+
+    public interface IPhoneNavigator
+    {
+        IPhoneNavigable GetCurrentNavigable { get; }
+
+        List<IPhoneNavigable> NavigableList { get; set; }
+    }
+
+    public interface IScrollHandler
+    {
+        void Scroll(float val);
+    }
+    
+    public interface IPhoneNavigable
+    {
+        void Enter();
+        void Exit();
+    }
+
+    public interface IPhoneApplication : IPhoneNavigable
+    {
+        //application specific functions
+        //Like displaying notifications
+        //Minimizing apps
+        //Playing in background?
+        //etc
+        void DisplayNotification();
+    }
+
+    public interface IPhoneApplicationFeature : IPhoneNavigable
+    {
+        IPhoneNavigable ParentNavigable { get; set; }
+        //Elements inside an application that can be interacted with
+        //like a volume slider
+        //a cross button to back out
+        //Switching to different radio stations
+        //toggling on car features
+        //etc
     }
 }

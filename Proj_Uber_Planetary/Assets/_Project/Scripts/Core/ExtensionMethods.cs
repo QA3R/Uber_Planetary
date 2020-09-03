@@ -18,6 +18,11 @@ namespace UberPlanetary.Core
         }
     }
 
+    public static class IntExtensionMethods
+    {
+        public static int Mod( this int value, int length ) => ( value % length + length ) % length; // modulo
+    }
+
     public static class RectExtensionMethods
     {
         /// Translate a given points from UI Rect space to Screen Space
