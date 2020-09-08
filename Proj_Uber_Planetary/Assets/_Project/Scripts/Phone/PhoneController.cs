@@ -9,6 +9,7 @@ namespace UberPlanetary.Phone
         private bool isActive;
         [SerializeField] private Vector3 offset;
         [SerializeField] private GameObject phone;
+        [SerializeField] private Canvas canvas;
 
         private IPhoneNavigator _phoneNavigator;
 
@@ -34,10 +35,10 @@ namespace UberPlanetary.Phone
 
             if (isActive)
             {
-                phone.transform.position -= offset;
+                phone.transform.position -= offset * canvas.scaleFactor;
                 return;
             }
-            phone.transform.position += offset;
+            phone.transform.position += offset * canvas.scaleFactor;
         }
 
         private void OnLeftClick()

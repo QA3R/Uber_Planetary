@@ -55,7 +55,6 @@ namespace UberPlanetary.Phone
         {
             if (scrollTimer < timeBetweenScrolls || val == 0) return;
             val = (int)Mathf.Sign(val);
-            Debug.Log("VAL "+ val);
             SetCurrentNavigable((int)val);
             scrollTimer = 0;
         }
@@ -63,7 +62,6 @@ namespace UberPlanetary.Phone
         private void SetCurrentNavigable(int val)
         {
             NavigableIndex += val;
-            Debug.Log("Index "+ NavigableIndex);
             GetCurrentNavigable.OnDeselect();
             GetCurrentNavigable = NavigableList[NavigableIndex];
             GetCurrentNavigable.OnSelect();
