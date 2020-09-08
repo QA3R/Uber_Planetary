@@ -10,7 +10,7 @@ namespace UberPlanetary.Phone
         [SerializeField] private Vector3 offset;
         [SerializeField] private GameObject phone;
 
-        private IScrollHandler _scrollHandler;
+        private IPhoneNavigator _phoneNavigator;
 
         private void Awake()
         {
@@ -20,7 +20,7 @@ namespace UberPlanetary.Phone
         private void AssignComponents()
         {
             _inputProvider = GameObject.Find("PlayerShip").GetComponent<IInputProvider>();
-            _scrollHandler = GetComponent<IScrollHandler>();
+            _phoneNavigator = GetComponent<IPhoneNavigator>();
         }
 
         private void Start()
@@ -40,22 +40,23 @@ namespace UberPlanetary.Phone
             phone.transform.position += offset;
         }
 
-        private void OnClick()
+        private void OnLeftClick()
         {
             if(!isActive) return;
             // GetCurrentNavigable . Enter()
+            _phoneNavigator.GetCurrentNavigable.Enter();
         }
 
         private void Scroll(float val)
         {
             if(!isActive) return;
-            _scrollHandler.Scroll(val);
+            _phoneNavigator.Scroll(val);
         }
 
         private void AssignDelegates()
         {
             _inputProvider.ClickInfo[KeyCode.Mouse2].OnDown += TogglePhone;
-            _inputProvider.ClickInfo[KeyCode.Mouse1].OnDown += OnClick;
+            _inputProvider.ClickInfo[KeyCode.Mouse0].OnDown += OnLeftClick;
             _inputProvider.OnScroll += Scroll;
         }
     }

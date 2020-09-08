@@ -76,7 +76,7 @@ namespace UberPlanetary.Core
         Vector3 Position();
     }
 
-    public interface IPhoneNavigator
+    public interface IPhoneNavigator : IScrollHandler
     {
         IPhoneNavigable GetCurrentNavigable { get; }
 
@@ -92,6 +92,9 @@ namespace UberPlanetary.Core
     {
         void Enter();
         void Exit();
+
+        void OnSelect();
+        void OnDeselect();
     }
 
     public interface IPhoneApplication : IPhoneNavigable
