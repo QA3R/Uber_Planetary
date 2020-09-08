@@ -1,11 +1,21 @@
-﻿using UberPlanetary.Core;
+﻿using System;
+using UberPlanetary.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UberPlanetary.Phone.Applications
 {
     public class TestApplication : MonoBehaviour , IPhoneApplication
     {
-        
+        private Material _material;
+        [SerializeField] private string outlineActivePropertyTag;
+        [SerializeField] private string outlineColorPropertyTag;
+        [SerializeField][ColorUsage(true, true)] private Color normalColor, highlightColor;
+        private void Awake()
+        {
+            _material = GetComponent<Image>().material;
+        }
+
         public void Enter()
         {
             Debug.Log("Entering :" + gameObject.name);
@@ -20,6 +30,8 @@ namespace UberPlanetary.Phone.Applications
         {
             //throw new System.NotImplementedException();
             Debug.Log("<color=blue>HIGHLIGHTED </color>" + gameObject.name);
+            _material.SetFloat(outlineActivePropertyTag, 1);
+            _material.SetColor(outlineColorPropertyTag, highlightColor);
 
         }
 
@@ -27,7 +39,8 @@ namespace UberPlanetary.Phone.Applications
         {
             //throw new System.NotImplementedException();
             Debug.Log("<color=red>UNHIGHLIGHTED </color>" + gameObject.name);
-
+            _material.SetFloat(outlineActivePropertyTag, 0);
+            _material.SetColor(outlineColorPropertyTag, normalColor);
         }
 
 
