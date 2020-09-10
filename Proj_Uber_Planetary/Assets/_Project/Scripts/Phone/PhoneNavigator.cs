@@ -7,23 +7,33 @@ namespace UberPlanetary.Phone
 {
     public class PhoneNavigator : MonoBehaviour, IPhoneNavigator
     {
-        [SerializeField] private float timeBetweenScrolls;
-        [SerializeField] private List<GameObject> navigableObjects;
-        private float scrollTimer;
-        
+        private float _scrollTimer;
         private List<IPhoneNavigable> _currentList = new List<IPhoneNavigable>();
         private int _navigableIndex;
-
-        public IPhoneNavigable GetCurrentNavigable { get; private set; }
+        private int _tempIncrement;
+        private IPhoneNavigable _currentNavigable;
         
-
+        [SerializeField] private float timeBetweenScrolls;
+        [SerializeField] private List<GameObject> navigableObjects;
+        
+        public IPhoneNavigable CurrentNavigable
+        {
+            get => _currentNavigable;
+            private set
+            {
+                _currentNavigable?.OnDeselect();
+                _currentNavigable = value;
+                _currentNavigable?.OnSelect();
+            }
+        }
+        
         public List<IPhoneNavigable> NavigableList
         {
             get => _currentList;
             set
             {
                 _currentList = value;
-                GetCurrentNavigable = _currentList[0];
+                CurrentNavigable = _currentList[0];
                 NavigableIndex = 0;
             } 
         }
@@ -40,31 +50,32 @@ namespace UberPlanetary.Phone
             {
                 _currentList.Add(navigableObjects[i].GetComponent<IPhoneNavigable>());
             }
+        }
 
+        private void Start()
+        {
             //Note: Assigning Navigable List to update current navigable etc, but _currentList is populated internally 
             NavigableList = _currentList;
         }
 
         private void Update()
         {
-            if (scrollTimer > timeBetweenScrolls) return;
-            scrollTimer += Time.deltaTime;
+            if (_scrollTimer > timeBetweenScrolls) return;
+            _scrollTimer += Time.deltaTime;
         }
         
         public void Scroll(float val)
         {
-            if (scrollTimer < timeBetweenScrolls || val == 0) return;
-            val = (int)Mathf.Sign(val);
-            SetCurrentNavigable((int)val);
-            scrollTimer = 0;
+            if (_scrollTimer < timeBetweenScrolls || Mathf.Abs(val) < 0.1f) return;
+            _tempIncrement = (int)Mathf.Sign(val);
+            SetCurrentNavigable(_tempIncrement);
+            _scrollTimer = 0;
         }
 
         private void SetCurrentNavigable(int val)
         {
             NavigableIndex += val;
-            GetCurrentNavigable.OnDeselect();
-            GetCurrentNavigable = NavigableList[NavigableIndex];
-            GetCurrentNavigable.OnSelect();
+            CurrentNavigable = NavigableList[NavigableIndex];
         }
     }
 }

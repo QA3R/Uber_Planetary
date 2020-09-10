@@ -33,6 +33,7 @@ namespace UberPlanetary.Phone
         {
             isActive = !isActive;
 
+            //TODO: Animate phone based on state
             if (isActive)
             {
                 phone.transform.position -= offset * canvas.scaleFactor;
@@ -45,7 +46,12 @@ namespace UberPlanetary.Phone
         {
             if(!isActive) return;
             // GetCurrentNavigable . Enter()
-            _phoneNavigator.GetCurrentNavigable.Enter();
+            _phoneNavigator.CurrentNavigable.Enter();
+        }
+
+        private void OnRightClick()
+        {
+            _phoneNavigator.CurrentNavigable.Exit();
         }
 
         private void Scroll(float val)
@@ -57,6 +63,7 @@ namespace UberPlanetary.Phone
         private void AssignDelegates()
         {
             _inputProvider.ClickInfo[KeyCode.Mouse2].OnDown += TogglePhone;
+            _inputProvider.ClickInfo[KeyCode.Mouse1].OnDown += OnRightClick;
             _inputProvider.ClickInfo[KeyCode.Mouse0].OnDown += OnLeftClick;
             _inputProvider.OnScroll += Scroll;
         }

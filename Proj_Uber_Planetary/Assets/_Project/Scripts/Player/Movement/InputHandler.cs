@@ -8,7 +8,7 @@ namespace UberPlanetary.Player.Movement
     /// Implements the input interface and invokes events based on proper axis's names
     public class InputHandler : MonoBehaviour, IInputProvider
     {
-        private Dictionary<KeyCode, ButtonEvent> _clickInfo = new Dictionary<KeyCode, ButtonEvent>();
+        private readonly Dictionary<KeyCode, ButtonEvent> _clickInfo = new Dictionary<KeyCode, ButtonEvent>();
         
         //Delegate Deceleration
         public event Action<Vector3> OnRotate;

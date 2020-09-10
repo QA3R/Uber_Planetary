@@ -36,9 +36,7 @@ namespace UberPlanetary.Core
         //Rotate function
         void Rotate(Vector3 dir);
         ///Reduce Rotation multiplier
-        void DampenRotation();
-        ///ResetRotation multiplier
-        void ResetRotationMultiplier();
+        void DampenRotation(float val);
     }
 
     /// Moves the object based on provided value
@@ -78,7 +76,7 @@ namespace UberPlanetary.Core
 
     public interface IPhoneNavigator : IScrollHandler
     {
-        IPhoneNavigable GetCurrentNavigable { get; }
+        IPhoneNavigable CurrentNavigable { get; }
 
         List<IPhoneNavigable> NavigableList { get; set; }
     }

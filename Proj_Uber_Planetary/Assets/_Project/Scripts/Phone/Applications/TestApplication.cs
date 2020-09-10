@@ -14,6 +14,8 @@ namespace UberPlanetary.Phone.Applications
         private void Awake()
         {
             _material = GetComponent<Image>().material;
+            _material.SetFloat(outlineActivePropertyTag, 0);
+            _material.SetColor(outlineColorPropertyTag, normalColor);
         }
 
         public void Enter()
@@ -32,7 +34,6 @@ namespace UberPlanetary.Phone.Applications
             Debug.Log("<color=blue>HIGHLIGHTED </color>" + gameObject.name);
             _material.SetFloat(outlineActivePropertyTag, 1);
             _material.SetColor(outlineColorPropertyTag, highlightColor);
-
         }
 
         public void OnDeselect()

@@ -11,21 +11,16 @@ namespace UberPlanetary.Player.Movement
         [SerializeField] private float yRotationSpeed = 60;
         [SerializeField] private float zRotationSpeed = 100;
         [SerializeField] [Range(0,1)] private float rotationLossMultiplier = .5f;
-
-        public void DampenRotation()
-        {
-            rotationLossMultiplier = _originalRotLossMultiplier;
-        }
-
-        public void ResetRotationMultiplier()
-        {
-            rotationLossMultiplier = 1f;
-        }
-
+        
         private void Awake()
         {
             _originalRotLossMultiplier = rotationLossMultiplier;
             rotationLossMultiplier = 1f;
+        }
+        
+        public void DampenRotation(float val)
+        {
+            rotationLossMultiplier = Mathf.Lerp(1, _originalRotLossMultiplier, val);
         }
 
         /// Rotate object based on mouse cursor position and other inputs
@@ -33,5 +28,6 @@ namespace UberPlanetary.Player.Movement
         {
             transform.Rotate(new Vector3(dir.x * xRotationSpeed,dir.y * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
         }
+
     }
 }

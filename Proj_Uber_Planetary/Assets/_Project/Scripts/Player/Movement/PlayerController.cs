@@ -36,14 +36,8 @@ namespace UberPlanetary.Player.Movement
         
         private void OnBoost(float val)
         {
-            if (val >= .1)
-            {
-                _rotationHandler.DampenRotation();
-            }
-            else
-            { 
-                _rotationHandler.ResetRotationMultiplier();
-            }
+            _rotationHandler.DampenRotation(val);
+            
             _boostHandler.Boost(val);
         }
         
