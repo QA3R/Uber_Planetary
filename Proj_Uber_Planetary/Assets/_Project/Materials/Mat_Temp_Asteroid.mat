@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Temp_Asteroid
-  m_Shader: {fileID: -6465566751694194690, guid: 4aa46d33b0afb5e49bb0703218e42e0e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c378bcb8ff470da4bb71efc1fc89d3ce, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -28,12 +28,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_321CEB3F: 0
     - Vector1_38BD3441: 0.4
+    - Vector1_4E87E868: 1.9
+    - Vector1_9DE77A28: 0.006
+    - Vector1_BC878080: 1
     - Vector1_CF8B0D8D: 6
+    - Vector1_E4DC2276: 0.5
+    - Vector1_E8D8C946: 6
     - Vector1_ED5ABFD9: 0.006
+    - Vector1_F268431: 0.4
     - Vector1_F3F6B787: 0
     m_Colors:
     - Color_28180829: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
     - Color_57D43A16: {r: 0.95283014, g: 0.95283014, b: 0.95283014, a: 0}
+    - Color_7169309A: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 0}
+    - Color_93D971A0: {r: 0.20784315, g: 0.20784315, b: 0.20784315, a: 1}
+    - Color_B9F825DD: {r: 0, g: 0, b: 0, a: 1}
+    - Color_D39F3FA3: {r: 0.5176471, g: 0.5176471, b: 0.5176471, a: 1}
     - Color_F689E8B9: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   m_BuildTextureStacks: []

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Satellite_Black
-  m_Shader: {fileID: -6465566751694194690, guid: 4aa46d33b0afb5e49bb0703218e42e0e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c378bcb8ff470da4bb71efc1fc89d3ce, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -48,9 +48,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_321CEB3F: -0.2
     - Vector1_38BD3441: 0.28
+    - Vector1_4E87E868: 1.9
+    - Vector1_9DE77A28: 0.03
+    - Vector1_BC878080: 1
     - Vector1_CF8B0D8D: 5.2
+    - Vector1_E4DC2276: 0.5
+    - Vector1_E8D8C946: 5
     - Vector1_ED5ABFD9: 0.029
+    - Vector1_F268431: 0.2
     - Vector1_F3F6B787: -0.23
     - _AlphaClip: 0
     - _Blend: 0
@@ -74,9 +81,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_28180829: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
-    - Color_57D43A16: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 0}
-    - Color_F689E8B9: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
+    - Color_28180829: {r: 0.24705884, g: 0.24705884, b: 0.24705884, a: 1}
+    - Color_57D43A16: {r: 0.4431373, g: 0.4431373, b: 0.4431373, a: 0}
+    - Color_7169309A: {r: 0.4431373, g: 0.4431373, b: 0.4431373, a: 0}
+    - Color_93D971A0: {r: 0.24705884, g: 0.24705884, b: 0.24705884, a: 1}
+    - Color_B9F825DD: {r: 0, g: 0, b: 0, a: 1}
+    - Color_D39F3FA3: {r: 0.16078432, g: 0.16078432, b: 0.16078432, a: 1}
+    - Color_F689E8B9: {r: 0.16078432, g: 0.16078432, b: 0.16078432, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
