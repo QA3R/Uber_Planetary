@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Customer_Pod
+  m_Name: Mat_Pod
   m_Shader: {fileID: -6465566751694194690, guid: c378bcb8ff470da4bb71efc1fc89d3ce, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
