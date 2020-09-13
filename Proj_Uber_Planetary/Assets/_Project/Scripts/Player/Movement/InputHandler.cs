@@ -34,8 +34,7 @@ namespace UberPlanetary.Player.Movement
 
         [Header("Buttons")] 
         [SerializeField] private KeyCode[] keyCodes;
-
-
+        
         private void Awake()
         {
             InitializeDictionary();
@@ -85,12 +84,10 @@ namespace UberPlanetary.Player.Movement
                 Input.GetAxisRaw(yRotAxisName),
                 Input.GetAxisRaw(zRotAxisName)
             ));
-
+            
             OnMoveForward?.Invoke(Input.GetAxis(forwardAxisName));
             OnMoveBackward?.Invoke(Input.GetAxis(backwardAxisName));
             OnBoost?.Invoke(Input.GetAxis(boostAxisName));
         }
     }
-
-    
 }

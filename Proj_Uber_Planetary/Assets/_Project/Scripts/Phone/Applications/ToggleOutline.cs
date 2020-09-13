@@ -14,6 +14,7 @@ namespace UberPlanetary.Phone.Applications
             SetOutlineTo(0);
         }
 
+        // Sets the outline to true or false basically
         public void SetOutlineTo(float val)
         {
             _material.SetFloat(outlineActivePropertyTag, val);

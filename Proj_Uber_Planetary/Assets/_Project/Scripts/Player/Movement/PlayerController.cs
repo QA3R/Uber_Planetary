@@ -45,7 +45,7 @@ namespace UberPlanetary.Player.Movement
         private void AssignComponents()
         {
             _cursorController = FindObjectOfType<CursorController>();
-            _inputHandler = GetComponent<InputHandler>();
+            _inputHandler = GetComponent<IInputProvider>();
             _boostHandler = GetComponent<IBoostHandler>();
             _rotationHandler = GetComponent<IRotationHandler>();
             _movementHandler = GetComponent<IMovementHandler>();

@@ -5,8 +5,10 @@ using UnityEngine.Events;
 
 namespace UberPlanetary.Phone.Applications
 {
+    /// Just a test class for dumy functions
     public class TestApplication : MonoBehaviour , IPhoneApplication
     {
+        //Events exposed to Unity so we can drag and drop things, for eg, on select we might drag in a audio source and play a selection sound etc.
         [SerializeField] private UnityEvent OnEnter, OnExit, OnSelect, OnDeselect;
         
         public void Enter()
