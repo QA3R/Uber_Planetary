@@ -1,50 +1,38 @@
 ﻿using System;
 using UberPlanetary.Core;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 namespace UberPlanetary.Phone.Applications
 {
     public class TestApplication : MonoBehaviour , IPhoneApplication
     {
-        private Material _material;
-        [SerializeField] private string outlineActivePropertyTag;
-        [SerializeField] private string outlineColorPropertyTag;
-        [SerializeField][ColorUsage(true, true)] private Color normalColor, highlightColor;
-        private void Awake()
-        {
-            _material = GetComponent<Image>().material;
-            _material.SetFloat(outlineActivePropertyTag, 0);
-            _material.SetColor(outlineColorPropertyTag, normalColor);
-        }
-
+        [SerializeField] private UnityEvent OnEnter, OnExit, OnSelect, OnDeselect;
+        
         public void Enter()
         {
             Debug.Log("Entering :" + gameObject.name);
+            OnEnter?.Invoke();
         }
 
         public void Exit()
         {
             Debug.Log("Exiting :" + gameObject.name);
+            OnExit?.Invoke();
         }
 
-        public void OnSelect()
+        public void Select()
         {
-            //throw new System.NotImplementedException();
             Debug.Log("<color=blue>HIGHLIGHTED </color>" + gameObject.name);
-            _material.SetFloat(outlineActivePropertyTag, 1);
-            _material.SetColor(outlineColorPropertyTag, highlightColor);
+            OnSelect?.Invoke();
         }
 
-        public void OnDeselect()
+        public void Deselect()
         {
-            //throw new System.NotImplementedException();
             Debug.Log("<color=red>UNHIGHLIGHTED </color>" + gameObject.name);
-            _material.SetFloat(outlineActivePropertyTag, 0);
-            _material.SetColor(outlineColorPropertyTag, normalColor);
+            OnDeselect?.Invoke();
         }
-
-
+        
         public void DisplayNotification()
         {
             Debug.Log("Displaying Notification for :" + gameObject.name);

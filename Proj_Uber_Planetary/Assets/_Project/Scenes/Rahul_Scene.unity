@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 379120488}
   - component: {fileID: 379120487}
   - component: {fileID: 379120489}
+  - component: {fileID: 379120490}
   m_Layer: 5
   m_Name: App Icon 3
   m_TagString: Untagged
@@ -262,10 +263,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 379120490}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 379120490}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &379120490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379120485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c9dd52b1646a9967c950f4855ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineActivePropertyTag: _OutlineActive
-  outlineColorPropertyTag: _OutlineColor
-  normalColor: {r: 0, g: 0, b: 0, a: 1}
-  highlightColor: {r: 0.4627451, g: 2, b: 0.4862745, a: 0}
 --- !u!1 &447489422
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +326,7 @@ GameObject:
   - component: {fileID: 447489425}
   - component: {fileID: 447489424}
   - component: {fileID: 447489426}
+  - component: {fileID: 447489427}
   m_Layer: 5
   m_Name: App Icon 2
   m_TagString: Untagged
@@ -354,10 +403,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 447489427}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 447489427}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &447489427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447489422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c9dd52b1646a9967c950f4855ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineActivePropertyTag: _OutlineActive
-  outlineColorPropertyTag: _OutlineColor
-  normalColor: {r: 0, g: 0, b: 0, a: 1}
-  highlightColor: {r: 0.4627451, g: 2, b: 0.4862745, a: 0}
 --- !u!1 &460663613
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +487,21 @@ MonoBehaviour:
   offset: {x: 0, y: -190, z: 0}
   phone: {fileID: 1782156674}
   canvas: {fileID: 472326101}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 864192260}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.NavigableListProvider, Assembly-CSharp
+        m_MethodName: SetNavigatorList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &460663615
 Transform:
   m_ObjectHideFlags: 0
@@ -419,13 +530,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenScrolls: 0.3
-  navigableObjects:
-  - {fileID: 1739823103}
-  - {fileID: 447489422}
-  - {fileID: 379120485}
-  - {fileID: 2034718661}
-  - {fileID: 1576758865}
-  - {fileID: 1684724726}
 --- !u!1 &472326097
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864192257}
   - component: {fileID: 864192259}
+  - component: {fileID: 864192260}
   - component: {fileID: 864192258}
   m_Layer: 5
   m_Name: MainDisplay
@@ -606,6 +711,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864192256}
   m_CullTransparentMesh: 0
+--- !u!114 &864192260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864192256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4517342e73b14111ae503e664077ab9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navigableObjects:
+  - {fileID: 1739823103}
+  - {fileID: 447489422}
+  - {fileID: 379120485}
+  - {fileID: 2034718661}
+  - {fileID: 1576758865}
+  - {fileID: 1684724726}
+  phoneObjectName: Phone Controller
 --- !u!850595691 &1161556842
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -794,6 +919,7 @@ GameObject:
   - component: {fileID: 1576758868}
   - component: {fileID: 1576758867}
   - component: {fileID: 1576758869}
+  - component: {fileID: 1576758870}
   m_Layer: 5
   m_Name: App Icon 5
   m_TagString: Untagged
@@ -870,10 +996,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1576758870}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1576758870}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1576758870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576758865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c9dd52b1646a9967c950f4855ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineActivePropertyTag: _OutlineActive
-  outlineColorPropertyTag: _OutlineColor
-  normalColor: {r: 0, g: 0, b: 0, a: 1}
-  highlightColor: {r: 0.4627451, g: 2, b: 0.4862745, a: 0}
 --- !u!1 &1684724726
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +1059,7 @@ GameObject:
   - component: {fileID: 1684724729}
   - component: {fileID: 1684724728}
   - component: {fileID: 1684724730}
+  - component: {fileID: 1684724731}
   m_Layer: 5
   m_Name: App Icon 6
   m_TagString: Untagged
@@ -962,10 +1136,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1684724731}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1684724731}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1684724731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684724726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c9dd52b1646a9967c950f4855ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineActivePropertyTag: _OutlineActive
-  outlineColorPropertyTag: _OutlineColor
-  normalColor: {r: 0, g: 0, b: 0, a: 1}
-  highlightColor: {r: 0.4627451, g: 2, b: 0.4862745, a: 0}
 --- !u!1 &1739823103
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1199,7 @@ GameObject:
   - component: {fileID: 1739823106}
   - component: {fileID: 1739823105}
   - component: {fileID: 1739823107}
+  - component: {fileID: 1739823108}
   m_Layer: 5
   m_Name: App Icon 1
   m_TagString: Untagged
@@ -1054,10 +1276,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739823108}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739823108}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1739823108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739823103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c9dd52b1646a9967c950f4855ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineActivePropertyTag: _OutlineActive
-  outlineColorPropertyTag: _OutlineColor
-  normalColor: {r: 0, g: 0, b: 0, a: 1}
-  highlightColor: {r: 0.4627451, g: 2, b: 0.4862745, a: 0}
 --- !u!1 &1782156674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1481,7 @@ GameObject:
   - component: {fileID: 2034718664}
   - component: {fileID: 2034718663}
   - component: {fileID: 2034718665}
+  - component: {fileID: 2034718666}
   m_Layer: 5
   m_Name: App Icon 4
   m_TagString: Untagged
@@ -1288,7 +1558,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2034718666}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2034718666}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
+          Assembly-CSharp
+        m_MethodName: SetOutlineTo
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2034718666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034718661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c9dd52b1646a9967c950f4855ac07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   outlineActivePropertyTag: _OutlineActive
-  outlineColorPropertyTag: _OutlineColor
-  normalColor: {r: 0, g: 0, b: 0, a: 1}
-  highlightColor: {r: 0.4627451, g: 2, b: 0.4862745, a: 0}

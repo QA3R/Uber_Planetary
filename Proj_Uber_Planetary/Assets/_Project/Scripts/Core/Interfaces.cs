@@ -91,8 +91,8 @@ namespace UberPlanetary.Core
         void Enter();
         void Exit();
 
-        void OnSelect();
-        void OnDeselect();
+        void Select();
+        void Deselect();
     }
 
     public interface IPhoneApplication : IPhoneNavigable

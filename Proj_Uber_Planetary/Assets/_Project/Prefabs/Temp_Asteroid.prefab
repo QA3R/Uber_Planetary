@@ -166,7 +166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91595ef4dbe04ea41bab78f3a57369ac, type: 2}
+  - {fileID: 2100000, guid: bb31e27d82102914ab761691b89d85c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -379,4 +379,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dff3fafda6841f9ba3cf3f9e5cf209d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageableTag: Player
+  damageableTags: []

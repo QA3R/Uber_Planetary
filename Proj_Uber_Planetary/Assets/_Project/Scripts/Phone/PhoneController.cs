@@ -1,5 +1,6 @@
 ﻿using UberPlanetary.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UberPlanetary.Phone
 {
@@ -10,6 +11,7 @@ namespace UberPlanetary.Phone
         [SerializeField] private Vector3 offset;
         [SerializeField] private GameObject phone;
         [SerializeField] private Canvas canvas;
+        [SerializeField] private UnityEvent OnStart;
 
         private IPhoneNavigator _phoneNavigator;
 
@@ -17,16 +19,11 @@ namespace UberPlanetary.Phone
         {
             AssignComponents();
         }
-
-        private void AssignComponents()
-        {
-            _inputProvider = GameObject.Find("PlayerShip").GetComponent<IInputProvider>();
-            _phoneNavigator = GetComponent<IPhoneNavigator>();
-        }
-
+        
         private void Start()
         {
             AssignDelegates();
+            OnStart?.Invoke();
         }
 
         private void TogglePhone()
@@ -51,6 +48,7 @@ namespace UberPlanetary.Phone
 
         private void OnRightClick()
         {
+            if(!isActive) return;
             _phoneNavigator.CurrentNavigable.Exit();
         }
 
@@ -66,6 +64,12 @@ namespace UberPlanetary.Phone
             _inputProvider.ClickInfo[KeyCode.Mouse1].OnDown += OnRightClick;
             _inputProvider.ClickInfo[KeyCode.Mouse0].OnDown += OnLeftClick;
             _inputProvider.OnScroll += Scroll;
+        }
+        
+        private void AssignComponents()
+        {
+            _inputProvider = GameObject.Find("PlayerShip").GetComponent<IInputProvider>();
+            _phoneNavigator = GetComponent<IPhoneNavigator>();
         }
     }
 }

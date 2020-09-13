@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UberPlanetary.Core;
 using UnityEngine;
 
@@ -14,16 +13,15 @@ namespace UberPlanetary.Phone
         private IPhoneNavigable _currentNavigable;
         
         [SerializeField] private float timeBetweenScrolls;
-        [SerializeField] private List<GameObject> navigableObjects;
         
         public IPhoneNavigable CurrentNavigable
         {
             get => _currentNavigable;
             private set
             {
-                _currentNavigable?.OnDeselect();
+                _currentNavigable?.Deselect();
                 _currentNavigable = value;
-                _currentNavigable?.OnSelect();
+                _currentNavigable?.Select();
             }
         }
         
@@ -42,20 +40,6 @@ namespace UberPlanetary.Phone
         {
             get => _navigableIndex;
             set => _navigableIndex = value.Mod(NavigableList.Count);
-        }
-
-        private void Awake()
-        {
-            for (int i = 0; i < navigableObjects.Count; i++)
-            {
-                _currentList.Add(navigableObjects[i].GetComponent<IPhoneNavigable>());
-            }
-        }
-
-        private void Start()
-        {
-            //Note: Assigning Navigable List to update current navigable etc, but _currentList is populated internally 
-            NavigableList = _currentList;
         }
 
         private void Update()
