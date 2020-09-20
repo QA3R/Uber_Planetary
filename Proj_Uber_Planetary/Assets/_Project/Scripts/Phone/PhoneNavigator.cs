@@ -30,7 +30,7 @@ namespace UberPlanetary.Phone
                 _currentNavigable?.Select();
             }
         }
-        
+
         public List<IPhoneNavigable> NavigableList
         {
             get => _currentList;

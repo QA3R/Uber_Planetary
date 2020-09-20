@@ -10,7 +10,10 @@ namespace UberPlanetary.Core
             var t = Mathf.InverseLerp( iMin, iMax, value );
             return Mathf.Lerp( oMin, oMax, t );
         }
-        
+    }
+
+    public static class BoolExtensionMethods
+    {
         /// Returns true if the value is between the min and max
         public static bool IsBetween( this float value, float min, float max )
         {
