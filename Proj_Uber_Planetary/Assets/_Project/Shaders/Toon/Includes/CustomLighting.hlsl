@@ -13,7 +13,9 @@ void MainLight_float(float3 WorldPos, out float3 Direction, out float3 Color, ou
     float4 clipPos = TransformWorldToHClip(WorldPos);
     float4 shadowCoord = ComputeScreenPos(clipPos);
 #else
-    float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    // float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    half cascadeIndex = ComputeCascadeIndex(WorldPos);
+    float4 shadowCoord = mul(_MainLightWorldToShadow[cascadeIndex], float4(WorldPos, 1.0));
 #endif
     Light mainLight = GetMainLight(shadowCoord);
     Direction = mainLight.direction;

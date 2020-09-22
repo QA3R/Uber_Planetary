@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Engine_Inner
   m_Shader: {fileID: -6465566751694194690, guid: 670e85d1ebfd35845aa5acb2a07baf5e, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ' MAIN_LIGHT_CALCULATE_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT'
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,6 +32,7 @@ Material:
     - Vector1_321CEB3F: -1
     - Vector1_38BD3441: 0.4
     - Vector1_4E87E868: 1.9
+    - Vector1_8E88A19D: 0.5
     - Vector1_9DE77A28: 0.05
     - Vector1_BC878080: 1
     - Vector1_CF8B0D8D: 2

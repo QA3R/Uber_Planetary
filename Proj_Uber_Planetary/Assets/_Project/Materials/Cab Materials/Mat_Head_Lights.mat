@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Head_Lights
   m_Shader: {fileID: -6465566751694194690, guid: 670e85d1ebfd35845aa5acb2a07baf5e, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ' _MAIN_LIGHT_SHADOWS_CASCADE MAIN_LIGHT_CALCULATE_SHADOWS _SHADOWS_SOFT'
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
