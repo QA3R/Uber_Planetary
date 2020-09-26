@@ -9,9 +9,7 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
     {
         [SerializeField] private Vector2 heightMinMax;
         [SerializeField] private float speedSmoothingDuration;
-        [SerializeField] private AnimationCurve smoothingCurve;
         private float _originalPassiveMovementSpeed;
-        private bool _isRunning;
         private bool IsBacking => Mathf.Abs(_backVal) > 0;
         private float _backVal;
 
@@ -48,7 +46,7 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
                 if(Math.Abs(passiveMovementSpeed - _originalPassiveMovementSpeed) < .01f || _isRunning || IsBacking) return;
                 //passiveMovementSpeed = _originalPassiveMovementSpeed;
                 SafeStop();
-                StartCoroutine(LerpSpeed(passiveMovementSpeed, _originalPassiveMovementSpeed, speedSmoothingDuration));
+                StartCoroutine(LerpPassiveSpeed(passiveMovementSpeed, _originalPassiveMovementSpeed, speedSmoothingDuration));
             }
         }
 
@@ -61,28 +59,8 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
                 if(passiveMovementSpeed == 0 || _isRunning) return;
                 //passiveMovementSpeed = 0;
                 SafeStop();
-                StartCoroutine(LerpSpeed(passiveMovementSpeed, 0, speedSmoothingDuration));
+                StartCoroutine(LerpPassiveSpeed(passiveMovementSpeed, 0, speedSmoothingDuration));
             }
-        }
-
-        private void SafeStop()
-        {
-            StopAllCoroutines();
-            _isRunning = false;
-        }
-
-        private IEnumerator LerpSpeed(float from, float to, float duration)
-        {
-            _isRunning = true;
-            float t = 0;
-            while (t <= duration)
-            {
-                passiveMovementSpeed = Mathf.Lerp(from, to, smoothingCurve.Evaluate(t.Remap(0, duration, 0, 1)));
-                t += Time.fixedDeltaTime;
-                yield return new WaitForFixedUpdate();
-            }
-
-            _isRunning = false;
         }
     }
 }
