@@ -12,7 +12,7 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         [SerializeField] private AnimationCurve smoothingCurve;
         private float _originalPassiveMovementSpeed;
         private bool _isRunning;
-        private bool _isBacking => Mathf.Abs(_backVal) > 0;
+        private bool IsBacking => Mathf.Abs(_backVal) > 0;
         private float _backVal;
 
 
@@ -45,11 +45,10 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
             base.MoveForward(val);
             if (Mathf.Abs(val) > 0)
             {
-                if(Math.Abs(passiveMovementSpeed - _originalPassiveMovementSpeed) < .01f || _isRunning || _isBacking) return;
+                if(Math.Abs(passiveMovementSpeed - _originalPassiveMovementSpeed) < .01f || _isRunning || IsBacking) return;
                 //passiveMovementSpeed = _originalPassiveMovementSpeed;
                 SafeStop();
                 StartCoroutine(LerpSpeed(passiveMovementSpeed, _originalPassiveMovementSpeed, speedSmoothingDuration));
-
             }
         }
 
