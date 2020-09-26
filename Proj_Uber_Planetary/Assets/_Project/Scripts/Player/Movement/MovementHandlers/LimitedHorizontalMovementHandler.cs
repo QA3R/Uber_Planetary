@@ -10,12 +10,15 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         [SerializeField] private Vector2 heightMinMax;
         [SerializeField] private float speedSmoothingDuration;
         [SerializeField] private AnimationCurve smoothingCurve;
-        private float originalPassiveMovementSpeed;
+        private float _originalPassiveMovementSpeed;
+        private bool _isRunning;
+        private bool _isBacking => Mathf.Abs(_backVal) > 0;
+        private float _backVal;
 
 
         private void Awake()
         {
-            originalPassiveMovementSpeed = passiveMovementSpeed;
+            _originalPassiveMovementSpeed = passiveMovementSpeed;
         }
 
         public override void MoveVertical(float val)
@@ -25,13 +28,15 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
             // base.MoveVertical(val);
             if (transform.localPosition.y <= heightMinMax.x)
             {
-                transform.localPosition = new Vector3(transform.localPosition.x, heightMinMax.x, transform.localPosition.z);
+                transform.localPosition =
+                    new Vector3(transform.localPosition.x, heightMinMax.x, transform.localPosition.z);
                 return;
             }
 
             if (transform.localPosition.y >= heightMinMax.y)
             {
-                transform.localPosition = new Vector3(transform.localPosition.x, heightMinMax.y, transform.localPosition.z);
+                transform.localPosition =
+                    new Vector3(transform.localPosition.x, heightMinMax.y, transform.localPosition.z);
             }
         }
 
@@ -40,26 +45,36 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
             base.MoveForward(val);
             if (Mathf.Abs(val) > 0)
             {
-                //passiveMovementSpeed = originalPassiveMovementSpeed;
-                StopAllCoroutines();
-                StartCoroutine(LerpSpeed(passiveMovementSpeed,originalPassiveMovementSpeed, speedSmoothingDuration));
+                if(Math.Abs(passiveMovementSpeed - _originalPassiveMovementSpeed) < .01f || _isRunning || _isBacking) return;
+                //passiveMovementSpeed = _originalPassiveMovementSpeed;
+                SafeStop();
+                StartCoroutine(LerpSpeed(passiveMovementSpeed, _originalPassiveMovementSpeed, speedSmoothingDuration));
+
             }
         }
 
         public override void MoveBackward(float val)
         {
             base.MoveBackward(val);
+            _backVal = val;
             if (Mathf.Abs(val) > 0)
             {
+                if(passiveMovementSpeed == 0 || _isRunning) return;
                 //passiveMovementSpeed = 0;
-                StopAllCoroutines();
-                StartCoroutine(LerpSpeed(passiveMovementSpeed,0, speedSmoothingDuration));
-
+                SafeStop();
+                StartCoroutine(LerpSpeed(passiveMovementSpeed, 0, speedSmoothingDuration));
             }
+        }
+
+        private void SafeStop()
+        {
+            StopAllCoroutines();
+            _isRunning = false;
         }
 
         private IEnumerator LerpSpeed(float from, float to, float duration)
         {
+            _isRunning = true;
             float t = 0;
             while (t <= duration)
             {
@@ -67,6 +82,8 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
                 t += Time.fixedDeltaTime;
                 yield return new WaitForFixedUpdate();
             }
+
+            _isRunning = false;
         }
     }
 }

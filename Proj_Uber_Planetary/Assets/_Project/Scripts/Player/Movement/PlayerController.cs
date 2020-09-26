@@ -28,7 +28,7 @@ namespace UberPlanetary.Player.Movement
         {
             _movementHandler.MoveForward(val);
         }
-
+        
         private void MoveBackward(float val)
         {
             _movementHandler.MoveBackward(val);
