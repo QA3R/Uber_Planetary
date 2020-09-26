@@ -28,7 +28,7 @@ Material:
     - Boolean_2F29F9F5: 0
     - CORNERS: 0
     - OUTLINE: 0
-    - _OutlineActive: 1
+    - _OutlineActive: 0
     - _OutlineThickness: 2
     m_Colors:
     - Color_48E92557: {r: 1, g: 1, b: 1, a: 1}

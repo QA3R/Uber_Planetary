@@ -10,6 +10,9 @@ namespace UberPlanetary.Core
             var t = Mathf.InverseLerp( iMin, iMax, value );
             return Mathf.Lerp( oMin, oMax, t );
         }
+        
+        public static float Repeat( float value, float length ) => Mathf.Clamp( value - Mathf.Floor( value / length ) * length, 0.0f, length );
+
     }
 
     public static class BoolExtensionMethods

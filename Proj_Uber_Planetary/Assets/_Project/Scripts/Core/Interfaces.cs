@@ -44,8 +44,9 @@ namespace UberPlanetary.Core
     {
         void MoveForward(float val);
         void MoveBackward(float val);
+        void MoveSidewards(float val);
+        void MoveVertical(float val);
         
-        float ForwardSpeed { get; set; }
     }
 
     /// Moves the player forward based on value
@@ -60,6 +61,8 @@ namespace UberPlanetary.Core
         event Action<Vector3> OnRotate;
         event Action<float> OnMoveForward;
         event Action<float> OnMoveBackward;
+        event Action<float> OnMoveVertical;
+        event Action<float> OnMoveSideways;
         event Action<Vector3> OnMousePosition;
         event Action<float> OnBoost;
         event Action<float> OnScroll;

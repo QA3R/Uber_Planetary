@@ -1,9 +1,9 @@
 using UberPlanetary.Core;
 using UnityEngine;
 
-namespace UberPlanetary.Player.Movement
+namespace UberPlanetary.Player.Movement.BoostHandlers
 {
-    public class PlayerBoostHandler : MonoBehaviour, IBoostHandler
+    public class BaseBoostHandler : MonoBehaviour, IBoostHandler
     {
         [SerializeField] private float boostSpeed = 180;
         
