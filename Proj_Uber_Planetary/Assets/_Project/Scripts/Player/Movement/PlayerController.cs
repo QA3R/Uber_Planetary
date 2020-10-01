@@ -28,10 +28,20 @@ namespace UberPlanetary.Player.Movement
         {
             _movementHandler.MoveForward(val);
         }
-
+        
         private void MoveBackward(float val)
         {
             _movementHandler.MoveBackward(val);
+        }
+
+        private void MoveVertical(float val)
+        {
+            _movementHandler.MoveVertical(val);
+        }
+
+        private void MoveSideways(float val)
+        {
+            _movementHandler.MoveSidewards(val);
         }
         
         private void OnBoost(float val)
@@ -58,6 +68,8 @@ namespace UberPlanetary.Player.Movement
             _inputHandler.OnMoveForward += MoveForward;
             _inputHandler.OnBoost += OnBoost;
             _inputHandler.OnMoveBackward += MoveBackward;
+            _inputHandler.OnMoveVertical += MoveVertical;
+            _inputHandler.OnMoveSideways += MoveSideways;
         }
 
         /// UnAssign methods on Disable
@@ -67,6 +79,9 @@ namespace UberPlanetary.Player.Movement
             _inputHandler.OnMoveForward -= MoveForward;
             _inputHandler.OnBoost -= OnBoost;
             _inputHandler.OnMoveBackward -= MoveBackward;
+            _inputHandler.OnMoveVertical -= MoveVertical;
+            _inputHandler.OnMoveSideways -= MoveSideways;
+
         }
     }
 }

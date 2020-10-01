@@ -24,11 +24,12 @@ namespace UberPlanetary.Phone
         {
             AssignComponents();
             
-            AssignDelegates();
         }
         
         private void Start()
         {
+            _inputProvider = GameObject.Find("PlayerShip").GetComponent<IInputProvider>();
+            AssignDelegates();
             OnStart?.Invoke();
         }
 
@@ -90,7 +91,6 @@ namespace UberPlanetary.Phone
         
         private void AssignComponents()
         {
-            _inputProvider = GameObject.Find("PlayerShip").GetComponent<IInputProvider>();
             _phoneNavigator = GetComponent<IPhoneNavigator>();
         }
     }

@@ -669,7 +669,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: -0.0000000037252899, y: -0.0000000061644077, z: 6.1644073e-10, w: 1}
+  m_LocalRotation: {x: 0.0000000037252899, y: -0.000000004280247, z: 4.2802464e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -803,7 +803,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.049813703, y: 0.0000000037206658, z: -1.8557052e-10, w: 0.99875855}
+  m_LocalRotation: {x: 0.0498137, y: 0.000000002148127, z: -1.0713915e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -953,8 +953,8 @@ GameObject:
   - component: {fileID: 740858015040728188}
   - component: {fileID: 740858015040728189}
   - component: {fileID: 740858015040728190}
-  - component: {fileID: 6643397319906002875}
-  - component: {fileID: 2839219001471342374}
+  - component: {fileID: 8759139988431937609}
+  - component: {fileID: 5283712357465948647}
   - component: {fileID: 1118167280937437197}
   - component: {fileID: 3765352350659547529}
   - component: {fileID: 740858015040728161}
@@ -1011,6 +1011,8 @@ MonoBehaviour:
   boostAxisName: Boost
   forwardAxisName: Forward
   backwardAxisName: Backward
+  verticalAxisName: UpDown
+  sidewaysAxisName: Sideways
   scrollAxisName: Scroll
   keyCodes: 430100004401000045010000
 --- !u!114 &740858015040728190
@@ -1025,7 +1027,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe0d54c57d3f5c4d9d4c457baa34802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6643397319906002875
+--- !u!114 &8759139988431937609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740858015040728187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd71e3f372b47548bcebf715703b1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardMovementSpeed: 80
+  backwardMovementSpeed: 80
+  sideMovementSpeed: 0
+  verticalMovementSpeed: 80
+  passiveMovementSpeed: 20
+--- !u!114 &5283712357465948647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1037,25 +1056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb045bb990f9458b900ef2788f79c04b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRotationSpeed: 60
+  xRotationSpeed: 0
   yRotationSpeed: 60
-  zRotationSpeed: 80
-  rotationLossMultiplier: 0.4
---- !u!114 &2839219001471342374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740858015040728187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 123004cb1fe5412a9fae8c6dd508eab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardMovementSpeed: 80
-  backwardMovementSpeed: 30
-  passiveMovementSpeed: 30
+  zRotationSpeed: 0
+  rotationLossMultiplier: 0.5
 --- !u!114 &1118167280937437197
 MonoBehaviour:
   m_ObjectHideFlags: 0

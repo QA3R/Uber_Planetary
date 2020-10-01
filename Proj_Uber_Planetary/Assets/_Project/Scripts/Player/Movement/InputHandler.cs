@@ -14,6 +14,8 @@ namespace UberPlanetary.Player.Movement
         public event Action<Vector3> OnRotate;
         public event Action<float> OnMoveForward;
         public event Action<float> OnMoveBackward;
+        public event Action<float> OnMoveVertical;
+        public event Action<float> OnMoveSideways;
         public event Action<Vector3> OnMousePosition;
         public event Action<float> OnBoost;
         public event Action<float> OnScroll;
@@ -27,6 +29,8 @@ namespace UberPlanetary.Player.Movement
         [SerializeField] private string boostAxisName;
         [SerializeField] private string forwardAxisName;
         [SerializeField] private string backwardAxisName;
+        [SerializeField] private string verticalAxisName;
+        [SerializeField] private string sidewaysAxisName;
         
         [Space(10)]
         [Header("Mouse")]
@@ -87,6 +91,8 @@ namespace UberPlanetary.Player.Movement
             
             OnMoveForward?.Invoke(Input.GetAxis(forwardAxisName));
             OnMoveBackward?.Invoke(Input.GetAxis(backwardAxisName));
+            OnMoveVertical?.Invoke(Input.GetAxis(verticalAxisName));
+            OnMoveSideways?.Invoke(Input.GetAxis(sidewaysAxisName));
             OnBoost?.Invoke(Input.GetAxis(boostAxisName));
         }
     }
