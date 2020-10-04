@@ -1,57 +1,58 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Febucci.UI;
+using TMPro;
+using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using Febucci.UI;
-using UberPlanetary.ScriptableObjects;
 
-public class DialogueController : MonoBehaviour
+namespace UberPlanetary.Dialogue
 {
-    // Dialogue Box objects
-    public TextMeshProUGUI custName;
-    public TextMeshProUGUI dialogueBox;
-    public Image custFace;
-
-    public TextAnimator textAnimator;
-    private TextAnimatorPlayer textAnimatorPlayer;
-
-    [SerializeField]
-    private CustomerSO customerSO;
-    [SerializeField]
-    private DialogueSO dialogueSO;
-    private Dialogue dialogue;
-
-    private void Awake()
+    public class DialogueController : MonoBehaviour
     {
-        textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
-        dialogue = GetComponent<Dialogue>();
-    }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Space))
+        // Dialogue Box objects
+        public TextMeshProUGUI custName;
+        public TextMeshProUGUI dialogueBox;
+        public Image custFace;
+
+        public TextAnimator textAnimator;
+        private TextAnimatorPlayer textAnimatorPlayer;
+
+        [SerializeField]
+        private CustomerSO customerSO;
+        [SerializeField]
+        private DialogueSO dialogueSO;
+        private Dialogue dialogue;
+
+        private void Awake()
         {
-            PlayNextLine();
+            textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
+            dialogue = GetComponent<Dialogue>();
         }
-    }
-    public void InitiateDialogue()
-    {
-        custName.text = customerSO.CustomerName;
-        custFace.color = new Color(1, 1, 1, 1);
-        custFace.sprite = customerSO.CustomerFace;
-        textAnimatorPlayer.ShowText(dialogueSO.lines[0]);
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                PlayNextLine();
+            }
+        }
+        public void InitiateDialogue()
+        {
+            custName.text = customerSO.CustomerName;
+            custFace.color = new Color(1, 1, 1, 1);
+            custFace.sprite = customerSO.CustomerFace;
+            textAnimatorPlayer.ShowText(dialogueSO.lines[0]);
         
 
-    }
-    public void PlayNextLine()
-    {
-        dialogue.nextText.SetActive(false);
-        textAnimatorPlayer.ShowText(dialogueSO.lines[dialogue.LineIndex]);
-    }
-    public void InterruptDialogue()
-    {
+        }
+        public void PlayNextLine()
+        {
+            dialogue.nextText.SetActive(false);
+            textAnimatorPlayer.ShowText(dialogueSO.lines[dialogue.LineIndex]);
+        }
+        public void InterruptDialogue()
+        {
 
-    }
+        }
     
 
+    }
 }

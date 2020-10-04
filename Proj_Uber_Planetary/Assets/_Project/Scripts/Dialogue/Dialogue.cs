@@ -1,24 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Dialogue : MonoBehaviour
+namespace UberPlanetary.Dialogue
 {
-    public GameObject nextText;
-
-    [SerializeField]
-    private int _lineIndex;
-
-    public int LineIndex
+    public class Dialogue : MonoBehaviour
     {
-        get { return _lineIndex; }
+        public GameObject nextText;
 
-        set { _lineIndex = value; }
-    }
+        [SerializeField]
+        private int _lineIndex;
 
-    public void QueueNextLine()
-    {
-        LineIndex ++;
-        nextText.SetActive(true);
+        public int LineIndex
+        {
+            get { return _lineIndex; }
+
+            set { _lineIndex = value; }
+        }
+
+        public void QueueNextLine()
+        {
+            LineIndex ++;
+            nextText.SetActive(true);
+        }
     }
 }
