@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UberPlanetary.Core;
 using UnityEngine;
@@ -12,6 +11,7 @@ namespace UberPlanetary.Navigation
         private static NavigationManager _instance;
         
         private List<ILandmark> _landmarks;
+        private List<IGeneralLandmark> _generalLandmarks;
 
         private Sprite passengerPickUpSprite;
         private Sprite passengerDropOffSprite;
@@ -29,6 +29,12 @@ namespace UberPlanetary.Navigation
             //set => _landmarks = value;
         }
 
+        public List<IGeneralLandmark> GeneralLandmarks
+        {
+            get => _generalLandmarks;
+            //set => _generalLandmarks = value;
+        }
+
         private void Awake()
         {
             Instance = _instance ? _instance : this;
@@ -39,13 +45,27 @@ namespace UberPlanetary.Navigation
             var rand = Random.Range(0, _landmarks.Count);
             return _landmarks[rand];
         }
+
+        public IGeneralLandmark getRandomGeneralLandmark()
+        {
+            var rand = Random.Range(0, _landmarks.Count);
+            return _generalLandmarks[rand];
+        }
         public ILandmark GetFurthestLandmark(Vector3 from)
         {
-            return _landmarks.OrderBy(x => (from - x.GetPosition).magnitude).Last();
+            return _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).Last();
         }        
         public ILandmark GetNearestLandmark(Vector3 from)
         {
-            return _landmarks.OrderBy(x => (from - x.GetPosition).magnitude).First();
+            return _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
+        }
+        public IGeneralLandmark GetFurthestGeneralLandmark(Vector3 from)
+        {
+            return _generalLandmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).Last();
+        }        
+        public IGeneralLandmark GetNearestGeneralLandmark(Vector3 from)
+        {
+            return _generalLandmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
         }
     }
 }

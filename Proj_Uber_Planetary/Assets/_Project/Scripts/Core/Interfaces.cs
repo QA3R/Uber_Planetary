@@ -134,7 +134,14 @@ namespace UberPlanetary.Core
         ILandmarkIcon LocationIcon { get; set; }
         void OnLocationReached();
         UnityEvent OnReached { get; set; }
-        Vector3 GetPosition { get; }
+        Transform GetTransform { get; }
+        
+        IGeneralLandmark parentLandmark { get;}
+    }
+
+    public interface IGeneralLandmark : ILandmark
+    {
+        List<ILandmark> landmarkGrouping { get; set; }
     }
 
     public interface ILandmarkIcon
@@ -142,7 +149,7 @@ namespace UberPlanetary.Core
         Image iconImage { get; set; }
         Color iconColor { get; set; }
 
-        void UpdatePosition();
+        void UpdateIconPosition();
         
     }
     
