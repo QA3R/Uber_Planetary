@@ -10,6 +10,11 @@ public class DialogueSO : ScriptableObject
     [TextArea(3,10)]
     public string[] lines;
 
+    [TextArea(3,10)]
+    public string[] interruptions;
+
+
+
     
 
 }
