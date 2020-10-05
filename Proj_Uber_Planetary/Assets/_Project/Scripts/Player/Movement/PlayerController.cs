@@ -1,3 +1,4 @@
+using System;
 using UberPlanetary.Core;
 using UnityEngine;
 
@@ -16,9 +17,13 @@ namespace UberPlanetary.Player.Movement
         private void Awake()
         {
             AssignComponents();
+        }
+
+        private void Start()
+        { 
             AssignDelegates();
         }
-        
+
         private void Rotate(Vector3 dir)
         {
             _rotationHandler.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,dir.z));
@@ -37,6 +42,7 @@ namespace UberPlanetary.Player.Movement
         private void MoveVertical(float val)
         {
             _movementHandler.MoveVertical(val);
+            //_movementHandler.MoveVertical(_cursorController.CursorAxis.y);
         }
 
         private void MoveSideways(float val)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UberPlanetary.Core;
 using UnityEngine;
@@ -13,13 +14,14 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         [SerializeField] protected float passiveMovementSpeed = 20;
         [SerializeField] protected AnimationCurve smoothingCurve;
         protected bool _isRunning;
-
+        
+        
         public float MovementSpeed
         {
             get => forwardMovementSpeed;
             set => forwardMovementSpeed = value;
         }
-
+        
         public virtual void MoveForward(float val)
         {
             Move(transform.forward, val, forwardMovementSpeed);
@@ -37,8 +39,7 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         {
             Move(transform.up, val, verticalMovementSpeed);
         }
-
-
+        
         protected virtual void Update()
         {
             Move(transform.forward,1, passiveMovementSpeed);

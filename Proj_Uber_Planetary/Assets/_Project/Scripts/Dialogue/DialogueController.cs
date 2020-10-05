@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Febucci.UI;
+using TMPro;
+using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using Febucci.UI;
-using UberPlanetary.ScriptableObjects;
-using UberPlanetary.Dialogue;
 
 namespace UberPlanetary.Dialogue
 {
@@ -23,55 +20,39 @@ namespace UberPlanetary.Dialogue
         private CustomerSO customerSO;
         [SerializeField]
         private DialogueSO dialogueSO;
-        public DialogueTrigger dialogueTrigger;
-    
-        public bool isStarted;
-        public bool IsShowing { get; set; }
+        private Dialogue dialogue;
 
-        private int _lineIndex;
-
-        private void OnEnable()
-        {
-            InitiateDialogue();
-        }
         private void Awake()
         {
-            dialogueTrigger = GetComponentInParent<DialogueTrigger>();
             textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
+            dialogue = GetComponent<Dialogue>();
         }
         private void Update()
         {
-
-            if (IsShowing || !isStarted) return;
-
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
-                if (_lineIndex >= dialogueSO.lines.Length - 1)
-                {
-                    FinishDialogue();
-                    return;
-                }
-                DisplayText(dialogueSO.lines[++_lineIndex]);
+                PlayNextLine();
             }
         }
         public void InitiateDialogue()
         {
-            isStarted = true;
             custName.text = customerSO.CustomerName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = customerSO.CustomerFace;
             textAnimatorPlayer.ShowText(dialogueSO.lines[0]);
+        
+
         }
-        public void DisplayText(string textToDisplay)
+        public void PlayNextLine()
         {
-            textAnimatorPlayer.ShowText(textToDisplay);
-            Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
+            dialogue.nextText.SetActive(false);
+            textAnimatorPlayer.ShowText(dialogueSO.lines[dialogue.LineIndex]);
         }
-        public void FinishDialogue()
+        public void InterruptDialogue()
         {
-            dialogueTrigger.TurnOff();
+
         }
+    
 
     }
 }
-

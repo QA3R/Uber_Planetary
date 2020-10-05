@@ -423,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -476,6 +476,22 @@ PrefabInstance:
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728160, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728160, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728160, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728161, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728187, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Name
@@ -603,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3765352350659547529, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: iMax
-      value: 120
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4080764438318990169, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: zRotationSpeed
@@ -675,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: verticalMovementSpeed
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: heightMinMax.x
@@ -705,6 +721,10 @@ PrefabInstance:
       propertyPath: forwardMovementSpeed
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 1322699300}
     - target: {fileID: 8887952009849335663, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -783,6 +803,11 @@ MonoBehaviour:
     m_RotationOrder: 4
   speedIncrement: 20
   smoothingDuration: 2
+--- !u!54 &1322699300 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 740858015040728160, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+  m_PrefabInstance: {fileID: 1322699292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1749414648
 GameObject:
   m_ObjectHideFlags: 0

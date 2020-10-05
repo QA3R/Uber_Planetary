@@ -1,9 +1,18 @@
 using System;
 using System.Collections.Generic;
+using UberPlanetary.Navigation;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace UberPlanetary.Core
 {
+
+    public interface IListElement
+    {
+        void Add();
+        void Remove();
+    }
     /// Finds the appropriate IEventValueProvider and exposes an event based on provided value
     public interface IEventExposer<T> where T : struct
     {
@@ -119,4 +128,22 @@ namespace UberPlanetary.Core
         //toggling on car features
         //etc
     }
+
+    public interface ILandmark : IListElement
+    {
+        ILandmarkIcon LocationIcon { get; set; }
+        void OnLocationReached();
+        UnityEvent OnReached { get; set; }
+        Vector3 GetPosition { get; }
+    }
+
+    public interface ILandmarkIcon
+    {
+        Image iconImage { get; set; }
+        Color iconColor { get; set; }
+
+        void UpdatePosition();
+        
+    }
+    
 }
