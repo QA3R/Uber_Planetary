@@ -66,6 +66,7 @@ namespace UberPlanetary.Dialogue
         }
         public void FinishDialogue()
         {
+            isStarted = false;
             dialogueTrigger.TurnOff();
         }
     }

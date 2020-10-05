@@ -6,7 +6,6 @@ namespace UberPlanetary.Dialogue
 {
     public class DialogueTrigger : MonoBehaviour
     {
-
         public GameObject dialogueWindow;
 
         private void Update()
