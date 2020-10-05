@@ -20,39 +20,53 @@ namespace UberPlanetary.Dialogue
         private CustomerSO customerSO;
         [SerializeField]
         private DialogueSO dialogueSO;
-        private Dialogue dialogue;
+        public DialogueTrigger dialogueTrigger;
 
+        public bool isStarted;
+        public bool IsShowing { get; set; }
+
+        private int _lineIndex;
+
+        private void OnEnable()
+        {
+            InitiateDialogue();
+        }
         private void Awake()
         {
+            dialogueTrigger = GetComponentInParent<DialogueTrigger>();
             textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
-            dialogue = GetComponent<Dialogue>();
         }
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Space))
+
+            if (IsShowing || !isStarted) return;
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                PlayNextLine();
+                if (_lineIndex >= dialogueSO.lines.Length - 1)
+                {
+                    FinishDialogue();
+                    return;
+                }
+                DisplayText(dialogueSO.lines[++_lineIndex]);
             }
         }
         public void InitiateDialogue()
         {
+            isStarted = true;
             custName.text = customerSO.CustomerName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = customerSO.CustomerFace;
             textAnimatorPlayer.ShowText(dialogueSO.lines[0]);
-        
-
         }
-        public void PlayNextLine()
+        public void DisplayText(string textToDisplay)
         {
-            dialogue.nextText.SetActive(false);
-            textAnimatorPlayer.ShowText(dialogueSO.lines[dialogue.LineIndex]);
+            textAnimatorPlayer.ShowText(textToDisplay);
+            Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
         }
-        public void InterruptDialogue()
+        public void FinishDialogue()
         {
-
+            dialogueTrigger.TurnOff();
         }
-    
-
     }
 }
