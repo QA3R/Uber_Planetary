@@ -7,6 +7,7 @@ using UberPlanetary.Player.Movement;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.UI;
+using GameObject = UberPlanetary.Player.Movement.GameObject;
 
 namespace UberPlanetary.Course
 {
@@ -31,7 +32,7 @@ namespace UberPlanetary.Course
         
         private void Awake()
         {
-            _playerSpeed = FindObjectOfType<PlayerController>().GetComponent<IEventValueProvider<float>>();
+            _playerSpeed = FindObjectOfType<GameObject>().GetComponent<IEventValueProvider<float>>();
             Analytics.enabled = true;
         }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace UberPlanetary.Player.Movement
 {
     /// Delegates tasks to other classes according to input
-    public class PlayerController : MonoBehaviour 
+    public class GameObject : MonoBehaviour 
     {
         //Private Members
         private IInputProvider _inputHandler;

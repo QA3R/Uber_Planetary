@@ -67,5 +67,14 @@ namespace UberPlanetary.Navigation
         {
             return _generalLandmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
         }
+
+        public ILandmark GetRandomLandmarkWithinRadius(Vector3 from, float radius)
+        {
+            var temp = _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude < radius).ToList();
+
+            var rand = Random.Range(0, temp.Count);
+            
+            return temp[rand];
+        }
     }
 }

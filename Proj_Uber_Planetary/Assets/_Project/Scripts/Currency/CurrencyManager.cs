@@ -9,7 +9,7 @@ namespace UberPlanetary.Currency
         private int _amount;
 
         [SerializeField] private Text cashText;
-        [SerializeField] private UnityEvent onValueChanged;
+        [SerializeField] private UnityEvent<int> onValueChanged;
         
         public int Amount
         {
@@ -18,7 +18,7 @@ namespace UberPlanetary.Currency
             {
                 _amount = value;
                 cashText.text = Amount.ToString();
-                onValueChanged?.Invoke();
+                onValueChanged?.Invoke(_amount);
             } 
         }
     }
