@@ -5,7 +5,7 @@ using UnityEngine;
 namespace UberPlanetary.Player.Movement
 {
     /// Delegates tasks to other classes according to input
-    public class GameObject : MonoBehaviour 
+    public class PlayerController : MonoBehaviour 
     {
         //Private Members
         private IInputProvider _inputHandler;
@@ -57,7 +57,7 @@ namespace UberPlanetary.Player.Movement
             _boostHandler.Boost(val);
         }
         
-        /// Get Component Reference from GameObject
+        /// Get Component Reference from PlayerController
         private void AssignComponents()
         {
             _cursorController = FindObjectOfType<CursorController>();

@@ -7,15 +7,15 @@ namespace UberPlanetary.Player
     /// Functions for what happens when player is hit
     public class PlayerDamageResponse : DamageResponse
     {
-        private GameObject gameObject;
+        private PlayerController playerController;
         private void Awake()
         {
-            gameObject = GetComponent<GameObject>();
+            playerController = GetComponent<PlayerController>();
         }
 
         public void ReduceSpeed(float val)
         {
-            //gameObject.MovementLossMultiplier -= val;
+            //playerController.MovementLossMultiplier -= val;
         }
     }
 }

@@ -3,14 +3,13 @@ using UberPlanetary.Player.Movement;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
-using GameObject = UberPlanetary.Player.Movement.GameObject;
 
 namespace UberPlanetary.Quests
 {
     public class QuestManager : MonoBehaviour
     {
         private NavigationManager _navigationManager;
-        private GameObject _player;
+        private PlayerController playerController;
         private QuestSO _currentQuest;
         private bool IsQuestActive => _currentQuest != null;
 
@@ -26,7 +25,7 @@ namespace UberPlanetary.Quests
         private void Start()
         {
             _navigationManager = FindObjectOfType<NavigationManager>();
-            //_player = F
+            playerController = FindObjectOfType<PlayerController>();
         }
 
         public void AcceptQuest(QuestSO questSo)
@@ -41,7 +40,7 @@ namespace UberPlanetary.Quests
         {
             if (questSo.QuestStartLandmark == null)
             {
-                questSo.QuestStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(gameObject.transform.position, searchRadius);
+                questSo.QuestStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(playerController.transform.position, searchRadius);
             }
 
             if (questSo.QuestStartLandmark == null)
@@ -63,7 +62,7 @@ namespace UberPlanetary.Quests
 
             if (_currentQuest.QuestEndLandmark == null)
             {
-                _currentQuest.QuestEndLandmark = _navigationManager.GetFurthestLandmark(gameObject.transform.position);
+                _currentQuest.QuestEndLandmark = _navigationManager.GetFurthestLandmark(playerController.transform.position);
             }
             _currentQuest.QuestEndLandmark.OnReached.AddListener(EndLocationReached);
         }

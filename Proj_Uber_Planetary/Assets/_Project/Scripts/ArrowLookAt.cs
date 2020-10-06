@@ -2,7 +2,6 @@ using System;
 using UberPlanetary.Core;
 using UberPlanetary.Player.Movement;
 using UnityEngine;
-using GameObject = UberPlanetary.Player.Movement.GameObject;
 
 namespace UberPlanetary
 {
@@ -21,7 +20,7 @@ namespace UberPlanetary
         private void Awake()
         {
             lookAtTarget = new LookAtTarget {Threshold = threshold};
-            _lookFrom = FindObjectOfType<GameObject>().GetComponent<IEventValueProvider<Vector3>>();
+            _lookFrom = FindObjectOfType<PlayerController>().GetComponent<IEventValueProvider<Vector3>>();
         }
 
         private void Update()

@@ -3,14 +3,13 @@ using UberPlanetary.Core;
 using UberPlanetary.Player.Movement;
 using UnityEngine;
 using UnityEngine.UI;
-using GameObject = UberPlanetary.Player.Movement.GameObject;
 
 namespace UberPlanetary.Navigation
 {
     public class NavigationIcon : MonoBehaviour , ILandmarkIcon
     {
         private Camera _camera;
-        private GameObject _player;
+        private PlayerController _player;
         private ILandmark target;
         [SerializeField] private Vector3 offset;
 
@@ -38,7 +37,7 @@ namespace UberPlanetary.Navigation
         {
             _camera = Camera.main;
 
-            _player = FindObjectOfType<GameObject>();
+            _player = FindObjectOfType<PlayerController>();
         }
 
         private void LateUpdate()

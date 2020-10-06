@@ -3,7 +3,6 @@ using UberPlanetary.Core;
 using UberPlanetary.Player.Movement;
 using UnityEngine;
 using UnityEngine.Events;
-using GameObject = UberPlanetary.Player.Movement.GameObject;
 
 namespace UberPlanetary.Player
 {
@@ -28,7 +27,7 @@ namespace UberPlanetary.Player
 
         public void SetReference()
         {
-            EventValueProvider = FindObjectOfType<GameObject>().GetComponent<IEventValueProvider<float>>();
+            EventValueProvider = FindObjectOfType<PlayerController>().GetComponent<IEventValueProvider<float>>();
         }
 
         public void InvokeEvent()

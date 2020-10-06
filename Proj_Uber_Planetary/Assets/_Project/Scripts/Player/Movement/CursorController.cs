@@ -77,7 +77,7 @@ namespace UberPlanetary.Player.Movement
             _cursorAxis.y = _remappedY;
         }
         
-        /// Get Component Reference from GameObject
+        /// Get Component Reference from PlayerController
         private void AssignComponents()
         {
             _inputHandler = FindObjectOfType<InputHandler>().GetComponent<IInputProvider>();
