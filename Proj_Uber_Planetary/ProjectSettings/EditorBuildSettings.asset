@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Project/Scenes/Game Scenes/MainMenu_Scene.unity
+    guid: 732280c62672f384d82cbecff40b00d5
+  - enabled: 1
     path: Assets/_Project/Scenes/Game Scenes/Player_Scene.unity
     guid: 4f1534dcd801e7e49b75713f219a83a7
+  - enabled: 1
+    path: Assets/_Project/Scenes/Game Scenes/Whitebox_Scene.unity
+    guid: 4904049b5eb1bd643ba96fbf118f93d0
   - enabled: 0
     path: Assets/_Project/Scenes/MainGame_Scene.unity
     guid: 37e6c6ffcd65ce94b8ec776201d7bf8b
