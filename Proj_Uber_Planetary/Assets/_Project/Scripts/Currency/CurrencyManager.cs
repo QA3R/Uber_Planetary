@@ -10,7 +10,10 @@ namespace UberPlanetary.Currency
 
         [SerializeField] private Text cashText;
         [SerializeField] private UnityEvent<int> onValueChanged;
-        
+
+
+        public UnityEvent<int> OnValueChanged => onValueChanged;
+       
         public int Amount
         {
             get => _amount;
