@@ -1,39 +1,53 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UberPlanetary.Currency;
 
-
-public class EndCondition : MonoBehaviour
+namespace UberPlanetary.General
 {
-    public int goalAmount;
-
-    private CurrencyManager _currencyMngr;
-    public Clock clock;
-
-    private void Awake()
+    public class EndCondition : MonoBehaviour
     {
-        _currencyMngr = GetComponent<CurrencyManager>();
-    }
-    private void Start()
-    {
-        _currencyMngr.OnValueChanged.AddListener(CheckWin);
-        clock.OnTimeUp.AddListener(Lose);
-    }
+        public int goalAmount;
 
-    void CheckWin(int money)
-    {
-        if (money < goalAmount) return;
+        private bool _isGameOver;
 
-        Win();
-    }
+        private CurrencyManager _currencyMngr;
+        private Clock clock;
 
-    public void Win()
-    {
-        Debug.Log("YOU DID IT! You paid your debt to those suckers and now you're free!");
-    }
-    public void Lose()
-    {
-        Debug.Log("You couldn't pay in time and now you'll sleep with the fishes");
+        public GameObject winScreen, loseScreen;
+
+        private void Awake()
+        {
+            _currencyMngr = GetComponent<CurrencyManager>();
+            clock = FindObjectOfType<Clock>();
+        }
+        private void Start()
+        {
+            _currencyMngr.OnValueChanged.AddListener(CheckWin);
+            clock.onTimeUp += Lose;
+        }
+
+        
+        void CheckWin(int money)
+        {
+            if (money <= goalAmount) return;
+
+            Win();
+        }
+
+        public void Win()
+        {
+            _isGameOver = true;
+            winScreen.SetActive(true);
+            Debug.Log("YOU DID IT! You paid your debt to those suckers and now you're free!");
+            Time.timeScale = 0;
+        }
+        public void Lose()
+        {
+            _isGameOver = true;
+            loseScreen.SetActive(true);
+            Debug.Log("You couldn't pay in time and now you'll sleep with the fishes");
+            Time.timeScale = 0;
+        }
     }
 }
+

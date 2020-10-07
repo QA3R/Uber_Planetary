@@ -1,42 +1,52 @@
 ﻿using UnityEngine.Events;
+using System;
 using UnityEngine;
 using TMPro;
 
-public class Clock : MonoBehaviour
+namespace UberPlanetary.General
 {
-    public float clockSpeed, startTime, endTime;
-    private float _currentTime;
-
-    private UnityEvent onTimeUp;
-    public UnityEvent OnTimeUp => onTimeUp;
-
-    private TextMeshProUGUI _clockText;
-    private void Awake()
+    public class Clock : MonoBehaviour
     {
-        _clockText = GetComponent<TextMeshProUGUI>();
-    }
-    private void Start()
-    {
-        _currentTime = startTime;
-    }
+        private bool isOver;
 
-    void Update()
-    {
-        _currentTime += Time.deltaTime * clockSpeed;
+        public float clockSpeed, startTime, endTime;
+        private float _currentTime;
 
-        int minutes = (int)(_currentTime % 60);
-        int hours = (int)(_currentTime / 60) % 24;
+        public event Action onTimeUp;
+        
 
-        _clockText.text = string.Format("{0:00}:{1:00}", hours, minutes);
-
-        if (_currentTime == endTime)
+        private TextMeshProUGUI _clockText;
+        private void Awake()
         {
-            TimeUp();
+            _clockText = GetComponent<TextMeshProUGUI>();
+        }
+        private void Start()
+        {
+            _currentTime = startTime;
+        }
+
+        void Update()
+        {
+            if (isOver) return;
+
+            _currentTime += Time.deltaTime * clockSpeed;
+
+            int minutes = (int)(_currentTime % 60);
+            int hours = (int)(_currentTime / 60) % 24;
+
+            _clockText.text = string.Format("{0:00}:{1:00}", hours, minutes);
+
+            if (_currentTime >= endTime)
+            {
+                TimeUp();
+            }
+        }
+
+        public void TimeUp()
+        {
+            isOver = true;
+            onTimeUp?.Invoke();
         }
     }
-
-    public void TimeUp()
-    {
-        onTimeUp?.Invoke();
-    }
 }
+
