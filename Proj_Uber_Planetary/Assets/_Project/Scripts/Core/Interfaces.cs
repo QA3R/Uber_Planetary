@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
-using UberPlanetary.Navigation;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace UberPlanetary.Core
 {
-
     public interface IListElement
     {
         void Add();
@@ -76,6 +74,7 @@ namespace UberPlanetary.Core
         event Action<Vector3> OnMousePosition;
         event Action<float> OnBoost;
         event Action<float> OnScroll;
+
         Dictionary<KeyCode, ButtonEvent> ClickInfo {get;}
     }
     /// Interface for courses to communicate with checkpoints
@@ -152,5 +151,4 @@ namespace UberPlanetary.Core
         void UpdateIconPosition();
         
     }
-    
 }

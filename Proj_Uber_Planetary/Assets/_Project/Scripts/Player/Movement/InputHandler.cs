@@ -20,7 +20,8 @@ namespace UberPlanetary.Player.Movement
         public event Action<float> OnBoost;
         public event Action<float> OnScroll;
         public Dictionary<KeyCode, ButtonEvent> ClickInfo => _clickInfo;
-
+        
+        
         //Exposed input names
         [Header("Movement")]
         [SerializeField] private string xRotAxisName;
@@ -58,14 +59,19 @@ namespace UberPlanetary.Player.Movement
         /// Capture Input and invoke respective Events
         private void Update()
         {
-            UpdateMovementAxis();
-            
+         
+
             UpdateMouse();
 
             foreach (var kvp in _clickInfo)
             {
                 ButtonPress(kvp.Key);
             }
+        }
+
+        private void FixedUpdate()
+        {
+            UpdateMovementAxis();
         }
 
         private void UpdateMouse()
@@ -89,11 +95,19 @@ namespace UberPlanetary.Player.Movement
                 Input.GetAxisRaw(zRotAxisName)
             ));
             
-            OnMoveForward?.Invoke(Input.GetAxis(forwardAxisName));
+
             OnMoveBackward?.Invoke(Input.GetAxis(backwardAxisName));
+
+
             OnMoveVertical?.Invoke(Input.GetAxis(verticalAxisName));
+
+
             OnMoveSideways?.Invoke(Input.GetAxis(sidewaysAxisName));
+            OnMoveForward?.Invoke(Input.GetAxis(forwardAxisName));
+
+
             OnBoost?.Invoke(Input.GetAxis(boostAxisName));
+
         }
     }
 }

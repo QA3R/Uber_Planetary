@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,14 +27,20 @@ namespace UberPlanetary.Core
 
         private void Start()
         {
-            StartCoroutine(CalculateVelocity());
+            //StartCoroutine(CalculateVelocity());
         }
 
         private void Update()
         {
             speedText.text = _speed.ToString();
         }
-        
+
+        private void FixedUpdate()
+        {
+            _speed = Mathf.RoundToInt(Vector3.Distance(transform.position, _previousPosition) / Time.fixedDeltaTime);
+            remappedSpeed01 = _speed.Remap(0, iMax, 0, 1);
+            _previousPosition = transform.position;
+        }
 
         /// Velocity calculated based on position delta over time
         private IEnumerator CalculateVelocity()

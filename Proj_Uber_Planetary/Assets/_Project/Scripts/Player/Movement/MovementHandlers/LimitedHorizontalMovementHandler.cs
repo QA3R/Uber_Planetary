@@ -14,16 +14,18 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         private float _backVal;
 
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             _originalPassiveMovementSpeed = passiveMovementSpeed;
         }
 
         public override void MoveVertical(float val)
         {
-            Move(transform.up, val, verticalMovementSpeed);
+            //Move(transform.up, val, verticalMovementSpeed);
+            //_movement = new Vector3(_movement.x, _movement.y +(val * verticalMovementSpeed), _movement.z);
 
-            // base.MoveVertical(val);
+            base.MoveVertical(val);
             if (transform.localPosition.y <= heightMinMax.x)
             {
                 transform.localPosition =

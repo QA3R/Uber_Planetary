@@ -15,7 +15,9 @@ namespace UberPlanetary.ScriptableObjects
 
         private ILandmark _questStartLandmark;
         private ILandmark _questEndLandmark;
-        
+
+        public int QuestReward => questReward;
+
         public ILandmark QuestEndLandmark
         {
             get

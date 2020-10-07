@@ -14,17 +14,27 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         [SerializeField] protected float passiveMovementSpeed = 20;
         [SerializeField] protected AnimationCurve smoothingCurve;
         protected bool _isRunning;
-        
+
+        protected Rigidbody _rigidbody;
         
         public float MovementSpeed
         {
             get => forwardMovementSpeed;
             set => forwardMovementSpeed = value;
         }
+
+
+        protected virtual void Awake()
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+            Debug.Log("I'm awake", this);
+        }
         
         public virtual void MoveForward(float val)
         {
             Move(transform.forward, val, forwardMovementSpeed);
+            Debug.Log("Dir : " + transform.forward + " val : " + val);
+
         }
         public virtual void MoveBackward(float val)
         {
@@ -42,13 +52,32 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         
         protected virtual void Update()
         {
+        }
+
+        private void FixedUpdate()
+        {
             Move(transform.forward,1, passiveMovementSpeed);
         }
 
         /// Translate Object in direction with speed
         protected void Move(Vector3 dir, float val, float speedMultiplier)
         {
-            transform.Translate(dir * (val * (speedMultiplier * Time.deltaTime)), Space.World);
+
+            Vector3 smoothedDelta = Vector3.MoveTowards(transform.position, _rigidbody.position + (dir * val), Time.fixedDeltaTime * speedMultiplier);
+
+            Vector3 direction = (smoothedDelta - transform.position);
+
+            Ray ray = new Ray(transform.position, direction);
+            RaycastHit hit;
+            if (!Physics.Raycast(ray, out hit, direction.magnitude + .5f))
+            {
+                //_rigidbody.MovePosition(smoothedDelta);
+                _rigidbody.MovePosition(_rigidbody.position + dir * (val * Time.fixedDeltaTime * speedMultiplier));
+            }
+            else
+            {
+                _rigidbody.MovePosition(hit.point);
+            }
         }
 
         protected IEnumerator LerpPassiveSpeed(float from, float to, float duration)

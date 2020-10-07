@@ -1,5 +1,5 @@
-﻿using UberPlanetary.Navigation;
-using UberPlanetary.Player.Movement;
+﻿using UberPlanetary.Currency;
+using UberPlanetary.Navigation;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,7 +9,8 @@ namespace UberPlanetary.Quests
     public class QuestManager : MonoBehaviour
     {
         private NavigationManager _navigationManager;
-        private PlayerController playerController;
+        private CurrencyManager _currencyManager;
+        private GameObject _player;
         private QuestSO _currentQuest;
         private bool IsQuestActive => _currentQuest != null;
 
@@ -25,7 +26,8 @@ namespace UberPlanetary.Quests
         private void Start()
         {
             _navigationManager = FindObjectOfType<NavigationManager>();
-            playerController = FindObjectOfType<PlayerController>();
+            _currencyManager = FindObjectOfType<CurrencyManager>();
+            _player = GameObject.Find("PlayerShip");
         }
 
         public void AcceptQuest(QuestSO questSo)
@@ -40,7 +42,7 @@ namespace UberPlanetary.Quests
         {
             if (questSo.QuestStartLandmark == null)
             {
-                questSo.QuestStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(playerController.transform.position, searchRadius);
+                questSo.QuestStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(_player.transform.position, searchRadius);
             }
 
             if (questSo.QuestStartLandmark == null)
@@ -62,7 +64,7 @@ namespace UberPlanetary.Quests
 
             if (_currentQuest.QuestEndLandmark == null)
             {
-                _currentQuest.QuestEndLandmark = _navigationManager.GetFurthestLandmark(playerController.transform.position);
+                _currentQuest.QuestEndLandmark = _navigationManager.GetFurthestLandmark(_player.transform.position);
             }
             _currentQuest.QuestEndLandmark.OnReached.AddListener(EndLocationReached);
         }
@@ -71,6 +73,13 @@ namespace UberPlanetary.Quests
         {
             _currentQuest.QuestEndLandmark.OnReached.RemoveListener(EndLocationReached);
 
+            QuestComplete();
+        }
+
+        private void QuestComplete()
+        {
+            _currencyManager.Amount += _currentQuest.QuestReward;
+            _currentQuest = null;
         }
     }
 }
