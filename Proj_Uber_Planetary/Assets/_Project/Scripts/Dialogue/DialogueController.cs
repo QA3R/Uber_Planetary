@@ -1,5 +1,6 @@
 ﻿using Febucci.UI;
 using TMPro;
+using UberPlanetary.Quests;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,9 +9,12 @@ namespace UberPlanetary.Dialogue
 {
     public class DialogueController : MonoBehaviour
     {
+        private RideManager _rideManager;
+        
         // Dialogue Box objects
         public TextMeshProUGUI custName;
         public TextMeshProUGUI dialogueBox;
+        public GameObject dialogueWindow;
         public Image custFace;
 
         public TextAnimator textAnimator;
@@ -25,21 +29,63 @@ namespace UberPlanetary.Dialogue
         public bool isStarted;
         public bool IsShowing { get; set; }
 
-        private int _lineIndex;
+        public bool hasDialogue => dialogueSO != null;
 
-        private void OnEnable()
-        {
-            InitiateDialogue();
-        }
+        private int _lineIndex;
+        
         private void Awake()
         {
             dialogueTrigger = GetComponentInParent<DialogueTrigger>();
-            textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
+            textAnimatorPlayer = textAnimator.GetComponent<TextAnimatorPlayer>();
+            _rideManager = FindObjectOfType<RideManager>();
+            ToggleDialogueBox(false);
         }
+
+        private void Start()
+        {
+            _rideManager.onCustomerPickedUp.AddListener(StartDialogue);
+            _rideManager.onCustomerDroppedOff.AddListener(EndDialogue);
+        }
+
+        public void StartDialogue(CustomerSO customerData)
+        {
+            customerSO = customerData;
+            dialogueSO = customerSO.CustomerDialogue;
+            ToggleDialogueBox(true);
+
+            InitiateDialogue();
+        }
+
+        public void EndDialogue(CustomerSO customerData)
+        {
+            ClearCustomerData();
+            ClearDialogueBox();
+            ToggleDialogueBox(false);
+        }
+
+        public void ToggleDialogueBox(bool state)
+        {
+            dialogueWindow.SetActive(state);
+            dialogueBox.gameObject.SetActive(state);
+        }
+
+        public void ClearDialogueBox()
+        {
+            dialogueBox.text = "";
+        }
+
+        public void ClearCustomerData()
+        {
+            customerSO = null;
+            dialogueSO = null;
+            custName.text = null;
+            custFace.sprite = null;
+        }
+        
         private void Update()
         {
 
-            if (IsShowing || !isStarted) return;
+            if (IsShowing || !isStarted || !hasDialogue) return;
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -67,7 +113,7 @@ namespace UberPlanetary.Dialogue
         public void FinishDialogue()
         {
             isStarted = false;
-            dialogueTrigger.TurnOff();
+            ToggleDialogueBox(false);
         }
     }
 }

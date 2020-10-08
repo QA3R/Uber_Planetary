@@ -20,7 +20,7 @@ namespace UberPlanetary.Phone.Applications
 
         public void GenerateNewCustomer()
         {
-            if(_rideManager.IsRideActive) return;
+            if(_rideManager.IsRideActive || customerSos.Count < 1) return;
             var rand = Random.Range(0, customerSos.Count - 1);
             
             _rideManager.AcceptRide(customerSos[rand]);
