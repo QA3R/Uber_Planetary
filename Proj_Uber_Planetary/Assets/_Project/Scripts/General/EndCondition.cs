@@ -17,7 +17,7 @@ namespace UberPlanetary.General
 
         private void Awake()
         {
-            _currencyMngr = GetComponent<CurrencyManager>();
+            _currencyMngr = FindObjectOfType<CurrencyManager>();
             clock = FindObjectOfType<Clock>();
         }
         private void Start()
@@ -25,7 +25,6 @@ namespace UberPlanetary.General
             _currencyMngr.OnValueChanged.AddListener(CheckWin);
             clock.onTimeUp += Lose;
         }
-
         
         void CheckWin(int money)
         {
