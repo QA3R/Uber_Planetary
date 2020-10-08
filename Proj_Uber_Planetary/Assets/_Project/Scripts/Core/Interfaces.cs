@@ -128,11 +128,11 @@ namespace UberPlanetary.Core
         //etc
     }
 
-    public interface ILandmark : IListElement
+    public interface ILandmark
     {
         ILandmarkIcon LocationIcon { get; set; }
         void OnLocationReached();
-        UnityEvent OnReached { get; set; }
+        event Action OnReached;
         Transform GetTransform { get; }
         
         IGeneralLandmark parentLandmark { get;}

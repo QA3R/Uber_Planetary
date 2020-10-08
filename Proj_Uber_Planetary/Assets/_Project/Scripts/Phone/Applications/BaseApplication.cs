@@ -6,7 +6,7 @@ using UnityEngine.Events;
 namespace UberPlanetary.Phone.Applications
 {
     /// Just a test class for dumy functions
-    public class TestApplication : MonoBehaviour , IPhoneApplication
+    public class BaseApplication : MonoBehaviour , IPhoneApplication
     {
         //Events exposed to Unity so we can drag and drop things, for eg, on select we might drag in a audio source and play a selection sound etc.
         [SerializeField] private UnityEvent OnEnter, OnExit, OnSelect, OnDeselect;
@@ -25,13 +25,13 @@ namespace UberPlanetary.Phone.Applications
 
         public void Select()
         {
-            Debug.Log("<color=blue>HIGHLIGHTED </color>" + gameObject.name);
+            //Debug.Log("<color=blue>HIGHLIGHTED </color>" + gameObject.name);
             OnSelect?.Invoke();
         }
 
         public void Deselect()
         {
-            Debug.Log("<color=red>UNHIGHLIGHTED </color>" + gameObject.name);
+            //Debug.Log("<color=red>UNHIGHLIGHTED </color>" + gameObject.name);
             OnDeselect?.Invoke();
         }
         

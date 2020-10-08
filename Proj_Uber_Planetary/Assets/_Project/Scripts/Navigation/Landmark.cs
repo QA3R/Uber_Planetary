@@ -5,21 +5,25 @@ using UnityEngine.Events;
 
 namespace UberPlanetary.Navigation
 {
-    public class Landmark : MonoBehaviour, ILandmark
+    public class Landmark : MonoBehaviour, ILandmark, IListElement
     {
         [SerializeField]private GameObject iconHolder;
 
         public ILandmarkIcon LocationIcon { get; set; }
+        public event Action OnReached;
 
-        public UnityEvent OnReached { get; set; }
         public Transform GetTransform => transform;
         public IGeneralLandmark parentLandmark { get; private set; }
-
-
+        
         private void Awake()
         {
             LocationIcon = iconHolder.GetComponent<ILandmarkIcon>();
             parentLandmark = GetComponentInParent<IGeneralLandmark>();
+        }
+
+        private void Start()
+        {
+            Add();
         }
 
         public void Add()

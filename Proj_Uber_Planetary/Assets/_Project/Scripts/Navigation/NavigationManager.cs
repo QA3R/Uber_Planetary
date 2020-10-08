@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UberPlanetary.Core;
+using UberPlanetary.Quests;
+using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,12 +13,14 @@ namespace UberPlanetary.Navigation
     {
         private static NavigationManager _instance;
         
-        private List<ILandmark> _landmarks;
-        private List<IGeneralLandmark> _generalLandmarks;
+        private List<ILandmark> _landmarks = new List<ILandmark>();
+        private List<IGeneralLandmark> _generalLandmarks = new List<IGeneralLandmark>();
 
         private Sprite passengerPickUpSprite;
         private Sprite passengerDropOffSprite;
         private Sprite additionalQuestSprite;
+        
+        private RideManager _rideManager;
 
         public static NavigationManager Instance
         {
@@ -38,15 +43,27 @@ namespace UberPlanetary.Navigation
         private void Awake()
         {
             Instance = _instance ? _instance : this;
+            _rideManager = FindObjectOfType<RideManager>();
         }
 
+        private void Start()
+        {
+            _rideManager.onRideAccepted.AddListener(SetDestination);
+            _rideManager.onCustomerPickedUp.AddListener(SetDestination);
+        }
+
+        private void SetDestination(CustomerSO customerSo)
+        {
+            customerSo.CustomerRide.RideCurrentLandmark.LocationIcon.iconImage.enabled = true;
+        }
+        
         public ILandmark GetRandomLandmark()
         {
             var rand = Random.Range(0, _landmarks.Count);
             return _landmarks[rand];
         }
 
-        public IGeneralLandmark getRandomGeneralLandmark()
+        public IGeneralLandmark GetRandomGeneralLandmark()
         {
             var rand = Random.Range(0, _landmarks.Count);
             return _generalLandmarks[rand];
@@ -68,13 +85,13 @@ namespace UberPlanetary.Navigation
             return _generalLandmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
         }
 
-        public ILandmark GetRandomLandmarkWithinRadius(Vector3 from, float radius)
-        {
-            var temp = _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude < radius).ToList();
-
-            var rand = Random.Range(0, temp.Count);
-            
-            return temp[rand];
-        }
+        // public ILandmark GetRandomLandmarkWithinRadius(Vector3 from, float radius)
+        // {
+        //     var temp = _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude < radius).ToList();
+        //
+        //     var rand = Random.Range(0, temp.Count -1);
+        //     
+        //     return temp[rand];
+        // }
     }
 }

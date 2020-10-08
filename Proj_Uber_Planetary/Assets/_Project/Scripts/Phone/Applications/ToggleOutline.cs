@@ -5,12 +5,15 @@ namespace UberPlanetary.Phone.Applications
 {
     public class ToggleOutline : MonoBehaviour
     {
+        private GameObject go;
         private Material _material;
         [SerializeField] private string outlineActivePropertyTag;
 
         private void Awake()
         {
-            _material = GetComponent<Image>().material;
+            go = this.gameObject;
+            
+            _material = go.GetComponent<Image>().material;
             SetOutlineTo(0);
         }
 

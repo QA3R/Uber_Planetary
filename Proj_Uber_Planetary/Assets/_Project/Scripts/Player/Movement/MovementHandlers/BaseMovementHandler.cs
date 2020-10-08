@@ -27,14 +27,11 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         protected virtual void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            Debug.Log("I'm awake", this);
         }
         
         public virtual void MoveForward(float val)
         {
             Move(transform.forward, val, forwardMovementSpeed);
-            Debug.Log("Dir : " + transform.forward + " val : " + val);
-
         }
         public virtual void MoveBackward(float val)
         {

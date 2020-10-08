@@ -9,7 +9,7 @@ namespace UberPlanetary.ScriptableObjects
         [SerializeField] private Sprite customerFace;
         [SerializeField] private float customerMood;
         [SerializeField] private DialogueSO customerDialogue;
-        [SerializeField] private QuestSO customerQuest;
+        [SerializeField] private Ride customerRide;
         
         public string CustomerName => customerName;
  
@@ -21,7 +21,7 @@ namespace UberPlanetary.ScriptableObjects
             set => customerMood = Mathf.Clamp01(value);
         }
         
-        public QuestSO CustomerQuest => customerQuest;
+        public Ride CustomerRide => customerRide;
         public DialogueSO CustomerDialogue => customerDialogue;
     }
 }

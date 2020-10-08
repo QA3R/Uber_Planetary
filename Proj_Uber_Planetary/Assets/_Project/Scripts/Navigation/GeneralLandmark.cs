@@ -1,19 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UberPlanetary.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace UberPlanetary.Navigation
 {
-    public class GeneralLandmark : MonoBehaviour, IGeneralLandmark
+    public class GeneralLandmark : MonoBehaviour, IGeneralLandmark, IListElement
     {
         [SerializeField]private GameObject iconHolder;
         
         private List<ILandmark> _landmarkGrouping = new List<ILandmark>();
         
         public ILandmarkIcon LocationIcon { get; set; }
+        public event Action OnReached;
 
-        public UnityEvent OnReached { get; set; }
         public Transform GetTransform => transform;
         public IGeneralLandmark parentLandmark { get; }
         public List<ILandmark> landmarkGrouping { get; set; }
@@ -51,5 +52,6 @@ namespace UberPlanetary.Navigation
         {
             OnReached?.Invoke();
         }
+
     }
 }
