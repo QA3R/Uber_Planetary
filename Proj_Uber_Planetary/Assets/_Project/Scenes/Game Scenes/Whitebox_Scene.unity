@@ -936,6 +936,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1418314408388070511, guid: e6e21ee79e9c50945892dd79e69ee088, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1843784388716517279, guid: e6e21ee79e9c50945892dd79e69ee088, type: 3}
       propertyPath: landmarkStringId
       value: House C6
@@ -1003,6 +1007,10 @@ PrefabInstance:
     - target: {fileID: 6253962180513756746, guid: e6e21ee79e9c50945892dd79e69ee088, type: 3}
       propertyPath: landmarkStringId
       value: Willy's (C)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640495173398290239, guid: e6e21ee79e9c50945892dd79e69ee088, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e21ee79e9c50945892dd79e69ee088, type: 3}

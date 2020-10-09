@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DobbieDialogue
   m_EditorClassIdentifier: 
   lines:
-  - '<wiggle> Heeyyyyyyyyyyyyyyy......... <wiggle> '
-  - '<wiggle> Wait a minute..... You''re not one of them bots! <wiggle> '
-  - '<wiggle> Ehhhhh whatever... Just take me home man... <wiggle> '
-  - '<wiggle>  Had wayyy too much at DInklebop''s <wiggle> '
-  - '<wiggle> Just drop me off at Willy''s man.... <wiggle> '
-  - '<wiggle> I''ll stay with mum til she''s off work... <wiggle> '
+  - '<wiggle a=.2> Heeyyyyyyyyyyyyyyy......... <wiggle> '
+  - '<wiggle a-.2> Wait a minute..... You''re not one of them bots! <wiggle> '
+  - '<wiggle a=.2> Ehhhhh whatever... Just take me home man... <wiggle> '
+  - '<wiggle a=.2>  Had wayyy too much at DInklebop''s <wiggle> '
+  - '<wiggle a=.2> Just drop me off at Willy''s man.... <wiggle> '
+  - '<wiggle a=.2> I''ll stay with mum til she''s off work... <wiggle> '
   interruptions: []
