@@ -39,7 +39,7 @@ namespace UberPlanetary.Navigation
 
             _player = FindObjectOfType<PlayerController>();
         }
-
+        
         private void FixedUpdate()
         {
             UpdateIconPosition();

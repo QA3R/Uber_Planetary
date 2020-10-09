@@ -60,7 +60,7 @@ namespace UberPlanetary.Dialogue
         {
             ClearCustomerData();
             ClearDialogueBox();
-            ToggleDialogueBox(false);
+            FinishDialogue();        
         }
 
         public void ToggleDialogueBox(bool state)
@@ -96,11 +96,17 @@ namespace UberPlanetary.Dialogue
                 DisplayText(dialogueSO.lines[++_lineIndex]);
             }
 
-            _timeBetweenDialogue += Time.deltaTime;
             if (_timeBetweenDialogue >= autoPlayDialogueTime)
             {
                 DisplayText(dialogueSO.lines[++_lineIndex]);
+                _timeBetweenDialogue = 0;
             }
+            else
+            {
+                _timeBetweenDialogue += Time.deltaTime;
+            }
+
+            _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
         }
 
         public void InitiateDialogue()
