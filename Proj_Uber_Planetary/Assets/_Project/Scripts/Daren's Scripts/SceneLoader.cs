@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
     private static SceneLoader _instance;
     public static SceneLoader instance { get { return _instance; } }
-
+    
     void Awake ()
     {
         if (_instance != null && _instance != this)
@@ -27,17 +28,17 @@ public class SceneLoader : MonoBehaviour
    // Loads the scene using LoadSceneMode.Additive
    public void LoadSceneAdditive (int sceneIndex)
     {
-        SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Additive);
         Debug.Log(sceneIndex + " was loaded");
     }
 
     // Loads the scene using LoadSceneMode.Single
     public void LoadSceneSingle (int sceneIndex)
     {
-        SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         Debug.Log(sceneIndex + " was loaded");
     }
-
+    
     public void QuitGame()
     {
         Application.Quit();

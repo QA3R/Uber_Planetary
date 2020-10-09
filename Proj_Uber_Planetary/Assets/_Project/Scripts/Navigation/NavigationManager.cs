@@ -69,6 +69,7 @@ namespace UberPlanetary.Navigation
                     stringLandmarkDictionary.Add(lm.LandmarkStringID, lm);
                 }
             }
+
         }
 
         private void SetDestination(CustomerSO customerSo)
