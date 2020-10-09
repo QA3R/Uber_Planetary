@@ -32,6 +32,7 @@ namespace UberPlanetary
             _InputHandler.enabled = false;
             //fade to black
             transitionImage.transform.DOScale(endScale, scaleDuration).SetEase(scaleEase);
+
             yield return new WaitForSeconds(scaleDuration);
             
             //play sound
@@ -40,6 +41,7 @@ namespace UberPlanetary
             
             //fade back
             transitionImage.transform.DOScale(startScale, scaleDuration).SetEase(scaleEase);
+
             yield return new WaitForSeconds(scaleDuration);
 
             //give back input
