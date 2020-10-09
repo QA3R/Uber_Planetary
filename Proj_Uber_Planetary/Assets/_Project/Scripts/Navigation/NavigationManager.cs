@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UberPlanetary.Core;
 using UberPlanetary.Quests;
@@ -58,14 +57,14 @@ namespace UberPlanetary.Navigation
 
         private void InitializeDictionaries()
         {
-            foreach (var lm in _landmarks)
+            foreach (ILandmark lm in _landmarks)
             {
-                if (!intLandmarkDictionary.ContainsKey(lm.LandmarkIntID))
+                if (!intLandmarkDictionary.ContainsKey(lm.LandmarkIntID) && lm.LandmarkIntID != 0)
                 {
                     intLandmarkDictionary.Add(lm.LandmarkIntID, lm);
                 }
 
-                if (!stringLandmarkDictionary.ContainsKey(lm.LandmarkStringID))
+                if (!stringLandmarkDictionary.ContainsKey(lm.LandmarkStringID) && !string.IsNullOrEmpty(lm.LandmarkStringID))
                 {
                     stringLandmarkDictionary.Add(lm.LandmarkStringID, lm);
                 }

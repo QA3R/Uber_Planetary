@@ -22,13 +22,9 @@ namespace UberPlanetary.Navigation
         {
             LocationIcon = iconHolder.GetComponent<ILandmarkIcon>();
             parentLandmark = GetComponentInParent<IGeneralLandmark>();
-        }
-
-        private void Start()
-        {
             Add();
         }
-
+        
         public void Add()
         {
             NavigationManager.Instance.Landmarks.Add(this);

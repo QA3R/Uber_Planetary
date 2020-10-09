@@ -29,6 +29,8 @@ namespace UberPlanetary.Navigation
             LocationIcon = iconHolder.GetComponent<ILandmarkIcon>();
 
             PopulateChildLandmarks();
+            
+            Add();
         }
 
         private void PopulateChildLandmarks()
