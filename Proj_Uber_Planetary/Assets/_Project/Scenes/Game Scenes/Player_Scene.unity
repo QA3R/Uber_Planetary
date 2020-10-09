@@ -459,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -556,6 +556,10 @@ PrefabInstance:
     - target: {fileID: 740858015040728189, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: keyCodes.Array.data[4]
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728191, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Center.y
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 762616758548074518, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -699,11 +703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: heightMinMax.x
-      value: -200
+      value: -1000
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: heightMinMax.y
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: speedSmoothingDuration
