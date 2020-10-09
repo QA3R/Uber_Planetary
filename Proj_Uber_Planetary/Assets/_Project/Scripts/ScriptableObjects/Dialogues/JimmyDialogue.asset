@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: JimmyDialogue
   m_EditorClassIdentifier: 
   lines:
-  - Hey whats up my squigga
+  - Hey whats up fleshbag?
   - So listen, I'm in a bit of a <shake a=0.1>hurry</shake>. Can you book it to the
-    closest willies?
+    willies by Dinklebop Inc.?
   - 'You see... I''m high as kite on melloleef and im craving Willies '
-  - so if you can take me there in less than 12 parsecs that'd be dope
+  - The faster the better fleshbag.
   interruptions:
   - Whooa slow down there buckaroo! i wanna get there fast but i also wanna get there
     in one piece

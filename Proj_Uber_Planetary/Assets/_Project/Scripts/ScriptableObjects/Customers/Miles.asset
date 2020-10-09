@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cae0246c5e94e41b4c0c6e8e990abb, type: 3}
-  m_Name: Jimmy
+  m_Name: Miles
   m_EditorClassIdentifier: 
-  customerName: Jimmy
-  customerFace: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
+  customerName: Miles
+  customerFace: {fileID: 0}
   customerMood: 0
-  customerDialogue: {fileID: 11400000, guid: 55a2f65fdea2c18409dda75b5eec879b, type: 2}
+  customerDialogue: {fileID: 0}
   customerRide:
-    rideReward: 200
-    endLocationStringID: Willy's (C)
-    startLocationStringID: 
+    rideReward: 150
+    endLocationStringID: House C6
+    startLocationStringID: Will-Mart
     endLocationIntID: 0
     startLocationIntID: 0
