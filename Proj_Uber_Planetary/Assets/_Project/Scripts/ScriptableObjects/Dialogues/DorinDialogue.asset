@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
-  m_Name: MilesDialogue
+  m_Name: DorinDialogue
   m_EditorClassIdentifier: 
   lines:
-  - Hey bud, can you take me to C6? It's on Platform C.
-  - Yeah Hun? Yeah I got the groceries... Yeah... Yeah... The baby's doing what again?!?
-  - Uhh hey can you uhh maybe not take the ride that quickly? Not looking forward
-    to getting home right now...
-  - Thanks *sigh*
+  - Hey man, I need you to take me to the MEGA-Mall...
+  - Ding Dong's Milk Store is out of milk so he sent me to get more..
+  - How can such a big chungus like him run out of milk? Geez...
   interruptions: []
