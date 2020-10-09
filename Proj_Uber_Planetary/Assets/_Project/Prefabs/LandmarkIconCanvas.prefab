@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 496640441487296772}
   - component: {fileID: 496640441487296779}
   m_Layer: 5
-  m_Name: IconCanvas
+  m_Name: LandmarkIconCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,4 +187,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b3a031dda74822888ba019b25edd63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 100, z: 0}
+  offset: {x: 0, y: 30, z: 0}

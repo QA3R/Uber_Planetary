@@ -11,11 +11,14 @@ namespace UberPlanetary.Phone
         private IInputProvider _inputProvider;
         
         private bool isActive;
+        private AudioSource _audioSource;
         
         [SerializeField] private Vector3 offset;
         [SerializeField] private GameObject phone;
         [SerializeField] private Canvas canvas;
-        [SerializeField] private UnityEvent OnStart;
+        [SerializeField] private AudioClip pullUp, pullDown;
+        [SerializeField] private UnityEvent onStart;
+        [SerializeField] private UnityEvent onPhonePulledUp;
 
         //The Phone Navigator interface, lets us access the currently selected item and scroll through the rest.
         private IPhoneNavigator _phoneNavigator;
@@ -23,14 +26,27 @@ namespace UberPlanetary.Phone
         private void Awake()
         {
             AssignComponents();
-            
+            _audioSource = GetComponent<AudioSource>();
         }
         
         private void Start()
         {
             _inputProvider = GameObject.Find("PlayerShip").GetComponent<IInputProvider>();
             AssignDelegates();
-            OnStart?.Invoke();
+            onStart?.Invoke();
+        }
+
+        public void TempPlayAudio()
+        {
+            if (isActive)
+            {
+                _audioSource.clip = pullUp;
+            }
+            else
+            {
+                _audioSource.clip = pullDown;
+            }
+            _audioSource.Play();
         }
 
 
@@ -39,7 +55,7 @@ namespace UberPlanetary.Phone
         {
             //Manage internal state of the phone, is it currently usable or not?
             isActive = !isActive;
-
+            onPhonePulledUp?.Invoke();
             //TODO: Animate phone based on state
             //When its active move the phone up
             if (isActive)

@@ -7,13 +7,15 @@ namespace UberPlanetary.Navigation
     public class Landmark : MonoBehaviour, ILandmark, IListElement
     {
         [SerializeField]private GameObject iconHolder;
+        [SerializeField]private String landmarkStringId;
+        [SerializeField]private int landmarkIntId;
 
         public ILandmarkIcon LocationIcon { get; set; }
         public event Action OnReached;
 
         public Transform GetTransform => transform;
-        public string LandmarkStringID { get; }
-        public int LandmarkIntID { get; }
+        public string LandmarkStringID => landmarkStringId;
+        public int LandmarkIntID => landmarkIntId;
         public IGeneralLandmark parentLandmark { get; private set; }
         
         private void Awake()

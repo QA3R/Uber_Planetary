@@ -45,10 +45,10 @@ namespace UberPlanetary.Quests
 
         private void RideAccepted()
         {
-            // if (_currentRide.RideStartLandmark == null)
-            // {
-            //     _currentRide.RideStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(_player.transform.position, searchRadius);
-            // }
+            if (_currentRide.RideStartLandmark == null)
+            {
+                _currentRide.RideStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(_player.transform.position, searchRadius);
+            }
 
             if (_currentRide.RideStartLandmark == null)
             {

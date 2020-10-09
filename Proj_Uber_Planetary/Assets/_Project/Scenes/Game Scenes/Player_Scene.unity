@@ -381,6 +381,10 @@ PrefabInstance:
       propertyPath: shakeMax
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1269204010, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 237027248837010046, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.z
       value: -1964.9512
