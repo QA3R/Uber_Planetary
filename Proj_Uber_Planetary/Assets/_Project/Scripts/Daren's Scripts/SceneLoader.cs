@@ -30,6 +30,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Additive);
         Debug.Log(sceneIndex + " was loaded");
+        Time.timeScale = 1;
     }
 
     // Loads the scene using LoadSceneMode.Single
@@ -37,6 +38,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         Debug.Log(sceneIndex + " was loaded");
+        Time.timeScale = 1;
     }
     
     public void QuitGame()
@@ -44,5 +46,4 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
         Debug.Log("Game Successfully Closed");
     }
-    
 }

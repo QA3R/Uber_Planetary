@@ -93,12 +93,12 @@ namespace UberPlanetary.Dialogue
                     FinishDialogue();
                     return;
                 }
-                DisplayText(dialogueSO.lines[++_lineIndex]);
+                DisplayText(dialogueSO.lines[_lineIndex++]);
             }
 
             if (_timeBetweenDialogue >= autoPlayDialogueTime)
             {
-                DisplayText(dialogueSO.lines[++_lineIndex]);
+                DisplayText(dialogueSO.lines[_lineIndex++]);
                 _timeBetweenDialogue = 0;
             }
             else
