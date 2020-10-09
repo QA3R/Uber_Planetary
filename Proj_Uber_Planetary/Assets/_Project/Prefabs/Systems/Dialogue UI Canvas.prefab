@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af08e21e0335804ebd2008a2a0beb48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoPlayDialogueTime: 8
   custName: {fileID: 769112866074426018}
   dialogueBox: {fileID: 769112866129506498}
   dialogueWindow: {fileID: 769112865801737559}

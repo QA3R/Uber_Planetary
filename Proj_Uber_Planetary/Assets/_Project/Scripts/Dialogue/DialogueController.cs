@@ -11,7 +11,7 @@ namespace UberPlanetary.Dialogue
     {
         private RideManager _rideManager;
         private float _timeBetweenDialogue;
-        private float autoPlayDialogueTime;
+        [SerializeField]private float autoPlayDialogueTime;
 
         // Dialogue Box objects
         public TextMeshProUGUI custName;
@@ -95,6 +95,12 @@ namespace UberPlanetary.Dialogue
                 }
                 DisplayText(dialogueSO.lines[++_lineIndex]);
             }
+
+            _timeBetweenDialogue += Time.deltaTime;
+            if (_timeBetweenDialogue >= autoPlayDialogueTime)
+            {
+                DisplayText(dialogueSO.lines[++_lineIndex]);
+            }
         }
 
         public void InitiateDialogue()
@@ -109,6 +115,7 @@ namespace UberPlanetary.Dialogue
         public void DisplayText(string textToDisplay)
         {
             textAnimatorPlayer.ShowText(textToDisplay);
+            _timeBetweenDialogue = 0;
             //Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
         }
 

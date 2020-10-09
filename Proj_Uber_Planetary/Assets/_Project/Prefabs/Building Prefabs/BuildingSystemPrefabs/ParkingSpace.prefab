@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9d91ef9e6ca31234aa4873f7c65b781d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconHolder: {fileID: 8687161779595347624}
+  landmarkStringId: 
+  landmarkIntId: 0
 --- !u!1001 &9109256222372344119
 PrefabInstance:
   m_ObjectHideFlags: 0
