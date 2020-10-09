@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 56428989}
   - component: {fileID: 56428988}
   - component: {fileID: 56428992}
+  - component: {fileID: 56428993}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -510,6 +511,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &56428993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56428987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8abc4b7e06f0f748869d50a45f9f908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &57360717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,17 +2487,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558348349}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &632393622 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4566636005940727608, guid: a198b3a660f16b547b209f48224522dd, type: 3}
-  m_PrefabInstance: {fileID: 4566636006554108078}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef349a702de995498bdbe2ba4142533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &638172302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4245,8 +4247,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 632393622}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -5653,8 +5655,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 632393622}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneSingle
         m_Mode: 3
         m_Arguments:
@@ -5665,8 +5667,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 632393622}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneAdditive
         m_Mode: 3
         m_Arguments:
@@ -5677,8 +5679,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 632393622}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneAdditive
         m_Mode: 3
         m_Arguments:

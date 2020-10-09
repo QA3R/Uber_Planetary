@@ -1,4 +1,5 @@
-﻿using UberPlanetary.Currency;
+﻿using System.Collections;
+using UberPlanetary.Currency;
 using UberPlanetary.Navigation;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace UberPlanetary.Quests
         public UnityEvent<CustomerSO> onCustomerDroppedOff;
         
         [SerializeField] private float searchRadius;
+        [SerializeField] private PickUpDropOffDelay pickUpDropOff;
         
         public bool IsRideActive => _currentRide != null;
         
@@ -78,21 +80,25 @@ namespace UberPlanetary.Quests
             //Update Navigation Icon
 
             _currentRide.RideCurrentLandmark = _currentRide.RideEndLandmark;
-            onCustomerPickedUp?.Invoke(_currentCustomer);
+            //onCustomerPickedUp?.Invoke(_currentCustomer);
+            StartCoroutine(InvokeWithDelay(onCustomerPickedUp, 5f, _currentCustomer));
             _currentRide.RideEndLandmark.OnReached += EndLocationReached;
         }
 
         private void EndLocationReached()
         {
             _currentRide.RideEndLandmark.OnReached -= EndLocationReached;
-            onCustomerDroppedOff?.Invoke(_currentCustomer);
+            //onCustomerDroppedOff?.Invoke(_currentCustomer);
+            StartCoroutine(InvokeWithDelay(onCustomerDroppedOff, 5f, _currentCustomer));
             //Update Navigation Icon
             RideCompleted();
         }
 
-        private void InvokeWithDelay(UnityEvent enventToInvoke, float time)
+        private IEnumerator InvokeWithDelay(UnityEvent<CustomerSO> enventToInvoke, float time, CustomerSO data)
         {
-            
+            pickUpDropOff.PlayCutscene();
+            yield return new WaitForSeconds(time);
+            enventToInvoke?.Invoke(data);
         }
 
         private void RideCompleted()
