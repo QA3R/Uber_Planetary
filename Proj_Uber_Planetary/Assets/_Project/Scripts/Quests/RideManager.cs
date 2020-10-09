@@ -90,6 +90,11 @@ namespace UberPlanetary.Quests
             RideCompleted();
         }
 
+        private void InvokeWithDelay(UnityEvent enventToInvoke, float time)
+        {
+            
+        }
+
         private void RideCompleted()
         {
             _currencyManager.Amount += _currentRide.RideReward;

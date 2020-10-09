@@ -39,5 +39,15 @@ namespace UberPlanetary.Phone.Applications
         {
             Debug.Log("Displaying Notification for :" + gameObject.name);
         }
+        
+        public void GoToMainMenu(int index)
+        {
+            SceneLoader.instance.LoadSceneSingle(index);
+        }
+
+        public void ExitGame()
+        {
+            SceneLoader.instance.QuitGame();
+        }
     }
 }

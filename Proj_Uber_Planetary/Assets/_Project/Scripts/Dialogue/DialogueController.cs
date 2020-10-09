@@ -10,7 +10,9 @@ namespace UberPlanetary.Dialogue
     public class DialogueController : MonoBehaviour
     {
         private RideManager _rideManager;
-        
+        private float _timeBetweenDialogue;
+        private float autoPlayDialogueTime;
+
         // Dialogue Box objects
         public TextMeshProUGUI custName;
         public TextMeshProUGUI dialogueBox;
@@ -20,10 +22,8 @@ namespace UberPlanetary.Dialogue
         public TextAnimator textAnimator;
         private TextAnimatorPlayer textAnimatorPlayer;
 
-        [SerializeField]
-        private CustomerSO customerSO;
-        [SerializeField]
-        private DialogueSO dialogueSO;
+        [SerializeField] private CustomerSO customerSO;
+        [SerializeField] private DialogueSO dialogueSO;
         public DialogueTrigger dialogueTrigger;
 
         public bool isStarted;
@@ -32,7 +32,7 @@ namespace UberPlanetary.Dialogue
         public bool hasDialogue => dialogueSO != null;
 
         private int _lineIndex;
-        
+
         private void Awake()
         {
             dialogueTrigger = GetComponentInParent<DialogueTrigger>();
@@ -81,13 +81,12 @@ namespace UberPlanetary.Dialogue
             custName.text = null;
             custFace.sprite = null;
         }
-        
+
         private void Update()
         {
-
             if (IsShowing || !isStarted || !hasDialogue) return;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 if (_lineIndex >= dialogueSO.lines.Length - 1)
                 {
@@ -97,6 +96,7 @@ namespace UberPlanetary.Dialogue
                 DisplayText(dialogueSO.lines[++_lineIndex]);
             }
         }
+
         public void InitiateDialogue()
         {
             isStarted = true;
@@ -105,11 +105,13 @@ namespace UberPlanetary.Dialogue
             custFace.sprite = customerSO.CustomerFace;
             textAnimatorPlayer.ShowText(dialogueSO.lines[0]);
         }
+
         public void DisplayText(string textToDisplay)
         {
             textAnimatorPlayer.ShowText(textToDisplay);
             //Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
         }
+
         public void FinishDialogue()
         {
             isStarted = false;

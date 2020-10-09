@@ -635,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3765352350659547529, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: iMax
-      value: 150
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 4080764438318990169, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: zRotationSpeed
@@ -707,7 +707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: verticalMovementSpeed
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: heightMinMax.x
@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: forwardMovementSpeed
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: rigidbody
@@ -817,7 +817,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speedIncrement: 20
+  speedIncrement: 10
   smoothingDuration: 2
 --- !u!54 &1322699300 stripped
 Rigidbody:

@@ -27,5 +27,6 @@ namespace UberPlanetary.Phone.Applications
 
             customerSos.Remove(customerSos[rand]);
         }
+        
     }
 }
