@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: RobbieDialogue
   m_EditorClassIdentifier: 
   lines:
-  - Thanks for picking me up buddy-boi!
-  - 
-  - 
-  - 
-  - 
+  - Thanks for picking me up pal.
+  - Take me to the University of Wacdonalds.
+  - Mind if I do some Moon-Rocks while you drive? Dinklebop himself is hosting a
+    rad party and I don't wanna be a buzzkill when I meet up with my home-boi Gobbie...
+  - You don't even gotta worry about the cops my guy, they barely even patrol these
+    roads...
+  - I'll even throw some extra dosh your way.
+  - '<shake> *SNIFFFF*  ohhhh yeahh....<shake> '
+  - Ahhh yeahhh, that's the stuff...
   interruptions: []

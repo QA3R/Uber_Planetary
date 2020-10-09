@@ -18,5 +18,7 @@ MonoBehaviour:
   customerDialogue: {fileID: 0}
   customerRide:
     rideReward: 0
-    rideEndLocationHolder: {fileID: 0}
-    rideStartLocationHolder: {fileID: 0}
+    endLocationStringID: Willy's (B)
+    startLocationStringID: University of Wacdonalds
+    endLocationIntID: 0
+    startLocationIntID: 0
