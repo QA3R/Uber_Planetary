@@ -135,6 +135,8 @@ namespace UberPlanetary.Core
         event Action OnReached;
         Transform GetTransform { get; }
         
+        string LandmarkStringID { get;}
+        int LandmarkIntID { get;}
         IGeneralLandmark parentLandmark { get;}
     }
 

@@ -13,13 +13,13 @@ namespace UberPlanetary.Phone.Applications
         
         public void Enter()
         {
-            Debug.Log("Entering :" + gameObject.name);
+            //Debug.Log("Entering :" + gameObject.name);
             OnEnter?.Invoke();
         }
 
         public void Exit()
         {
-            Debug.Log("Exiting :" + gameObject.name);
+            //Debug.Log("Exiting :" + gameObject.name);
             OnExit?.Invoke();
         }
 

@@ -9,6 +9,8 @@ namespace UberPlanetary.Navigation
     public class GeneralLandmark : MonoBehaviour, IGeneralLandmark, IListElement
     {
         [SerializeField]private GameObject iconHolder;
+        [SerializeField]private string stringID;
+        [SerializeField]private int intID;
         
         private List<ILandmark> _landmarkGrouping = new List<ILandmark>();
         
@@ -16,6 +18,8 @@ namespace UberPlanetary.Navigation
         public event Action OnReached;
 
         public Transform GetTransform => transform;
+        public string LandmarkStringID => stringID;
+        public int LandmarkIntID => intID;
         public IGeneralLandmark parentLandmark { get; }
         public List<ILandmark> landmarkGrouping { get; set; }
         

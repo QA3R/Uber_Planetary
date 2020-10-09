@@ -108,7 +108,7 @@ namespace UberPlanetary.Dialogue
         public void DisplayText(string textToDisplay)
         {
             textAnimatorPlayer.ShowText(textToDisplay);
-            Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
+            //Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
         }
         public void FinishDialogue()
         {

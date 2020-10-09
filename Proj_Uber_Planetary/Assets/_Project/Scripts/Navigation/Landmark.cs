@@ -12,6 +12,8 @@ namespace UberPlanetary.Navigation
         public event Action OnReached;
 
         public Transform GetTransform => transform;
+        public string LandmarkStringID { get; }
+        public int LandmarkIntID { get; }
         public IGeneralLandmark parentLandmark { get; private set; }
         
         private void Awake()

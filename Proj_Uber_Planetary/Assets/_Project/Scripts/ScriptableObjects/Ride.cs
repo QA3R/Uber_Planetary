@@ -1,4 +1,5 @@
 ﻿using UberPlanetary.Core;
+using UberPlanetary.Navigation;
 using UnityEngine;
 
 namespace UberPlanetary.ScriptableObjects
@@ -9,7 +10,9 @@ namespace UberPlanetary.ScriptableObjects
         public int rideReward;
         
         [Tooltip("Optional, leave empty and the quest manager will find a random location for it")]
-        [SerializeField] private GameObject rideEndLocationHolder, rideStartLocationHolder;
+        [SerializeField] private string endLocationStringID, startLocationStringID;
+        [Tooltip("Optional, leave empty and the quest manager will find a random location for it")]
+        [SerializeField] private int endLocationIntID, startLocationIntID;
 
         private ILandmark _rideStartLandmark;
         private ILandmark _rideEndLandmark;
@@ -29,11 +32,21 @@ namespace UberPlanetary.ScriptableObjects
             {
                 if (_rideEndLandmark == null)
                 {
-                    if (rideEndLocationHolder != null)
+                    if (!string.IsNullOrEmpty(endLocationStringID))
                     {
-                        if (rideEndLocationHolder.GetComponent<ILandmark>() != null)
+                        if (NavigationManager.Instance.stringLandmarkDictionary[endLocationStringID] != null)
                         {
-                            _rideEndLandmark = rideEndLocationHolder.GetComponent<ILandmark>();
+                            _rideEndLandmark = NavigationManager.Instance.stringLandmarkDictionary[endLocationStringID];
+                        }
+                    }
+                    else
+                    {
+                        if (endLocationIntID != 0)
+                        {
+                            if (NavigationManager.Instance.intLandmarkDictionary[endLocationIntID] != null)
+                            {
+                                _rideEndLandmark = NavigationManager.Instance.intLandmarkDictionary[endLocationIntID];
+                            }
                         }
                     }
                 }
@@ -47,11 +60,21 @@ namespace UberPlanetary.ScriptableObjects
             {
                 if (_rideStartLandmark == null)
                 {
-                    if (rideEndLocationHolder != null)
+                    if (!string.IsNullOrEmpty(startLocationStringID))
                     {
-                        if (rideStartLocationHolder.GetComponent<ILandmark>() != null)
+                        if (NavigationManager.Instance.stringLandmarkDictionary[startLocationStringID] != null)
                         {
-                            _rideStartLandmark = rideStartLocationHolder.GetComponent<ILandmark>();
+                            _rideStartLandmark = NavigationManager.Instance.stringLandmarkDictionary[startLocationStringID];
+                        }
+                    }
+                    else
+                    {
+                        if (startLocationIntID != 0)
+                        {
+                            if (NavigationManager.Instance.intLandmarkDictionary[startLocationIntID] != null)
+                            {
+                                _rideEndLandmark = NavigationManager.Instance.intLandmarkDictionary[startLocationIntID];
+                            }
                         }
                     }
                 }

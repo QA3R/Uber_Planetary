@@ -22,6 +22,9 @@ namespace UberPlanetary.Navigation
         
         private RideManager _rideManager;
 
+        public Dictionary<string, ILandmark> stringLandmarkDictionary = new Dictionary<string, ILandmark>();
+        public Dictionary<int, ILandmark> intLandmarkDictionary = new Dictionary<int, ILandmark>();
+
         public static NavigationManager Instance
         {
             get => _instance;
@@ -50,6 +53,23 @@ namespace UberPlanetary.Navigation
         {
             _rideManager.onRideAccepted.AddListener(SetDestination);
             _rideManager.onCustomerPickedUp.AddListener(SetDestination);
+            InitializeDictionaries();
+        }
+
+        private void InitializeDictionaries()
+        {
+            foreach (var lm in _landmarks)
+            {
+                if (!intLandmarkDictionary.ContainsKey(lm.LandmarkIntID))
+                {
+                    intLandmarkDictionary.Add(lm.LandmarkIntID, lm);
+                }
+
+                if (!stringLandmarkDictionary.ContainsKey(lm.LandmarkStringID))
+                {
+                    stringLandmarkDictionary.Add(lm.LandmarkStringID, lm);
+                }
+            }
         }
 
         private void SetDestination(CustomerSO customerSo)
