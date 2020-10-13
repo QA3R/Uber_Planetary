@@ -66,7 +66,7 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
 
             Ray ray = new Ray(transform.position, direction);
             RaycastHit hit;
-            if (!Physics.Raycast(ray, out hit, direction.magnitude + .5f))
+            if (!Physics.Raycast(ray, out hit, direction.magnitude * 2f))
             {
                 //_rigidbody.MovePosition(smoothedDelta);
                 _rigidbody.MovePosition(_rigidbody.position + dir * (val * Time.fixedDeltaTime * speedMultiplier));
