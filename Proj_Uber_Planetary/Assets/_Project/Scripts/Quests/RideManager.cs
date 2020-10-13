@@ -14,6 +14,7 @@ namespace UberPlanetary.Quests
         private GameObject _player;
         private CustomerSO _currentCustomer;
         private Ride _currentRide;
+        private bool _isRunning;
         
         public UnityEvent<CustomerSO> onRideAccepted;
         public UnityEvent<CustomerSO> onCustomerPickedUp;
@@ -96,9 +97,12 @@ namespace UberPlanetary.Quests
 
         private IEnumerator InvokeWithDelay(UnityEvent<CustomerSO> enventToInvoke, float time, CustomerSO data)
         {
+            if (_isRunning) yield break;
+            _isRunning = true;
             pickUpDropOff.PlayCutscene();
             yield return new WaitForSeconds(time);
             enventToInvoke?.Invoke(data);
+            _isRunning = false;
         }
 
         private void RideCompleted()

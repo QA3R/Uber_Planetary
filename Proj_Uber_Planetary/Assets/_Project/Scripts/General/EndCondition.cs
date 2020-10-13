@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UberPlanetary.Currency;
 
@@ -14,6 +15,8 @@ namespace UberPlanetary.General
         private Clock clock;
 
         public GameObject winScreen, loseScreen;
+
+        public static event Action onGameOver;
 
         private void Awake()
         {
@@ -38,6 +41,7 @@ namespace UberPlanetary.General
             _isGameOver = true;
             winScreen.SetActive(true);
             Debug.Log("YOU DID IT! You paid your debt to those suckers and now you're free!");
+            onGameOver?.Invoke();
             Time.timeScale = 0;
         }
         public void Lose()
@@ -45,6 +49,7 @@ namespace UberPlanetary.General
             _isGameOver = true;
             loseScreen.SetActive(true);
             Debug.Log("You couldn't pay in time and now you'll sleep with the fishes");
+            onGameOver?.Invoke();
             Time.timeScale = 0;
         }
     }

@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UberPlanetary.Player.Movement;
 using UnityEngine;
 using DG.Tweening;
+using UberPlanetary.General;
 
 namespace UberPlanetary
 {
@@ -19,11 +19,18 @@ namespace UberPlanetary
         {
             _InputHandler = FindObjectOfType<InputHandler>();
             _audioSource = GetComponent<AudioSource>();
+            EndCondition.onGameOver += EndStuff;
         }
 
         public void PlayCutscene()
         {
             StartCoroutine(StartCutscene());
+        }
+
+        public void EndStuff()
+        {
+            transitionImage.transform.localScale = Vector3.zero;
+            EndCondition.onGameOver -= EndStuff;
         }
         
         public IEnumerator StartCutscene()

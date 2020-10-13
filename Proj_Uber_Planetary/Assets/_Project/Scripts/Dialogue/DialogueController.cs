@@ -60,7 +60,8 @@ namespace UberPlanetary.Dialogue
         {
             ClearCustomerData();
             ClearDialogueBox();
-            FinishDialogue();        
+            FinishDialogue();
+            _lineIndex = 0;
         }
 
         public void ToggleDialogueBox(bool state)
@@ -88,25 +89,28 @@ namespace UberPlanetary.Dialogue
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (_lineIndex >= dialogueSO.lines.Length - 1)
+                if (_lineIndex >= dialogueSO.lines.Length)
                 {
                     FinishDialogue();
                     return;
                 }
                 DisplayText(dialogueSO.lines[_lineIndex++]);
             }
-
+            _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
             if (_timeBetweenDialogue >= autoPlayDialogueTime)
             {
+                if (_lineIndex >= dialogueSO.lines.Length)
+                {
+                    FinishDialogue();
+                    return;
+                }
                 DisplayText(dialogueSO.lines[_lineIndex++]);
-                _timeBetweenDialogue = 0;
+                //_timeBetweenDialogue = 0;
             }
             else
             {
                 _timeBetweenDialogue += Time.deltaTime;
             }
-
-            _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
         }
 
         public void InitiateDialogue()
@@ -115,7 +119,7 @@ namespace UberPlanetary.Dialogue
             custName.text = customerSO.CustomerName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = customerSO.CustomerFace;
-            textAnimatorPlayer.ShowText(dialogueSO.lines[0]);
+            textAnimatorPlayer.ShowText(dialogueSO.lines[_lineIndex++]);
         }
 
         public void DisplayText(string textToDisplay)
