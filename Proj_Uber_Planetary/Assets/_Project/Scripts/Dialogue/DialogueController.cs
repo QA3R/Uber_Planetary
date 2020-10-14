@@ -31,7 +31,9 @@ namespace UberPlanetary.Dialogue
 
         public bool hasDialogue => dialogueSO != null;
 
+        public string characterTalking;
         private int _lineIndex;
+        private int _characterIndex;
 
         private void Awake()
         {
@@ -89,22 +91,22 @@ namespace UberPlanetary.Dialogue
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (_lineIndex >= dialogueSO.lines.Length)
+                if (_lineIndex >= dialogueSO.dialogueLines.Length)
                 {
                     FinishDialogue();
                     return;
                 }
-                DisplayText(dialogueSO.lines[_lineIndex++]);
+                DisplayText(dialogueSO.dialogueLines[_lineIndex++].line);
             }
             _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
             if (_timeBetweenDialogue >= autoPlayDialogueTime)
             {
-                if (_lineIndex >= dialogueSO.lines.Length)
+                if (_lineIndex >= dialogueSO.dialogueLines.Length)
                 {
                     FinishDialogue();
                     return;
                 }
-                DisplayText(dialogueSO.lines[_lineIndex++]);
+                DisplayText(dialogueSO.dialogueLines[_lineIndex++].line);
                 //_timeBetweenDialogue = 0;
             }
             else
@@ -119,13 +121,16 @@ namespace UberPlanetary.Dialogue
             custName.text = customerSO.CustomerName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = customerSO.CustomerFace;
-            textAnimatorPlayer.ShowText(dialogueSO.lines[_lineIndex++]);
+            textAnimatorPlayer.ShowText(dialogueSO.dialogueLines[_lineIndex++].line);
+            
         }
 
         public void DisplayText(string textToDisplay)
         {
             textAnimatorPlayer.ShowText(textToDisplay);
             _timeBetweenDialogue = 0;
+            custName.text = dialogueSO.dialogueLines[_lineIndex].characterName;
+            custFace.sprite = dialogueSO.dialogueLines[_lineIndex].characterSpeaking;
             //Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
         }
 

@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
   m_Name: BobbieDialogue
   m_EditorClassIdentifier: 
-  lines:
-  - Hey man, thanks for the ride!
-  - Ahh, to the UofW mi'guy.
-  - 'Hello? Yeah, what''s up Gobbie? '
-  - Bruh what do you mean you're..?
-  - YOU TOOK HOW MUCH?!?
-  - HOW DID YOU... You know what? Just keep quiet and stay somewhere safe til I get
-    there..
-  interruptions: []
+  dialogueLines:
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}

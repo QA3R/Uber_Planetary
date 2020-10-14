@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
   m_Name: DavidDialogue
   m_EditorClassIdentifier: 
-  lines:
-  - Hey bud, can you take me to House C6? It's on Platform C.
-  - Hello? Yeah I got the groceries... Yeah... Yeah... Wait what? The baby's doing
-    what again?!?
-  - Uhh hey can you uhh maybe not take me home? Not looking forward to getting home
-    right now... Can you take me to Willy's instead?
-  - Thanks...  *sigh*
-  interruptions: []
+  dialogueLines:
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}

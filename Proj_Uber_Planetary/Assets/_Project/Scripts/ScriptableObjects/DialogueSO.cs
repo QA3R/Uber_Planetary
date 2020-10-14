@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace UberPlanetary.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "ScriptableObjects/Create Dialogue", order = 1)]
     public class DialogueSO : ScriptableObject
     {
-        private int _index;
+        public Dialogue[] dialogueLines;
 
-        [TextArea(3,10)]
-        public string[] lines;
+    }
 
-    [TextArea(3,10)]
-    public string[] interruptions;
+    [System.Serializable]
+    public class Dialogue
+    {
+        [TextArea(3, 10)]
+        public string line;
 
-
-
-    
-
+        public string characterName;
+        public Sprite characterSpeaking;
     }
 }
