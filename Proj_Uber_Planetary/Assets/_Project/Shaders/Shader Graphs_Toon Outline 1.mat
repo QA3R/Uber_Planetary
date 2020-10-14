@@ -24,6 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - RIM_LIGHTING: 0
     - Vector1_321CEB3F: 0
     - Vector1_3E7670E7: 1
     - Vector1_4E0ECF07: 0.5
@@ -36,6 +37,7 @@ Material:
     - Vector1_B1A04313: 0.3
     - Vector1_B1E42B62: 6
     - Vector1_BC878080: 1
+    - Vector1_C27FAE0C: 1
     - Vector1_E4DC2276: 0.5
     - Vector1_E8D8C946: 6
     - Vector1_EB0BB371: 1.9

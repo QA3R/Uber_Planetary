@@ -125,6 +125,7 @@ void AddAdditionalLights_float(float Smoothness, float3 WorldPosition, float3 Wo
     Color = MainColor * (MainDiffuse + MainSpecular);
 
     #ifndef SHADERGRAPH_PREVIEW
+    
     int pixelLightCount = GetAdditionalLightsCount();
     for (int i = 0; i < pixelLightCount; ++i) {
         Light light = GetAdditionalLight(i, WorldPosition);
