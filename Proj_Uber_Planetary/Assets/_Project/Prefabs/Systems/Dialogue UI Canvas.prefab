@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlayDialogueTime: 8
-  custName: {fileID: 769112866074426018}
+  custName: {fileID: 769112866497006824}
   dialogueBox: {fileID: 769112866129506498}
   dialogueWindow: {fileID: 769112865801737559}
   custFace: {fileID: 769112865637714562}
@@ -59,6 +59,7 @@ MonoBehaviour:
   dialogueSO: {fileID: 0}
   dialogueTrigger: {fileID: 0}
   isStarted: 0
+  characterTalking: 
 --- !u!1 &769112865637714620
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,8 +807,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
