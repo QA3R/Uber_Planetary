@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using UberPlanetary.Core;
+using UberPlanetary.Core.Interfaces;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace UberPlanetary.Navigation
 {
+    /// Implements the IGeneralLandmark interface and maintains its state
     public class GeneralLandmark : MonoBehaviour, IGeneralLandmark, IListElement
     {
+        //private members
+        private List<ILandmark> _landmarkGrouping = new List<ILandmark>();
+
+        //serialized fields
         [SerializeField]private GameObject iconHolder;
         [SerializeField]private string stringID;
         [SerializeField]private int intID;
         
-        private List<ILandmark> _landmarkGrouping = new List<ILandmark>();
-        
-        public ILandmarkIcon LocationIcon { get; set; }
+        //events
         public event Action OnReached;
 
+        //public properties
+        public ILandmarkIcon LocationIcon { get; set; }
         public Transform GetTransform => transform;
         public string LandmarkStringID => stringID;
         public int LandmarkIntID => intID;
@@ -27,21 +31,8 @@ namespace UberPlanetary.Navigation
         private void Awake()
         {
             LocationIcon = iconHolder.GetComponent<ILandmarkIcon>();
-
-            PopulateChildLandmarks();
             
             Add();
-        }
-
-        private void PopulateChildLandmarks()
-        {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                if (transform.GetChild(i).GetComponent<ILandmark>() != null)
-                {
-                    landmarkGrouping.Add(transform.GetChild(i).GetComponent<ILandmark>());
-                }
-            }
         }
 
         public void Add()
@@ -58,6 +49,5 @@ namespace UberPlanetary.Navigation
         {
             OnReached?.Invoke();
         }
-
     }
 }

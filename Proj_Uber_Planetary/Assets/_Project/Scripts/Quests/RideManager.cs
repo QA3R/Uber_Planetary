@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UberPlanetary.Core.Interfaces;
 using UberPlanetary.Currency;
 using UberPlanetary.Navigation;
 using UberPlanetary.ScriptableObjects;
@@ -9,6 +10,7 @@ namespace UberPlanetary.Quests
 {
     public class RideManager : MonoBehaviour
     {
+        //private members
         private NavigationManager _navigationManager;
         private CurrencyManager _currencyManager;
         private GameObject _player;
@@ -16,19 +18,17 @@ namespace UberPlanetary.Quests
         private Ride _currentRide;
         private bool _isRunning;
         
+        //public events
         public UnityEvent<CustomerSO> onRideAccepted;
         public UnityEvent<CustomerSO> onCustomerPickedUp;
         public UnityEvent<CustomerSO> onCustomerDroppedOff;
         
+        //serialized fields
         [SerializeField] private float searchRadius;
         [SerializeField] private PickUpDropOffDelay pickUpDropOff;
         
         public bool IsRideActive => _currentRide != null;
         
-        private void Awake()
-        {
-            //onRideAccepted.AddListener(RideAccepted);
-        }
 
         private void Start()
         {
@@ -50,12 +50,12 @@ namespace UberPlanetary.Quests
         {
             if (_currentRide.RideStartLandmark == null)
             {
-                _currentRide.RideStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius(_player.transform.position, searchRadius);
+                _currentRide.RideStartLandmark = _navigationManager.GetRandomLandmarkWithinRadius<ILandmark>(_player.transform.position, searchRadius);
             }
 
             if (_currentRide.RideStartLandmark == null)
             {
-                _currentRide.RideStartLandmark = _navigationManager.GetRandomLandmark();
+                _currentRide.RideStartLandmark = _navigationManager.GetRandomLandmark<ILandmark>();
             }
 
             if (_currentRide.RideStartLandmark == null)
@@ -66,7 +66,6 @@ namespace UberPlanetary.Quests
             _currentRide.RideCurrentLandmark = _currentRide.RideStartLandmark;
 
             onRideAccepted?.Invoke(_currentCustomer);
-            //Update Navigation Icon
             _currentRide.RideStartLandmark.OnReached += StartLocationReached;
         }
 
@@ -76,12 +75,10 @@ namespace UberPlanetary.Quests
             
             if (_currentRide.RideEndLandmark == null)
             {
-                _currentRide.RideEndLandmark = _navigationManager.GetFurthestLandmark(_player.transform.position);
+                _currentRide.RideEndLandmark = _navigationManager.GetFurthestLandmark<ILandmark>(_player.transform.position);
             }
-            //Update Navigation Icon
-
+            
             _currentRide.RideCurrentLandmark = _currentRide.RideEndLandmark;
-            //onCustomerPickedUp?.Invoke(_currentCustomer);
             StartCoroutine(InvokeWithDelay(onCustomerPickedUp, 5f, _currentCustomer));
             _currentRide.RideEndLandmark.OnReached += EndLocationReached;
         }
@@ -89,9 +86,7 @@ namespace UberPlanetary.Quests
         private void EndLocationReached()
         {
             _currentRide.RideEndLandmark.OnReached -= EndLocationReached;
-            //onCustomerDroppedOff?.Invoke(_currentCustomer);
             StartCoroutine(InvokeWithDelay(onCustomerDroppedOff, 5f, _currentCustomer));
-            //Update Navigation Icon
             RideCompleted();
         }
 
@@ -114,7 +109,7 @@ namespace UberPlanetary.Quests
 
         private void RideFailed()
         {
-            
+            //if the time runs out
         }
     }
 }

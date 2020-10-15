@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace UberPlanetary._Project.Scripts.Editor
 {
+    /// Finds all occurrences of the provided shader and adds given keyword to it
     public class ShaderOccurenceWindow : EditorWindow
     {
         [MenuItem("Tools/Shader Occurence")]

@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using UberPlanetary.Core;
+using UberPlanetary.Core.Interfaces;
 using UberPlanetary.Quests;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
@@ -8,43 +9,39 @@ using Random = UnityEngine.Random;
 
 namespace UberPlanetary.Navigation
 {
+    /// Maintains the list of Navigation points in the world and provides functions to generate new ones
     public class NavigationManager : MonoBehaviour
     {
+        //Instance
         private static NavigationManager _instance;
-        
+        public static NavigationManager Instance => _instance;
+
+        //private members
         private List<ILandmark> _landmarks = new List<ILandmark>();
         private List<IGeneralLandmark> _generalLandmarks = new List<IGeneralLandmark>();
-
-        private Sprite passengerPickUpSprite;
-        private Sprite passengerDropOffSprite;
-        private Sprite additionalQuestSprite;
-        
         private RideManager _rideManager;
+        private Dictionary<Type, List<ILandmark>> _typeDictionary = new Dictionary<Type, List<ILandmark>>();
 
+        //public dictionaries
         public Dictionary<string, ILandmark> stringLandmarkDictionary = new Dictionary<string, ILandmark>();
         public Dictionary<int, ILandmark> intLandmarkDictionary = new Dictionary<int, ILandmark>();
-
-        public static NavigationManager Instance
-        {
-            get => _instance;
-            set => _instance = value;
-        }
-
+        
+        //public properties
         public List<ILandmark> Landmarks
         {
             get => _landmarks;
-            //set => _landmarks = value;
         }
 
         public List<IGeneralLandmark> GeneralLandmarks
         {
             get => _generalLandmarks;
-            //set => _generalLandmarks = value;
         }
 
         private void Awake()
         {
-            Instance = _instance ? _instance : this;
+            //_instance ??= this;
+
+            _instance = _instance ? _instance : this;
             _rideManager = FindObjectOfType<RideManager>();
         }
 
@@ -55,6 +52,7 @@ namespace UberPlanetary.Navigation
             InitializeDictionaries();
         }
 
+        /// Update the dictionaries of landmarks based on the registered landmarks
         private void InitializeDictionaries()
         {
             foreach (ILandmark lm in _landmarks)
@@ -69,49 +67,52 @@ namespace UberPlanetary.Navigation
                     stringLandmarkDictionary.Add(lm.LandmarkStringID, lm);
                 }
             }
-
+            _typeDictionary.Add(typeof(ILandmark), _landmarks);
+            _typeDictionary.Add(typeof(IGeneralLandmark), _landmarks);
         }
 
+        //Enable the image and wait for player to reach that destination.
         private void SetDestination(CustomerSO customerSo)
         {
-            customerSo.CustomerRide.RideCurrentLandmark.LocationIcon.iconImage.enabled = true;
+            var locationIcon = customerSo.CustomerRide.RideCurrentLandmark.LocationIcon;
+            locationIcon.ToggleImage();
         }
         
-        public ILandmark GetRandomLandmark()
+
+        /// Returns a ILandmark randomly from the collection
+        public T GetRandomLandmark<T>() where T : ILandmark
         {
-            var rand = Random.Range(0, _landmarks.Count);
-            return _landmarks[rand];
+            var listToUse = _typeDictionary[typeof(T)];
+            var rand = Random.Range(0, listToUse.Count);
+            return (T) listToUse[rand]; //_generalLandmarks[rand];
+        }
+        
+        /// Returns the furthest ILandmark from the provided vector3
+        public T GetFurthestLandmark<T>(Vector3 from) where T : ILandmark
+        {
+            var listToUse = _typeDictionary[typeof(T)];
+
+            return (T) listToUse.OrderBy(x => (from - x.GetTransform.position).magnitude).Last();
+        }        
+        
+        /// Returns the nearest ILandmark from the provided vector3
+        public T GetNearestLandmark<T>(Vector3 from) where T : ILandmark
+        {
+            var listToUse = _typeDictionary[typeof(T)];
+            
+            return (T) listToUse.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
         }
 
-        public IGeneralLandmark GetRandomGeneralLandmark()
+        /// Returns a random ILandmark from the provided vector3
+        public T GetRandomLandmarkWithinRadius<T>(Vector3 from, float radius) where T : ILandmark
         {
-            var rand = Random.Range(0, _landmarks.Count);
-            return _generalLandmarks[rand];
-        }
-        public ILandmark GetFurthestLandmark(Vector3 from)
-        {
-            return _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).Last();
-        }        
-        public ILandmark GetNearestLandmark(Vector3 from)
-        {
-            return _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
-        }
-        public IGeneralLandmark GetFurthestGeneralLandmark(Vector3 from)
-        {
-            return _generalLandmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).Last();
-        }        
-        public IGeneralLandmark GetNearestGeneralLandmark(Vector3 from)
-        {
-            return _generalLandmarks.OrderBy(x => (from - x.GetTransform.position).magnitude).First();
-        }
+            var listToUse = _typeDictionary[typeof(T)];
 
-        public ILandmark GetRandomLandmarkWithinRadius(Vector3 from, float radius)
-        {
-            var temp = _landmarks.OrderBy(x => (from - x.GetTransform.position).magnitude < radius).ToList();
+            var temp = listToUse.OrderBy(x => (from - x.GetTransform.position).magnitude < radius).ToList();
         
             var rand = Random.Range(0, temp.Count -1);
             
-            return temp[rand];
+            return (T) temp[rand];
         }
     }
 }

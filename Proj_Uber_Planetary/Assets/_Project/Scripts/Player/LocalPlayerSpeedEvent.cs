@@ -1,5 +1,6 @@
 using System;
 using UberPlanetary.Core;
+using UberPlanetary.Core.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 

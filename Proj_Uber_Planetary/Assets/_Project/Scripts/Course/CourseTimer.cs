@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UberPlanetary.Core;
+using UberPlanetary.Core.Interfaces;
 using UberPlanetary.Player;
 using UberPlanetary.Player.Movement;
 using UnityEngine;

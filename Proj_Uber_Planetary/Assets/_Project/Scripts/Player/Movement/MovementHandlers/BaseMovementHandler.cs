@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using UberPlanetary.Core;
+using UberPlanetary.Core.ExtensionMethods;
+using UberPlanetary.Core.Interfaces;
 using UnityEngine;
 
 namespace UberPlanetary.Player.Movement.MovementHandlers
