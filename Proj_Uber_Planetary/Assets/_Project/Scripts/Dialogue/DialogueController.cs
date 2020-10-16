@@ -129,8 +129,8 @@ namespace UberPlanetary.Dialogue
         {
             textAnimatorPlayer.ShowText(textToDisplay);
             _timeBetweenDialogue = 0;
-            custName.text = dialogueSO.dialogueLines[_lineIndex].characterName;
-            custFace.sprite = dialogueSO.dialogueLines[_lineIndex].characterSpeaking;
+            custName.text = dialogueSO.dialogueLines[_lineIndex-1].characterName;
+            custFace.sprite = dialogueSO.dialogueLines[_lineIndex-1].characterSpeaking;
             //Debug.Log(_lineIndex + " comparing to: " + dialogueSO.lines.Length);
         }
 
