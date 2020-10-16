@@ -25,7 +25,7 @@ MonoBehaviour:
   - line: Alright..
     characterName: Furgust
     characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: Ya know I heard William Dinklebop's planning on buying out the MEGA-Mall
+  - line: Ya know I heard William Dinklebop's planning on buying out the MEGA-Mall.
     characterName: Timmy
     characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "I\u2019m not surprised.. Dinklebop Inc. already owns almost 40% of Sector-3.
@@ -52,9 +52,9 @@ MonoBehaviour:
     characterName: Timmy
     characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "Yeah! Me and Georgie used to be neighbours! I told him cause his grand-papa
-      has a store down there.  Inc. cripples small businesses from taxing people
-      renting out their vendor stalls and I don\u2019t want him to get shafted by
-      that.."
+      has a store down there. Dinklebop Inc. cripples small businesses from taxing
+      people renting out their vendor stalls and I don\u2019t want him to get shafted
+      by that.."
     characterName: Dorin
     characterSpeaking: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
   - line: "Doesn\u2019t Georgie deal moon-rocks..?"

@@ -12,13 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
   m_Name: JimmyDialogue
   m_EditorClassIdentifier: 
-  lines:
-  - Hey whats up fleshbag?
-  - So listen, I'm in a bit of a <shake a=0.1>hurry</shake>. Can you book it to the
-    willies by Dinklebop Inc.?
-  - 'You see... I''m high as kite on melloleef and im craving Willies '
-  - The faster the better fleshbag.
-  interruptions:
-  - Whooa slow down there buckaroo! i wanna get there fast but i also wanna get there
-    in one piece
-  - ...anyway as i was saying
+  dialogueLines:
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
+  - line: 
+    characterName: 
+    characterSpeaking: {fileID: 0}
