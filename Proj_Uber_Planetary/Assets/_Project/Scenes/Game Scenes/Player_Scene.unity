@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3765352350659547529, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: iMax
-      value: 110
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4080764438318990169, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: zRotationSpeed
@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: backwardMovementSpeed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: passiveMovementSpeed
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: verticalMovementSpeed
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: heightMinMax.x
@@ -835,11 +835,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: sideMovementSpeed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: forwardMovementSpeed
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: rigidbody
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04048f9add042844e93dae0bbe3de165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gearCount: 5
+  gearCount: 2
   smoothingCurve:
     serializedVersion: 2
     m_Curve:
@@ -921,7 +921,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speedIncrement: 10
+  speedIncrement: 5
   smoothingDuration: 2
 --- !u!114 &1322699296 stripped
 MonoBehaviour:
