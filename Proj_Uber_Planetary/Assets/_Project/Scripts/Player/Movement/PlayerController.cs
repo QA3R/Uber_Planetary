@@ -14,7 +14,14 @@ namespace UberPlanetary.Player.Movement
         private IRotationHandler _rotationHandler;
         private IMovementHandler _movementHandler;
         private IBoostHandler _boostHandler;
-        
+        [SerializeField] [Range(0,1)] private float axisModifier = 1;
+
+        public float AxisModifier
+        {
+            get => axisModifier;
+            set => axisModifier = Mathf.Clamp01(value);
+        }
+
         private void Awake()
         {
             AssignComponents();
@@ -32,30 +39,30 @@ namespace UberPlanetary.Player.Movement
         
         private void MoveForward(float val)
         {
-            _movementHandler.MoveForward(val);
+            _movementHandler.MoveForward(val * axisModifier);
         }
         
         private void MoveBackward(float val)
         {
-            _movementHandler.MoveBackward(val);
+            _movementHandler.MoveBackward(val * axisModifier);
         }
 
         private void MoveVertical(float val)
         {
-            _movementHandler.MoveVertical(val);
+            _movementHandler.MoveVertical(val * axisModifier);
             //_movementHandler.MoveVertical(_cursorController.CursorAxis.y);
         }
 
         private void MoveSideways(float val)
         {
-            _movementHandler.MoveSidewards(val);
+            _movementHandler.MoveSidewards(val * axisModifier);
         }
         
         private void OnBoost(float val)
         {
             _rotationHandler.DampenRotation(val);
             
-            _boostHandler.Boost(val);
+            _boostHandler.Boost(val * axisModifier);
         }
         
         /// Get Component Reference from PlayerController
