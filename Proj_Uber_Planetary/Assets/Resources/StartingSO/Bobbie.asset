@@ -18,7 +18,7 @@ MonoBehaviour:
   customerDialogue: {fileID: 11400000, guid: b39a8282df5212d4987e05a5ec4b5760, type: 2}
   customerRide:
     endLocationStringID: University of Wacdonalds
-    startLocationStringID: 
+    startLocationStringID: House A10
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:

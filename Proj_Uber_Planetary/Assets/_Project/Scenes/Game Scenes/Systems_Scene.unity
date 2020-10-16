@@ -747,6 +747,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4591807804449867301, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
+      propertyPath: goalAmount
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 5523849676679685015, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
       propertyPath: m_Name
       value: EndGame

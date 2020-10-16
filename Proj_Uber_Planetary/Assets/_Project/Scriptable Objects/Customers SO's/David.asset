@@ -17,8 +17,25 @@ MonoBehaviour:
   customerMood: 0
   customerDialogue: {fileID: 11400000, guid: 552e1a039b148b940920290f65d16ced, type: 2}
   customerRide:
-    rideReward: 400
     endLocationStringID: Willy's (C)
     startLocationStringID: Willy's (B)
     endLocationIntID: 0
     startLocationIntID: 0
+    rideRewards:
+      cashReward: 50
+      unlockedCustomers: []
+    onRideSuccessful:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1064925268783784459, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+          m_TargetAssemblyTypeName: UberPlanetary.Rides.RideLoader, Assembly-CSharp
+          m_MethodName: OnRewarded
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

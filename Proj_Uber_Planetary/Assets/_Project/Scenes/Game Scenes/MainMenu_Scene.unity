@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8020,7 +8020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9887,7 +9887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11790,13 +11790,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2837963635439955551}
-  m_LocalRotation: {x: -0.12214354, y: 0.35430506, z: 0.036190085, w: 0.926412}
-  m_LocalPosition: {x: -0.32967, y: 0.653, z: -0.22564}
-  m_LocalScale: {x: 0.0024982414, y: 0.07641186, z: 0.0025610332}
+  m_LocalRotation: {x: -0.13731903, y: 0.37989885, z: 0.057138767, w: 0.9129926}
+  m_LocalPosition: {x: -0.33219, y: 0.67, z: -0.2258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 304648979}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -14.593, y: 42.006, z: -1.154}
+  m_LocalEulerAnglesHint: {x: -17.107, y: 45.185, z: 0}
 --- !u!20 &2837963635439955549
 Camera:
   m_ObjectHideFlags: 0
