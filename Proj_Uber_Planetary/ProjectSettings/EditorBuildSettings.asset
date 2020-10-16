@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Game Scenes/Whitebox_Scene.unity
     guid: 4904049b5eb1bd643ba96fbf118f93d0
   - enabled: 0
-    path: Assets/_Project/Scenes/Unused Scenes/TestFlight_Scene.unity
+    path: Assets/_Project/Scenes/Unused Scenes/MainGame_Scene.unity
     guid: 37e6c6ffcd65ce94b8ec776201d7bf8b
   - enabled: 0
     path: Assets/_Project/Scenes/Team Member Scenes/Rahul_Scene/Rahul_Scene.unity
