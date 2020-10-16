@@ -18,12 +18,12 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Game Scenes/Whitebox_Scene.unity
     guid: 4904049b5eb1bd643ba96fbf118f93d0
   - enabled: 0
-    path: Assets/_Project/Scenes/MainGame_Scene.unity
+    path: Assets/_Project/Scenes/Unused Scenes/MainGame_Scene.unity
     guid: 37e6c6ffcd65ce94b8ec776201d7bf8b
   - enabled: 0
-    path: Assets/_Project/Scenes/Rahul_Scene.unity
+    path: Assets/_Project/Scenes/Team Member Scenes/Rahul_Scene/Rahul_Scene.unity
     guid: 159fc2a9bd7507f40afc735bdfe1f306
   - enabled: 0
-    path: Assets/_Project/Scenes/Daren_Scene.unity
+    path: Assets/_Project/Scenes/Team Member Scenes/Daren_Scene.unity
     guid: 13682060605d24f479ba3bdc74a934c7
   m_configObjects: {}
