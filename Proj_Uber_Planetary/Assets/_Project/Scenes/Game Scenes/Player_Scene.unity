@@ -561,6 +561,10 @@ PrefabInstance:
       propertyPath: keyCodes.Array.data[4]
       value: 115
       objectReference: {fileID: 0}
+    - target: {fileID: 740858015040728190, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: axisModifier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 740858015040728191, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Center.y
       value: -0.2
@@ -608,6 +612,102 @@ PrefabInstance:
     - target: {fileID: 1492814425629315969, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.z
       value: -1965.0092
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: reduceSpeedTo
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1322699296}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UberPlanetary.Player.PlayerDamageResponse, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReduceSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: onDamageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: decelerationDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: accelerationDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2658235267127742970, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -823,6 +923,17 @@ MonoBehaviour:
     m_RotationOrder: 4
   speedIncrement: 10
   smoothingDuration: 2
+--- !u!114 &1322699296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2296210312025619625, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+  m_PrefabInstance: {fileID: 1322699292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322699294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f72a2929f01418da29807a4545326cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1322699300 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 740858015040728160, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
