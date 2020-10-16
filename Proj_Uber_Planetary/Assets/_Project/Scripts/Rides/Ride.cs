@@ -1,19 +1,31 @@
-﻿using UberPlanetary.Core.Interfaces;
+﻿using System.Collections.Generic;
+using UberPlanetary.Core.Interfaces;
+using UberPlanetary.Navigation;
+using UberPlanetary.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace UberPlanetary.Navigation
+namespace UberPlanetary.Rides
 {
     /// Details of any given ride, start location, end location, the rewards, etc.
     [System.Serializable]
-    public class Ride 
+    public class Ride
     {
         //exposed fields
-        public int rideReward;
-        
+        public int CashReward =>rideRewards.cashReward;
+
         [Tooltip("Optional, leave empty and the quest manager will find a random location for it")]
         [SerializeField] private string endLocationStringID, startLocationStringID;
         [Tooltip("Optional, leave empty and the quest manager will find a random location for it")]
         [SerializeField] private int endLocationIntID, startLocationIntID;
+
+
+        [Space(10)]
+        
+        [Header("Rewards")]
+        public RideRewards rideRewards;
+        public UnityEvent<CustomerSO> onRideSuccessful = new UnityEvent<CustomerSO>();
+
 
         //private memebers
         private ILandmark _rideStartLandmark;
@@ -27,7 +39,7 @@ namespace UberPlanetary.Navigation
             set => _rideCurrentLandmark = value;
         }
 
-        public int RideReward => rideReward;
+        public int RideCashReward => CashReward;
 
         public ILandmark RideStartLandmark
         {
@@ -74,5 +86,13 @@ namespace UberPlanetary.Navigation
             set => _rideEndLandmark = value;
         }
         
+    }
+
+    [System.Serializable]
+    public class RideRewards
+    {
+        public int cashReward;
+        public List<CustomerSO> unlockedCustomers;
+    
     }
 }

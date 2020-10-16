@@ -1,6 +1,6 @@
 ﻿using Febucci.UI;
 using TMPro;
-using UberPlanetary.Quests;
+using UberPlanetary.Rides;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;

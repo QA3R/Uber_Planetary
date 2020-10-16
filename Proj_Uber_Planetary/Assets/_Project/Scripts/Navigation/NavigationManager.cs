@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UberPlanetary.Core.Interfaces;
-using UberPlanetary.Quests;
+using UberPlanetary.Rides;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using Random = UnityEngine.Random;

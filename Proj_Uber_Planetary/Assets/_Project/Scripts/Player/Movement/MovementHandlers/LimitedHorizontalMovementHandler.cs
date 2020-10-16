@@ -13,6 +13,12 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         private bool IsBacking => Mathf.Abs(_backVal) > 0;
         private float _backVal;
 
+        public Vector2 HeightMinMax
+        {
+            get => heightMinMax;
+            set => heightMinMax = value;
+        }
+
 
         protected override void Awake()
         {
@@ -30,10 +36,8 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
             {
                 transform.localPosition =
                     new Vector3(transform.localPosition.x, heightMinMax.x, transform.localPosition.z);
-                return;
             }
-
-            if (transform.localPosition.y >= heightMinMax.y)
+            else if (transform.localPosition.y >= heightMinMax.y)
             {
                 transform.localPosition =
                     new Vector3(transform.localPosition.x, heightMinMax.y, transform.localPosition.z);

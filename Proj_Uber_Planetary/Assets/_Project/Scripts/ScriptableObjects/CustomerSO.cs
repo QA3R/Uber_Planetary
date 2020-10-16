@@ -1,4 +1,5 @@
 ﻿using UberPlanetary.Navigation;
+using UberPlanetary.Rides;
 using UnityEngine;
 
 namespace UberPlanetary.ScriptableObjects

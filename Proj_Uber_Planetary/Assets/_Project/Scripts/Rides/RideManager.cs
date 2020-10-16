@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UberPlanetary.Core.Interfaces;
 using UberPlanetary.Currency;
 using UberPlanetary.Navigation;
@@ -6,7 +7,7 @@ using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UberPlanetary.Quests
+namespace UberPlanetary.Rides
 {
     public class RideManager : MonoBehaviour
     {
@@ -17,7 +18,7 @@ namespace UberPlanetary.Quests
         private CustomerSO _currentCustomer;
         private Ride _currentRide;
         private bool _isRunning;
-        
+        private RideLoader _rideLoader;
         //public events
         public UnityEvent<CustomerSO> onRideAccepted;
         public UnityEvent<CustomerSO> onCustomerPickedUp;
@@ -28,13 +29,19 @@ namespace UberPlanetary.Quests
         [SerializeField] private PickUpDropOffDelay pickUpDropOff;
         
         public bool IsRideActive => _currentRide != null;
-        
+
+
+        private void Awake()
+        {
+            _rideLoader = GetComponent<RideLoader>();
+        }
 
         private void Start()
         {
             _navigationManager = FindObjectOfType<NavigationManager>();
             _currencyManager = FindObjectOfType<CurrencyManager>();
             _player = GameObject.Find("PlayerShip");
+            onCustomerDroppedOff.AddListener(RideCompleted);
         }
 
         public void AcceptRide(CustomerSO customerSo)
@@ -87,7 +94,6 @@ namespace UberPlanetary.Quests
         {
             _currentRide.RideEndLandmark.OnReached -= EndLocationReached;
             StartCoroutine(InvokeWithDelay(onCustomerDroppedOff, 5f, _currentCustomer));
-            RideCompleted();
         }
 
         private IEnumerator InvokeWithDelay(UnityEvent<CustomerSO> enventToInvoke, float time, CustomerSO data)
@@ -100,9 +106,10 @@ namespace UberPlanetary.Quests
             _isRunning = false;
         }
 
-        private void RideCompleted()
+        private void RideCompleted(CustomerSO so)
         {
-            _currencyManager.Amount += _currentRide.RideReward;
+            _currentRide.onRideSuccessful?.Invoke(_currentCustomer);
+            //_currencyManager.Amount += _currentRide.RideCashReward;
             _currentCustomer = null;
             _currentRide = null;
         }
@@ -110,6 +117,11 @@ namespace UberPlanetary.Quests
         private void RideFailed()
         {
             //if the time runs out
+        }
+
+        private void OnDisable()
+        {
+            onCustomerDroppedOff.RemoveListener(RideCompleted);
         }
     }
 }
