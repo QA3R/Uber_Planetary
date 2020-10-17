@@ -18,7 +18,13 @@ namespace UberPlanetary.Phone
         {
             //finding the refrence
             _phoneNavigator = GameObject.Find(phoneObjectName).GetComponent<IPhoneNavigator>();
-            
+
+            UpdateList();
+        }
+
+        public void UpdateList()
+        {
+            _currentList.Clear();
             //populating list
             for (int i = 0; i < navigableObjects.Count; i++)
             {

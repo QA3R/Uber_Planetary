@@ -12,6 +12,8 @@ namespace UberPlanetary.Phone.Applications
         private RideLoader _rideLoader;
 
         [SerializeField] private List<CustomerSO> customerSos; 
+        [SerializeField] GameObject _customerListItemPrefab; 
+        [SerializeField] NavigableListProvider _listProvider; 
 
         private void Awake()
         {
@@ -38,11 +40,14 @@ namespace UberPlanetary.Phone.Applications
             customerSos.Remove(customerSos[rand]);
         }
 
-        private void DoSomething(CustomerSO so)
+        public bool TryAcceptNewCustomer(CustomerSO so)
         {
-            PopulateList();
+            if(_rideManager.IsRideActive || !customerSos.Contains(so)) return false;
+            _rideManager.AcceptRide(so);
+            customerSos.Remove(so);
+            return true;
         }
-
+        
         private void PopulateList()
         {
             foreach (var customerSo in RideLoader.CurrentCustomerList)
@@ -50,8 +55,11 @@ namespace UberPlanetary.Phone.Applications
                 if (!customerSos.Contains(customerSo))
                 {
                     customerSos.Add(customerSo);
+                    //Instantiate(_customerListItemPrefab, transform);
+                    //_customerListItemPrefab.GetComponent<CustomerListItem>().Init(customerSo);
                 }
             }
+            //_listProvider.UpdateList();
         }
 
         private void OnDestroy()

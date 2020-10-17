@@ -434,9 +434,10 @@ GameObject:
   - component: {fileID: 3996780395465955780}
   - component: {fileID: 3996780395465955777}
   - component: {fileID: 7562499299432646548}
-  - component: {fileID: 2036193116456166251}
+  - component: {fileID: 4889853435146936040}
+  - component: {fileID: 1959602736548523178}
   m_Layer: 5
-  m_Name: App Icon 1
+  m_Name: App Uber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,7 +609,103 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2036193116456166251
+--- !u!82 &4889853435146936040
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996780395465954874}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d8d0d390d3e2b0e49a46710900091c26, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1959602736548523178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,15 +714,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3996780395465954874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7442adc2e9603046bdde182e938fd8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 66d90b39fff2a6a4698838dabc20e61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7562499299432646548}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 1959602736548523178}
+        m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.UberApplication,
+          Assembly-CSharp
+        m_MethodName: GenerateNewCustomer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -665,7 +763,7 @@ MonoBehaviour:
   OnSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3996780395465955777}
+      - m_Target: {fileID: 8976609852556369861}
         m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
           Assembly-CSharp
         m_MethodName: SetOutlineTo
@@ -681,7 +779,7 @@ MonoBehaviour:
   OnDeselect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3996780395465955777}
+      - m_Target: {fileID: 8976609852556369861}
         m_TargetAssemblyTypeName: UberPlanetary.Phone.Applications.ToggleOutline,
           Assembly-CSharp
         m_MethodName: SetOutlineTo
@@ -694,6 +792,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  customerSos:
+  - {fileID: 11400000, guid: 2f8bfeaeb29eb454ca38d971a12ac59e, type: 2}
+  - {fileID: 11400000, guid: 44f05cf3ae53e8a4d8ffa4f73f9a62c4, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 0e5e1d87e3157fe4d94e02beb7795be2, type: 2}
+  - {fileID: 11400000, guid: 96a29e3759901034ca95c12ea1a9aa51, type: 2}
+  - {fileID: 0}
+  _customerListItemPrefab: {fileID: 0}
+  _listProvider: {fileID: 493193523450052308}
 --- !u!1 &3996780395502180915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,18 +3509,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3960913012501709978}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2610855804534164498}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -3500,10 +3595,12 @@ MonoBehaviour:
   customerSos:
   - {fileID: 11400000, guid: 2f8bfeaeb29eb454ca38d971a12ac59e, type: 2}
   - {fileID: 11400000, guid: 44f05cf3ae53e8a4d8ffa4f73f9a62c4, type: 2}
-  - {fileID: 11400000, guid: 1efba20efcfb6db4983ccc6dfb5fa8e6, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 0e5e1d87e3157fe4d94e02beb7795be2, type: 2}
   - {fileID: 11400000, guid: 96a29e3759901034ca95c12ea1a9aa51, type: 2}
-  - {fileID: 11400000, guid: 683c4bd348260d54787a1a5e29a2dcd4, type: 2}
+  - {fileID: 0}
+  _customerListItemPrefab: {fileID: 0}
+  _listProvider: {fileID: 0}
 --- !u!82 &2610855804534164498
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3631,7 +3728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2416317602125243831
 RectTransform:
   m_ObjectHideFlags: 0
