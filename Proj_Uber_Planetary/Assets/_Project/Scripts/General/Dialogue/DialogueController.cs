@@ -17,7 +17,8 @@ namespace UberPlanetary.Dialogue
         private float _timeBetweenDialogue;
         private TextAnimatorPlayer textAnimatorPlayer;
         private int _lineIndex;
-        private int _characterIndex;
+        private bool _isStarted;
+        private bool _isShowing;
 
         //exposed fields
         [SerializeField]private float autoPlayDialogueTime;
@@ -25,42 +26,46 @@ namespace UberPlanetary.Dialogue
         [SerializeField] private DialogueSO dialogueSO;
 
         // public fields
-        public TextMeshProUGUI custName;
+        public TextMeshProUGUI custName; 
         public TextMeshProUGUI dialogueBox;
         public GameObject dialogueWindow;
         public Image custFace;
-        public TextAnimator textAnimator;
-        public DialogueTrigger dialogueTrigger;
-        public bool isStarted;
-        public string characterTalking;
+
 
         //public properties
-        public bool IsShowing { get; set; }
         public bool HasDialogue => dialogueSO != null;
 
 
 
         private void Awake()
         {
-            dialogueTrigger = GetComponentInParent<DialogueTrigger>();
-            textAnimatorPlayer = textAnimator.GetComponent<TextAnimatorPlayer>();
-            _rideManager = FindObjectOfType<RideManager>();
+            AssignReferences();
             ToggleDialogueBox(false);
         }
-
         private void Start()
+        {
+            EventSubscriber();
+        }
+
+        private void AssignReferences()
+        {
+            textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
+            _rideManager = FindObjectOfType<RideManager>();
+        }
+        private void EventSubscriber()
         {
             _rideManager.onCustomerPickedUp.AddListener(StartDialogue);
             _rideManager.onCustomerDroppedOff.AddListener(EndDialogue);
         }
+
         //Turns the dialogue box on and off
-        public void ToggleDialogueBox(bool state)
+        private void ToggleDialogueBox(bool state)
         {
             dialogueWindow.SetActive(state);
             dialogueBox.gameObject.SetActive(state);
         }
         //pulls customer information from other scripts toggles dialogue window on
-        public void StartDialogue(CustomerSO customerData)
+        private void StartDialogue(CustomerSO customerData)
         {
             customerSO = customerData;
             dialogueSO = customerSO.CustomerDialogue;
@@ -69,53 +74,56 @@ namespace UberPlanetary.Dialogue
             InitiateDialogue();
         }
         //populates the window with customer information and begins running dialogue lines
-        public void InitiateDialogue()
+        private void InitiateDialogue()
         {
-            isStarted = true;
+            _isStarted = true;
             custName.text = customerSO.CustomerName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = customerSO.CustomerFace;
             textAnimatorPlayer.ShowText(dialogueSO.dialogueLines[_lineIndex++].line);
-
         }
 
         private void Update()
         {
-            if (IsShowing || !isStarted || !HasDialogue) return;
+            if (_isShowing || !_isStarted || !HasDialogue) return;
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (_lineIndex >= dialogueSO.dialogueLines.Length)
-                {
-                    FinishDialogue();
-                    return;
-                }
-                custName.text = dialogueSO.dialogueLines[_lineIndex].characterName;
-                custFace.sprite = dialogueSO.dialogueLines[_lineIndex].characterSpeaking;
-                DisplayText(dialogueSO.dialogueLines[_lineIndex++].line);
+                EndCheck();
 
             }
             _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
             if (_timeBetweenDialogue >= autoPlayDialogueTime)
             {
-                if (_lineIndex >= dialogueSO.dialogueLines.Length)
-                {
-                    FinishDialogue();
-                    return;
-                }
-                DisplayText(dialogueSO.dialogueLines[_lineIndex++].line);
+                EndCheck();
             }
             else
             {
                 _timeBetweenDialogue += Time.deltaTime;
             }
         }
+
         //plays text with typewriter effect
-        public void DisplayText(string textToDisplay)
+        public void DisplayText(Dialogue dialogue)
         {
-            textAnimatorPlayer.ShowText(textToDisplay);
+            custName.text = dialogue.characterName;
+            custFace.sprite = dialogue.characterSpeaking;
+            textAnimatorPlayer.ShowText(dialogue.line);
             _timeBetweenDialogue = 0;
+            _lineIndex++;
         }
+
+        //checks to see if dialogue is over and if not, plays the next line
+        private void EndCheck()
+        {
+            if (_lineIndex >= dialogueSO.dialogueLines.Length)
+                {
+                    FinishDialogue();
+                    return;
+                }
+                DisplayText(dialogueSO.dialogueLines[_lineIndex]);
+        }
+
         //called at the end of the ride to run dialogue end methods
         public void EndDialogue(CustomerSO customerData)
         {
@@ -140,7 +148,7 @@ namespace UberPlanetary.Dialogue
         //toggles dialogue box off and sets dialogue condition back to false
         public void FinishDialogue()
         {
-            isStarted = false;
+            _isStarted = false;
             ToggleDialogueBox(false);
         }
     }
