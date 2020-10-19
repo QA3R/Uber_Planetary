@@ -17,13 +17,15 @@ MonoBehaviour:
   customerMood: 0
   customerDialogue: {fileID: 11400000, guid: b39a8282df5212d4987e05a5ec4b5760, type: 2}
   customerRide:
-    endLocationStringID: University of Wacdonalds
-    startLocationStringID: 
+    endLocationStringID: University of Wacdonalds 2
+    startLocationStringID: Ding Dong's Milk Store 3
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 0
-      unlockedCustomers: []
+      cashReward: 50
+      unlockedCustomers:
+      - {fileID: 11400000, guid: 44f05cf3ae53e8a4d8ffa4f73f9a62c4, type: 2}
+      - {fileID: 11400000, guid: 0e5e1d87e3157fe4d94e02beb7795be2, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls: []

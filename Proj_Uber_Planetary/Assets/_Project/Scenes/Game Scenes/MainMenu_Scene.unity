@@ -3792,9 +3792,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\t\tControls:\n\n-> Use the WASD keys to pilot your ship!\n\n-> Use
-    Spacebar to rise in elevation!\n\n-> Use the Ctrl key to lower in elevation\n\n->
-    The \"F\" key will advance the game's dialogue "
+  m_text: "\t\t\tControls:\n\n-> Use the WASD keys to pilot your ship!\n\n-> Your
+    Mouse's Y-axis movements changes elevation\n\n-> The \"F\" key will advance the
+    game's dialogue "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11790,13 +11790,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2837963635439955551}
-  m_LocalRotation: {x: -0.13731903, y: 0.37989885, z: 0.057138767, w: 0.9129926}
-  m_LocalPosition: {x: -0.33219, y: 0.67, z: -0.2258}
+  m_LocalRotation: {x: -0.13410822, y: 0.33506277, z: 0.04824661, w: 0.9313539}
+  m_LocalPosition: {x: -0.3289, y: 0.655, z: -0.2239}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 304648979}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -17.107, y: 45.185, z: 0}
+  m_LocalEulerAnglesHint: {x: -16.388, y: 39.573, z: 0}
 --- !u!20 &2837963635439955549
 Camera:
   m_ObjectHideFlags: 0

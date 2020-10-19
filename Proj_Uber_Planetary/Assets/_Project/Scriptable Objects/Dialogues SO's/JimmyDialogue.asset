@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JimmyDialogue
   m_EditorClassIdentifier: 
   dialogueLines:
-  - line: 
+  - line: Timmy! Buddy! It's been forever!
     characterName: 
     characterSpeaking: {fileID: 0}
   - line: 

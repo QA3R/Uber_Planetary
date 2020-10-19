@@ -49,7 +49,7 @@ namespace UberPlanetary.Dialogue
 
         private void AssignReferences()
         {
-            textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
+            textAnimatorPlayer = FindObjectOfType<TextAnimatorPlayer>();
             _rideManager = FindObjectOfType<RideManager>();
         }
         private void EventSubscriber()
@@ -90,7 +90,6 @@ namespace UberPlanetary.Dialogue
             if (Input.GetKeyDown(KeyCode.F))
             {
                 EndCheck();
-
             }
             _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
             if (_timeBetweenDialogue >= autoPlayDialogueTime)

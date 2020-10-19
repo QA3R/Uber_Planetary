@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
+  m_Name: TimmyDialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - line: Furgus! Long time no see my guy!
+    characterName: Timmy
+    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Hey, it's been a while Tim. How you've been?
+    characterName: Furgus
+    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'Oh man, I''ve been doin good my guy! '
+    characterName: Timmy
+    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Ehh.. Been making ends meet as usual. So where to?
+    characterName: Furgus
+    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Haha, I feel you my guy.. Geez how long has it been?
+    characterName: Timmy
+    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: One year.
+    characterName: Furgus
+    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Damn only one year? Feels like forever.
+    characterName: Timmy
+    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Still haven't answered me.. Where to?
+    characterName: Furgus
+    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Let's go to Willy's my guy. I wanna catch up.
+    characterName: Timmy
+    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: I'm working so "catching up" will have to wait..
+    characterName: Furgus
+    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: How bout this? We grab Willy's and I'll tag along we'll catch up for the
+      other rides?
+    characterName: Timmy
+    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}

@@ -17,8 +17,8 @@ MonoBehaviour:
   customerMood: 0
   customerDialogue: {fileID: 11400000, guid: c7ecf89f7e2c2c44eab70878c7c7dbfa, type: 2}
   customerRide:
-    endLocationStringID: MEGA-Mall
-    startLocationStringID: House A1
+    endLocationStringID: MEGA-Mall 2
+    startLocationStringID: Dinklebop Inc. 2
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
