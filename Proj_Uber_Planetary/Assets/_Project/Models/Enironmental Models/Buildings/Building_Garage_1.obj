@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib Building_Garage_1_Scale.mtl
+mtllib Building_Garage_1.mtl
 g default
 v -3.877868 0.010366 2.508501
 v 3.877868 0.010366 2.508501
