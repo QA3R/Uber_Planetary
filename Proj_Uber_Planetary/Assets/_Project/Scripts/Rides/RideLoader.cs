@@ -50,7 +50,7 @@ namespace UberPlanetary.Rides
             }
             onHashSetUpdated?.Invoke();
         }
-        public  void Initialize()
+        public void Initialize()
         {
             var boop = Resources.LoadAll<CustomerSO>("StartingSO");
             foreach (var so in boop)
