@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+﻿using TMPro;
 using UberPlanetary.Phone.Applications;
 using UberPlanetary.ScriptableObjects;
+using UnityEngine.UI;
 
-namespace UberPlanetary.Phone.Application_Feature
+namespace UberPlanetary.Phone.ApplicationFeature
 {
+    
+    //NOTE: Script is in the wrong folder
     public class CustomerListItem : BaseApplicationFeature
     {
         public Image customerFace;
@@ -23,7 +22,7 @@ namespace UberPlanetary.Phone.Application_Feature
         }
         public void Init(CustomerSO customerSO)
         {
-
+            
         }
         public void ButtonClicked()
         {

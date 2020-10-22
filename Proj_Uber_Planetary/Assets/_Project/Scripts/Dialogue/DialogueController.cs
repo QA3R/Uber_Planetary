@@ -15,16 +15,17 @@ namespace UberPlanetary.Dialogue
         //private members
         private RideManager _rideManager;
         private float _timeBetweenDialogue;
-        private TextAnimatorPlayer textAnimatorPlayer;
+        private TextAnimatorPlayer textAnimatorPlayer; //NOTE: Naming convention
         private int _lineIndex;
         private bool _isStarted;
         private bool _isShowing;
 
         //exposed fields
         [SerializeField]private float autoPlayDialogueTime;
-        [SerializeField] private CustomerSO customerSO;
+        [SerializeField] private CustomerSO customerSO; //NOTE: This and the one below are private fields I think?
         [SerializeField] private DialogueSO dialogueSO;
 
+        //NOTE: Looks like these should be serialized private fields since we only change them though inspector(Drag and drop)
         // public fields
         public TextMeshProUGUI custName; 
         public TextMeshProUGUI dialogueBox;
@@ -33,10 +34,9 @@ namespace UberPlanetary.Dialogue
 
 
         //public properties
-        public bool HasDialogue => dialogueSO != null;
-
-
-
+        public bool HasDialogue => dialogueSO != null; // NOTE: this can be made private too...
+        
+        
         private void Awake()
         {
             AssignReferences();
@@ -52,6 +52,8 @@ namespace UberPlanetary.Dialogue
             textAnimatorPlayer = FindObjectOfType<TextAnimatorPlayer>();
             _rideManager = FindObjectOfType<RideManager>();
         }
+        //NOTE: This is good practice, add another function at the bottom, OnDisable or destroy? RemoveListener
+        //you should always do the same with events and delegates too!
         private void EventSubscriber()
         {
             _rideManager.onCustomerPickedUp.AddListener(StartDialogue);
@@ -87,7 +89,7 @@ namespace UberPlanetary.Dialogue
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F)) //NOTE: In the next meeting I'll show you how to get input though the Input Handler class instead.
             {
                 EndCheck();
             }
@@ -112,9 +114,12 @@ namespace UberPlanetary.Dialogue
             _lineIndex++;
         }
 
+        // NOTE: Check end implies it just checks the condition for ending. But the function is also  calling display text here.
+        //I'll show you a case where I use exactly the same function but you'll see how I don't make it a void
         //checks to see if dialogue is over and if not, plays the next line
-        private void EndCheck()
+        private void EndCheck() 
         {
+            //NOTE: Code formatting indentation issues
             if (_lineIndex >= dialogueSO.dialogueLines.Length)
                 {
                     FinishDialogue();

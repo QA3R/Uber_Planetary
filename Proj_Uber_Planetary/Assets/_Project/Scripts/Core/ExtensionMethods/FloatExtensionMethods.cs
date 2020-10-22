@@ -17,6 +17,6 @@ namespace UberPlanetary.Core.ExtensionMethods
             return ( value >= Mathf.Min( min,max ) && value <= Mathf.Max( min,max ) );
         }
         
-        public static float Repeat( float value, float length ) => Mathf.Clamp( value - Mathf.Floor( value / length ) * length, 0.0f, length );
+        public static float Repeat(this float value, float length ) => Mathf.Clamp( value - Mathf.Floor( value / length ) * length, 0.0f, length );
     }
 }

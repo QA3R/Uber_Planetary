@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UberPlanetary.Phone.Application_Feature
+namespace UberPlanetary.Phone.ApplicationFeature
 {
     public class BaseApplicationFeature : MonoBehaviour , IPhoneApplicationFeature
     {

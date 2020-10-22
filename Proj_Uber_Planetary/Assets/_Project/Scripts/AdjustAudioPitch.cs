@@ -8,7 +8,7 @@ namespace UberPlanetary
     public class AdjustAudioPitch : MonoBehaviour
     {
         private AudioSource _audioSource;
-
+        
         private float CurrentPitch
         {
             set
