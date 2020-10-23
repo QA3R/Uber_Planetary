@@ -26,9 +26,17 @@ namespace UberPlanetary.Phone
         {
             _currentList.Clear();
             //populating list
-            for (int i = 0; i < navigableObjects.Count; i++)
+            //for (int i = 0; i < navigableObjects.Count; i++)
+            //{
+            //    _currentList.Add(navigableObjects[i].GetComponent<IPhoneNavigable>());
+            //}
+            for (int i = 0; i < transform.childCount; i++)
             {
-                _currentList.Add(navigableObjects[i].GetComponent<IPhoneNavigable>());
+                if (transform.GetChild(i).GetComponent<IPhoneNavigable>() != null)
+                {
+                    _currentList.Add(transform.GetChild(i).GetComponent<IPhoneNavigable>());
+
+                }
             }
         }
 
@@ -36,6 +44,15 @@ namespace UberPlanetary.Phone
         public void SetNavigatorList()
         {
             _phoneNavigator.NavigableList = _currentList;
+        }
+
+        public void AddToList(IPhoneNavigable navigable)
+        {
+            _currentList.Add(navigable);
+        }
+        public void RemoveFromList(IPhoneNavigable navigable)
+        {
+            _currentList.Remove(navigable);
         }
     }
 }
