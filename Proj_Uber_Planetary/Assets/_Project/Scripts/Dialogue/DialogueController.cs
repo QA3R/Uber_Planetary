@@ -146,8 +146,7 @@ namespace UberPlanetary.Dialogue
             customerSO = customerData;
             dialogueSO = customerSO.CustomerDialogue;
 
-            Debug.Log("The drop off dialogue length is " + customerSO.CustomerDialogue.dropOffLines.Length);
-            if (customerSO.CustomerDialogue.dropOffLines.Length < 1)
+            if (customerSO.CustomerDialogue.dropOffLines == null  || customerSO.CustomerDialogue.dropOffLines?.Length < 1)
             {
                 FinishDialogue();
                 return;
