@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UberPlanetary.Rides;
 using UberPlanetary.ScriptableObjects;
+using UberPlanetary.Phone.ApplicationFeature;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,21 +11,25 @@ namespace UberPlanetary.Phone.Applications
     {
         private RideManager _rideManager;
         private RideLoader _rideLoader;
+        private List<CustomerSO> _customerSos = new List<CustomerSO>();
 
-        [SerializeField] private List<CustomerSO> customerSos; 
-        [SerializeField] GameObject _customerListItemPrefab; 
-        [SerializeField] NavigableListProvider _listProvider; 
+        [SerializeField] GameObject customerListItemPrefab; 
+        [SerializeField] NavigableListProvider listProvider;
+        [SerializeField] Transform listHolder;
+
+
+        public NavigableListProvider ListProvider => listProvider;
 
         private void Awake()
         {
             _rideManager = FindObjectOfType<RideManager>();
             _rideLoader = _rideManager.GetComponent<RideLoader>();
-            customerSos.Clear(); //test
-            PopulateList();
+            _customerSos.Clear(); //test
         }
 
         private void Start()
         {
+            PopulateList();
             //_rideManager.onCustomerDroppedOff.AddListener(DoSomething);
             RideLoader.onHashSetUpdated += PopulateList;
             //CheckAvailablelist();
@@ -32,19 +37,19 @@ namespace UberPlanetary.Phone.Applications
 
         public void GenerateNewCustomer()
         {
-            if(_rideManager.IsRideActive || customerSos.Count < 1) return;
-            var rand = Random.Range(0, customerSos.Count - 1);
+            if(_rideManager.IsRideActive || _customerSos.Count < 1) return;
+            var rand = Random.Range(0, _customerSos.Count - 1);
             
-            _rideManager.AcceptRide(customerSos[rand]);
+            _rideManager.AcceptRide(_customerSos[rand]);
 
-            customerSos.Remove(customerSos[rand]);
+            _customerSos.Remove(_customerSos[rand]);
         }
 
         public bool TryAcceptNewCustomer(CustomerSO so)
         {
-            if(_rideManager.IsRideActive || !customerSos.Contains(so)) return false;
+            if(_rideManager.IsRideActive || !_customerSos.Contains(so)) return false;
             _rideManager.AcceptRide(so);
-            customerSos.Remove(so);
+            _customerSos.Remove(so);
             return true;
         }
         
@@ -52,11 +57,11 @@ namespace UberPlanetary.Phone.Applications
         {
             foreach (var customerSo in RideLoader.CurrentCustomerList)
             {
-                if (!customerSos.Contains(customerSo))
+                if (!_customerSos.Contains(customerSo))
                 {
-                    customerSos.Add(customerSo);
-                    //Instantiate(_customerListItemPrefab, transform);
-                    //_customerListItemPrefab.GetComponent<CustomerListItem>().Init(customerSo);
+                    _customerSos.Add(customerSo);
+                    GameObject tempListItem = Instantiate(customerListItemPrefab, listHolder);
+                    tempListItem.GetComponent<CustomerListItem>().Init(customerSo, this);
                 }
             }
             //_listProvider.UpdateList();
