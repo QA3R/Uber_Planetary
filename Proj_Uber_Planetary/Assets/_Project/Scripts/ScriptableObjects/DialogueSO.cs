@@ -6,5 +6,6 @@ namespace UberPlanetary.ScriptableObjects
     public class DialogueSO : ScriptableObject
     {
         public Dialogue.Dialogue[] dialogueLines;
+        public Dialogue.Dialogue[] dropOffLines;
     }
 }

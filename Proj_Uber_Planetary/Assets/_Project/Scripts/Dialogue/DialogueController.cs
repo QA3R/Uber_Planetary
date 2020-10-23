@@ -20,8 +20,11 @@ namespace UberPlanetary.Dialogue
         private bool _isStarted;
         private bool _isShowing;
 
+        private Dialogue[] _dialogueArray;
+        private bool _hasDelivered;
+
         //exposed fields
-        [SerializeField]private float autoPlayDialogueTime;
+        [SerializeField] private float autoPlayDialogueTime;
         [SerializeField] private CustomerSO customerSO; //NOTE: This and the one below are private fields I think?
         [SerializeField] private DialogueSO dialogueSO;
 
@@ -72,17 +75,24 @@ namespace UberPlanetary.Dialogue
             customerSO = customerData;
             dialogueSO = customerSO.CustomerDialogue;
             ToggleDialogueBox(true);
-
-            InitiateDialogue();
+            InitiateDialogue(customerData.CustomerDialogue.dialogueLines);
         }
-        //populates the window with customer information and begins running dialogue lines
-        private void InitiateDialogue()
+
+        private void StartDialogue(Dialogue[] dialogues)
         {
+
+            InitiateDialogue(dialogues);
+        }
+
+        //populates the window with customer information and begins running dialogue lines
+        private void InitiateDialogue(Dialogue[] dialogues)
+        {
+            _dialogueArray = dialogues;
             _isStarted = true;
             custName.text = customerSO.CustomerName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = customerSO.CustomerFace;
-            textAnimatorPlayer.ShowText(dialogueSO.dialogueLines[_lineIndex++].line);
+            textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex++].line);
         }
 
         private void Update()
@@ -117,24 +127,35 @@ namespace UberPlanetary.Dialogue
         // NOTE: Check end implies it just checks the condition for ending. But the function is also  calling display text here.
         //I'll show you a case where I use exactly the same function but you'll see how I don't make it a void
         //checks to see if dialogue is over and if not, plays the next line
+   
         private void EndCheck() 
         {
             //NOTE: Code formatting indentation issues
-            if (_lineIndex >= dialogueSO.dialogueLines.Length)
-                {
-                    FinishDialogue();
-                    return;
-                }
-                DisplayText(dialogueSO.dialogueLines[_lineIndex]);
+            if (_lineIndex >= _dialogueArray.Length)
+            {
+                FinishDialogue();
+                return;
+            }
+            DisplayText(_dialogueArray[_lineIndex]);
         }
 
         //called at the end of the ride to run dialogue end methods
+        // Needs to start the dropOffLines
         public void EndDialogue(CustomerSO customerData)
         {
-            ClearCustomerData();
-            ClearDialogueBox();
-            FinishDialogue();
+            customerSO = customerData;
+            dialogueSO = customerSO.CustomerDialogue;
+
+            Debug.Log("The drop off dialogue length is " + customerSO.CustomerDialogue.dropOffLines.Length);
+            if (customerSO.CustomerDialogue.dropOffLines.Length < 1)
+            {
+                FinishDialogue();
+                return;
+            }
+            
+            ToggleDialogueBox(true);
             _lineIndex = 0;
+            StartDialogue(customerSO.CustomerDialogue.dropOffLines);
         }
 
         public void ClearDialogueBox()
@@ -154,6 +175,9 @@ namespace UberPlanetary.Dialogue
         {
             _isStarted = false;
             ToggleDialogueBox(false);
+            _lineIndex = 0;
+            ClearCustomerData();
+            ClearDialogueBox();
         }
     }
 }

@@ -47,3 +47,10 @@ MonoBehaviour:
       other rides?
     characterName: Timmy
     characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  dropOffLines:
+  - line: Hi we've made it to the EndDialogue()
+    characterName: Debug
+    characterSpeaking: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
+  - line: Hopefully everything works..
+    characterName: Debug
+    characterSpeaking: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}

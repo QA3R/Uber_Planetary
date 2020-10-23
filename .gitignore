@@ -53,3 +53,4 @@ sysinfo.txt
 *.unitypackage
 
 # End of https://www.gitignore.io/api/unity
+Proj_Uber_Planetary/ProjectSettings/Packages/com.unity.probuilder/Settings.json
