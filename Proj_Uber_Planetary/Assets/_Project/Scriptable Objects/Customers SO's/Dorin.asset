@@ -22,8 +22,9 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 50
-      unlockedCustomers: []
+      cashReward: 25
+      unlockedCustomers:
+      - {fileID: 11400000, guid: 96a29e3759901034ca95c12ea1a9aa51, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:

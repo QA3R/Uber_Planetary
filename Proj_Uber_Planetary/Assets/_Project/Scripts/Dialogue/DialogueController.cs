@@ -89,9 +89,9 @@ namespace UberPlanetary.Dialogue
         {
             _dialogueArray = dialogues;
             _isStarted = true;
-            custName.text = customerSO.CustomerName;
+            custName.text = _dialogueArray[_lineIndex].characterName;
             custFace.color = new Color(1, 1, 1, 1);
-            custFace.sprite = customerSO.CustomerFace;
+            custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
             textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex++].line);
         }
 
@@ -118,7 +118,7 @@ namespace UberPlanetary.Dialogue
         public void DisplayText(Dialogue dialogue)
         {
             custName.text = dialogue.characterName;
-            custFace.sprite = dialogue.characterSpeaking;
+            custFace.sprite = dialogue.characterSprite;
             textAnimatorPlayer.ShowText(dialogue.line);
             _timeBetweenDialogue = 0;
             _lineIndex++;

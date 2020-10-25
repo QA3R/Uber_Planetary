@@ -15,42 +15,58 @@ MonoBehaviour:
   dialogueLines:
   - line: Furgus! Long time no see my guy!
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Hey, it's been a while Tim. How you've been?
     characterName: Furgus
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: 'Oh man, I''ve been doin good my guy! '
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Ehh.. Been making ends meet as usual. So where to?
     characterName: Furgus
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Haha, I feel you my guy.. Geez how long has it been?
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: One year.
     characterName: Furgus
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Damn only one year? Feels like forever.
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Still haven't answered me.. Where to?
     characterName: Furgus
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Let's go to Willy's my guy. I wanna catch up.
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: I'm working so "catching up" will have to wait..
     characterName: Furgus
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: How bout this? We grab Willy's and I'll tag along we'll catch up for the
-      other rides?
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: How bout this? We grab Willy's and I'll tag along for the other rides.
+      That way we can catch up.
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Fine.
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   dropOffLines:
-  - line: Hi we've made it to the EndDialogue()
-    characterName: Debug
-    characterSpeaking: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
-  - line: Hopefully everything works..
-    characterName: Debug
-    characterSpeaking: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
+  - line: Man! These's donuts are the best! I can't believe you haven't tried them
+      yet.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Not a fan of sweet food.
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Haha, good to know you still haven't changed much my guy.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: What's that suppose to mean?
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: It just means that you're still the same bestie I had last year!
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: So. Let's go get ourselves a client!
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
