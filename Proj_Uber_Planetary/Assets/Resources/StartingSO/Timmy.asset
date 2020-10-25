@@ -24,9 +24,7 @@ MonoBehaviour:
     rideRewards:
       cashReward: 50
       unlockedCustomers:
-      - {fileID: 11400000, guid: 2f8bfeaeb29eb454ca38d971a12ac59e, type: 2}
       - {fileID: 11400000, guid: 44f05cf3ae53e8a4d8ffa4f73f9a62c4, type: 2}
-      - {fileID: 11400000, guid: 0e5e1d87e3157fe4d94e02beb7795be2, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:

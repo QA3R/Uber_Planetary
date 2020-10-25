@@ -9,6 +9,6 @@ namespace UberPlanetary.Dialogue
         public string line;
 
         public string characterName;
-        public Sprite characterSpeaking;
+        public Sprite characterSprite;
     }
 }

@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: 3e-45
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -524,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -568,11 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728188, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.62
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728188, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 53.72
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728188, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -880,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: passiveMovementSpeed
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: verticalMovementSpeed
@@ -912,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: forwardMovementSpeed
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8759139988431937609, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: rigidbody

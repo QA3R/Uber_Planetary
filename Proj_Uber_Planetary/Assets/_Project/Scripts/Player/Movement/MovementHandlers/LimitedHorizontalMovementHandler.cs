@@ -29,7 +29,7 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         /*
         public override void MoveVertical(float val)
         {
-            /Move(transform.up, val, verticalMovementSpeed);
+            Move(transform.up, val, verticalMovementSpeed);
             //_movement = new Vector3(_movement.x, _movement.y +(val * verticalMovementSpeed), _movement.z);
 
             base.MoveVertical(val);

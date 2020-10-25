@@ -15,33 +15,74 @@ MonoBehaviour:
   dialogueLines:
   - line: Heyy man.. Can you take me to Willy's?
     characterName: David
-    characterSpeaking: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
+    characterSprite: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
   - line: Uhh aren't you already at Willy's?
     characterName: Furgust
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Yeah we just picked you up from Willy's!
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Nah man not this Willy's.. The Willy's in Block-C..
     characterName: David
-    characterSpeaking: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
+    characterSprite: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
   - line: Yeah... Sure thing bud..
     characterName: Furgust
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: If you don't mind me asking.. Why do you want to go to another Willy's?
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: They got this limited edition Willy's donut they're selling in Block-C
       man. I heard it tastes like little kittens dancing on your tongue...
     characterName: David
-    characterSpeaking: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
-  - line: I heard that Willy's donuts have an unknown ingredient that they're refusing
-      to tell the government.
+    characterSprite: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
+  - line: Whaaaa??? Yo Furgus! We need to try this out!
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: Isn't that illegal?
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Uhhh I'm good.
     characterName: Furgust
-    characterSpeaking: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: Ha! Probably but the Willy's corp can just buy their way out.
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Ha! Your loss. I'm definitely gonna try one of that limted edition donut.
     characterName: Timmy
-    characterSpeaking: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  dropOffLines:
+  - line: 'So what have you been up to the past year? '
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Last I heard you mentioned something about hitting the jackpot?
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Haha yeah.. Uhh that stuff didn't entirely work out in the end..
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Turns out being a profressonal Burger Flip champ isn't so easy.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Heh yeah. Burger Flip champions tend to start from an early age..
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'But hey! It all worked out in the end. I ended up gettin'' work in with
+      a friend Jimmy for a couple months. '
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Then he hooked me up with a guy Adrian who got me work for another two
+      months.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: What kind of work did you do?
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: I delievered scented candles for his company. But here's the thing...
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: I kinda borrowed cash from him.. And I need to pay him back..
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Again?
+    characterName: Furgus
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Look I just need a little bit of help.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: I'm working right now so it'll have to be after.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}

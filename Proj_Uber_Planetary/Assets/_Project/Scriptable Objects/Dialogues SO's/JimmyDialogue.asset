@@ -14,23 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Timmy! Buddy! It's been forever!
-    characterName: 
-    characterSpeaking: {fileID: 0}
-  - line: 
-    characterName: 
-    characterSpeaking: {fileID: 0}
-  - line: 
-    characterName: 
-    characterSpeaking: {fileID: 0}
-  - line: 
-    characterName: 
-    characterSpeaking: {fileID: 0}
-  - line: 
-    characterName: 
-    characterSpeaking: {fileID: 0}
-  - line: 
-    characterName: 
-    characterSpeaking: {fileID: 0}
-  - line: 
-    characterName: 
-    characterSpeaking: {fileID: 0}
+    characterName: Jimmy
+    characterSprite: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
+  - line: Jimmy?!? My god, you've grown..
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Yeah! Look I need to go to Dinklebops Inc. Got myself a job interview..
+    characterName: Jimmy
+    characterSprite: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
+  - line: Seriously? My guy!
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: HAHAHA! We need to celebrate Timmy! Gram Gram's been missing you! Stop
+      by this weekend!
+    characterName: Jimmy
+    characterSprite: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
+  - line: For sure! I'd love to stop by and see Gram Gram but I'm gonna be busy this
+      week.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: Soon though, I promise.
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: I'll hold you to that buddy HAHA!
+    characterName: Jimmy
+    characterSprite: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
+  dropOffLines: []
