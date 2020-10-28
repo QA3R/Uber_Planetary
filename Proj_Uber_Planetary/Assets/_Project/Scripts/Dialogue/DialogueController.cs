@@ -27,6 +27,7 @@ namespace UberPlanetary.Dialogue
         [SerializeField] private float autoPlayDialogueTime;
         [SerializeField] private CustomerSO customerSO; //NOTE: This and the one below are private fields I think?
         [SerializeField] private DialogueSO dialogueSO;
+        [SerializeField] private AudioSource audioSource;
 
         //NOTE: Looks like these should be serialized private fields since we only change them though inspector(Drag and drop)
         // public fields
@@ -54,6 +55,7 @@ namespace UberPlanetary.Dialogue
         {
             textAnimatorPlayer = FindObjectOfType<TextAnimatorPlayer>();
             _rideManager = FindObjectOfType<RideManager>();
+            audioSource = GetComponent<AudioSource>();
         }
         //NOTE: This is good practice, add another function at the bottom, OnDisable or destroy? RemoveListener
         //you should always do the same with events and delegates too!
@@ -99,18 +101,22 @@ namespace UberPlanetary.Dialogue
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
 
-            if (Input.GetKeyDown(KeyCode.F)) //NOTE: In the next meeting I'll show you how to get input though the Input Handler class instead.
+            //if (Input.GetKeyDown(KeyCode.F)) //NOTE: In the next meeting I'll show you how to get input though the Input Handler class instead.
+            //{
+            //    EndCheck();
+            //}
+            //_timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
+            //if (_timeBetweenDialogue >= autoPlayDialogueTime)
+            //{
+            //    EndCheck();
+            //}
+            //else
+            //{
+            //    _timeBetweenDialogue += Time.deltaTime;
+            //}
+            if (!audioSource.isPlaying)
             {
                 EndCheck();
-            }
-            _timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
-            if (_timeBetweenDialogue >= autoPlayDialogueTime)
-            {
-                EndCheck();
-            }
-            else
-            {
-                _timeBetweenDialogue += Time.deltaTime;
             }
         }
 
@@ -119,6 +125,7 @@ namespace UberPlanetary.Dialogue
         {
             custName.text = dialogue.characterName;
             custFace.sprite = dialogue.characterSprite;
+            audioSource.clip = dialogue.voiceOver;
             textAnimatorPlayer.ShowText(dialogue.line);
             _timeBetweenDialogue = 0;
             _lineIndex++;
