@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7449941517263770479}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 7449941517263770479}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.9999999}
   m_Center: {x: 0, y: -0.0000038146973, z: 0}
@@ -125,8 +125,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8687161779595347630}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+      - m_Target: {fileID: 8687161779595347628}
+        m_TargetAssemblyTypeName: UberPlanetary.Navigation.NavigationIcon, Assembly-CSharp
+        m_MethodName: ToggleImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4322154987947735687}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1302388770712010206}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -160,6 +184,45 @@ MonoBehaviour:
   iconHolder: {fileID: 8687161779595347624}
   landmarkStringId: 
   landmarkIntId: 0
+  activationEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4322154987947735687}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1302388770712010206}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 8687161779595347628}
+        m_TargetAssemblyTypeName: UberPlanetary.Navigation.NavigationIcon, Assembly-CSharp
+        m_MethodName: ToggleImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &9109256222372344119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,6 +318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandmarkIconCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 496640442388232095, guid: 950f6d61e27dea9449e032b680c4b40e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950f6d61e27dea9449e032b680c4b40e, type: 3}
 --- !u!224 &8687161780238334001 stripped
@@ -267,14 +334,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 496640442388232095, guid: 950f6d61e27dea9449e032b680c4b40e, type: 3}
   m_PrefabInstance: {fileID: 9109256222372344119}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8687161779595347630 stripped
+--- !u!114 &8687161779595347628 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 496640442388232089, guid: 950f6d61e27dea9449e032b680c4b40e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 496640442388232091, guid: 950f6d61e27dea9449e032b680c4b40e, type: 3}
   m_PrefabInstance: {fileID: 9109256222372344119}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687161779595347624}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: d3b3a031dda74822888ba019b25edd63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -17,8 +17,8 @@ MonoBehaviour:
   customerMood: 0
   customerDialogue: {fileID: 11400000, guid: df81c1ea6b1fe2a43a6c5324c8291637, type: 2}
   customerRide:
-    endLocationStringID: Willy's 3
-    startLocationStringID: Timmy's House
+    endLocationStringID: Timmy's House
+    startLocationStringID: Willy's 3
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:

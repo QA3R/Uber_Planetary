@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UberPlanetary.Core.Interfaces
 {
@@ -15,6 +16,9 @@ namespace UberPlanetary.Core.Interfaces
         string LandmarkStringID { get;}
         int LandmarkIntID { get;}
         IGeneralLandmark parentLandmark { get;}
+
+        void ActivateLandmark();
+        UnityEvent ActivationEvent { get;}
     }
 
     public interface IGeneralLandmark : ILandmark

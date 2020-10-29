@@ -19,6 +19,7 @@ namespace UberPlanetary.Navigation
         //private members
         private List<ILandmark> _landmarks = new List<ILandmark>();
         private List<IGeneralLandmark> _generalLandmarks = new List<IGeneralLandmark>();
+        private List<GameObject> _parkingSpaces = new List<GameObject>();
         private RideManager _rideManager;
         private Dictionary<Type, List<ILandmark>> _typeDictionary = new Dictionary<Type, List<ILandmark>>();
 
@@ -53,6 +54,7 @@ namespace UberPlanetary.Navigation
         }
 
         /// Update the dictionaries of landmarks based on the registered landmarks
+        /// Get references to the parking spaces of the registered landmarks
         private void InitializeDictionaries()
         {
             foreach (ILandmark lm in _landmarks)
@@ -71,11 +73,10 @@ namespace UberPlanetary.Navigation
             _typeDictionary.Add(typeof(IGeneralLandmark), _landmarks);
         }
 
-        //Enable the image and wait for player to reach that destination.
+        //Calls the ActivateLandmark() method in the ILandmark script
         private void SetDestination(CustomerSO customerSo)
         {
-            var locationIcon = customerSo.CustomerRide.RideCurrentLandmark.LocationIcon;
-            locationIcon.ToggleImage();
+            customerSo.CustomerRide.RideCurrentLandmark.ActivateLandmark();
         }
         
 

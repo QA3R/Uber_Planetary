@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UberPlanetary.Core.Interfaces;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UberPlanetary.Navigation
 {
@@ -15,9 +16,11 @@ namespace UberPlanetary.Navigation
         [SerializeField]private GameObject iconHolder;
         [SerializeField]private string stringID;
         [SerializeField]private int intID;
-        
+        [SerializeField] private UnityEvent activationEvent;
+
         //events
         public event Action OnReached;
+        public UnityEvent ActivationEvent => activationEvent;
 
         //public properties
         public ILandmarkIcon LocationIcon { get; set; }
@@ -48,6 +51,11 @@ namespace UberPlanetary.Navigation
         public void OnLocationReached()
         {
             OnReached?.Invoke();
+        }
+
+        public void ActivateLandmark()
+        {
+            activationEvent?.Invoke();
         }
     }
 }
