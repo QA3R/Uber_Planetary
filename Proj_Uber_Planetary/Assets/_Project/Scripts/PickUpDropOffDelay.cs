@@ -8,17 +8,19 @@ namespace UberPlanetary
 {
     public class PickUpDropOffDelay : MonoBehaviour
     {
-        private InputHandler _InputHandler;
+        private InputHandler _inputHandler;
         private AudioSource _audioSource; 
+        private PlayerController _player; 
         
-        [SerializeField]private GameObject transitionImage;
+        [SerializeField] private GameObject transitionImage;
         [SerializeField] private float endScale, startScale, scaleDuration;
         [SerializeField] private Ease scaleEase;
 
         private void Start()
         {
-            _InputHandler = FindObjectOfType<InputHandler>();
+            _inputHandler = FindObjectOfType<InputHandler>();
             _audioSource = GetComponent<AudioSource>();
+            _player = FindObjectOfType<PlayerController>();
             EndCondition.onGameOver += EndStuff;
         }
 
@@ -36,7 +38,11 @@ namespace UberPlanetary
         public IEnumerator StartCutscene()
         {
             //take away input
-            _InputHandler.enabled = false;
+            _inputHandler.enabled = false;
+
+            _player.MovementAxisModifier = 0;
+            _player.RotationAxisModifier = 0;
+            
             //fade to black
             transitionImage.transform.DOScale(endScale, scaleDuration).SetEase(scaleEase);
 
@@ -52,7 +58,10 @@ namespace UberPlanetary
             yield return new WaitForSeconds(scaleDuration);
 
             //give back input
-            _InputHandler.enabled = true;
+            _inputHandler.enabled = true;
+            
+            _player.MovementAxisModifier = 1;
+            _player.RotationAxisModifier = 1;
         }
     }
 }

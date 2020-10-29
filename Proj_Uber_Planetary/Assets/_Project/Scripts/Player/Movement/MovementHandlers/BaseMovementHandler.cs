@@ -62,21 +62,23 @@ namespace UberPlanetary.Player.Movement.MovementHandlers
         protected void Move(Vector3 dir, float val, float speedMultiplier)
         {
 
-            Vector3 smoothedDelta = Vector3.MoveTowards(transform.position, _rigidbody.position + (dir * val), Time.fixedDeltaTime * speedMultiplier);
+            Vector3 smoothedDelta = Vector3.MoveTowards(transform.position, _rigidbody.position + (dir), Time.fixedDeltaTime * speedMultiplier);
 
             Vector3 direction = (smoothedDelta - transform.position);
 
-            Ray ray = new Ray(transform.position, direction);
-            RaycastHit hit;
-            if (!Physics.Raycast(ray, out hit, direction.magnitude * 2f))
-            {
-                //_rigidbody.MovePosition(smoothedDelta);
-                _rigidbody.MovePosition(_rigidbody.position + dir * (val * Time.fixedDeltaTime * speedMultiplier));
-            }
-            else
-            {
-                _rigidbody.MovePosition(hit.point);
-            }
+            // Ray ray = new Ray(transform.position, direction);
+            // RaycastHit hit;
+            // if (!Physics.Raycast(ray, out hit, direction.magnitude * 3f))
+            // {
+            //     //_rigidbody.MovePosition(smoothedDelta);
+            //     _rigidbody.MovePosition(_rigidbody.position + dir * (val * Time.fixedDeltaTime * speedMultiplier));
+            // }
+            // else
+            // {
+            //     _rigidbody.MovePosition(hit.point);
+            // }
+            
+            _rigidbody.MovePosition(_rigidbody.position + dir * (val * Time.fixedDeltaTime * speedMultiplier));
         }
 
         protected IEnumerator LerpPassiveSpeed(float from, float to, float duration)

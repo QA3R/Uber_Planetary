@@ -30,7 +30,7 @@ namespace UberPlanetary.Player
             //playerController.MovementLossMultiplier -= val;
             if(_isDecelerating) return;
             SafeStop();
-            StartCoroutine(DeceleratePlayer(playerController.AxisModifier, reduceSpeedTo));
+            StartCoroutine(DeceleratePlayer(playerController.MovementAxisModifier, reduceSpeedTo));
         }
 
         private void SafeStop()
@@ -46,14 +46,14 @@ namespace UberPlanetary.Player
             float t = 0;
             while (t <= decelerationDuration)
             {
-                playerController.AxisModifier = Mathf.Lerp(@from, to, decelerationCurve.Evaluate(t.Remap(0, decelerationDuration, 0, 1)));
+                playerController.MovementAxisModifier = Mathf.Lerp(@from, to, decelerationCurve.Evaluate(t.Remap(0, decelerationDuration, 0, 1)));
                 t += Time.fixedDeltaTime;
                 yield return new WaitForFixedUpdate();
             }
             _isDecelerating = false;
             
             if(_isAccelerating) yield break;
-            StartCoroutine(AcceleratePlayer(playerController.AxisModifier, 1));
+            StartCoroutine(AcceleratePlayer(playerController.MovementAxisModifier, 1));
         }
 
         protected IEnumerator AcceleratePlayer(float from, float to)
@@ -64,7 +64,7 @@ namespace UberPlanetary.Player
             float t = 0;
             while (t <= accelerationDuration)
             {
-                playerController.AxisModifier = Mathf.Lerp(@from, to, accelerationCurve.Evaluate(t.Remap(0, accelerationDuration, 0, 1)));
+                playerController.MovementAxisModifier = Mathf.Lerp(@from, to, accelerationCurve.Evaluate(t.Remap(0, accelerationDuration, 0, 1)));
                 t += Time.fixedDeltaTime;
                 yield return new WaitForFixedUpdate();
             }

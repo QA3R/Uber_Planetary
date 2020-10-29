@@ -2,6 +2,7 @@ using System;
 using UberPlanetary.Core;
 using UberPlanetary.Core.Interfaces;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace UberPlanetary.Player.Movement
 {
@@ -14,12 +15,19 @@ namespace UberPlanetary.Player.Movement
         private IRotationHandler _rotationHandler;
         private IMovementHandler _movementHandler;
         private IBoostHandler _boostHandler;
-        [SerializeField] [Range(0,1)] private float axisModifier = 1;
-
-        public float AxisModifier
+        [SerializeField] [Range(0,1)] private float movementMovementAxisModifier = 1;
+        [SerializeField] [Range(0,1)] private float rotationAxisModifier = 1;
+        
+        public float MovementAxisModifier
         {
-            get => axisModifier;
-            set => axisModifier = Mathf.Clamp01(value);
+            get => movementMovementAxisModifier;
+            set => movementMovementAxisModifier = Mathf.Clamp01(value);
+        }
+
+        public float RotationAxisModifier
+        {
+            get => rotationAxisModifier;
+            set => rotationAxisModifier = Mathf.Clamp01(value);
         }
 
         private void Awake()
@@ -34,35 +42,35 @@ namespace UberPlanetary.Player.Movement
 
         private void Rotate(Vector3 dir)
         {
-            _rotationHandler.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,dir.z));
+            _rotationHandler.Rotate(new Vector3(-_cursorController.CursorAxis.y,_cursorController.CursorAxis.x,dir.z) * RotationAxisModifier);
         }
         
         private void MoveForward(float val)
         {
-            _movementHandler.MoveForward(val * axisModifier);
+            _movementHandler.MoveForward(val * movementMovementAxisModifier);
         }
         
         private void MoveBackward(float val)
         {
-            _movementHandler.MoveBackward(val * axisModifier);
+            _movementHandler.MoveBackward(val * movementMovementAxisModifier);
         }
 
         private void MoveVertical(float val)
         {
             //_movementHandler.MoveVertical(val * axisModifier);
-            _movementHandler.MoveVertical(_cursorController.CursorAxis.y * axisModifier);
+            _movementHandler.MoveVertical(_cursorController.CursorAxis.y * movementMovementAxisModifier);
         }
 
         private void MoveSideways(float val)
         {
-            _movementHandler.MoveSidewards(val * axisModifier);
+            _movementHandler.MoveSidewards(val * movementMovementAxisModifier);
         }
         
         private void OnBoost(float val)
         {
             _rotationHandler.DampenRotation(val);
             
-            _boostHandler.Boost(val * axisModifier);
+            _boostHandler.Boost(val * movementMovementAxisModifier);
         }
         
         /// Get Component Reference from PlayerController
@@ -95,7 +103,6 @@ namespace UberPlanetary.Player.Movement
             _inputHandler.OnMoveBackward -= MoveBackward;
             _inputHandler.OnMoveVertical -= MoveVertical;
             _inputHandler.OnMoveSideways -= MoveSideways;
-
         }
     }
 }
