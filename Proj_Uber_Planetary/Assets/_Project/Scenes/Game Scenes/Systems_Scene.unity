@@ -691,6 +691,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: lerpAnimationCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: playerLerpDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: lerpAnimationCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: lerpAnimationCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: lerpAnimationCurve.m_Curve.Array.data[0].inSlope
+      value: 2.8559523
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: lerpAnimationCurve.m_Curve.Array.data[0].outSlope
+      value: 2.8559523
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952306472676813977, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+      propertyPath: lerpAnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.026240457
+      objectReference: {fileID: 0}
     - target: {fileID: 3770116310657283889, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
       propertyPath: m_Name
       value: RideManager

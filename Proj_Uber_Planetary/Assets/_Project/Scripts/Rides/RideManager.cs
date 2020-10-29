@@ -73,34 +73,59 @@ namespace UberPlanetary.Rides
             _currentRide.RideCurrentLandmark = _currentRide.RideStartLandmark;
 
             onRideAccepted?.Invoke(_currentCustomer);
+            //When player reaches the location
             _currentRide.RideStartLandmark.OnReached += StartLocationReached;
         }
 
         private void StartLocationReached()
         {
+            InitiateParking(InvokeStartReached);
+
             _currentRide.RideStartLandmark.OnReached -= StartLocationReached;
             
             if (_currentRide.RideEndLandmark == null)
             {
                 _currentRide.RideEndLandmark = _navigationManager.GetFurthestLandmark<ILandmark>(_player.transform.position);
             }
-            
             _currentRide.RideCurrentLandmark = _currentRide.RideEndLandmark;
-            StartCoroutine(InvokeWithDelay(onCustomerPickedUp, 5f, _currentCustomer));
+            //StartCoroutine(InvokeWithDelay(onCustomerPickedUp, 5f, _currentCustomer));
+        }
+
+        private void InvokeStartReached()
+        {
+            pickUpDropOff.ONParkingCompleted -= InvokeStartReached;
+            onCustomerPickedUp?.Invoke(_currentCustomer);
             _currentRide.RideEndLandmark.OnReached += EndLocationReached;
+        }
+        private void InvokeEndReached()
+        {
+            pickUpDropOff.ONParkingCompleted -= InvokeEndReached;
+            onCustomerDroppedOff?.Invoke(_currentCustomer);
+        }
+
+        public void InitiateParking(Action method)
+        {
+            pickUpDropOff.ONParkingCompleted += method;
+            pickUpDropOff.PlayCutscene(_currentCustomer.CustomerRide.RideCurrentLandmark);
         }
 
         private void EndLocationReached()
         {
+            InitiateParking(InvokeEndReached);
             _currentRide.RideEndLandmark.OnReached -= EndLocationReached;
-            StartCoroutine(InvokeWithDelay(onCustomerDroppedOff, 5f, _currentCustomer));
+            //StartCoroutine(InvokeWithDelay(onCustomerDroppedOff, 5f, _currentCustomer));
+        }
+
+        public void InvokeCostumerEvents(UnityEvent<CustomerSO> enventToInvoke, CustomerSO data)
+        {
+            enventToInvoke?.Invoke(data);
         }
 
         private IEnumerator InvokeWithDelay(UnityEvent<CustomerSO> enventToInvoke, float time, CustomerSO data)
         {
             if (_isRunning) yield break;
             _isRunning = true;
-            pickUpDropOff.PlayCutscene();
+            //pickUpDropOff.PlayCutscene();
             yield return new WaitForSeconds(time);
             enventToInvoke?.Invoke(data);
             _isRunning = false;
