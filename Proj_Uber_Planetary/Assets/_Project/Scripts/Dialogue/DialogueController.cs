@@ -15,32 +15,26 @@ namespace UberPlanetary.Dialogue
         //private members
         private RideManager _rideManager;
         private float _timeBetweenDialogue;
-        private TextAnimatorPlayer textAnimatorPlayer; //NOTE: Naming convention
+        private TextAnimatorPlayer _textAnimatorPlayer;
         private int _lineIndex;
         private bool _isStarted;
         private bool _isShowing;
-
         private Dialogue[] _dialogueArray;
         private bool _hasDelivered;
+        private CustomerSO _customerSO;
+        private DialogueSO _dialogueSO;
+        private AudioSource _audioSource;
 
         //exposed fields
         [SerializeField] private float autoPlayDialogueTime;
-        [SerializeField] private CustomerSO customerSO; //NOTE: This and the one below are private fields I think?
-        [SerializeField] private DialogueSO dialogueSO;
-        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private TextMeshProUGUI custName;
+        [SerializeField] private TextMeshProUGUI dialogueBox;
+        [SerializeField] private GameObject dialogueWindow;
+        [SerializeField] private Image custFace;
 
-        //NOTE: Looks like these should be serialized private fields since we only change them though inspector(Drag and drop)
-        // public fields
-        public TextMeshProUGUI custName; 
-        public TextMeshProUGUI dialogueBox;
-        public GameObject dialogueWindow;
-        public Image custFace;
+        //private properties
+        private bool HasDialogue => _dialogueSO != null;
 
-
-        //public properties
-        public bool HasDialogue => dialogueSO != null; // NOTE: this can be made private too...
-        
-        
         private void Awake()
         {
             AssignReferences();
@@ -53,9 +47,9 @@ namespace UberPlanetary.Dialogue
 
         private void AssignReferences()
         {
-            textAnimatorPlayer = FindObjectOfType<TextAnimatorPlayer>();
+            _textAnimatorPlayer = FindObjectOfType<TextAnimatorPlayer>();
             _rideManager = FindObjectOfType<RideManager>();
-            audioSource = GetComponent<AudioSource>();
+            _audioSource = GetComponent<AudioSource>();
         }
         //NOTE: This is good practice, add another function at the bottom, OnDisable or destroy? RemoveListener
         //you should always do the same with events and delegates too!
@@ -74,8 +68,8 @@ namespace UberPlanetary.Dialogue
         //pulls customer information from other scripts toggles dialogue window on
         private void StartDialogue(CustomerSO customerData)
         {
-            customerSO = customerData;
-            dialogueSO = customerSO.CustomerDialogue;
+            _customerSO = customerData;
+            _dialogueSO = _customerSO.CustomerDialogue;
             ToggleDialogueBox(true);
             InitiateDialogue(customerData.CustomerDialogue.dialogueLines);
         }
@@ -94,29 +88,19 @@ namespace UberPlanetary.Dialogue
             custName.text = _dialogueArray[_lineIndex].characterName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
-            textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex++].line);
+            _textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex++].line);
         }
 
         private void Update()
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
 
-            //if (Input.GetKeyDown(KeyCode.F)) //NOTE: In the next meeting I'll show you how to get input though the Input Handler class instead.
-            //{
-            //    EndCheck();
-            //}
-            //_timeBetweenDialogue = Mathf.Clamp(_timeBetweenDialogue, 0,autoPlayDialogueTime);
-            //if (_timeBetweenDialogue >= autoPlayDialogueTime)
-            //{
-            //    EndCheck();
-            //}
-            //else
-            //{
-            //    _timeBetweenDialogue += Time.deltaTime;
-            //}
-            if (!audioSource.isPlaying)
+            if (!_audioSource.isPlaying)
             {
-                EndCheck();
+                if (!EndCheck())
+                {
+                    DisplayText(_dialogueArray[_lineIndex]);
+                }
             }
         }
 
@@ -125,35 +109,37 @@ namespace UberPlanetary.Dialogue
         {
             custName.text = dialogue.characterName;
             custFace.sprite = dialogue.characterSprite;
-            audioSource.clip = dialogue.voiceOver;
-            textAnimatorPlayer.ShowText(dialogue.line);
+            if (dialogue.voiceOver != null)
+            {
+                _audioSource.clip = dialogue.voiceOver;
+                _audioSource.Play();
+            }
+            _textAnimatorPlayer.ShowText(dialogue.line);
             _timeBetweenDialogue = 0;
             _lineIndex++;
         }
 
-        // NOTE: Check end implies it just checks the condition for ending. But the function is also  calling display text here.
-        //I'll show you a case where I use exactly the same function but you'll see how I don't make it a void
         //checks to see if dialogue is over and if not, plays the next line
    
-        private void EndCheck() 
+        private bool EndCheck() 
         {
-            //NOTE: Code formatting indentation issues
-            if (_lineIndex >= _dialogueArray.Length)
+            if( _lineIndex >= _dialogueArray.Length)
             {
                 FinishDialogue();
-                return;
+                return true;
             }
-            DisplayText(_dialogueArray[_lineIndex]);
+            return false;
         }
 
         //called at the end of the ride to run dialogue end methods
         // Needs to start the dropOffLines
         public void EndDialogue(CustomerSO customerData)
         {
-            customerSO = customerData;
-            dialogueSO = customerSO.CustomerDialogue;
+            _customerSO = customerData;
+            _dialogueSO = _customerSO.CustomerDialogue;
+            _audioSource.Stop();
 
-            if (customerSO.CustomerDialogue.dropOffLines == null  || customerSO.CustomerDialogue.dropOffLines?.Length < 1)
+            if (_customerSO.CustomerDialogue.dropOffLines == null  || _customerSO.CustomerDialogue.dropOffLines?.Length < 1)
             {
                 FinishDialogue();
                 return;
@@ -161,7 +147,7 @@ namespace UberPlanetary.Dialogue
             
             ToggleDialogueBox(true);
             _lineIndex = 0;
-            StartDialogue(customerSO.CustomerDialogue.dropOffLines);
+            StartDialogue(_customerSO.CustomerDialogue.dropOffLines);
         }
 
         public void ClearDialogueBox()
@@ -171,8 +157,8 @@ namespace UberPlanetary.Dialogue
         
         public void ClearCustomerData()
         {
-            customerSO = null;
-            dialogueSO = null;
+            _customerSO = null;
+            _dialogueSO = null;
             custName.text = null;
             custFace.sprite = null;
         }

@@ -10,6 +10,7 @@ namespace UberPlanetary.Dialogue
         public string line;
 
         public AudioClip voiceOver;
+        public ulong playBuffer;
 
         public string characterName;
         public Sprite characterSprite;
