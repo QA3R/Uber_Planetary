@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Engine Flames
+  m_Name: ParkingShader
   m_Shader: {fileID: -6465566751694194690, guid: de9bbc79c5a6aba4eb45fe28ffca05f7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
