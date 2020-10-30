@@ -18,16 +18,19 @@ namespace UberPlanetary.OnBoarding
         
         [SerializeField] private AudioClip[] tutorialSequenceAudio;
         [SerializeField] private int indexToFocusPhone;
+        [SerializeField] private float bufferBetweenAudio;
         
         private void Start()
         {
             _playerController = FindObjectOfType<PlayerController>();
-            _phoneController = _playerController.GetComponent<PhoneController>();
+            _phoneController = FindObjectOfType<PhoneController>();
             _rideManager = FindObjectOfType<RideManager>();
             _audioSource = GetComponent<AudioSource>();
             TakeAwayControls();
             _rideManager.onCustomerDroppedOff.AddListener(FinishOnBoarding);
             _rideManager.onRideAccepted.AddListener(RideAccepted);
+            Invoke(nameof(GivePhoneControl), 3f);
+            PlayAudioClip();
         }
 
         private void TakeAwayControls()
@@ -62,12 +65,13 @@ namespace UberPlanetary.OnBoarding
         {
             //Do what we need to do
             _rideManager.onCustomerDroppedOff.RemoveListener(FinishOnBoarding);
+            Destroy(gameObject);
         }
 
         private void PlayAudioClip()
         {
-            
-            _index++;
+            StartCoroutine(OnBoardingAudio());
+            // _index++;
         }
 
         private IEnumerator OnBoardingAudio()
@@ -75,7 +79,12 @@ namespace UberPlanetary.OnBoarding
             while (_index < tutorialSequenceAudio.Length)
             {
                 _audioSource.clip = tutorialSequenceAudio[_index];
-                yield return new WaitForSeconds(_audioSource.clip.length);
+                _audioSource.Play();
+                if(_index ==1)
+                {
+                    GivePhoneControl();
+                }
+                yield return new WaitForSeconds(_audioSource.clip.length + bufferBetweenAudio);
                 _index++;
             }
         }
