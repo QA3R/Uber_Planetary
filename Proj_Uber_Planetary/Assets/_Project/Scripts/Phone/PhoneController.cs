@@ -11,7 +11,8 @@ namespace UberPlanetary.Phone
         //the input interface, gives us access to all the button presses and scroll etc
         private IInputProvider _inputProvider;
         
-        private bool isActive;
+        private bool _isActive;
+        private bool _canToggle;
         private AudioSource _audioSource;
         
         [SerializeField] private Vector3 offset;
@@ -23,6 +24,12 @@ namespace UberPlanetary.Phone
 
         //The Phone Navigator interface, lets us access the currently selected item and scroll through the rest.
         private IPhoneNavigator _phoneNavigator;
+
+        public bool CanToggle
+        {
+            get => _canToggle;
+            set => _canToggle = value;
+        }
 
         private void Awake()
         {
@@ -39,7 +46,7 @@ namespace UberPlanetary.Phone
 
         public void TempPlayAudio()
         {
-            if (isActive)
+            if (_isActive)
             {
                 _audioSource.clip = pullUp;
             }
@@ -54,12 +61,13 @@ namespace UberPlanetary.Phone
         /// When the middle mouse button is pressed, do this
         private void TogglePhone()
         {
+            if (!_canToggle) return;
             //Manage internal state of the phone, is it currently usable or not?
-            isActive = !isActive;
+            _isActive = !_isActive;
             onPhonePulledUp?.Invoke();
             //TODO: Animate phone based on state
             //When its active move the phone up
-            if (isActive)
+            if (_isActive)
             {
                 phone.transform.position -= offset * canvas.scaleFactor;
                 return;
@@ -72,7 +80,7 @@ namespace UberPlanetary.Phone
         private void OnLeftClick()
         {
             //when the phone is not active do nothing
-            if(!isActive) return;
+            if(!_isActive) return;
             
             //when the phone is active call the Enter function of the currently selected icon/feature.
             _phoneNavigator.CurrentNavigable.Enter();
@@ -82,7 +90,7 @@ namespace UberPlanetary.Phone
         private void OnRightClick()
         {
             //when the phone is not active do nothing
-            if(!isActive) return;
+            if(!_isActive) return;
             
             //when the phone is active call the Exit function of the currently selected icon/feature.
             _phoneNavigator.CurrentNavigable.Exit();
@@ -91,7 +99,7 @@ namespace UberPlanetary.Phone
         private void Scroll(float val)
         {
             //when the phone is not active do nothing
-            if(!isActive) return;
+            if(!_isActive) return;
             
             //Pass in the value of the scroll input to the navigator
             _phoneNavigator.Scroll(val);

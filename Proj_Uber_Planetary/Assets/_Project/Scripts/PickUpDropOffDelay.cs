@@ -20,6 +20,7 @@ namespace UberPlanetary
         [SerializeField] private Ease scaleEase;
         [SerializeField] private float playerLerpDuration;
         [SerializeField] private AnimationCurve lerpAnimationCurve;
+        [SerializeField] private float playerLiftOffRiseUpDistance;
 
         public event Action ONParkingCompleted;
         private void Start()
@@ -32,7 +33,7 @@ namespace UberPlanetary
 
         public void PlayCutscene(ILandmark landmark)
         {
-            StartCoroutine(StartCutscene(landmark.GetTransform.position));
+            StartCoroutine(StartCutscene(landmark.ParkingPositionTransform));
         }
 
         public void EndStuff()
@@ -41,7 +42,7 @@ namespace UberPlanetary
             EndCondition.onGameOver -= EndStuff;
         }
         
-        public IEnumerator StartCutscene(Vector3 posi)
+        public IEnumerator StartCutscene(Transform inTrans)
         {
             //take away input
             _inputHandler.enabled = false;
@@ -51,10 +52,12 @@ namespace UberPlanetary
 
             float t = 0;
             Vector3 startPosi = _player.transform.position;
+            Quaternion startRotation = _player.transform.rotation;
             while (t <= playerLerpDuration)
             {
                 t += Time.deltaTime;
-                _player.transform.position = Vector3.Lerp(startPosi, posi, lerpAnimationCurve.Evaluate(t.Remap(0, playerLerpDuration, 0, 1)));
+                _player.transform.position = Vector3.Lerp(startPosi, inTrans.position, lerpAnimationCurve.Evaluate(t.Remap(0, playerLerpDuration, 0, 1)));
+                _player.transform.rotation = Quaternion.Slerp(startRotation, inTrans.rotation, lerpAnimationCurve.Evaluate(t.Remap(0, playerLerpDuration, 0, 1)));
                 yield return new WaitForEndOfFrame();
             }
             
@@ -72,6 +75,14 @@ namespace UberPlanetary
 
             yield return new WaitForSeconds(scaleDuration);
 
+            t = 0;
+            startPosi = _player.transform.position;
+            while (t <= playerLerpDuration)
+            {
+                t += Time.deltaTime;
+                _player.transform.position = Vector3.Lerp(startPosi, inTrans.position + inTrans.up * playerLiftOffRiseUpDistance , lerpAnimationCurve.Evaluate(t.Remap(0, playerLerpDuration, 0, 1)));
+                yield return new WaitForEndOfFrame();
+            }
             //give back input
             _inputHandler.enabled = true;
             

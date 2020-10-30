@@ -12,6 +12,7 @@ namespace UberPlanetary.Core.Interfaces
         void OnLocationReached();
         event Action OnReached;
         Transform GetTransform { get; }
+        Transform ParkingPositionTransform { get; }
         
         string LandmarkStringID { get;}
         int LandmarkIntID { get;}
