@@ -11,6 +11,8 @@ namespace UberPlanetary.ScriptableObjects
         [SerializeField] private Sprite customerFace;
         [SerializeField] private float customerMood;
         [SerializeField] private DialogueSO customerDialogue;
+        [SerializeField] private NewsArticleSO completedStoryline;
+        [SerializeField] private NewsArticleSO baseStoryline;
         [SerializeField] private Ride customerRide;
         
         public string CustomerName => customerName;
