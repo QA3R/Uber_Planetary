@@ -29,7 +29,7 @@ namespace UberPlanetary.OnBoarding
             TakeAwayControls();
             _rideManager.onCustomerDroppedOff.AddListener(FinishOnBoarding);
             _rideManager.onRideAccepted.AddListener(RideAccepted);
-            Invoke(nameof(GivePhoneControl), 3f);
+            //Invoke(nameof(GivePhoneControl), 3f);
             PlayAudioClip();
         }
 

@@ -1,14 +1,15 @@
-﻿using System.Collections;
+﻿using System.Collections; //NOTE: You can remove unused using statements too btw
 using System.Collections.Generic;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//NOTE: Namespace
 public class NewsApplication : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private GameObject _articleStory;
+    [SerializeField] private GameObject _articleStory; //NOTE: naming convention
     [SerializeField] private NewsArticleSO testStory;
     [SerializeField] private Transform newsArticleHolder;
     [SerializeField] private GameObject articlePanel;
@@ -16,7 +17,7 @@ public class NewsApplication : MonoBehaviour
     [SerializeField] private TextMeshProUGUI articlePanelHeadline;
     [SerializeField] private Image articlePanelImage;
     #endregion
-
+//
     #region Properties
     public GameObject ArticlePanel
     {
@@ -43,7 +44,8 @@ public class NewsApplication : MonoBehaviour
     [ContextMenu ("Populate Scrollview")]
     void TestPopulate()
     {
-        PopulateArticleBoard(testStory);
+        PopulateArticleBoard(testStory); //NOTE: You can remove this too when you are done testing,
+                                         //but we still need to hook things up so you can leave it for later
     }
 
     // Will instantiate a prefab of the articles in the websitepanel

@@ -5,8 +5,10 @@ using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
+//NOTE: Add to the correct namespace
 public class ArticleItem : MonoBehaviour
 {
+    //NOTE: See if there are any variables you are not using anymore, basically cleanup
     #region Variables
     [SerializeField] private TextMeshProUGUI articleTitle;
     [SerializeField] private Button button;
@@ -16,6 +18,7 @@ public class ArticleItem : MonoBehaviour
     private NewsApplication _newsApp;
     #endregion
 
+    //NOTE: You can remove redundant things when you are done testing
     private void Start()
     {
         //button = gameObject.GetComponent<Button>();
