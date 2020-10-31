@@ -14,95 +14,95 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Furgus! Long time no see my guy!
-    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Hey, it's been a while Tim. How you've been?
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 9a8c22a6eb18bc041b074cdc988653aa, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: 'Oh man, I''ve been doin good my guy! '
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Ehh.. Been making ends meet as usual. So where to?
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 9a8c22a6eb18bc041b074cdc988653aa, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Haha, I feel you my guy.. Geez how long has it been?
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: One year.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 9a8c22a6eb18bc041b074cdc988653aa, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Damn only one year? Feels like forever.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Still haven't answered me.. Where to?
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 9a8c22a6eb18bc041b074cdc988653aa, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Let's go to Willy's my guy. I wanna catch up.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: I'm working so "catching up" will have to wait..
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 9a8c22a6eb18bc041b074cdc988653aa, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: How bout this? We grab Willy's and I'll tag along for the other rides.
       That way we can catch up.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Fine.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 13c59f2fd128b1647a33833d0ee0c07f, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   dropOffLines:
   - line: Man! These's donuts are the best! I can't believe you haven't tried them
       yet.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Not a fan of sweet food.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Haha, good to know you still haven't changed much my guy.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: What's that suppose to mean?
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
     playBuffer: 0
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: It just means that you're still the same bestie I had last year!
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: So. Let's go get ourselves a client!
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 966a78b86b078f74b88988478bfdd6f1, type: 3}
     playBuffer: 0
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
