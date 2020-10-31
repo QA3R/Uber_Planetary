@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UberPlanetary.CollisionHandling;
 using UberPlanetary.Core.ExtensionMethods;
@@ -31,6 +32,16 @@ namespace UberPlanetary.Player
             if(_isDecelerating) return;
             SafeStop();
             StartCoroutine(DeceleratePlayer(playerController.MovementAxisModifier, reduceSpeedTo));
+        }
+
+        private void OnCollisionStay(Collision other)
+        {
+            ReduceSpeed();
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            ReduceSpeed();
         }
 
         private void SafeStop()

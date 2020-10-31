@@ -370,6 +370,14 @@ MonoBehaviour:
   startScale: 0
   scaleDuration: 0.5
   scaleEase: 24
+  playerLerpDuration: 0
+  lerpAnimationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  playerLiftOffRiseUpDistance: 5
 --- !u!82 &3472422611004331973
 AudioSource:
   m_ObjectHideFlags: 0

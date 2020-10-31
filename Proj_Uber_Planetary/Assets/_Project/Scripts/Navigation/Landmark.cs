@@ -13,6 +13,7 @@ namespace UberPlanetary.Navigation
         [SerializeField]private String landmarkStringId;
         [SerializeField]private int landmarkIntId;
         [SerializeField]private UnityEvent activationEvent;
+        [SerializeField]private Transform parkingPositionTransform;
 
 
         //events
@@ -21,6 +22,17 @@ namespace UberPlanetary.Navigation
         //public properties
         public ILandmarkIcon LocationIcon { get; set; }
         public Transform GetTransform => transform;
+        public Transform ParkingPositionTransform
+        {
+            get
+            {
+                if (parkingPositionTransform == null)
+                {
+                    parkingPositionTransform = transform;
+                }                
+                return parkingPositionTransform;
+            }
+        }        
         public string LandmarkStringID => landmarkStringId;
         public int LandmarkIntID => landmarkIntId;
         public IGeneralLandmark parentLandmark { get; private set; }
