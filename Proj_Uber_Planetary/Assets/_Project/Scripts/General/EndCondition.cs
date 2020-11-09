@@ -41,12 +41,12 @@ namespace UberPlanetary.General
 
         public void Win()
         {
+            newsApplication.Populate();
             _isGameOver = true;
             winScreen.SetActive(true);
             Debug.Log("YOU DID IT! You paid your debt to those suckers and now you're free!");
             onGameOver?.Invoke();
             Time.timeScale = 0;
-            newsApplication.Populate();
             Cursor.visible = true;
         }
         public void Lose()
