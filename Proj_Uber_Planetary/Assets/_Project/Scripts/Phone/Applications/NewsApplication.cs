@@ -4,20 +4,23 @@ using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UberPlanetary.News;
 
 //NOTE: Namespace
 public class NewsApplication : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private GameObject _articleStory; //NOTE: naming convention
-    [SerializeField] private NewsArticleSO testStory;
+    [SerializeField] private GameObject articleStory; 
+    [SerializeField] private NewsArticleSO Story;
     [SerializeField] private Transform newsArticleHolder;
     [SerializeField] private GameObject articlePanel;
     [SerializeField] private TextMeshProUGUI articlePanelText;
     [SerializeField] private TextMeshProUGUI articlePanelHeadline;
     [SerializeField] private Image articlePanelImage;
+    [SerializeField] private NewsManager newsManager;
+    [SerializeField] private NewsApplication newsApplication;
     #endregion
-//
+
     #region Properties
     public GameObject ArticlePanel
     {
@@ -42,17 +45,27 @@ public class NewsApplication : MonoBehaviour
 
     // Test method which instantiates the article prefabs using PopulateArticleBoard()
     [ContextMenu ("Populate Scrollview")]
-    void TestPopulate()
+    public void Populate()
     {
-        PopulateArticleBoard(testStory); //NOTE: You can remove this too when you are done testing,
-                                         //but we still need to hook things up so you can leave it for later
+        foreach (NewsArticleSO newsArticleSO in newsManager.NewsArticleSOList)
+        {
+            GameObject tempArticleStory = Instantiate(articleStory, newsArticleHolder);
+            tempArticleStory.GetComponent<ArticleItem>().Initalize(newsArticleSO);
+            
+            /*
+            newsArticleSO.ArticleHeadline = newsArticleSO.ArticleHeadline;
+            newsArticleSO.ArticleSprite = newsArticleSO.ArticleSprite;
+            newsArticleSO.ArticleStory = newsArticleSO.ArticleStory;
+
+            */
+        }
     }
 
     // Will instantiate a prefab of the articles in the websitepanel
     void PopulateArticleBoard (NewsArticleSO newsArticleSO)
     {
         // Will eventually need to happen based on the number of customers involved with that particular day
-        GameObject tempArticleStory = Instantiate(_articleStory, newsArticleHolder);
-        tempArticleStory.GetComponent<ArticleItem>().Initalize(newsArticleSO, this);
+        GameObject tempArticleStory = Instantiate(articleStory, newsArticleHolder);
+        tempArticleStory.GetComponent<ArticleItem>().Initalize(newsArticleSO);
     }
 }

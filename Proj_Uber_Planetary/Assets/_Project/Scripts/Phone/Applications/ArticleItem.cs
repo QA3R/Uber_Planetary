@@ -17,30 +17,29 @@ public class ArticleItem : MonoBehaviour
     private NewsArticleSO _articleSo;
     private NewsApplication _newsApp;
     #endregion
-
-    //NOTE: You can remove redundant things when you are done testing
-    private void Start()
-    {
-        //button = gameObject.GetComponent<Button>();
-        //button.onClick.AddListener(TogglePanel);
-
-    }
-
-    //Updates the prefab's text with the headline title from the NewsArticleSO
-    public void Initalize(NewsArticleSO newsArticleSO, NewsApplication newsApplication)
+    
+    /// <summary>
+    /// Assigns a reference of the passed in newsArticleSO from the NewsManager to a private NewsArticleSO that exists in this class
+    /// Gets reference to the NewsApplication script 
+    /// Set the headline text to the passed in newsArticleSO's headline
+    /// </summary>
+    public void Initalize(NewsArticleSO newsArticleSO)
     {
         _articleSo = newsArticleSO;
-        _newsApp = newsApplication;
-        articleTitle.text = newsArticleSO.ArticleHeadline;
+        _newsApp = GameObject.FindObjectOfType<NewsApplication> ();
+        articleTitle.text = newsArticleSO.ArticleHeadline; 
     }
 
-    // This method toggles the Article Panel on and populates its field with the information from the NewsArticleSO
+    /// <summary>
+    ///  Activates the gameobject (ArticlePanel)
+    ///  Sets the infomration based on the passed information from the NewsManager
+    /// </summary>
     public void TogglePanel() 
     {
         _newsApp.ArticlePanel.gameObject.SetActive(true);
         _newsApp.ArticlePanelHeadline.text = _articleSo.ArticleHeadline;
         _newsApp.ArticlePanelText.text = _articleSo.ArticleStory;
-        _newsApp.ArticlePanelImage.sprite = _articleSo.ArticleSprite;
+        _newsApp.ArticlePanelImage.sprite = _articleSo.ArticleSprite;      
 
     }
 }

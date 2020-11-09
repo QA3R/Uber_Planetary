@@ -14,96 +14,150 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Hi! Thanks for the ride!
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Dorin
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
   - line: Where to?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: The MEGA-Mall.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Dorin
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
   - line: Alright..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Ya know I heard William Dinklebop's planning on buying out the MEGA-Mall.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "I\u2019m not surprised.. Dinklebop Inc. already owns almost 40% of Sector-3.
       Why wouldn't they keep expanding?"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Yeah but MEGA-Mall is owned by the Willy's corporation.. There's no way
       Dinkebop's prime competitor would be willing to give up the MEGA-Mall without
       trying to get something out of it.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "We don\u2019t even know if they\u2019re actually planning on buying it
       out. Who\u2019d you even hear this from?"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: My boi Georgie told me. He said he heard it from one of his customers.
       Besides, everyone knows this about this info already..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Wait Georgie? Like One Leg Georgie from B-Block?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Dorin
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
   - line: Yeah! You know him?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "Yeah! Me and Georgie used to be neighbours! I told him cause his grand-papa
       has a store down there. Dinklebop Inc. cripples small businesses from taxing
       people renting out their vendor stalls and I don\u2019t want him to get shafted
       by that.."
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Dorin
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
   - line: "Doesn\u2019t Georgie deal moon-rocks..?"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: "Hey! Don\u2019t judge.. Georgie's a good guy. Besides, it\u2019s rough
       living out here in Sector 3 man.. \r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "You know you shouldn\u2019t involve yourself\u2026 Nevermind, you\u2019re
       old enough to make your own decisions.."
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   dropOffLines:
   - line: You're still involved with those guys?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Look they're nice guys... They've changed.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Don't lie to me. Are they the people you owe?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: No. I just borrowed some money from my boss to cover my moving costs. Can
       you help me or not?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Fine... how much?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Here's the thing.. He doesn't want cash.. He asked for me to deliver something
       for him.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: But it requires a driver and you're the best driver I know.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: What kind of job?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Didn't say, but he wants us to go meet a guy named Raj.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: I'll consider it.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Look please my guy..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: I said I'll consider it.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}

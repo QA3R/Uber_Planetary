@@ -456,6 +456,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 826596513, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: fovMin
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 826596513, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: fovMax
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269204010, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269204010, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Volume
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 1322699297, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_CollisionDetection
       value: 2
@@ -478,11 +494,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: 3e-45
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 740858015040728187, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Name

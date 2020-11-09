@@ -16,13 +16,15 @@ MonoBehaviour:
   customerFace: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
   customerMood: 0
   customerDialogue: {fileID: 11400000, guid: c7ecf89f7e2c2c44eab70878c7c7dbfa, type: 2}
+  completedStoryline: {fileID: 11400000, guid: e87d772e62e0f354c9d9ec7e554a0281, type: 2}
+  baseStoryline: {fileID: 0}
   customerRide:
     endLocationStringID: MEGA-Mall 2
     startLocationStringID: Dinklebop Inc. 2
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 25
+      cashReward: 50
       unlockedCustomers:
       - {fileID: 11400000, guid: 96a29e3759901034ca95c12ea1a9aa51, type: 2}
     onRideSuccessful:

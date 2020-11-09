@@ -24,7 +24,12 @@ namespace UberPlanetary.ScriptableObjects
             get => customerMood;
             set => customerMood = Mathf.Clamp01(value);
         }
-        
+
+        public NewsArticleSO CompletedStoryline
+        {
+            get => completedStoryline;
+        }
+
         public Ride CustomerRide => customerRide;
         public DialogueSO CustomerDialogue => customerDialogue;
     }

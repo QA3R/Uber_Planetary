@@ -14,75 +14,121 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Heyy man.. Can you take me to Willy's?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: David
     characterSprite: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
   - line: Uhh aren't you already at Willy's?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Yeah we just picked you up from Willy's!
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Nah man not this Willy's.. The Willy's in Block-C..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: David
     characterSprite: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
   - line: Yeah... Sure thing bud..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: If you don't mind me asking.. Why do you want to go to another Willy's?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: They got this limited edition Willy's donut they're selling in Block-C
       man. I heard it tastes like little kittens dancing on your tongue...
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: David
     characterSprite: {fileID: 21300000, guid: dde433753f49af14195433a5f99b0f80, type: 3}
   - line: Whaaaa??? Yo Furgus! We need to try this out!
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Uhhh I'm good.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Ha! Your loss. I'm definitely gonna try one of that limted edition donut.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   dropOffLines:
   - line: 'So what have you been up to the past year? '
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Last I heard you mentioned something about hitting the jackpot?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Haha yeah.. Uhh that stuff didn't entirely work out in the end..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Turns out being a profressonal Burger Flip champ isn't so easy.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Heh yeah. Burger Flip champions tend to start from an early age..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: 'But hey! It all worked out in the end. I ended up gettin'' work in with
       a friend Jimmy for a couple months. '
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Then he hooked me up with a guy Adrian who got me work for another two
       months.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: What kind of work did you do?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: I delievered scented candles for his company. But here's the thing...
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: I kinda borrowed cash from him.. And I need to pay him back..
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: Again?
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Furgus
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: Look I just need a little bit of help.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: I'm working right now so it'll have to be after.
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 44200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
