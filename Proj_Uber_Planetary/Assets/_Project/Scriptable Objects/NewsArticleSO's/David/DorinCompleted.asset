@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac1bada42e310c4dbfba48207f860b5, type: 3}
   m_Name: DorinCompleted
   m_EditorClassIdentifier: 
-  articleHeadline: 
-  articleStory: 
+  articleHeadline: IF YOU SEE THIS, IT'S WORKING
+  articleStory: MUCH STORY, SUCH WOW
   articleSprite: {fileID: 0}

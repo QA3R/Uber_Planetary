@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac1bada42e310c4dbfba48207f860b5, type: 3}
   m_Name: DavidCompleted
   m_EditorClassIdentifier: 
-  articleHeadline: 
-  articleStory: 
+  articleHeadline: HOPEFULLY THIS POPS UP?
+  articleStory: YAY IT WORKS!
   articleSprite: {fileID: 0}

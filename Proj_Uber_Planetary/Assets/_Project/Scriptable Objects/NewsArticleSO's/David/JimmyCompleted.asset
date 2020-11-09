@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac1bada42e310c4dbfba48207f860b5, type: 3}
   m_Name: JimmyCompleted
   m_EditorClassIdentifier: 
-  articleHeadline: 
-  articleStory: 
+  articleHeadline: THIS STORY IS TIED TO JIMMY
+  articleStory: THERE'S NO STORY AS OF YET SO I GUESS IF YOU SEE THIS, IT MEANS THE
+    THING WORKS.
   articleSprite: {fileID: 0}

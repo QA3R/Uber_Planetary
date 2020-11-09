@@ -17,7 +17,12 @@ public class ArticleItem : MonoBehaviour
     private NewsArticleSO _articleSo;
     private NewsApplication _newsApp;
     #endregion
-    
+
+    private void Start()
+    {
+        _newsApp = GameObject.FindObjectOfType<NewsApplication>();
+    }
+
     /// <summary>
     /// Assigns a reference of the passed in newsArticleSO from the NewsManager to a private NewsArticleSO that exists in this class
     /// Gets reference to the NewsApplication script 
@@ -26,7 +31,6 @@ public class ArticleItem : MonoBehaviour
     public void Initalize(NewsArticleSO newsArticleSO)
     {
         _articleSo = newsArticleSO;
-        _newsApp = GameObject.FindObjectOfType<NewsApplication> ();
         articleTitle.text = newsArticleSO.ArticleHeadline; 
     }
 

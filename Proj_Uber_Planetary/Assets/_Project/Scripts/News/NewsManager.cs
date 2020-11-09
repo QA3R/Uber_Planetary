@@ -26,7 +26,7 @@ namespace UberPlanetary.News
         // Start is called before the first frame update
         void Start()
         {
-            _rideManager.onCustomerDroppedOff.AddListener(FindStory);
+            _rideManager.onRideAccepted.AddListener(FindStory);
         }
 
         // Will take the _currentCustomer from the RideManager and add it's NewsArticleSO to the list of NewsArticleSo's to populate
@@ -36,7 +36,7 @@ namespace UberPlanetary.News
         }
         void OnDisable()
         {
-            _rideManager.onCustomerDroppedOff.RemoveListener(FindStory);
+            _rideManager.onRideAccepted.RemoveListener(FindStory);
         }
     }
 
