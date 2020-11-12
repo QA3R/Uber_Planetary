@@ -7,19 +7,20 @@ namespace UberPlanetary.Player.Movement.RotationHandlers
     public class BaseRotationHandler : MonoBehaviour, IRotationHandler
     {
         protected float _originalRotLossMultiplier;
+        protected Rigidbody _rigidbody;
+
 
         [SerializeField] protected float xRotationSpeed = 80;
         [SerializeField] protected float yRotationSpeed = 60;
         [SerializeField] protected float zRotationSpeed = 100;
         [SerializeField] [Range(0,1)] protected float rotationLossMultiplier = .5f;
 
-        protected Rigidbody _rb;
 
         protected virtual void Awake()
         {
             _originalRotLossMultiplier = rotationLossMultiplier;
             rotationLossMultiplier = 1f;
-            _rb = gameObject.GetComponent<Rigidbody>();
+            _rigidbody = gameObject.GetComponent<Rigidbody>();
         }
         
         public virtual void DampenRotation(float val)
@@ -30,8 +31,8 @@ namespace UberPlanetary.Player.Movement.RotationHandlers
         /// Rotate object based on mouse cursor position and other inputs
         public virtual void Rotate(Vector3 dir)
         {
-            Quaternion rot = Quaternion.Euler(new Vector3(dir.x * xRotationSpeed, dir.y * yRotationSpeed, -dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
-            _rb.MoveRotation(rot);
+            Quaternion deltaRot = Quaternion.Euler(new Vector3(dir.x * xRotationSpeed, dir.y * yRotationSpeed, -dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
+            _rigidbody.MoveRotation(_rigidbody.rotation * deltaRot);
             //transform.Rotate(new Vector3(dir.x * xRotationSpeed,dir.y * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
         }
     }

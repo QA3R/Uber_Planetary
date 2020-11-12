@@ -80,6 +80,7 @@ namespace UberPlanetary.OnBoarding
             {
                 _audioSource.clip = tutorialSequenceAudio[_index];
                 _audioSource.Play();
+                // _audioSource.te
                 if(_index ==1)
                 {
                     GivePhoneControl();
