@@ -13,10 +13,13 @@ namespace UberPlanetary.Player.Movement.RotationHandlers
         [SerializeField] protected float zRotationSpeed = 100;
         [SerializeField] [Range(0,1)] protected float rotationLossMultiplier = .5f;
 
+        protected Rigidbody _rb;
+
         protected virtual void Awake()
         {
             _originalRotLossMultiplier = rotationLossMultiplier;
             rotationLossMultiplier = 1f;
+            _rb = gameObject.GetComponent<Rigidbody>();
         }
         
         public virtual void DampenRotation(float val)
@@ -27,7 +30,9 @@ namespace UberPlanetary.Player.Movement.RotationHandlers
         /// Rotate object based on mouse cursor position and other inputs
         public virtual void Rotate(Vector3 dir)
         {
-            transform.Rotate(new Vector3(dir.x * xRotationSpeed,dir.y * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
+            Quaternion rot = Quaternion.Euler(new Vector3(dir.x * xRotationSpeed, dir.y * yRotationSpeed, -dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
+            _rb.MoveRotation(rot);
+            //transform.Rotate(new Vector3(dir.x * xRotationSpeed,dir.y * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
         }
     }
 }
