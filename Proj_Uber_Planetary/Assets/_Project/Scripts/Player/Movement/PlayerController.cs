@@ -57,9 +57,10 @@ namespace UberPlanetary.Player.Movement
 
         private void MoveVertical(float val)
         {
-            //_movementHandler.MoveVertical(val * axisModifier);
-            _movementHandler.MoveVertical(_cursorController.CursorAxis.y * movementMovementAxisModifier);
+            //_movementHandler.MoveVertical(_cursorController.CursorAxis.y * movementMovementAxisModifier);
+            _movementHandler.MoveVertical(val * movementMovementAxisModifier);
         }
+
 
         private void MoveSideways(float val)
         {

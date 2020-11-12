@@ -672,7 +672,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014315136948}
-  m_LocalRotation: {x: -0, y: 3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -806,7 +806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740858014974294940}
-  m_LocalRotation: {x: 0.06622726, y: 1e-45, z: -0, w: 0.9978046}
+  m_LocalRotation: {x: 0.06622726, y: -0, z: -0, w: 0.9978046}
   m_LocalPosition: {x: 0, y: 6, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   verticalAxisName: UpDown
   sidewaysAxisName: Sideways
   scrollAxisName: Scroll
-  keyCodes: 4301000044010000450100007700000073000000
+  keyCodes: 43010000440100004501000077000000730000006100000064000000
 --- !u!114 &740858015040728190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,7 +1032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe0d54c57d3f5c4d9d4c457baa34802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisModifier: 1
+  movementMovementAxisModifier: 1
+  rotationAxisModifier: 1
 --- !u!114 &8759139988431937609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,7 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xRotationSpeed: 60
   yRotationSpeed: 60
-  zRotationSpeed: 60
+  zRotationSpeed: 0
   rotationLossMultiplier: 0.5
 --- !u!114 &1118167280937437197
 MonoBehaviour:
