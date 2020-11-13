@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac1bada42e310c4dbfba48207f860b5, type: 3}
   m_Name: DavidCompleted
   m_EditorClassIdentifier: 
-  articleHeadline: HOPEFULLY THIS POPS UP?
-  articleStory: YAY IT WORKS!
+  articleHeadline: BUGER FLIPPING CONTEST DISASTER
+  articleStory: Burger flipper David Fleep was gravely injured while flipping what
+    was defined by specialists as "The lamest flip in burger flipping history". In
+    an attempt to flip a burger patty as high as he could, David lost balance due
+    to his uneven weight caused by the massive difference in the size of his arms.
+    David slipped and fell breaking his arms and hitting a spectator in the face
+    with a patty at an enormous velocity. He was disqualified and sent to the nearest
+    hospital along with the spectator, who might not be able to consume solid food
+    again. "Worsth thay oth my lithe", says the spectator. Thougts and prayers go
+    out to Mr. Fleep in this time of need. Wife files for divorce.
   articleSprite: {fileID: 0}

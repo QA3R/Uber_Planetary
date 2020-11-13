@@ -11,6 +11,7 @@ namespace UberPlanetary.ScriptableObjects
     {
         #region Variables
         [SerializeField] private string articleHeadline;
+        [TextArea (3,10)]
         [SerializeField] private string articleStory;
         [SerializeField] private Sprite articleSprite;
         #endregion

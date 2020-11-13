@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac1bada42e310c4dbfba48207f860b5, type: 3}
+  m_Name: BilliamCompleted
+  m_EditorClassIdentifier: 
+  articleHeadline: HOSPITAL FLOODED WITH FOOD POSIONING CASES
+  articleStory: The local system's hospital got flooded with cases of food poisoning.
+    Since any of the pacients have been able to properly speak since their arrival
+    at the hospital, it's hard to determine the cause of this surge. According to
+    one of the doctors, the only piece of intelligable speech they were able to get
+    from the patients was "something about hodge podge". Authorities have detained
+    owner of local buisnes "The Soup Emporium" for interrogation on the matter.
+  articleSprite: {fileID: 0}
