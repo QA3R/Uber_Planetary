@@ -252,6 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2704604475834640235}
+  - component: {fileID: 6320161438963214545}
   m_Layer: 0
   m_Name: Building_Tower_v3_2
   m_TagString: Untagged
@@ -279,6 +280,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &6320161438963214545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369677530863664593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 48.6, y: 387.4065, z: 40.45}
+  m_Center: {x: 0, y: 189.85327, z: 1.8999996}
 --- !u!1 &4938892340325746114
 GameObject:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ MonoBehaviour:
     playBuffer: 44200
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
-  - line: Thank you for the invitation. I'm not a hotpot person though.
+  - line: Thank you for the invitation but I'm not a hotpot person though.
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 44200
     characterName: You
@@ -69,14 +69,14 @@ MonoBehaviour:
     playBuffer: 44200
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
-  - line: It's all good. I hope everyone enjoy the hotpot
+  - line: It's all good though. I'm hoping everyone enjoys the hotpot
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 44200
     characterName: Dorin
     characterSprite: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
-  - line: Oh they will.
+  - line: Oh I'm sure they will.
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 0
-    characterName: Furgust
+    characterName: You
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   dropOffLines: []

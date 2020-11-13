@@ -512,6 +512,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 740858012974042034, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 740858013920213180, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_DeadZoneWidth
       value: 0

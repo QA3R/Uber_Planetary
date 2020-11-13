@@ -7577,6 +7577,42 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneSingle
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneAdditive
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 56428993}
+        m_TargetAssemblyTypeName: UberPlanetary.ProxySceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneAdditive
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 56428992}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -7588,18 +7624,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1683559008}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1319588772
 MonoBehaviour:
@@ -11790,13 +11814,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2837963635439955551}
-  m_LocalRotation: {x: -0.13410822, y: 0.33506277, z: 0.04824661, w: 0.9313539}
-  m_LocalPosition: {x: -0.3289, y: 0.655, z: -0.2239}
+  m_LocalRotation: {x: -0.17274225, y: 0.31856546, z: 0.07065262, w: 0.92934626}
+  m_LocalPosition: {x: -0.32679, y: 0.532, z: -0.22958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 304648979}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -16.388, y: 39.573, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.475, y: 37.594, z: 1.309}
 --- !u!20 &2837963635439955549
 Camera:
   m_ObjectHideFlags: 0

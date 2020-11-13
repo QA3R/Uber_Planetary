@@ -657,6 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6121466392883526693}
+  - component: {fileID: 2255941797003869537}
   m_Layer: 0
   m_Name: Building_PoliceStation
   m_TagString: Untagged
@@ -680,6 +681,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2255941797003869537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465315875716657858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 74.5, y: 1061.9, z: 46.1}
+  m_Center: {x: 0.1, y: -496.9, z: 0.3}
 --- !u!1 &5113526931249036540
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using TMPro;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
+using UberPlanetary.News;
 
 //NOTE: Add to the correct namespace
 public class ArticleItem : MonoBehaviour

@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UberPlanetary.Currency;
+using UberPlanetary.News;
 
 namespace UberPlanetary.General
 {
@@ -28,7 +29,7 @@ namespace UberPlanetary.General
         private void Start()
         {
             _currencyMngr.OnValueChanged.AddListener(CheckWin);
-            clock.onTimeUp += Lose;
+            //clock.onTimeUp += Lose;
             Cursor.visible = false;
         }
         
