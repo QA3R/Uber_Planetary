@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace UberPlanetary.SceneManagement
@@ -10,6 +11,8 @@ namespace UberPlanetary.SceneManagement
     {
         private static SceneLoader _instance;
         public static SceneLoader instance { get { return _instance; } }
+
+        public static event Action onSceneSwitched;
     
         void Awake ()
         {
@@ -40,6 +43,7 @@ namespace UberPlanetary.SceneManagement
             SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
             //Debug.Log(sceneIndex + " was loaded");
             Time.timeScale = 1;
+            onSceneSwitched?.Invoke();
         }
     
         public void QuitGame()

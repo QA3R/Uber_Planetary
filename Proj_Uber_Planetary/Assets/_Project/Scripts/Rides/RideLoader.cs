@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UberPlanetary.Currency;
 using UberPlanetary.General;
+using UberPlanetary.SceneManagement;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 
 namespace UberPlanetary.Rides
 {
+    //Handles the current list of customers available and deals with reward at the end
     public class RideLoader : MonoBehaviour
     {
         private static List<CustomerSO> _currentCustomerSet = new List<CustomerSO>();
@@ -18,21 +20,10 @@ namespace UberPlanetary.Rides
         
         public static event Action onHashSetUpdated;
 
-        // private CustomerSO _customer;
-        // public CustomerSO Customer
-        // {
-        //     get => _customer;
-        //     set
-        //     {
-        //         _customer = value;
-        //         OnRewarded(_customer);
-        //     }
-        // }
-
         private void Awake()
         {
             Initialize();
-            EndCondition.onGameOver += ClearList;
+            SceneLoader.onSceneSwitched += ClearList;
         }
 
         public void OnRewarded(CustomerSO customerSo)
@@ -67,7 +58,7 @@ namespace UberPlanetary.Rides
         private void ClearList()
         {
             _currentCustomerSet.Clear();
-            EndCondition.onGameOver -= ClearList;
+            SceneLoader.onSceneSwitched -= ClearList;
         }
     }
 }

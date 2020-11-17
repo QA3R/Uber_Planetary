@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UberPlanetary.General;
 using UberPlanetary.Rides;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
@@ -27,12 +28,25 @@ namespace UberPlanetary.News
         void Start()
         {
             _rideManager.onCustomerPickedUp.AddListener(FindStory);
+            EndCondition.onGameOver += MissedUserStories;
         }
 
         // Will take the _currentCustomer from the RideManager and add it's NewsArticleSO to the list of NewsArticleSo's to populate
         void FindStory(CustomerSO so)
         {
             newsArticleSOList.Add(so.CompletedStoryline);
+        }
+
+        private void MissedUserStories()
+        {
+            foreach (var customerSo in RideLoader.CurrentCustomerList)
+            {
+                newsArticleSOList.Add(customerSo.CompletedStoryline);
+                //TODO: Fix here Daren
+            }
+
+            EndCondition.onGameOver -= MissedUserStories;
+
         }
         void OnDisable()
         {
