@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UberPlanetary.Currency;
+using UberPlanetary.General;
 using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 
@@ -31,6 +32,7 @@ namespace UberPlanetary.Rides
         private void Awake()
         {
             Initialize();
+            EndCondition.onGameOver += ClearList;
         }
 
         public void OnRewarded(CustomerSO customerSo)
@@ -60,6 +62,12 @@ namespace UberPlanetary.Rides
                     _currentCustomerSet.Add(so);
                 }
             }
+        }
+
+        private void ClearList()
+        {
+            _currentCustomerSet.Clear();
+            EndCondition.onGameOver -= ClearList;
         }
     }
 }
