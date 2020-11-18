@@ -24,11 +24,13 @@ namespace UberPlanetary.Phone.ApplicationFeature
             //_navListProvider = _uberApp.ListProvider;
             OnEnter.AddListener(ButtonClicked);
         }
+
         public void Init(CustomerSO customerData, UberApplication app)
         {
             _uberApp = app;
             _navListProvider = app.ListProvider;
             _customerSO = customerData;
+            
             customerFace.sprite = customerData.CustomerFace;
             customerName.text = customerData.CustomerName;
             _navListProvider.AddToList(this);

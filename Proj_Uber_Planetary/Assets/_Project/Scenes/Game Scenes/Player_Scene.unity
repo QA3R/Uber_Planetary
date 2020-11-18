@@ -150,11 +150,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8271221894669799216, guid: 41312023de424574088b3ec501b2111a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8271221894669799216, guid: 41312023de424574088b3ec501b2111a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8271221894669799216, guid: 41312023de424574088b3ec501b2111a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -179,6 +179,18 @@ PrefabInstance:
     - target: {fileID: 8271221895074834675, guid: 41312023de424574088b3ec501b2111a, type: 3}
       propertyPath: onValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UberPlanetary.Player.TiltWings, Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271221895859617956, guid: 41312023de424574088b3ec501b2111a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271221895859617956, guid: 41312023de424574088b3ec501b2111a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271221895859617956, guid: 41312023de424574088b3ec501b2111a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 8271221895859617957, guid: 41312023de424574088b3ec501b2111a, type: 3}
       propertyPath: m_Enabled
@@ -524,6 +536,14 @@ PrefabInstance:
       propertyPath: m_DeadZoneHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 740858014254787310, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014254787310, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
@@ -546,6 +566,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740858014315136949, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014315136950, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014974294942, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: field of view
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 740858014974294942, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 740858014974294943, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
@@ -683,6 +715,14 @@ PrefabInstance:
     - target: {fileID: 3559700208775826600, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118506386515126315, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118506386515126315, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4228386044653293380, guid: 4644c961b8f37dc48b9c848995845da7, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2196,10 +2236,10 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 9209923063219597304}
-  m_Follow: {fileID: 9209923063219597304}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 90
     OrthographicSize: 5
     NearClipPlane: 0.1
     FarClipPlane: 50000
