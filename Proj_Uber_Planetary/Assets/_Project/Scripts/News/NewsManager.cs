@@ -19,6 +19,7 @@ namespace UberPlanetary.News
         public List<NewsArticleSO> NewsArticleSOList {get => newsArticleSOList;}
         #endregion
 
+        #region Start and Awake
         private void Awake()
         {
             _rideManager = GameObject.FindObjectOfType<RideManager>();
@@ -27,31 +28,31 @@ namespace UberPlanetary.News
         // Start is called before the first frame update
         void Start()
         {
-            _rideManager.onCustomerPickedUp.AddListener(FindStory);
-            EndCondition.onGameOver += MissedUserStories;
+            _rideManager.onCustomerPickedUp.AddListener(AddCompeltedStory);
+            EndCondition.onGameOver += FindMissedUserStories;
         }
+        #endregion
 
+        #region Methods
         // Will take the _currentCustomer from the RideManager and add it's NewsArticleSO to the list of NewsArticleSo's to populate
-        void FindStory(CustomerSO so)
+        void AddCompeltedStory(CustomerSO so)
         {
             newsArticleSOList.Add(so.CompletedStoryline);
         }
 
-        private void MissedUserStories()
+        // Checks for non-completed quests in our client list
+        private void FindMissedUserStories()
         {
             foreach (var customerSo in RideLoader.CurrentCustomerList)
             {
-                newsArticleSOList.Add(customerSo.CompletedStoryline);
-                //TODO: Fix here Daren
+                newsArticleSOList.Add(customerSo.BaseStoryline);
             }
-
-            EndCondition.onGameOver -= MissedUserStories;
-
+            EndCondition.onGameOver -= FindMissedUserStories;
         }
         void OnDisable()
         {
-            _rideManager.onCustomerPickedUp.RemoveListener(FindStory);
+            _rideManager.onCustomerPickedUp.RemoveListener(AddCompeltedStory);
         }
     }
-
+    #endregion
 }
