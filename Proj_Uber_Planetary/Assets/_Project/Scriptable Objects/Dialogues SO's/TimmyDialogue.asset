@@ -13,95 +13,136 @@ MonoBehaviour:
   m_Name: TimmyDialogue
   m_EditorClassIdentifier: 
   dialogueLines:
-  - line: Furgus! Long time no see my guy!
+  - line: 'Timmy,how have you been?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'Timmy, how have you been?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "Let\u2019s move, quick.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: Hey, it's been a while Tim. How you've been?
+  - line: 'OK, sorry man, where to?
+
+'
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
-    characterName: Furgus
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: 'Oh man, I''ve been doin good my guy! '
+  - line: 'The MEGA-Mall
+
+'
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: Ehh.. Been making ends meet as usual. So where to?
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgus
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: Haha, I feel you my guy.. Geez how long has it been?
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Timmy
-    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: One year.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgus
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: Damn only one year? Feels like forever.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Timmy
-    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: Still haven't answered me.. Where to?
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgus
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: Let's go to Willy's my guy. I wanna catch up.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Timmy
-    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: I'm working so "catching up" will have to wait..
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgus
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: How bout this? We grab Willy's and I'll tag along for the other rides.
-      That way we can catch up.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Timmy
-    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: Fine.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgus
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   dropOffLines:
-  - line: Man! These's donuts are the best! I can't believe you haven't tried them
-      yet.
+  - line: Ok, here we are. Is everything alright Tim?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
-    characterName: Timmy
-    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: Not a fan of sweet food.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgus
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: Haha, good to know you still haven't changed much my guy.
+  - line: "Well\u2026 ugh not really. Look, I know I haven't seen you in a long time,
+      but we came up together, I always looked up to you. You watched out for me
+      when my family died in that depressurization accident.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: What's that suppose to mean?
+  - line: 'Ya of course, you''re like a brother to me Timmy.
+
+'
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
-    characterName: Furgus
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
-  - line: It just means that you're still the same bestie I had last year!
+  - line: 'Well I need your help again. I owe money to some bad people.
+
+'
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  - line: So. Let's go get ourselves a client!
+  - line: "Geez Timmy\u2026 who?\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'Adrian Atkins, the Taxi tycoon.
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: 'What? That guy is bad news, how did you get mixed up with him?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'I was in the wrong place, wrong time.
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "How much do you owe?\r"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "Well, I need 4 million credits in 4 days.\r"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: "WHAT! Sorry Timmy, I don\u2019t have that kind of money. I would not be
+      driving a cab if I did.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "I know Furgus, that's where you come in. You have a cab license! I have
+      a \u201Cfriend\u201D and he needs a legit courier for some deliveries. He pays
+      really well. I can hook you up.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: "I don\u2019t know Timmy, who is this guy? Is it legal?\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Fugust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: " Don\u2019t worry, it's all above board. He\u2019s an upstanding citizen,
+      a real entrepreneur. His name is Raj. I\u2019ll send you his client info when
+      you drop me off.\r"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Timmy
+    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  - line: "OK, for you Timmy, as long as there is no shady business going on, I\u2019m
+      in, I\u2019ll help.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 88200
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'Me?! Never! You know me, I am as clean as they come! Thanks Furgus!
+
+'
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     playBuffer: 88200
     characterName: Timmy

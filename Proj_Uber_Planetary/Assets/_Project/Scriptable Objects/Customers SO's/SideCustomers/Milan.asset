@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73cae0246c5e94e41b4c0c6e8e990abb, type: 3}
+  m_Name: Milan
+  m_EditorClassIdentifier: 
+  customerName: Milan Usk
+  customerFace: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
+  customerMood: 0
+  customerDialogue: {fileID: 11400000, guid: 3718c290bf66851439607104b07de09b, type: 2}
+  completedStoryline: {fileID: 0}
+  baseStoryline: {fileID: 0}
+  customerRide:
+    endLocationStringID: University of Wacdonalds 1
+    startLocationStringID: MEGA-Mall 2
+    endLocationIntID: 0
+    startLocationIntID: 0
+    rideRewards:
+      cashReward: 20
+      unlockedCustomers: []
+    onRideSuccessful:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1064925268783784459, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+          m_TargetAssemblyTypeName: UberPlanetary.Rides.RideLoader, Assembly-CSharp
+          m_MethodName: OnRewarded
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

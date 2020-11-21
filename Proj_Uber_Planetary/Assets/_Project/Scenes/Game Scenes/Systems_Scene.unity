@@ -4223,7 +4223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newsApplication: {fileID: 0}
-  goalAmount: 140
+  goalAmount: 150
   winScreen: {fileID: 1338832971}
   loseScreen: {fileID: 417496365}
 --- !u!222 &4691523738183764760
