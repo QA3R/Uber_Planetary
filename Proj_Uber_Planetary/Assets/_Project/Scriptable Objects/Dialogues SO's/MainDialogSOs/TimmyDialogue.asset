@@ -13,13 +13,6 @@ MonoBehaviour:
   m_Name: TimmyDialogue
   m_EditorClassIdentifier: 
   dialogueLines:
-  - line: 'Timmy,how have you been?
-
-'
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   - line: 'Timmy, how have you been?
 
 '
@@ -147,12 +140,6 @@ MonoBehaviour:
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   dropOffLines:
-  - line: "Thanks again Furgus, I need to get inside, I\u2019ve sent you Rajs client
-      info. I\u2019ll contact you later to see how it's going.\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 88200
-    characterName: Timmy
-    characterSprite: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
   - line: "Thanks again Furgus, I need to get inside, I\u2019ve sent you Rajs client
       info. I\u2019ll contact you later to see how it's going.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
