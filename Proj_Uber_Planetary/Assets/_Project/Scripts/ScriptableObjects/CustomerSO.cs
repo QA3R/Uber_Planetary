@@ -14,6 +14,9 @@ namespace UberPlanetary.ScriptableObjects
         [SerializeField] private NewsArticleSO completedStoryline;
         [SerializeField] private NewsArticleSO baseStoryline;
         [SerializeField] private Ride customerRide;
+        [SerializeField] private string pickupObjectiveTxt;
+        [SerializeField] private string dropoffObjectiveTxt;
+
         //[SerializeField] private float customerMood;
         #endregion
 
@@ -24,7 +27,9 @@ namespace UberPlanetary.ScriptableObjects
         public NewsArticleSO BaseStoryline => baseStoryline;
         public Ride CustomerRide => customerRide;
         public DialogueSO CustomerDialogue => customerDialogue;
-        
+        public string PickupObjectiveTxt => pickupObjectiveTxt;
+        public string DropoffObjectiveTxt => dropoffObjectiveTxt;
+
         /*
         public float CustomerMood
         {

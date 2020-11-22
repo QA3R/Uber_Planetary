@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: Timmy
   customerFace: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
-  customerMood: 0
   customerDialogue: {fileID: 11400000, guid: df81c1ea6b1fe2a43a6c5324c8291637, type: 2}
   completedStoryline: {fileID: 11400000, guid: b66821cbf92f8db4291407448939631d, type: 2}
   baseStoryline: {fileID: 0}
@@ -42,3 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjective: Pick up Timmy at his house
+  dropoffObjective: Drop off Timmy at Willy's

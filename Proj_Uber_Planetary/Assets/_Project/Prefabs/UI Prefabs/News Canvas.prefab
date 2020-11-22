@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 8291470606002565567}
   - component: {fileID: 8291470606002565564}
   m_Layer: 0
-  m_Name: NewCanvas
+  m_Name: News Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
