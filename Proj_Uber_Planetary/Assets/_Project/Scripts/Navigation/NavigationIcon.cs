@@ -1,4 +1,6 @@
-﻿using UberPlanetary.Core.Interfaces;
+﻿using TMPro;
+using UberPlanetary.Core.ExtensionMethods;
+using UberPlanetary.Core.Interfaces;
 using UberPlanetary.Player.Movement;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,9 +16,13 @@ namespace UberPlanetary.Navigation
         private PlayerController _player;
         private ILandmark target;
         private Vector2 _xMinMax, _yMinMax;
+        private float _distanceToPlayer;
 
         //exposed fields
         [SerializeField] private Vector3 offset;
+        [SerializeField] private TextMeshProUGUI distanceValueHolder;
+        [SerializeField] private Vector2 heightMinMax;
+        [SerializeField] private Vector2 distanceMinMax;
 
         //public properties
         public Image iconImage { get; set; }
@@ -24,6 +30,12 @@ namespace UberPlanetary.Navigation
         {
             get => iconImage.color;
             set => iconImage.color = value;
+        }
+
+        private string distanceValueText
+        {
+            get => distanceValueHolder.text;
+            set => distanceValueHolder.text = value;
         }
 
         private void Awake()
@@ -47,18 +59,27 @@ namespace UberPlanetary.Navigation
         
         private void FixedUpdate()
         {
+            _distanceToPlayer = Vector3.Distance(target.GetTransform.position, _player.transform.position);
             UpdateIconPosition();
+            UpdateDistance();
+        }
+        
+        private void UpdateDistance()
+        {
+            distanceValueText = "("+ (int)_distanceToPlayer + "m)";
         }
 
         public void ToggleImage()
         {
             iconImage.enabled = !iconImage.isActiveAndEnabled;
+            distanceValueHolder.gameObject.SetActive(!distanceValueHolder.gameObject.activeSelf);
         }
 
         //Map the icon's position on the canvas based on the camera and world offset.
         public void UpdateIconPosition()
         { 
-            Vector2 pos = _camera.WorldToScreenPoint(target.GetTransform.position + offset);
+            Vector3 yOffset = new Vector3(0,_distanceToPlayer.Remap(distanceMinMax.x, distanceMinMax.y, heightMinMax.x, heightMinMax.y));
+            Vector2 pos = _camera.WorldToScreenPoint(target.GetTransform.position + offset + yOffset);
             
             pos.x = Mathf.Clamp(pos.x, _xMinMax.x, _xMinMax.y);
             pos.y = Mathf.Clamp(pos.y, _yMinMax.x, _yMinMax.y);
