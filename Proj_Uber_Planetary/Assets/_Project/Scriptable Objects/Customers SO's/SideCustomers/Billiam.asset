@@ -20,13 +20,13 @@ MonoBehaviour:
   baseStoryline: {fileID: 0}
   customerRide:
     endLocationStringID: MEGA-Mall 2
-    startLocationStringID: Dinklebop Inc. 2
+    startLocationStringID: Dinklebop Inc. 3
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
       cashReward: 50
       unlockedCustomers:
-      - {fileID: 11400000, guid: 44f05cf3ae53e8a4d8ffa4f73f9a62c4, type: 2}
+      - {fileID: 11400000, guid: 8d9610a321141c043a352d9d29103790, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:

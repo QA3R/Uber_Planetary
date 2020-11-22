@@ -13,29 +13,35 @@ MonoBehaviour:
   m_Name: MilanDialogue
   m_EditorClassIdentifier: 
   dialogueLines:
-  - line: 
-    voiceOver: {fileID: 0}
+  - line: "Usk - Usk - UuuuSk \n\r\n"
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 44100
     characterName: Milan Usk
-    characterSprite: {fileID: 0}
-  - line: 
-    voiceOver: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: 6d218f9cf1a7ba54c8281598067d4cb3, type: 3}
+  - line: " Let me translate this neanderthal\u2019s attempt at modern verbal communications.\r\n"
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
-    characterName: 
-    characterSprite: {fileID: 0}
-  - line: 
-    voiceOver: {fileID: 0}
+    characterName: 'Cab AI:'
+    characterSprite: {fileID: 21300000, guid: fafe1e3aaffea75488e4a61d747f7567, type: 3}
+  - line: "\u201CDo you want see wheel? usk-usk, Usk make wheel, usk show             
+      wheel to everyone usk-usk\u201D \r\n"
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
-    characterName: 
-    characterSprite: {fileID: 0}
-  - line: 
-    voiceOver: {fileID: 0}
+    characterName: Milan Usk
+    characterSprite: {fileID: 21300000, guid: 6d218f9cf1a7ba54c8281598067d4cb3, type: 3}
+  - line: "That\u2019s a mighty impressive wheel there big guy! *chuckles*"
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
-    characterName: 
-    characterSprite: {fileID: 0}
-  - line: 
-    voiceOver: {fileID: 0}
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: Milan thanks you...usk, Minlan loves his wheeeeel!!!
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
     playBuffer: 0
-    characterName: 
-    characterSprite: {fileID: 0}
+    characterName: Milan Usk
+    characterSprite: {fileID: 21300000, guid: 6d218f9cf1a7ba54c8281598067d4cb3, type: 3}
+  - line: Timmy has friend's who know some really strange people.
+    voiceOver: {fileID: 8300000, guid: 1eaa02aa187134241aaa0bfd9237da91, type: 3}
+    playBuffer: 0
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
   dropOffLines: []
