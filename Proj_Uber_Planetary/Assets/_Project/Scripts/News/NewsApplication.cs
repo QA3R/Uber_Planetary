@@ -4,6 +4,7 @@ using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UberPlanetary.General;
 
 namespace UberPlanetary.News
 {
@@ -41,6 +42,16 @@ namespace UberPlanetary.News
         }
         #endregion
 
+        private void OnEnable()
+        {
+            EndCondition.CallEnd += Populate;
+        }
+
+        private void OnDisable()
+        {
+            EndCondition.CallEnd -= Populate;
+        }
+
         // Test method which instantiates the article prefabs using PopulateArticleBoard()
         [ContextMenu ("Populate Scrollview")]
         public void Populate()
@@ -49,7 +60,6 @@ namespace UberPlanetary.News
             {
                 GameObject tempArticleStory = Instantiate(articleStory, newsArticleHolder);
                 tempArticleStory.GetComponent<ArticleItem>().Initalize(newsArticleSO);
-
             }
         }
     }

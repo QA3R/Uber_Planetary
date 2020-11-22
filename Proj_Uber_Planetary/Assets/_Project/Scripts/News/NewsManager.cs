@@ -37,7 +37,10 @@ namespace UberPlanetary.News
         // Will take the _currentCustomer from the RideManager and add it's NewsArticleSO to the list of NewsArticleSo's to populate
         void AddCompeltedStory(CustomerSO so)
         {
-            newsArticleSOList.Add(so.CompletedStoryline);
+            if (so.CompletedStoryline != null)
+            {
+                newsArticleSOList.Add(so.CompletedStoryline);
+            }
         }
 
         // Checks for non-completed quests in our client list
@@ -45,7 +48,10 @@ namespace UberPlanetary.News
         {
             foreach (var customerSo in RideLoader.CurrentCustomerList)
             {
-                newsArticleSOList.Add(customerSo.BaseStoryline);
+                if (!customerSo.BaseStoryline)
+                {
+                    newsArticleSOList.Add(customerSo.BaseStoryline);
+                }
             }
             EndCondition.onGameOver -= FindMissedUserStories;
         }
