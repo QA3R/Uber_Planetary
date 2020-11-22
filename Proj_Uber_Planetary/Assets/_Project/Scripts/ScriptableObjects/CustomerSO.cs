@@ -10,11 +10,11 @@ namespace UberPlanetary.ScriptableObjects
         #region Variables
         [SerializeField] private string customerName;
         [SerializeField] private Sprite customerFace;
-        [SerializeField] private float customerMood;
         [SerializeField] private DialogueSO customerDialogue;
         [SerializeField] private NewsArticleSO completedStoryline;
         [SerializeField] private NewsArticleSO baseStoryline;
         [SerializeField] private Ride customerRide;
+        //[SerializeField] private float customerMood;
         #endregion
 
         #region Properties
@@ -24,11 +24,14 @@ namespace UberPlanetary.ScriptableObjects
         public NewsArticleSO BaseStoryline => baseStoryline;
         public Ride CustomerRide => customerRide;
         public DialogueSO CustomerDialogue => customerDialogue;
+        
+        /*
         public float CustomerMood
         {
             get => customerMood;
             set => customerMood = Mathf.Clamp01(value);
         }
+        */
         #endregion
     }
 }

@@ -8,21 +8,18 @@ namespace UberPlanetary.General
 {
     public class EndCondition : MonoBehaviour
     {
-        public delegate void EndedGame();
-        public static event EndedGame CallEnd;
+        public static event Action OnEndedGame;
+        public static event Action onGameOver;
 
-        //[SerializeField] private NewsApplication newsApplication;
-
-        public int goalAmount;
-
-        private bool _isGameOver;
 
         [SerializeField] private CurrencyManager _currencyMngr;
+        private bool _isGameOver;
         private Clock clock;
-
+        public int goalAmount;
         public GameObject winScreen, loseScreen;
 
-        public static event Action onGameOver;
+
+
 
         private void Awake()
         {
@@ -32,7 +29,6 @@ namespace UberPlanetary.General
         private void Start()
         {
             _currencyMngr.OnValueChanged.AddListener(CheckWin);
-            //newsApplication = FindObjectOfType<NewsApplication>();
             //clock.onTimeUp += Lose;
             Cursor.visible = false;
         }
@@ -46,7 +42,9 @@ namespace UberPlanetary.General
 
         public void Win()
         {
-            CallEnd();
+            if (OnEndedGame != null)
+                OnEndedGame();
+
             //newsApplication.Populate();
             _isGameOver = true;
             winScreen.SetActive(true);

@@ -44,12 +44,12 @@ namespace UberPlanetary.News
 
         private void OnEnable()
         {
-            EndCondition.CallEnd += Populate;
+            EndCondition.OnEndedGame += Populate;
         }
 
         private void OnDisable()
         {
-            EndCondition.CallEnd -= Populate;
+            EndCondition.OnEndedGame -= Populate;
         }
 
         // Test method which instantiates the article prefabs using PopulateArticleBoard()
