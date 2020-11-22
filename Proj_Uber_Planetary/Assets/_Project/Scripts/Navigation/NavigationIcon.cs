@@ -23,6 +23,8 @@ namespace UberPlanetary.Navigation
         [SerializeField] private TextMeshProUGUI distanceValueHolder;
         [SerializeField] private Vector2 heightMinMax;
         [SerializeField] private Vector2 distanceMinMax;
+        [SerializeField] private float iconScreenPadding;
+        [SerializeField] private Canvas parentCanvas;
 
         //public properties
         public Image iconImage { get; set; }
@@ -38,6 +40,16 @@ namespace UberPlanetary.Navigation
             set => distanceValueHolder.text = value;
         }
 
+        private float canvasScaleFactor => parentCanvas.scaleFactor;
+
+        private bool IsActive => iconImage.enabled;
+
+        public float IconScreenPadding
+        {
+            get => iconScreenPadding * canvasScaleFactor;
+            set => iconScreenPadding = value;
+        }
+
         private void Awake()
         {
             iconImage = GetComponent<Image>(); 
@@ -47,7 +59,6 @@ namespace UberPlanetary.Navigation
             
             _yMinMax.x = iconImage.GetPixelAdjustedRect().height / 2f;
             _yMinMax.y = Screen.height - _yMinMax.x;
-            
         }
 
         private void Start()
@@ -59,6 +70,7 @@ namespace UberPlanetary.Navigation
         
         private void FixedUpdate()
         {
+            if(!IsActive) return;
             _distanceToPlayer = Vector3.Distance(target.GetTransform.position, _player.transform.position);
             UpdateIconPosition();
             UpdateDistance();
@@ -81,18 +93,19 @@ namespace UberPlanetary.Navigation
             Vector3 yOffset = new Vector3(0,_distanceToPlayer.Remap(distanceMinMax.x, distanceMinMax.y, heightMinMax.x, heightMinMax.y));
             Vector2 pos = _camera.WorldToScreenPoint(target.GetTransform.position + offset + yOffset);
             
-            pos.x = Mathf.Clamp(pos.x, _xMinMax.x, _xMinMax.y);
-            pos.y = Mathf.Clamp(pos.y, _yMinMax.x, _yMinMax.y);
-            
-            if(Vector3.Dot((target.GetTransform.position - _player.transform.position), _player.transform.forward) < 0)
+            pos.x = Mathf.Clamp(pos.x, _xMinMax.x + IconScreenPadding, _xMinMax.y - IconScreenPadding);
+            pos.y = Mathf.Clamp(pos.y, _yMinMax.x + IconScreenPadding, _yMinMax.y - IconScreenPadding);
+            float forwardDotLandmark = Vector3.Dot((target.GetTransform.position - _player.transform.position),
+                _player.transform.forward);
+            if(forwardDotLandmark < 0)
             {
                 if (pos.x < Screen.width / 2)
                 {
-                    pos.x = _xMinMax.y;
+                    pos.x = _xMinMax.y - IconScreenPadding;
                 }
                 else
                 {
-                    pos.x = _xMinMax.x;
+                    pos.x = _xMinMax.x + IconScreenPadding;
                 }
             }
             iconImage.transform.position = pos;

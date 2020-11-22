@@ -18,5 +18,7 @@ namespace UberPlanetary.Core.ExtensionMethods
         }
         
         public static float Repeat(this float value, float length ) => Mathf.Clamp( value - Mathf.Floor( value / length ) * length, 0.0f, length );
+        
+        public static float Determinant /*or Cross*/( Vector2 a, Vector2 b ) => a.x * b.y - a.y * b.x;
     }
 }

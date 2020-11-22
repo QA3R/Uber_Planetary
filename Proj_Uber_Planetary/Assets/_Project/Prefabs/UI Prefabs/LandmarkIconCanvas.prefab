@@ -192,6 +192,8 @@ MonoBehaviour:
   distanceValueHolder: {fileID: 4289083634336952264}
   heightMinMax: {x: -30, y: 0}
   distanceMinMax: {x: 20, y: 150}
+  iconScreenPadding: 20
+  parentCanvas: {fileID: 496640441487296773}
 --- !u!1 &6895704417246054675
 GameObject:
   m_ObjectHideFlags: 0
