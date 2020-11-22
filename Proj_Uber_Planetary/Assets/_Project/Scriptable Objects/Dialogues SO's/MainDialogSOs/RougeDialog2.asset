@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
+  m_Name: RougeDialog2
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - line: 'Hi. Uber-Planetary here, how can I help you?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'It''s me Rouge. You got the 5k credits?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Rouge
+    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+  - line: 'Ya. It''s all right here.
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'OK, lets go. I gotta go pay my bookie--err my grandma. I need to pay back
+      my grandma, I owe her 5k.
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Rouge
+    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+  - line: 'Your grandma? Whatever. Hop in.
+
+'
+    voiceOver: {fileID: 0}
+    playBuffer: 0
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "OK, so far I\u2019ve only spent money. I need to MAKE money. I gave you
+      the cash, let\u2019s get to work.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "Relax. I had to vet you for the real boss. I don\u2019t pay for the jobs,
+      She does. I\u2019m just the scout. Drop me at the racetrack and I\u2019ll give
+      you her client info.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Rouge
+    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+  - line: 'The racetrack?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'My grandma likes the ponies, what can I say.
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: Rouge
+    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+  dropOffLines:
+  - line: "OK, I\u2019ve sent you the info for the boss. Her name is Demonia the
+      Widow.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: 
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'The Widow? Why the widow?
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: 
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "Don\u2019t ask.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: 
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: 'Roger. Off to see the Widow.
+
+'
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: 
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+  - line: "What has Timmy gotten himself into. I trust him, but I\u2019d swear there
+      is something shady going on.\r\n"
+    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    playBuffer: 0
+    characterName: 
+    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}

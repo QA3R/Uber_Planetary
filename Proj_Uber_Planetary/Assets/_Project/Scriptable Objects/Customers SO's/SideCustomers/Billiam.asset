@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: Billiam
   customerFace: {fileID: 21300000, guid: 274f2a623de6a5b4e86ba751fe092da5, type: 3}
-  customerMood: 0
   customerDialogue: {fileID: 11400000, guid: c7ecf89f7e2c2c44eab70878c7c7dbfa, type: 2}
   completedStoryline: {fileID: 11400000, guid: e87d772e62e0f354c9d9ec7e554a0281, type: 2}
   baseStoryline: {fileID: 0}
@@ -25,8 +24,7 @@ MonoBehaviour:
     startLocationIntID: 0
     rideRewards:
       cashReward: 50
-      unlockedCustomers:
-      - {fileID: 11400000, guid: 8d9610a321141c043a352d9d29103790, type: 2}
+      unlockedCustomers: []
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:

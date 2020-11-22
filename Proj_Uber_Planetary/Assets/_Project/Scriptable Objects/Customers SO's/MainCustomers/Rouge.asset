@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: Rouge
   customerFace: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
-  customerMood: 0
   customerDialogue: {fileID: 11400000, guid: 3f093d92a3132e14a9faeb331e4138df, type: 2}
   completedStoryline: {fileID: 0}
   baseStoryline: {fileID: 0}
@@ -30,4 +29,16 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 0e5e1d87e3157fe4d94e02beb7795be2, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1064925268783784459, guid: d62158fb91555a6498ba5ff0ffabfa1f, type: 3}
+          m_TargetAssemblyTypeName: UberPlanetary.Rides.RideLoader, Assembly-CSharp
+          m_MethodName: OnRewarded
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
