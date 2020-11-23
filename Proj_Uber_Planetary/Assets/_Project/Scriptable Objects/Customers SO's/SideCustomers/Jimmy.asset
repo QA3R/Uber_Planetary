@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: Jimmy
   customerFace: {fileID: 21300000, guid: 421b8dfc26aa05746a3efe32a2dd97e7, type: 3}
-  customerMood: 0
   customerDialogue: {fileID: 11400000, guid: 55a2f65fdea2c18409dda75b5eec879b, type: 2}
   completedStoryline: {fileID: 11400000, guid: c92f042d43299104a99b2a51368bdda1, type: 2}
   baseStoryline: {fileID: 0}
@@ -24,8 +23,9 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 25
-      unlockedCustomers: []
+      cashReward: 1600
+      unlockedCustomers:
+      - {fileID: 11400000, guid: 8d9610a321141c043a352d9d29103790, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:
@@ -41,3 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: Pick up Jimmy at Willy's
+  dropoffObjectiveTxt: Drop off Jimmy at the Dinklebop Inc. building

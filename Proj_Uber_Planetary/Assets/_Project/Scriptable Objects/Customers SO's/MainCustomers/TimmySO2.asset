@@ -18,12 +18,12 @@ MonoBehaviour:
   completedStoryline: {fileID: 0}
   baseStoryline: {fileID: 0}
   customerRide:
-    endLocationStringID: 
+    endLocationStringID: Dinklebop Inc. 2
     startLocationStringID: Timmy's House
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 1
+      cashReward: 500
       unlockedCustomers: []
     onRideSuccessful:
       m_PersistentCalls:
@@ -40,3 +40,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: Pick up Timmy at his house
+  dropoffObjectiveTxt: 

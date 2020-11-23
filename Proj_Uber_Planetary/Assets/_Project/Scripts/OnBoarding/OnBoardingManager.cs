@@ -17,6 +17,7 @@ namespace UberPlanetary.OnBoarding
         private AudioSource _audioSource;
 
         [SerializeField] private GameObject tutorialCanvas;
+        [SerializeField] private GameObject controlTutorialCanvas;
         [SerializeField] private AudioClip[] tutorialSequenceAudio;
         [SerializeField] private int indexToFocusPhone;
         [SerializeField] private float bufferBetweenAudio;
@@ -69,6 +70,7 @@ namespace UberPlanetary.OnBoarding
             Invoke(nameof(GiveRotationControl), 2f);
             _rideManager.onRideAccepted.RemoveListener(RideAccepted);
             tutorialCanvas.SetActive(false);
+            StartCoroutine(OnboardingControlsPanel());
         }
         
         //Destroys itself when the onboarding process is completed
@@ -99,6 +101,13 @@ namespace UberPlanetary.OnBoarding
                     GivePhoneControl();
                 }
             }
+        }
+
+        private IEnumerator OnboardingControlsPanel ()
+        {
+            controlTutorialCanvas.SetActive(true);
+            yield return new WaitForSeconds(7);
+            controlTutorialCanvas.SetActive(false);
         }
     }
 }

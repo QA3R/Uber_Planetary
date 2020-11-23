@@ -23,10 +23,9 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 10
+      cashReward: 1300
       unlockedCustomers:
       - {fileID: 11400000, guid: 96a29e3759901034ca95c12ea1a9aa51, type: 2}
-      - {fileID: 11400000, guid: 0e5e1d87e3157fe4d94e02beb7795be2, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:
@@ -42,3 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: Pick up David at Willy's
+  dropoffObjectiveTxt: Drop off David at Willy's

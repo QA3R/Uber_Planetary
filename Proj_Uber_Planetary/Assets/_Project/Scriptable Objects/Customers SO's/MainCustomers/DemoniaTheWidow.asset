@@ -23,7 +23,7 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 1
+      cashReward: 0
       unlockedCustomers:
       - {fileID: 11400000, guid: 5ae8063f44d54f4468813427e90a8d67, type: 2}
     onRideSuccessful:
@@ -41,3 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: 'Pick up the Widow at the Dinklebop Inc. '
+  dropoffObjectiveTxt: Drop off the Widow at the Dinklebop Inc. building
