@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerName: Milan Usk
   customerFace: {fileID: 21300000, guid: 6d218f9cf1a7ba54c8281598067d4cb3, type: 3}
-  customerMood: 0
   customerDialogue: {fileID: 11400000, guid: 3718c290bf66851439607104b07de09b, type: 2}
   completedStoryline: {fileID: 0}
   baseStoryline: {fileID: 0}
@@ -24,8 +23,9 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 20
-      unlockedCustomers: []
+      cashReward: 2100
+      unlockedCustomers:
+      - {fileID: 11400000, guid: 7e538250c47bd644eb967e26ed6c106c, type: 2}
     onRideSuccessful:
       m_PersistentCalls:
         m_Calls:
@@ -41,3 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: Pick up Milan at the MEGA-Mall
+  dropoffObjectiveTxt: Drop off Milan at the UofW

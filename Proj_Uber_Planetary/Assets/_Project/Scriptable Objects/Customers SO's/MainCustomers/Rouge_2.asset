@@ -23,7 +23,7 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 1
+      cashReward: 0
       unlockedCustomers:
       - {fileID: 11400000, guid: 2266cb951eb15924193198c7918181d6, type: 2}
     onRideSuccessful:
@@ -41,3 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: Pick up Rouge at the UofW
+  dropoffObjectiveTxt: Drop off Rouge at Ding Dong's Milk Store

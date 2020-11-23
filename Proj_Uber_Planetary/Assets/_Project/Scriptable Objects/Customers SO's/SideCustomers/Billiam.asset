@@ -23,7 +23,7 @@ MonoBehaviour:
     endLocationIntID: 0
     startLocationIntID: 0
     rideRewards:
-      cashReward: 50
+      cashReward: 1500
       unlockedCustomers: []
     onRideSuccessful:
       m_PersistentCalls:
@@ -40,3 +40,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  pickupObjectiveTxt: 
+  dropoffObjectiveTxt: 
