@@ -41,5 +41,5 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  pickupObjective: Pick up Timmy at his house
-  dropoffObjective: Drop off Timmy at Willy's
+  pickupObjectiveTxt: Pick up Timmy at Timmy's house
+  dropoffObjectiveTxt: Drop off Timmy at Willy's
