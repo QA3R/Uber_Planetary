@@ -957,7 +957,6 @@ GameObject:
   - component: {fileID: 740858015040728189}
   - component: {fileID: 740858015040728190}
   - component: {fileID: 8759139988431937609}
-  - component: {fileID: 5283712357465948647}
   - component: {fileID: 1118167280937437197}
   - component: {fileID: 3765352350659547529}
   - component: {fileID: 740858015040728161}
@@ -970,6 +969,7 @@ GameObject:
   - component: {fileID: 1322699297}
   - component: {fileID: 1322699295}
   - component: {fileID: 102229061}
+  - component: {fileID: 3534353366623205141}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -1078,22 +1078,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   heightMinMax: {x: -10000, y: 10000}
   speedSmoothingDuration: 1
---- !u!114 &5283712357465948647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740858015040728187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb045bb990f9458b900ef2788f79c04b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xRotationSpeed: 0
-  yRotationSpeed: 60
-  zRotationSpeed: 0
-  rotationLossMultiplier: 0.5
 --- !u!114 &1118167280937437197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,6 +1533,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.86, y: 1, z: 4.5}
   m_Center: {x: 0, y: -0.31, z: 3.5}
+--- !u!114 &3534353366623205141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740858015040728187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1771c39d4940539eaadb73e159481c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRotationSpeed: 0
+  yRotationSpeed: 60
+  zRotationSpeed: 0
+  rotationLossMultiplier: 0.5
+  xRotMinMax: {x: -20, y: 20}
+  yRotMinMax: {x: 0, y: 0}
+  zRotMinMax: {x: 0, y: 0}
+  clampX: 1
+  clampY: 0
+  clampZ: 0
+  parentObject: {fileID: 740858015040728187}
 --- !u!1 &791312113046490008
 GameObject:
   m_ObjectHideFlags: 0

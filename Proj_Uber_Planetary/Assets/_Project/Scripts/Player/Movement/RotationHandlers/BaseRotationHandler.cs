@@ -32,7 +32,7 @@ namespace UberPlanetary.Player.Movement.RotationHandlers
         public virtual void Rotate(Vector3 dir)
         {
             Quaternion deltaRot = Quaternion.Euler(new Vector3(dir.x * xRotationSpeed, dir.y * yRotationSpeed, -dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
-            _rigidbody.MoveRotation(_rigidbody.rotation * deltaRot);
+            _rigidbody.MoveRotation(transform.localRotation * deltaRot);
             //transform.Rotate(new Vector3(dir.x * xRotationSpeed,dir.y * yRotationSpeed,-dir.z * zRotationSpeed) * (rotationLossMultiplier * Time.deltaTime));
         }
     }
