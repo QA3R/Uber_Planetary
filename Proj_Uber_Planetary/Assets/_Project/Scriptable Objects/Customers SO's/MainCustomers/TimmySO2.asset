@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TimmySO2
   m_EditorClassIdentifier: 
   customerName: Timmy
-  customerFace: {fileID: 21300000, guid: 95470061c8dd8da41887a95d4bde7e30, type: 3}
+  customerFace: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   customerDialogue: {fileID: 11400000, guid: 7bcc857bd11507f4b9a2a7a30efb4b5a, type: 2}
   completedStoryline: {fileID: 0}
   baseStoryline: {fileID: 0}

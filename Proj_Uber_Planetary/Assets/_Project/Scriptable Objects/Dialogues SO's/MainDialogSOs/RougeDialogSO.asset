@@ -17,97 +17,82 @@ MonoBehaviour:
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
-    characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+    characterName: Furgust
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'You must be Furgus. Timmy told me you''re looking for work.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Ya,What do I need to do to get paid?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Woah woah\u2026 before ya get to the big jobs, you\u2019re gonna have
       to earn my trust first. Take me to my drug de--err, take me to the Burger Joint,
       ya, the burger joint.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
-  - line: Sure hop in.
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
+  - line: Alright man, no problem.
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: ' So, helping Timmy with his debts eh? Why on earth are you helping him?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: " I grew up with him, took care of him. He\u2019s a good kid, keeps his
       nose clean.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "What? You sure we talking about the same Tim--umm oh ya, sure, ya, he\u2019s
       a good kid, sure he is. *chuckles under his breath*\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'What''s that supposed to mean?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Oh nothing, nevermind. So, if you want to work for me, you gotta prove
       your worth. So first go earn some money so I can see that you know how to work.
       I want $5000 credits by the end of the day.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: ' Huh? I thought you were going to pay ME?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Do this for me and you will get the jobs and the creds.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: "*Sigh*\tFine..."
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   dropOffLines:
   - line: "Remember, 5k end of day. I\u2019ll send you a message to meet.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Rouge
-    characterSprite: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+    characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: OK. Got it.
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    playBuffer: 0
     characterName: Furgust
-    characterSprite: {fileID: 21300000, guid: 67441de8548071747913cbc0fa6a5dbf, type: 3}
+    characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

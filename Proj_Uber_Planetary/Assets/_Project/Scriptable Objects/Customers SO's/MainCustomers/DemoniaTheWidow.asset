@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DemoniaTheWidow
   m_EditorClassIdentifier: 
   customerName: D. Widow
-  customerFace: {fileID: 0}
+  customerFace: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   customerDialogue: {fileID: 11400000, guid: 1988ba912c67ce24d929c72fa4528e16, type: 2}
   completedStoryline: {fileID: 0}
   baseStoryline: {fileID: 0}

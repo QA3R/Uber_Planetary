@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rouge
   m_EditorClassIdentifier: 
   customerName: Rouge
-  customerFace: {fileID: 21300000, guid: 3cc89a531dc05e4478593552057aef6b, type: 3}
+  customerFace: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   customerDialogue: {fileID: 11400000, guid: 3f093d92a3132e14a9faeb331e4138df, type: 2}
   completedStoryline: {fileID: 0}
   baseStoryline: {fileID: 0}
