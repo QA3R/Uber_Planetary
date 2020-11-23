@@ -1306,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2788823028474899176, guid: f4b98dcf4708a644dae91315c807227e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3312454049229221970, guid: f4b98dcf4708a644dae91315c807227e, type: 3}
       propertyPath: m_Name
       value: Building_LandingPad_v3
