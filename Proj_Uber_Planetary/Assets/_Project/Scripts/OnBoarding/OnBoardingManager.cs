@@ -15,7 +15,8 @@ namespace UberPlanetary.OnBoarding
         private RideManager _rideManager;
         private int _index = 0;
         private AudioSource _audioSource;
-        
+
+        [SerializeField] private GameObject tutorialCanvas;
         [SerializeField] private AudioClip[] tutorialSequenceAudio;
         [SerializeField] private int indexToFocusPhone;
         [SerializeField] private float bufferBetweenAudio;
@@ -33,6 +34,7 @@ namespace UberPlanetary.OnBoarding
             PlayAudioClip();
         }
 
+        //Removes player movement capabilites
         private void TakeAwayControls()
         {
             _playerController.MovementAxisModifier = 0;
@@ -40,27 +42,36 @@ namespace UberPlanetary.OnBoarding
             _phoneController.CanToggle = false;
         }
 
+        //Allows player phone control
         private void GivePhoneControl()
         {
+            tutorialCanvas.SetActive(true);
             _phoneController.CanToggle = true;
+
         }
 
+        // Gives player Movement control
         private void GiveMovementControl()
         {
             _playerController.MovementAxisModifier = 1;
         }
 
+        //Gives player rotation Control
         private void GiveRotationControl()
         {
             _playerController.RotationAxisModifier = 1;
         }
 
+        //Will Give player full controls on accepting client
         private void RideAccepted(CustomerSO customerSo)
         {
             GiveMovementControl();
             Invoke(nameof(GiveRotationControl), 2f);
             _rideManager.onRideAccepted.RemoveListener(RideAccepted);
+            tutorialCanvas.SetActive(false);
         }
+        
+        //Destroys itself when the onboarding process is completed
         private void FinishOnBoarding(CustomerSO customerSo)
         {
             //Do what we need to do
@@ -81,12 +92,12 @@ namespace UberPlanetary.OnBoarding
                 _audioSource.clip = tutorialSequenceAudio[_index];
                 _audioSource.Play();
                 // _audioSource.te
+                yield return new WaitForSeconds(_audioSource.clip.length + bufferBetweenAudio);
+                _index++;
                 if(_index ==1)
                 {
                     GivePhoneControl();
                 }
-                yield return new WaitForSeconds(_audioSource.clip.length + bufferBetweenAudio);
-                _index++;
             }
         }
     }
