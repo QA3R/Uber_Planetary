@@ -15,7 +15,8 @@ namespace UberPlanetary.OnBoarding
         private RideManager _rideManager;
         private int _index = 0;
         private AudioSource _audioSource;
-
+        
+        [SerializeField] private int tutorialCanvasTime;
         [SerializeField] private GameObject tutorialCanvas;
         [SerializeField] private GameObject controlTutorialCanvas;
         [SerializeField] private AudioClip[] tutorialSequenceAudio;
@@ -106,7 +107,7 @@ namespace UberPlanetary.OnBoarding
         private IEnumerator OnboardingControlsPanel ()
         {
             controlTutorialCanvas.SetActive(true);
-            yield return new WaitForSeconds(7);
+            yield return new WaitForSeconds(tutorialCanvasTime);
             controlTutorialCanvas.SetActive(false);
         }
     }

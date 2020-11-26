@@ -2655,6 +2655,10 @@ PrefabInstance:
       propertyPath: controlTutorialCanvas
       value: 
       objectReference: {fileID: 212608021}
+    - target: {fileID: 5442355977640615664, guid: cffa00ee189339d43ac518072b7a19a7, type: 3}
+      propertyPath: tutorialCanvasTime
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5442355977640615665, guid: cffa00ee189339d43ac518072b7a19a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
