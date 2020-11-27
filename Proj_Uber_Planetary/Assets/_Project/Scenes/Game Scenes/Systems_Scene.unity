@@ -3441,45 +3441,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2004017106}
     m_Modifications:
-    - target: {fileID: 6431523076333891197, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_margin.z
-      value: 229.82501
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 509586642}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UberPlanetary.Dialogue.DialogueHistory, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseDialogueHistory
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076795451149, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_MovementType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6431523076795451150, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6431523076799596152, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3565,29 +3529,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6431523076799596156, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: dialogueController
-      value: 
-      objectReference: {fileID: 821067847}
-    - target: {fileID: 6431523076799596156, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: dialogueHistory
-      value: 
-      objectReference: {fileID: 2030377254191522919}
     - target: {fileID: 6431523076799596159, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: m_Name
       value: Dialogue History Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523077097286631, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_text
-      value: Close Dialogue History
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523078230761532, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523078230761532, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}

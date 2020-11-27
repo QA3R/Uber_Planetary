@@ -440,8 +440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947ae8980c1f6e2428dffedd1d831801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueController: {fileID: 0}
+  dialogueHistory: {fileID: 0}
   dialoguePrefab: {fileID: 4043205479981683707, guid: f6ad701700d59a14fbe1de8f0777e5d2, type: 3}
+  dialogueController: {fileID: 0}
   dialogueContainer: {fileID: 6431523077737564052}
 --- !u!223 &6431523076799596155
 Canvas:
@@ -692,14 +693,14 @@ MonoBehaviour:
     m_Top: 70
     m_Bottom: 1600
   m_ChildAlignment: 1
-  m_Spacing: 40
+  m_Spacing: 60
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
-  m_ReverseArrangement: 0
+  m_ReverseArrangement: 1
 --- !u!222 &6431523077737564054
 CanvasRenderer:
   m_ObjectHideFlags: 0
