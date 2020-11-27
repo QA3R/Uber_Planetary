@@ -5,6 +5,7 @@ using UberPlanetary.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 namespace UberPlanetary.Dialogue
 {
@@ -14,6 +15,7 @@ namespace UberPlanetary.Dialogue
     public class DialogueController : MonoBehaviour
     {
         #region Variables
+
         //private members
         private RideManager _rideManager;
         private TextAnimatorPlayer _textAnimatorPlayer;
@@ -25,6 +27,7 @@ namespace UberPlanetary.Dialogue
         private CustomerSO _customerSO;
         private DialogueSO _dialogueSO;
         private AudioSource _audioSource;
+        private Action <Dialogue> onDialoguePlayed; 
 
         //exposed fields
         //[SerializeField] private float autoPlayDialogueTime;
@@ -33,11 +36,20 @@ namespace UberPlanetary.Dialogue
         [SerializeField] private TextMeshProUGUI dialogueBox;
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private Image custFace;
+
         #endregion
 
         #region Properites
+
         //private properties
         private bool HasDialogue => _dialogueSO != null;
+        
+        public Action <Dialogue> OnDialoguePlayed
+        {
+            get => onDialoguePlayed;
+            set => onDialoguePlayed = value;
+        }
+
         #endregion
 
         #region OnEnable, OnDisable, Awake and Update Methods
@@ -47,6 +59,7 @@ namespace UberPlanetary.Dialogue
             _rideManager = FindObjectOfType<RideManager>();
             _audioSource = GetComponent<AudioSource>();
             ToggleDialogueBox(false);
+            _lineIndex = 0;
         }
 
         private void OnEnable()
@@ -96,6 +109,7 @@ namespace UberPlanetary.Dialogue
         {
 
             InitiateDialogue(dialogues);
+
         }
 
         //populates the window with customer information and begins running dialogue lines
@@ -103,10 +117,12 @@ namespace UberPlanetary.Dialogue
         {
             _dialogueArray = dialogues;
             _isStarted = true;
-            custName.text = _dialogueArray[_lineIndex].characterName;
+            custFace.color = new Color(1, 1, 1, 1);
+            DisplayText(dialogues[_lineIndex]);
+            /*custName.text = _dialogueArray[_lineIndex].characterName;
             custFace.color = new Color(1, 1, 1, 1);
             custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
-            _textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex].line);
+            _textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex].line);*/
         }
 
         /*
@@ -129,14 +145,25 @@ namespace UberPlanetary.Dialogue
         //plays text with typewriter effect
         public void DisplayText(Dialogue dialogue)
         {
-            custName.text = dialogue.characterName;
-            custFace.sprite = dialogue.characterSprite;
+            //custName.text = dialogue.characterName;
+            //custFace.sprite = dialogue.characterSprite;
+
+            custName.text = _dialogueArray[_lineIndex].characterName;
+            custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
+            _textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex].line);
+
             if (dialogue.voiceOver != null)
             {
                 _audioSource.clip = dialogue.voiceOver;
                 _audioSource.Play();
                 _textAnimatorPlayer.ShowText(dialogue.line);
                 timeBetweenDialogue = 0;
+
+                if (onDialoguePlayed != null)
+                {
+                    onDialoguePlayed(dialogue);
+                }
+
                 _lineIndex++;
             }
         }
