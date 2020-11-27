@@ -17,7 +17,8 @@ namespace UberPlanetary.Dialogue
         private TextMeshProUGUI _characterDialogue;
         private List <string> _dialogueList;
 
-        [SerializeField] private GameObject dialogueHistory;
+        [SerializeField] private GameObject screenBorder;
+        [SerializeField] private RectTransform dialogueHistory;
         [SerializeField] private GameObject dialoguePrefab;
         [SerializeField] private DialogueController dialogueController;
         [SerializeField] private Transform dialogueContainer;
@@ -49,19 +50,20 @@ namespace UberPlanetary.Dialogue
 
             _tempObj.GetComponent<TextMeshProUGUI>().text = dialogue.characterName;
             _tempObj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = dialogue.line;
+            dialogueHistory.offsetMin = new Vector2 (dialogueHistory.offsetMin.x, (dialogueHistory.offsetMin.y - 500));
         }
 
 
         public void OpenDialogueHistory()
         {
-            dialogueHistory.SetActive(true);
+            screenBorder.SetActive(true);
             Cursor.visible = true;
             Time.timeScale = 0;
         }
 
         public void CloseDialogueHistory()
         {
-            dialogueHistory.SetActive(false);
+            screenBorder.SetActive(false);
             Cursor.visible = false;
             Time.timeScale = 1;
         }

@@ -3441,42 +3441,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2004017106}
     m_Modifications:
-    - target: {fileID: 6431523076559360477, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 69.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360477, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360477, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360477, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Pivot.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360477, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360479, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Color.r
-      value: 0.5754717
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360479, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Color.g
-      value: 0.26873443
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076559360479, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Color.b
-      value: 0.26873443
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523076795451150, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6431523076799596152, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3568,24 +3532,21 @@ PrefabInstance:
     - target: {fileID: 6431523076799596156, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: dialogueHistory
       value: 
-      objectReference: {fileID: 2030377254191522919}
+      objectReference: {fileID: 2030377254191522920}
     - target: {fileID: 6431523076799596159, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: m_Name
       value: Dialogue History Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523077097286631, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_text
-      value: Close Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6431523077737564053, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
-      propertyPath: m_Spacing
-      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
 --- !u!1 &2030377254191522919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6431523076795451150, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
+  m_PrefabInstance: {fileID: 2030377254191522918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2030377254191522920 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6431523078230761532, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
   m_PrefabInstance: {fileID: 2030377254191522918}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2471755317091253085
