@@ -27,7 +27,6 @@ namespace UberPlanetary.Dialogue
         #endregion
 
         #region OnEnable, and OnDisable Methods
-
         private void OnEnable()
         {
             dialogueController.OnDialoguePlayed += PopulateDialogue;
@@ -37,11 +36,9 @@ namespace UberPlanetary.Dialogue
         {
             dialogueController.OnDialoguePlayed -= PopulateDialogue;
         }
-
         #endregion
 
         #region Methods
-
         [ContextMenu("Populate")]
         void PopulateDialogue(Dialogue dialogue)
         {
@@ -52,7 +49,6 @@ namespace UberPlanetary.Dialogue
             _tempObj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = dialogue.line;
             dialogueHistory.offsetMin = new Vector2 (dialogueHistory.offsetMin.x, (dialogueHistory.offsetMin.y - 500));
         }
-
 
         public void OpenDialogueHistory()
         {
@@ -67,7 +63,6 @@ namespace UberPlanetary.Dialogue
             Cursor.visible = false;
             Time.timeScale = 1;
         }
-
         #endregion
     }
 }

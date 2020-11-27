@@ -2381,6 +2381,10 @@ PrefabInstance:
       propertyPath: navigableObjects.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3996780396737939141, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3996780397359082144, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2554,12 +2558,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3996780397427024983, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996780397427024983, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
       propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1382592904}
     - target: {fileID: 3996780397427024983, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
       propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996780397427024983, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UberPlanetary.Phone.NavigableListProvider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996780397427024983, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996780397427024983, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: OnEnter.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794750022667675469, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6662847146003527763, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
       propertyPath: m_IsActive
@@ -2568,6 +2592,10 @@ PrefabInstance:
     - target: {fileID: 7955466330156741156, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875734402457429771, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b4f3b7059a83804988a7dc9d7b6b032, type: 3}
@@ -3441,6 +3469,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2004017106}
     m_Modifications:
+    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 509586642}
+    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseDialogueHistory
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UberPlanetary.Dialogue.DialogueHistory, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431523076559360478, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431523076795451150, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6431523076799596152, guid: 49243b851f7bd8741ab99661adbb1213, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

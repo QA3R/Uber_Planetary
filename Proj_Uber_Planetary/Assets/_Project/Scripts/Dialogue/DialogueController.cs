@@ -29,7 +29,6 @@ namespace UberPlanetary.Dialogue
         private AudioSource _audioSource;
         private Action <Dialogue> onDialoguePlayed; 
 
-        //exposed fields
         //[SerializeField] private float autoPlayDialogueTime;
         [SerializeField] private float timeBetweenDialogue;
         [SerializeField] private TextMeshProUGUI custName;
@@ -119,28 +118,7 @@ namespace UberPlanetary.Dialogue
             _isStarted = true;
             custFace.color = new Color(1, 1, 1, 1);
             DisplayText(dialogues[_lineIndex]);
-            /*custName.text = _dialogueArray[_lineIndex].characterName;
-            custFace.color = new Color(1, 1, 1, 1);
-            custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
-            _textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex].line);*/
         }
-
-        /*
-        IEnumerator DisplayText(Dialogue dialogue)
-        {
-            custName.text = dialogue.characterName;
-            custFace.sprite = dialogue.characterSprite;
-            if (dialogue.voiceOver != null)
-            {
-                _audioSource.clip = dialogue.voiceOver;
-                _audioSource.Play();
-            }
-            _textAnimatorPlayer.ShowText(dialogue.line);
-            _timeBetweenDialogue = 0;
-            _lineIndex++;
-            yield return new WaitForSeconds(2);
-        }
-        */
 
         //plays text with typewriter effect
         public void DisplayText(Dialogue dialogue)
@@ -169,7 +147,6 @@ namespace UberPlanetary.Dialogue
         }
 
         //checks to see if dialogue is over and if not, plays the next line
-   
         private bool EndCheck() 
         {
             if( _lineIndex >= _dialogueArray.Length)
@@ -211,6 +188,7 @@ namespace UberPlanetary.Dialogue
             custName.text = null;
             custFace.sprite = null;
         }
+
         //toggles dialogue box off and sets dialogue condition back to false
         public void FinishDialogue()
         {
