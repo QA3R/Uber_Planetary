@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b7caa80e48e35469bbc71ac397b8f1, type: 3}
+  m_Name: SandraDialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - line: Hey
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: Hey
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  - line: Can you take me to the Poopysoft Building at block C Please?
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: You got it! Wait... Poopysoft? Are you one of those videogame streamers?
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  - line: "hahah no not actually, though I kind of wish I was. I\u2019d be making
+      a lot more money that\u2019s for sure. I am actually a programmer for the company.
+      I\u2019ve been working on this big project for the past six years."
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: Is it that one everyone has been talking about? DrivePunk2020 or something
+      like that?
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  - line: "That\u2019s the one!"
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: <shake a=.4> That's so awesome! When does it come out?</shake>
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  - line: I...<wiggle a = .4> *sob* I don't know man</wiggle>
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: "Woah... I'm so sorry I didn\u2019t mean that in a rude way"
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  - line: "It\u2019s ok, I know. I just can\u2019t take the pressure and abuse I\u2019m
+      taking anymore. Everyone is always asking when will the game release and we
+      have delayed it so many times now!"
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: Hey pal, it's gonna be alright. do you need a tissue?
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  - line: "No. <shake a=.6>THAT\u2019S IT!</shake> I am done with this abuse. Scratch
+      what I said, the game releases tonight!"
+    voiceOver: {fileID: 0}
+    characterName: Sandra
+    characterSprite: {fileID: 0}
+  - line: Oh boy
+    voiceOver: {fileID: 0}
+    characterName: Furgus
+    characterSprite: {fileID: 0}
+  dropOffLines: []
