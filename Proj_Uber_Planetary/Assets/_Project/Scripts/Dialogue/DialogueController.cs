@@ -12,10 +12,10 @@ namespace UberPlanetary.Dialogue
     /// <summary>
     /// Controls dialogue flow and translates customer data into UI
     /// </summary>
+    
     public class DialogueController : MonoBehaviour
     {
         #region Variables
-
         //private members
         private RideManager _rideManager;
         private TextAnimatorPlayer _textAnimatorPlayer;
@@ -35,11 +35,9 @@ namespace UberPlanetary.Dialogue
         [SerializeField] private TextMeshProUGUI dialogueBox;
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private Image custFace;
-
         #endregion
 
         #region Properites
-
         //private properties
         private bool HasDialogue => _dialogueSO != null;
         
@@ -48,7 +46,6 @@ namespace UberPlanetary.Dialogue
             get => onDialoguePlayed;
             set => onDialoguePlayed = value;
         }
-
         #endregion
 
         #region OnEnable, OnDisable, Awake and Update Methods
@@ -77,8 +74,10 @@ namespace UberPlanetary.Dialogue
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
 
-            if (!_audioSource.isPlaying)
+            //Checks if there the Audio Source is playing and the game isn't paused before calling the EndCheck method
+            if (!_audioSource.isPlaying && Time.timeScale == 1)
             {
+                //Checks if the EndCheck method returns true before calling hte DisplayText method
                 if (!EndCheck())
                 {
                     DisplayText(_dialogueArray[_lineIndex]);
@@ -95,7 +94,7 @@ namespace UberPlanetary.Dialogue
             dialogueBox.gameObject.SetActive(state);
         }
 
-        //pulls customer information from other scripts toggles dialogue window on
+        // Takes in the CustomerSO and assigns the information to the DialogueBox while toggling it on
         private void StartDialogue(CustomerSO customerData)
         {
             _customerSO = customerData;
@@ -104,6 +103,7 @@ namespace UberPlanetary.Dialogue
             InitiateDialogue(customerData.CustomerDialogue.dialogueLines);
         }
 
+        // Takes in and passes the DialgoueArray to the InitiateDialogue method
         private void StartDialogue(Dialogue[] dialogues)
         {
 
@@ -123,13 +123,12 @@ namespace UberPlanetary.Dialogue
         //plays text with typewriter effect
         public void DisplayText(Dialogue dialogue)
         {
-            //custName.text = dialogue.characterName;
-            //custFace.sprite = dialogue.characterSprite;
-
+            //Assigns the text in the dialogue box to the correct line index of the CustomerSO's dialgoue passed in
             custName.text = _dialogueArray[_lineIndex].characterName;
             custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
             _textAnimatorPlayer.ShowText(_dialogueArray[_lineIndex].line);
 
+            //Checks if there is a voiceOver clip within the dialogue before assigning the text and playing the audio clip
             if (dialogue.voiceOver != null)
             {
                 _audioSource.clip = dialogue.voiceOver;
@@ -137,6 +136,7 @@ namespace UberPlanetary.Dialogue
                 _textAnimatorPlayer.ShowText(dialogue.line);
                 timeBetweenDialogue = 0;
 
+                //Checks if the Action is null before invoking and passing the dialogue to the DialogueHistory.cs
                 if (onDialoguePlayed != null)
                 {
                     onDialoguePlayed(dialogue);
@@ -146,7 +146,7 @@ namespace UberPlanetary.Dialogue
             }
         }
 
-        //checks to see if dialogue is over and if not, plays the next line
+        //checks to see if dialogue is over and if not, calls the FinishDialogue method
         private bool EndCheck() 
         {
             if( _lineIndex >= _dialogueArray.Length)
@@ -176,11 +176,14 @@ namespace UberPlanetary.Dialogue
             StartDialogue(_customerSO.CustomerDialogue.dropOffLines);
         }
 
+
+        //Clears the dialogueBox text
         public void ClearDialogueBox()
         {
             dialogueBox.text = "";
         }
         
+        //Clears the temp variables used in script
         public void ClearCustomerData()
         {
             _customerSO = null;

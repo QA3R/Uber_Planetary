@@ -7,8 +7,10 @@ namespace UberPlanetary.Currency
     /// <summary>
     /// Keeps track of the money the player has and exposes event to update value
     /// </summary>
+    
     public class CurrencyManager : MonoBehaviour
     {
+        #region Variables
         private static CurrencyManager _instance;
         public static CurrencyManager Instance => _instance;
         
@@ -18,7 +20,9 @@ namespace UberPlanetary.Currency
         [SerializeField] private UnityEvent<int> onValueChanged = new UnityEvent<int>();
         
         public UnityEvent<int> OnValueChanged => onValueChanged;
-       
+        #endregion
+
+        #region Properties
         public int Amount
         {
             get => _amount;
@@ -29,9 +33,12 @@ namespace UberPlanetary.Currency
                 onValueChanged?.Invoke(_amount);
             } 
         }
-        
+        #endregion
+
+        #region Awake method
         void Awake ()
         {
+            // Checks if there is a pre-existing CurrencyManager
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);
@@ -39,10 +46,11 @@ namespace UberPlanetary.Currency
             }
             else
             {
+                //Sets the instance of the TimeManager to this object and assigns this Object as DontDestroyOnLoad
                 _instance = this;
-                //Debug.Log("Instance was not found");
                 DontDestroyOnLoad(gameObject);
             }
         }
+        #endregion
     }
 }
