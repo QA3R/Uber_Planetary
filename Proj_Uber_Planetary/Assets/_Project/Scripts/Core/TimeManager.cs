@@ -18,7 +18,7 @@ namespace UberPlanetary.Core
         public static TimeManager Instance => _instance;
         private TextAnimatorPlayer _textAnimatorPlayer;
         private GameObject _dialogueCanvas;
-        private Transform targetTrans;
+        //private Transform targetTrans;
 
 
         private TextAnimator _textAnimator;
@@ -45,11 +45,19 @@ namespace UberPlanetary.Core
         // Start is called before the first frame update
         void Start()
         {
+            FindTextAnimator();
+        }
+        #endregion
+
+        #region Methods
+        void FindTextAnimator() 
+        {
+            Transform targetTrans = this.transform;
             _dialogueCanvas = GameObject.FindGameObjectWithTag("Dialogue");
             _audioSource = _dialogueCanvas.GetComponentInChildren<AudioSource>();
             _dialogueHistory = _dialogueCanvas.GetComponentInChildren<DialogueHistory>();
 
-            //Looks for the GameObject with the DialogueController.cs attached
+            //Looks for the GameObject with the DialogueController.cs attached (First part of acquiring the TextAnimator and TextAnimatorPlayer)
             foreach (Transform child in _dialogueCanvas.transform)
             {
                 if (child.GetComponent<DialogueController>())
@@ -60,8 +68,9 @@ namespace UberPlanetary.Core
                 }
             }
 
-            if (targetTrans != null) 
-            { 
+            //Second part of acquiring the TextAnimator and TextAnimatorPlayer
+            if (targetTrans != null)
+            {
                 //Looks for the GameObject with the TextAnimator and TextAnimatorPlayer attached
                 foreach (Transform child2 in targetTrans)
                 {
@@ -79,9 +88,6 @@ namespace UberPlanetary.Core
             }
         }
 
-        #endregion
-
-        #region Methods
         [ContextMenu("Pause Time")]
         public void PauseTime()
         {
