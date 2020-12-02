@@ -17,7 +17,7 @@ namespace UberPlanetary.Core
         private static TimeManager _instance;
         public static TimeManager Instance => _instance;
         private TextAnimatorPlayer _textAnimatorPlayer;
-        private GameObject _dialogueUICanvas;
+        private GameObject _dialogueCanvas;
         
         private TextAnimator _textAnimator;
         private AudioSource _audioSource;
@@ -38,15 +38,29 @@ namespace UberPlanetary.Core
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-        }
 
-        // Start is called before the first frame update
-        void Start()
-        {
+            _dialogueCanvas = GameObject.FindGameObjectWithTag("Dialogue");
+            _audioSource = _dialogueCanvas.GetComponentInChildren<AudioSource>();
+            _dialogueHistory = _dialogueCanvas.GetComponentInChildren<DialogueHistory>();
 
-            _textAnimatorPlayer = GameObject.FindObjectOfType<TextAnimatorPlayer>();
-            _textAnimator = GameObject.FindObjectOfType<TextAnimator>();
-            _dialogueHistory = GameObject.FindObjectOfType<DialogueHistory>();
+            foreach (Transform child in _dialogueCanvas.transform)
+            {
+                if (child.GetComponent<DialogueController>())
+                {
+                    //Gets the child of the GameObject that has the DialogueController.cs attached to it
+                    Transform targetTrans = child.transform.GetChild(0);
+
+                    //Checks all the children of the rargetTrans for the GameObject with the TextAnimator and TextAnimatorPlayer
+                    foreach (Transform child2 in targetTrans.transform)
+                    {
+                        if (child2.GetComponent<TextAnimator>())
+                            _textAnimator = child2.GetComponent<TextAnimator>();
+
+                        if (child2.GetComponent<TextAnimatorPlayer>())
+                            _textAnimatorPlayer = child2.GetComponent<TextAnimatorPlayer>();
+                    }
+                }
+            }
 
             if (_textAnimatorPlayer != null)
             {
@@ -54,43 +68,47 @@ namespace UberPlanetary.Core
             }
         }
 
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
         private void OnEnable()
         {
-            if (_dialogueHistory != null)
-            {
-                _dialogueHistory.TimePaused += PauseTime;
-                _dialogueHistory.TimeUnpaused += UnpauseTime;
-            }
+            Debug.Log("subscribed to PauseTime and UnpauseTime");
+            _dialogueHistory.TimePaused += PauseTime;
+            _dialogueHistory.TimeUnpaused += UnpauseTime;
         }
 
         private void OnDisable()
         {
-            if (_dialogueHistory != null)
-            {
-                _dialogueHistory.TimePaused -= PauseTime;
-                _dialogueHistory.TimeUnpaused -= UnpauseTime;
-            }
+
+            Debug.Log("subscribed to PauseTime and UnpauseTime");
+            _dialogueHistory.TimePaused -= PauseTime;
+            _dialogueHistory.TimeUnpaused -= UnpauseTime;
         }
         #endregion
 
         #region Methods
         [ContextMenu("Pause Time")]
-        void PauseTime()
+        void PauseTime(int timeScale)
         {
-            Time.timeScale = 0;
+            Debug.Log("paused");
+            Time.timeScale = timeScale;
             
-            if (_audioSource != null)
+            if (_audioSource)
             {
                 _audioSource.Pause();
             }
         }
 
         [ContextMenu("Unpause Time")]
-        void UnpauseTime()
+        void UnpauseTime(int timeScale)
         {
-            Time.timeScale = 1;
+            Time.timeScale = timeScale;
 
-            if (_audioSource != null)
+            if (_audioSource)
             { 
                 _audioSource.UnPause();
             }

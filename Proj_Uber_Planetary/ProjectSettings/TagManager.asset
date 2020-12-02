@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Asteroid
   - GuideArrow
+  - Dialogue
   layers:
   - Default
   - TransparentFX
