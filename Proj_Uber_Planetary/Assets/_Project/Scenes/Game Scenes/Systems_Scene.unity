@@ -3219,6 +3219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2014266203026016913, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2158368279156623143, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
       propertyPath: goalAmount
       value: 7400
@@ -3233,6 +3237,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2471755315786597137, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471755315786597142, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3725997757989388196, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
@@ -3283,12 +3291,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7294117546454555950, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7991031014822896277, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
       propertyPath: m_Name
       value: EndGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
+--- !u!114 &2471755317091253086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9108360106163467688, guid: 0aa1f5f50e2fc804eaa6b2a3065482d3, type: 3}
+  m_PrefabInstance: {fileID: 2471755317091253085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a904a98806172744392677e12d39deee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4790559591464300719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3437,9 +3460,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 31159119629632837, guid: 82b985e00d4b818408f583f033fcbbfb, type: 3}
+      propertyPath: clock
+      value: 
+      objectReference: {fileID: 2471755317091253086}
     - target: {fileID: 31159119629632838, guid: 82b985e00d4b818408f583f033fcbbfb, type: 3}
       propertyPath: m_Name
       value: Dialogue Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 31159119633777719, guid: 82b985e00d4b818408f583f033fcbbfb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b985e00d4b818408f583f033fcbbfb, type: 3}

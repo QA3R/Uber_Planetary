@@ -5,6 +5,7 @@ using UnityEngine;
 using UberPlanetary.ScriptableObjects;
 using TMPro;
 using UberPlanetary.Core;
+using UberPlanetary.General;
 
 
 namespace UberPlanetary.Dialogue
@@ -23,6 +24,7 @@ namespace UberPlanetary.Dialogue
         private Action <int> _timeUnpaused;
         private TimeManager _timeManager;
 
+        [SerializeField] private Clock clock;
         [SerializeField] private GameObject canvas;
         [SerializeField] private RectTransform dialogueHistory;
         [SerializeField] private GameObject dialoguePrefab;
@@ -70,8 +72,15 @@ namespace UberPlanetary.Dialogue
             GameObject _tempObj = Instantiate(dialoguePrefab, dialogueContainer);
 
             _tempObj.GetComponent<TextMeshProUGUI>().text = dialogue.characterName;
-            _tempObj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = dialogue.line;
+            _tempObj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = string.Format("{0:00}:{1:00}: {2}", clock.Hours, clock.Minutes, dialogue.line);
             dialogueHistory.offsetMin = new Vector2 (dialogueHistory.offsetMin.x, (dialogueHistory.offsetMin.y - 500));
+
+            /* Functionality to adjust Scroll Rect spacing based on size of dialogue....
+            if (dialogue.line.Length < 100)
+            {
+
+            }
+            */
         }
 
         public void OpenDialogueHistory()
