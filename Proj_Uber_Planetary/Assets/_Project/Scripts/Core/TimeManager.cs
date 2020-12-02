@@ -18,7 +18,9 @@ namespace UberPlanetary.Core
         public static TimeManager Instance => _instance;
         private TextAnimatorPlayer _textAnimatorPlayer;
         private GameObject _dialogueCanvas;
-        
+        private Transform targetTrans;
+
+
         private TextAnimator _textAnimator;
         private AudioSource _audioSource;
         private DialogueHistory _dialogueHistory;
@@ -38,64 +40,53 @@ namespace UberPlanetary.Core
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-
-            _dialogueCanvas = GameObject.FindGameObjectWithTag("Dialogue");
-            _audioSource = _dialogueCanvas.GetComponentInChildren<AudioSource>();
-            _dialogueHistory = _dialogueCanvas.GetComponentInChildren<DialogueHistory>();
-
-            foreach (Transform child in _dialogueCanvas.transform)
-            {
-                if (child.GetComponent<DialogueController>())
-                {
-                    //Gets the child of the GameObject that has the DialogueController.cs attached to it
-                    Transform targetTrans = child.transform.GetChild(0);
-
-                    //Checks all the children of the rargetTrans for the GameObject with the TextAnimator and TextAnimatorPlayer
-                    foreach (Transform child2 in targetTrans.transform)
-                    {
-                        if (child2.GetComponent<TextAnimator>())
-                            _textAnimator = child2.GetComponent<TextAnimator>();
-
-                        if (child2.GetComponent<TextAnimatorPlayer>())
-                            _textAnimatorPlayer = child2.GetComponent<TextAnimatorPlayer>();
-                    }
-                }
-            }
-
-            if (_textAnimatorPlayer != null)
-            {
-                _textAnimator.timeScale = TextAnimator.TimeScale.Scaled;
-            }
         }
 
         // Start is called before the first frame update
         void Start()
         {
+            _dialogueCanvas = GameObject.FindGameObjectWithTag("Dialogue");
+            _audioSource = _dialogueCanvas.GetComponentInChildren<AudioSource>();
+            _dialogueHistory = _dialogueCanvas.GetComponentInChildren<DialogueHistory>();
 
+            //Looks for the GameObject with the DialogueController.cs attached
+            foreach (Transform child in _dialogueCanvas.transform)
+            {
+                if (child.GetComponent<DialogueController>())
+                {
+                    //Gets the child of the GameObject that has the DialogueController.cs attached to it
+                    targetTrans = child.transform.GetChild(0);
+
+                }
+            }
+
+            if (targetTrans != null) 
+            { 
+                //Looks for the GameObject with the TextAnimator and TextAnimatorPlayer attached
+                foreach (Transform child2 in targetTrans)
+                {
+                    if (child2.GetComponent<TextAnimator>())
+                        _textAnimator = child2.GetComponent<TextAnimator>();
+
+                    if (child2.GetComponent<TextAnimatorPlayer>())
+                        _textAnimatorPlayer = child2.GetComponent<TextAnimatorPlayer>();
+                }
+
+                if (_textAnimatorPlayer != null)
+                {
+                    _textAnimator.timeScale = TextAnimator.TimeScale.Scaled;
+                }
+            }
         }
 
-        private void OnEnable()
-        {
-            Debug.Log("subscribed to PauseTime and UnpauseTime");
-            _dialogueHistory.TimePaused += PauseTime;
-            _dialogueHistory.TimeUnpaused += UnpauseTime;
-        }
-
-        private void OnDisable()
-        {
-
-            Debug.Log("subscribed to PauseTime and UnpauseTime");
-            _dialogueHistory.TimePaused -= PauseTime;
-            _dialogueHistory.TimeUnpaused -= UnpauseTime;
-        }
         #endregion
 
         #region Methods
         [ContextMenu("Pause Time")]
-        void PauseTime(int timeScale)
+        public void PauseTime()
         {
             Debug.Log("paused");
-            Time.timeScale = timeScale;
+            Time.timeScale = 0;
             
             if (_audioSource)
             {
@@ -104,9 +95,9 @@ namespace UberPlanetary.Core
         }
 
         [ContextMenu("Unpause Time")]
-        void UnpauseTime(int timeScale)
+        public void UnpauseTime()
         {
-            Time.timeScale = timeScale;
+            Time.timeScale = 1;
 
             if (_audioSource)
             { 

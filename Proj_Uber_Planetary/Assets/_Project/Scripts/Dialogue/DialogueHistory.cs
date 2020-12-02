@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UberPlanetary.ScriptableObjects;
 using TMPro;
+using UberPlanetary.Core;
 
 
 namespace UberPlanetary.Dialogue
@@ -20,7 +21,7 @@ namespace UberPlanetary.Dialogue
         private List <string> _dialogueList;
         private Action <int> _timePaused;
         private Action <int> _timeUnpaused;
-
+        private TimeManager _timeManager;
 
         [SerializeField] private GameObject canvas;
         [SerializeField] private RectTransform dialogueHistory;
@@ -43,7 +44,13 @@ namespace UberPlanetary.Dialogue
         }
         #endregion
 
-        #region OnEnable, and OnDisable Methods
+
+        #region Start, OnEnable, and OnDisable Methods
+        private void Start()
+        {
+            _timeManager = GameObject.FindObjectOfType<TimeManager>();
+        }
+
         private void OnEnable()
         {
             dialogueController.OnDialoguePlayed += PopulateDialogue;
@@ -71,22 +78,18 @@ namespace UberPlanetary.Dialogue
         {
             canvas.SetActive(true);
             Cursor.visible = true;
-            
-            if (TimePaused != null)
-            {
-                TimePaused(0);
-            }
+
+            if (_timeManager != null)
+                _timeManager.PauseTime();
         }
 
         public void CloseDialogueHistory()
         {
             canvas.SetActive(false);
             Cursor.visible = false;
-            
-            if (TimeUnpaused != null)
-            {
-                TimeUnpaused(1);
-            }
+
+            if (_timeManager != null)
+                _timeManager.UnpauseTime();
         }
         #endregion
     }

@@ -27,7 +27,7 @@ namespace UberPlanetary.General
 
         void Update()
         {
-            if (isOver) return;
+            //if (isOver) return;
 
             _currentTime += Time.deltaTime * clockSpeed;
 
@@ -36,10 +36,11 @@ namespace UberPlanetary.General
 
             _clockText.text = string.Format("{0:00}:{1:00}", hours, minutes);
 
+            /*
             if (_currentTime >= endTime)
             {
                 TimeUp();
-            }
+            }*/
         }
 
         public void TimeUp()
