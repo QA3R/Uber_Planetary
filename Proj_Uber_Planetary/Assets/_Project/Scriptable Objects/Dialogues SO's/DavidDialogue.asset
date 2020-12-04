@@ -19,7 +19,7 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: Hello... Where to?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    characterName: You
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I am Dinklebopbound! I will be the best burger flipper in the system!
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
@@ -27,32 +27,32 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: You got it
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    characterName: You
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: What's going on at Dinklebop?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    characterName: You
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: WHAT?! You don't know? The biggest burger flipping contest is taking place
-      there and I am gonna be the <shake>VERY BEST</shake>
+      there and I am gonna be the <shake A=.4>VERY BEST</shake>
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: Wow... I didn' know there were such competitions. Didn't think there's
       much to flipping burgers.
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    characterName: You
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
-  - line: <shake>WHAT DO YOU MEAN</shake>?! Flipping burgers is an artform! I've
-      been working out my right arm for 2 straight months for this
+  - line: <shake a = .4>WHAT DO YOU MEAN</shake>?! Flipping burgers is an artform!
+      I've been working out my right arm for 2 straight months for this
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: Gee, I'm sorry the bud. Well I hope you win!
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    characterName: You
+    characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
-  - line: <shake>I WILL!</shake>
+  - line: <shake a=.4>I WILL!</shake>
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
