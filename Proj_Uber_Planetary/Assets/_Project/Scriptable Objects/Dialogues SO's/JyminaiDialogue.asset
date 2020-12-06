@@ -16,50 +16,50 @@ MonoBehaviour:
   - line: 'Helllo my guy!
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   - line: Jyminai, that you?!? My god, you've grown..
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Yeah Furgy! Look I need to go to Dinklebops Inc. Got myself a job interview...
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   - line: Seriously? Congratulaions man
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: HAHAHA! We need to celebrate Furgy! Gram Gram's been missing you! Stop
       by this weekend!
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   - line: For sure! I'd love to stop by and say "Hi" to Gram but I'm gonna be busy
       this week.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Soon though, I promise.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I'll hold you to that buddy HAHA!
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   dropOffLines:
   - line: Good luck Jyminai, we'll talk soon.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

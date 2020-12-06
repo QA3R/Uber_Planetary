@@ -14,69 +14,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Hey.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   - line: Where to?
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: The MEGA-Mall.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   - line: Alright..
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I have to get some groceries for a party I'm having tonight.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   - line: Ooh nice! I hope you enjoy it.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Oh I will, buddy. I make the best hotpot this system has ever tasted.
       Don''t believe me? Feel free to stop by my place later today to try some. '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   - line: 'haha... I''m good. Thank you though. '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Trust me you're not gonna regret it my friend.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   - line: Thank you for the invitation but I'm not a hotpot person though.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: You don't know what you're missing dude!
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   - line: It's all good though. I'm hoping everyone enjoys the hotpot
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Oh I'm sure they will.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Billiam
     characterSprite: {fileID: 21300000, guid: b584e50f156e3a245a78af1cacdfdeb5, type: 3}
   dropOffLines: []

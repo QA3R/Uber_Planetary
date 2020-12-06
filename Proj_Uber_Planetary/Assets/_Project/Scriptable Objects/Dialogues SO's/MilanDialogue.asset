@@ -14,34 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: "Usk - Usk - UuuuSk!!! \n\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Milan Usk
     characterSprite: {fileID: 21300000, guid: b307153f74e41934fa865ec053a00c6e, type: 3}
   - line: Hold on buddy let me turn on the universal translater
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "\u201CDo you want see me invention? Milan calls it wheel usk-usk, Usk
       make wheel, usk show wheel to everyone usk-usk\u201D \r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Milan Usk
     characterSprite: {fileID: 21300000, guid: b307153f74e41934fa865ec053a00c6e, type: 3}
   - line: "That\u2019s a mighty impressive wheel there big guy! *chuckles*"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Milan thanks you...usk, Milan loves his wheeeeel!!!
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Milan Usk
     characterSprite: {fileID: 21300000, guid: b307153f74e41934fa865ec053a00c6e, type: 3}
   dropOffLines:
   - line: Interesting guy.
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

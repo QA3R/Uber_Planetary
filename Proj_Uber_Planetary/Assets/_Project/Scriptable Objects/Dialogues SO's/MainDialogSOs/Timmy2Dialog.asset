@@ -16,86 +16,86 @@ MonoBehaviour:
   - line: 'Hi. ASSHOLE.
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'What''s wrong?
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "What's wrong? WHAT'S WRONG? So far you\u2019ve cost me 5k creds and a
       bunch of free rides. That's what's wrong. Where do you know these people from?
       I said LEGAL, these people seem pretty shady to me.\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'OK, OK, can I get in?
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: 'NO. So I finally met this Widow person and she said I need a faster cab,
       so there was no deal. This is BS Timmy.
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Hmm, did not think of that. OK, don\u2019t worry, I have it figured out!\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "What? I\u2019m out 5k, no jobs from your \u201Cfriends\u201D unless I
       get a faster cab. How have you figured this out?\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "HEY, relax! My friend has a beautiful fast racing car and he's not using
       it. He said I could borrow it if I kept it safe. I don\u2019t have a taxi license
       but you do. Problem solved. Lets go get it.\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: 'Seriously? Are you sure this is OK?
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: " I did not want to tell you this, but if I don\u2019t get this money,
       I am a dead man. I know I said this was above board, but just trust me. These
       are not people we want to screw over. \r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: ' We? You mean you!
 
 '
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Please Furgus, for old times sake. I\u2019ve got no one else.\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "OK Timmy. I\u2019ll trust you. Let's get your friend's car. Hop in.\r\n"
-    voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    lineTime: 0
+    voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   dropOffLines: []

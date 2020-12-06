@@ -12,7 +12,6 @@ namespace UberPlanetary.Dialogue
         public int lineTime;
 
         public AudioClip voiceOver;
-        public AudioClip textAudio;
         //public ulong playBuffer;
 
         public string characterName;
