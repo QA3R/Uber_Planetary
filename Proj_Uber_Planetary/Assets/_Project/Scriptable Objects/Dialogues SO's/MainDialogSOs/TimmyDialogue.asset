@@ -18,13 +18,11 @@ MonoBehaviour:
 '
     lineTime: 5
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Let\u2019s move, quick.\r\n"
     lineTime: 4
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: 'OK, sorry man, where to?
@@ -32,7 +30,6 @@ MonoBehaviour:
 '
     lineTime: 5
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'The MEGA-Mall
@@ -40,13 +37,11 @@ MonoBehaviour:
 '
     lineTime: 4
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: OK, hey are you alright Tim?
     lineTime: 5
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Well\u2026 ugh not really. Look, I know I haven't seen you in a long time,
@@ -54,15 +49,13 @@ MonoBehaviour:
       when my family died in that depressurization accident.\r\n"
     lineTime: 9
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: 'Ya of course, you''re like a brother to me Timmy.
 
 '
-    lineTime: 5
+    lineTime: 6
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Well I need your help again. I owe money to some bad people.
@@ -70,13 +63,11 @@ MonoBehaviour:
 '
     lineTime: 4
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "Geez Timmy\u2026 who?\r\n"
     lineTime: 4
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Adrian Atkins, the Taxi tycoon.
@@ -84,7 +75,6 @@ MonoBehaviour:
 '
     lineTime: 4
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: 'What? That guy is bad news, how did you get mixed up with him?
@@ -92,7 +82,6 @@ MonoBehaviour:
 '
     lineTime: 8
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'I was in the wrong place, wrong time.
@@ -100,26 +89,22 @@ MonoBehaviour:
 '
     lineTime: 5
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "How much do you owe?\r"
     lineTime: 4
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Well, I need 4 million credits in 4 days.\r"
     lineTime: 5
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "WHAT! Sorry Timmy, I don\u2019t have that kind of money. I would not be
       driving a cab if I did.\r\n"
     lineTime: 6
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "I know Furgus, that's where you come in. You have a cab license! I have
@@ -127,13 +112,11 @@ MonoBehaviour:
       really well. I can hook you up.\r\n"
     lineTime: 6
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "I don\u2019t know Timmy, who is this guy? Is it legal?\r\n"
     lineTime: 8
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: " Don\u2019t worry, it's all above board. He\u2019s an upstanding citizen,
@@ -141,14 +124,12 @@ MonoBehaviour:
       you drop me off.\r"
     lineTime: 7
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   - line: "OK, for you Timmy, as long as there is no shady business going on, I\u2019m
       in, I\u2019ll help.\r\n"
     lineTime: 6
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Me?! Never! You know me, I am as clean as they come! Thanks Furgus!
@@ -156,7 +137,6 @@ MonoBehaviour:
 '
     lineTime: 8
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
   dropOffLines:
@@ -164,6 +144,5 @@ MonoBehaviour:
       info. I\u2019ll contact you later to see how it's going.\r\n"
     lineTime: 6
     voiceOver: {fileID: 0}
-    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
