@@ -4,6 +4,9 @@ using UnityEngine;
 using Febucci.UI;
 using UberPlanetary.ScriptableObjects;
 using UberPlanetary.Dialogue;
+using UberPlanetary.Phone;
+using UberPlanetary.Player.Movement;
+
 
 namespace UberPlanetary.Core
 {
@@ -18,6 +21,7 @@ namespace UberPlanetary.Core
         public static TimeManager Instance => _instance;
         private TextAnimatorPlayer _textAnimatorPlayer;
         private GameObject _dialogueCanvas;
+        private PhoneController _phoneController;
         //private Transform targetTrans;
 
 
@@ -45,6 +49,8 @@ namespace UberPlanetary.Core
         // Start is called before the first frame update
         void Start()
         {
+            _phoneController = FindObjectOfType<PhoneController>();
+
             FindTextAnimator();
         }
         #endregion
@@ -98,6 +104,8 @@ namespace UberPlanetary.Core
             {
                 _audioSource.Pause();
             }
+
+            _phoneController.gameObject.SetActive(false);
         }
 
         [ContextMenu("Unpause Time")]
@@ -109,6 +117,8 @@ namespace UberPlanetary.Core
             { 
                 _audioSource.UnPause();
             }
+
+            _phoneController.gameObject.SetActive(true);
         }
         #endregion
     }
