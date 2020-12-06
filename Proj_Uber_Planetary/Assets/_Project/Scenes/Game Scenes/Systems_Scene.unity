@@ -3472,6 +3472,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1139055381061334257, guid: 82b985e00d4b818408f583f033fcbbfb, type: 3}
+      propertyPath: textAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b985e00d4b818408f583f033fcbbfb, type: 3}
 --- !u!1 &5002379278940152680 stripped

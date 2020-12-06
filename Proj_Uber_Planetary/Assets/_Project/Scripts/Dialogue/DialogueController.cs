@@ -26,8 +26,10 @@ namespace UberPlanetary.Dialogue
         private bool _hasDelivered;
         private CustomerSO _customerSO;
         private DialogueSO _dialogueSO;
+        private Dialogue _currentDialogueSO;
         private AudioSource _audioSource;
-        private Action <Dialogue> onDialoguePlayed; 
+        private Action <Dialogue> onDialoguePlayed;
+        private float _timer;
 
         //[SerializeField] private float autoPlayDialogueTime;
         [SerializeField] private float timeBetweenDialogue;
@@ -35,6 +37,7 @@ namespace UberPlanetary.Dialogue
         [SerializeField] private TextMeshProUGUI dialogueBox;
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private Image custFace;
+        [SerializeField] private AudioClip textAudio;
         #endregion
 
         #region Properites
@@ -56,6 +59,7 @@ namespace UberPlanetary.Dialogue
             _audioSource = GetComponent<AudioSource>();
             ToggleDialogueBox(false);
             _lineIndex = 0;
+            _timer = 0;
         }
 
         private void OnEnable()
@@ -74,23 +78,40 @@ namespace UberPlanetary.Dialogue
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
 
-            //Check if the Dialogue passed has the voiceOver audio 
-            //If not tell the AudioSource to use the textAudio instead.
-            //Nest the code below in this check
-
-            //Checks if there the Audio Source is playing and the game isn't paused before calling the EndCheck method.
-            if (!_audioSource.isPlaying && Time.timeScale == 1)
+            //Checks if the current dialogue has a voice over audio file
+            if (_currentDialogueSO.voiceOver != null)
             {
-                //Checks if the EndCheck method returns true before calling hte DisplayText method.
-                if (!EndCheck())
+                //Checks if the voice over audio is playihg, the game is not paused, and the dialogue array has more lines
+                if (!_audioSource.isPlaying && Time.timeScale == 1 && !EndCheck())
                 {
+                    //Displays next line in the dialogue array
                     DisplayText(_dialogueArray[_lineIndex]);
                 }
             }
+            //If there is no voice over audio, we're going to use the base text audio
+            else
+            {
+                _timer += Time.deltaTime;
+                if (_timer > _currentDialogueSO.lineTime)
+                {
+                    ResetTimer();
+                    DisplayText(_dialogueArray[_lineIndex]);
+                }
+            }
+         
+            //Checks if there the Audio Source is playing and the game isn't paused before calling the EndCheck method.
+            //Checks if the EndCheck method returns true before calling hte DisplayText method.
         }
         #endregion
 
         #region Methods
+        //Resets timer
+        private void ResetTimer()
+        {
+            _timer = 0;
+        }
+
+
         //Turns the dialogue box on and off
         private void ToggleDialogueBox(bool state)
         {
@@ -127,6 +148,8 @@ namespace UberPlanetary.Dialogue
         //plays text with typewriter effect
         public void DisplayText(Dialogue dialogue)
         {
+            _currentDialogueSO = dialogue;
+
             //Assigns the text in the dialogue box to the correct line index of the CustomerSO's dialgoue passed in
             custName.text = _dialogueArray[_lineIndex].characterName;
             custFace.sprite = _dialogueArray[_lineIndex].characterSprite;
@@ -147,6 +170,24 @@ namespace UberPlanetary.Dialogue
                 }
 
                 _lineIndex++;
+            }
+            else
+            {
+                if (textAudio != null)
+                {
+                    Debug.Log("No voice over file found.");
+                    _audioSource.clip = textAudio;
+                    _audioSource.Play();
+                    _textAnimatorPlayer.ShowText(dialogue.line);
+
+                    //Checks if the Action is null before invoking and passing the dialogue to the DialogueHistory.cs
+                    if (onDialoguePlayed != null)
+                    {
+                        onDialoguePlayed(dialogue);
+                    }
+
+                    _lineIndex++;
+                }
             }
         }
 
