@@ -15,64 +15,78 @@ MonoBehaviour:
   dialogueLines:
   - line: Hey
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: How's it going, hop in.
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Can you take me to the Poopysoft Building at block C Please?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: You got it! Wait... Poopysoft? Are you one of those videogame streamers?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "hahah no not actually, though I kind of wish I was. I\u2019d be making
       a lot more money that\u2019s for sure. I am actually a programmer for the company.
       I\u2019ve been working on this big project for the past six years."
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: Is it that one everyone has been talking about? DrivePunk2020 or something
       like that?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "That\u2019s the one!"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: <shake a=.4> That's so awesome! When does it come out?</shake>
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I...<wiggle a = .4> *sob* I don't know man</wiggle>
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: "Woah... I'm so sorry I didn\u2019t mean that in a rude way"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "It\u2019s ok, I know. I just can\u2019t take the pressure and abuse I\u2019m
       taking anymore. Everyone is always asking when will the game release and we
       have delayed it so many times now!"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: Hey pal, it's gonna be alright. do you need a tissue?
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "No. <shake a=.6>THAT\u2019S IT!</shake> I am done with this abuse. Scratch
       what I said, the game releases tonight!"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: Oh boy
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   dropOffLines: []

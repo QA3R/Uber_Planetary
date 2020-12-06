@@ -74,10 +74,14 @@ namespace UberPlanetary.Dialogue
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
 
-            //Checks if there the Audio Source is playing and the game isn't paused before calling the EndCheck method
+            //Check if the Dialogue passed has the voiceOver audio 
+            //If not tell the AudioSource to use the textAudio instead.
+            //Nest the code below in this check
+
+            //Checks if there the Audio Source is playing and the game isn't paused before calling the EndCheck method.
             if (!_audioSource.isPlaying && Time.timeScale == 1)
             {
-                //Checks if the EndCheck method returns true before calling hte DisplayText method
+                //Checks if the EndCheck method returns true before calling hte DisplayText method.
                 if (!EndCheck())
                 {
                     DisplayText(_dialogueArray[_lineIndex]);

@@ -17,18 +17,21 @@ MonoBehaviour:
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'It''s me Rouge. You got the 5k credits?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Ya. It''s all right here.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'OK, lets go. I gotta go pay my bookie--err my grandma. I need to pay back
@@ -36,61 +39,72 @@ MonoBehaviour:
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Your grandma? Whatever. Hop in.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "OK, so far I\u2019ve only spent money. I need to MAKE money. I gave you
       the cash, let\u2019s get to work.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Relax. I had to vet you for the real boss. I don\u2019t pay for the jobs,
       She does. I\u2019m just the scout. Drop me at the racetrack and I\u2019ll give
       you her client info.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'The racetrack?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'My grandma likes the ponies, what can I say.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   dropOffLines:
   - line: "OK, I\u2019ve sent you the info for the boss. Her name is Demonia the
       Widow.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'The Widow? Why the widow?
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Don\u2019t ask.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Roger. Off to see the Widow.
 
 '
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "What has Timmy gotten himself into. I trust him, but I\u2019d swear there
       is something shady going on.\r\n"
     voiceOver: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
+    textAudio: {fileID: 8300000, guid: 56bcbc5f8de41a943a6ac8425f0fa664, type: 3}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
