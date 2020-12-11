@@ -14,34 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: "Usk - Usk - UuuuSk!!! \n\r\n"
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Milan Usk
     characterSprite: {fileID: 21300000, guid: b307153f74e41934fa865ec053a00c6e, type: 3}
   - line: Hold on buddy let me turn on the universal translater
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "\u201CDo you want see me invention? Milan calls it wheel usk-usk, Usk
       make wheel, usk show wheel to everyone usk-usk\u201D \r\n"
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Milan Usk
     characterSprite: {fileID: 21300000, guid: b307153f74e41934fa865ec053a00c6e, type: 3}
   - line: "That\u2019s a mighty impressive wheel there big guy! *chuckles*"
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Milan thanks you...usk, Milan loves his wheeeeel!!!
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Milan Usk
     characterSprite: {fileID: 21300000, guid: b307153f74e41934fa865ec053a00c6e, type: 3}
   dropOffLines:
   - line: Interesting guy.
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

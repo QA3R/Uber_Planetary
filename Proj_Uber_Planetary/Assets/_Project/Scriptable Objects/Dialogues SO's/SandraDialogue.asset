@@ -14,78 +14,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Hey
-    lineTime: 0
+    lineTime: 1
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: How's it going, hop in.
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Can you take me to the Poopysoft Building at block C Please?
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: You got it! Wait... Poopysoft? Are you one of those videogame streamers?
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "hahah no not actually, though I kind of wish I was. I\u2019d be making
       a lot more money that\u2019s for sure. I am actually a programmer for the company.
       I\u2019ve been working on this big project for the past six years."
-    lineTime: 0
+    lineTime: 8
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: Is it that one everyone has been talking about? DrivePunk2020 or something
       like that?
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "That\u2019s the one!"
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: <shake a=.4> That's so awesome! When does it come out?</shake>
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I...<wiggle a = .4> *sob* I don't know man</wiggle>
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: "Woah... I'm so sorry I didn\u2019t mean that in a rude way"
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "It\u2019s ok, I know. I just can\u2019t take the pressure and abuse I\u2019m
       taking anymore. Everyone is always asking when will the game release and we
       have delayed it so many times now!"
-    lineTime: 0
+    lineTime: 8
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: Hey pal, it's gonna be alright. do you need a tissue?
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "No. <shake a=.6>THAT\u2019S IT!</shake> I am done with this abuse. Scratch
       what I said, the game releases tonight!"
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Sandra
     characterSprite: {fileID: 0}
   - line: Oh boy
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

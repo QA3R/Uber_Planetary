@@ -16,50 +16,50 @@ MonoBehaviour:
   - line: 'Helllo my guy!
 
 '
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   - line: Jyminai, that you?!? My god, you've grown..
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Yeah Furgy! Look I need to go to Dinklebops Inc. Got myself a job interview...
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   - line: Seriously? Congratulaions man
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: HAHAHA! We need to celebrate Furgy! Gram Gram's been missing you! Stop
       by this weekend!
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   - line: For sure! I'd love to stop by and say "Hi" to Gram but I'm gonna be busy
       this week.
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Soon though, I promise.
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I'll hold you to that buddy HAHA!
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Jyminai
     characterSprite: {fileID: 21300000, guid: 5fa85c150ccf1f342bf6ea9c75c94e5d, type: 3}
   dropOffLines:
   - line: Good luck Jyminai, we'll talk soon.
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

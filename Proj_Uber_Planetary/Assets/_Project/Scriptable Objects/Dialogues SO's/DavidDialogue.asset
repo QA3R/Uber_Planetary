@@ -14,55 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - line: Hello my fellow taxi driver!
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: Hello... Where to?
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I am Dinklebopbound! I will be the best burger flipper in the system!
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: You got it
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: What's going on at Dinklebop?
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: WHAT?! You don't know? The biggest burger flipping contest is taking place
       there and I am gonna be the <shake A=.4>VERY BEST</shake>
-    lineTime: 0
+    lineTime: 9
     voiceOver: {fileID: 0}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: Wow... I didn' know there were such competitions. Didn't think there's
       much to flipping burgers.
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: <shake a = .4>WHAT DO YOU MEAN</shake>?! Flipping burgers is an artform!
       I've been working out my right arm for 2 straight months for this
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
   - line: Gee, I'm sorry the bud. Well I hope you win!
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: <shake a=.4>I WILL!</shake>
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: David
     characterSprite: {fileID: 21300000, guid: 0158e77c4208b394797446c8e67b404b, type: 3}
