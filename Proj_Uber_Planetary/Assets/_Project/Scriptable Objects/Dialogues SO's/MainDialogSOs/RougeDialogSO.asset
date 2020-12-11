@@ -16,59 +16,59 @@ MonoBehaviour:
   - line: ' Hi. Uberplanetary here, how can I help you?
 
 '
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'You must be Furgust. Timmy told me you''re looking for work.
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Ya,What do I need to do to get paid?
 
 '
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Woah woah\u2026 before ya get to the big jobs, you\u2019re gonna have
       to earn my trust first. Take me to my drug de--err, take me to the Burger Joint,
       ya, the burger joint.\r\n"
-    lineTime: 0
+    lineTime: 8
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: Alright man, no problem.
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: ' So, helping Timmy with his debts eh? Why on earth are you helping him?
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: " I grew up with him, took care of him. He\u2019s a good kid, keeps his
       nose clean.\r\n"
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "What? You sure we talking about the same Tim--umm oh ya, sure, ya, he\u2019s
       a good kid, sure he is. *chuckles under his breath*\r\n"
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'What''s that supposed to mean?
 
 '
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
@@ -77,37 +77,37 @@ MonoBehaviour:
       I want $5000 credits by the end of the day.
 
 '
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: ' Huh? I thought you were going to pay ME?
 
 '
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'Do this for me and you will get the jobs and the creds.
 
 '
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: "*Sigh*\tFine..."
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   dropOffLines:
   - line: "Remember, 5k end of day. I\u2019ll send you a message to meet.\r\n"
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: OK. Got it.
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
