@@ -16,21 +16,21 @@ MonoBehaviour:
   - line: 'Hi. Uber-Planetary here, how can I help you?
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'It''s me Rouge. You got the 5k credits?
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Ya. It''s all right here.
 
 '
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
@@ -38,34 +38,34 @@ MonoBehaviour:
       my grandma, I owe her 5k.
 
 '
-    lineTime: 0
+    lineTime: 8
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Your grandma? Whatever. Hop in.
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "OK, so far I\u2019ve only spent money. I need to MAKE money. I gave you
       the cash, let\u2019s get to work.\r\n"
-    lineTime: 0
+    lineTime: 8
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Relax. I had to vet you for the real boss. I don\u2019t pay for the jobs,
       She does. I\u2019m just the scout. Drop me at the racetrack and I\u2019ll give
       you her client info.\r\n"
-    lineTime: 0
+    lineTime: 9
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'The racetrack?
 
 '
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
@@ -79,32 +79,32 @@ MonoBehaviour:
   dropOffLines:
   - line: "OK, I\u2019ve sent you the info for the boss. Her name is Demonia the
       Widow.\r\n"
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'The Widow? Why the widow?
 
 '
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "Don\u2019t ask.\r\n"
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Rouge
     characterSprite: {fileID: 21300000, guid: fc3f9fca71af07c47a34d6a6311d69c1, type: 3}
   - line: 'Roger. Off to see the Widow.
 
 '
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "What has Timmy gotten himself into. I trust him, but I\u2019d swear there
       is something shady going on.\r\n"
-    lineTime: 0
+    lineTime: 7
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

@@ -16,82 +16,82 @@ MonoBehaviour:
   - line: ' Hi. Uberplanetary here, how can I help you?
 
 '
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'I know. Let me in.
 
 '
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: Sure thing, hop in.
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Go to the Schneider building.
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: 'So, I hear you may have some work for me?
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: Shut up.
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: 'This won''t do. This won''t do at all.
 
 '
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: 'Huh? Is everything okay?
 
 '
-    lineTime: 0
+    lineTime: 3
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: This cab.
-    lineTime: 0
+    lineTime: 1
     voiceOver: {fileID: 0}
     characterName: D.Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: 'What about it?
 
 '
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'It''s a piece of shit.
 
 '
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: 'What?
 
 '
-    lineTime: 0
+    lineTime: 1
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: I'm going to pretend you're not deaf and tell you that If you want work,
       get a faster cab.
-    lineTime: 0
+    lineTime: 8
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
@@ -99,18 +99,18 @@ MonoBehaviour:
       new cab?
 
 '
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: "That\u2019s what I said. Now shut up and drop me off. If you get a faster
       cab, I\u2019ll send you a message.\r\n"
-    lineTime: 0
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: D. Widow
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   - line: " I can\u2019t believe this. That\u2019s it. I\u2019m done.\r\n"
-    lineTime: 0
+    lineTime: 2
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
@@ -121,14 +121,14 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 1db3debf8e311624ba7ee2e9c80545ad, type: 3}
   dropOffLines:
   - line: "Timmy. Finally. You\u2019ve got some questions to answer.\r\n"
-    lineTime: 0
+    lineTime: 4
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}
   - line: 'I am so. Mad.
 
 '
-    lineTime: 0
+    lineTime: 5
     voiceOver: {fileID: 0}
     characterName: Furgust
     characterSprite: {fileID: 21300000, guid: d87d15b866dfab341b256a900fde80e3, type: 3}

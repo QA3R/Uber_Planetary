@@ -135,7 +135,7 @@ MonoBehaviour:
   - line: 'Me?! Never! You know me, I am as clean as they come! Thanks Furgus!
 
 '
-    lineTime: 8
+    lineTime: 6
     voiceOver: {fileID: 0}
     characterName: Timmy
     characterSprite: {fileID: 21300000, guid: 858d6c41e6c19a240ba4439d985496e5, type: 3}
