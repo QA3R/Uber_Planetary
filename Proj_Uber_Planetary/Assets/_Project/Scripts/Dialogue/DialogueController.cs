@@ -77,25 +77,28 @@ namespace UberPlanetary.Dialogue
         private void Update()
         {
             if (_isShowing || !_isStarted || !HasDialogue) return;
-
-            //Checks if the current dialogue has a voice over audio file
-            if (_currentDialogueSO.voiceOver != null)
+            
+            if (Time.timeScale == 1 && !EndCheck())
             {
-                //Checks if the voice over audio is playihg, the game is not paused, and the dialogue array has more lines
-                if (!_audioSource.isPlaying && Time.timeScale == 1 && !EndCheck())
+                //Checks if the current dialogue has a voice over audio file
+                if (_currentDialogueSO.voiceOver != null)
                 {
-                    //Displays next line in the dialogue array
-                    DisplayText(_dialogueArray[_lineIndex]);
+                    //Checks if the voice over audio is playihg, the game is not paused, and the dialogue array has more lines
+                    if (!_audioSource.isPlaying)
+                    {
+                        //Displays next line in the dialogue array
+                        DisplayText(_dialogueArray[_lineIndex]);
+                    }
                 }
-            }
-            //If there is no voice over audio, we're going to use the base text audio
-            else
-            {
-                _timer += Time.deltaTime;
-                if (_timer > _currentDialogueSO.lineTime)
+                //If there is no voice over audio, we're going to use the base text audio
+                else
                 {
-                    ResetTimer();
-                    DisplayText(_dialogueArray[_lineIndex]);
+                    _timer += Time.deltaTime;
+                    if (_timer > _currentDialogueSO.lineTime)
+                    {
+                        ResetTimer();
+                        DisplayText(_dialogueArray[_lineIndex]);
+                    }
                 }
             }
          

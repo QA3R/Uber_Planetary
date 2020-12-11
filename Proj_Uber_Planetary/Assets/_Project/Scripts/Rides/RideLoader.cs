@@ -19,6 +19,8 @@ namespace UberPlanetary.Rides
         }
         
         public static event Action onHashSetUpdated;
+        public delegate void Notify();
+        public static event Notify OnNotified;
 
         private void Awake()
         {
@@ -42,6 +44,11 @@ namespace UberPlanetary.Rides
                 _currentCustomerSet.Remove(customerSo);
             }
             onHashSetUpdated?.Invoke();
+
+            if (OnNotified != null)
+            {
+                OnNotified();
+            }
         }
         public void Initialize()
         {
